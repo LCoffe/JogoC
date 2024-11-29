@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Inimigo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|solutionrelative:src\\Inimigo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Jogador.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|solutionrelative:src\\Jogador.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Fase01.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|solutionrelative:src\\Fase01.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Fase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|solutionrelative:src\\Fase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\ListaEntidade.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|solutionrelative:src\\ListaEntidade.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Inimigo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|solutionrelative:src\\Inimigo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Entidade.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|solutionrelative:src\\Entidade.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Personagem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|solutionrelative:src\\Personagem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Principal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|solutionrelative:src\\Principal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\include\\Entidade.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -35,28 +51,12 @@
       "RelativeMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|solutionrelative:include\\Personagem.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Personagem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|solutionrelative:src\\Personagem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\GerenciadorGrafico.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|solutionrelative:src\\GerenciadorGrafico.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\include\\Inimigo.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|solutionrelative:include\\Inimigo.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Principal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|solutionrelative:src\\Principal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Fase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|solutionrelative:src\\Fase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Fase01.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|solutionrelative:src\\Fase01.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\include\\Principal.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -110,89 +110,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Jogador.cpp",
-              "DocumentMoniker": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Jogador.cpp",
-              "RelativeDocumentMoniker": "src\\Jogador.cpp",
-              "ToolTip": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Jogador.cpp",
-              "RelativeToolTip": "src\\Jogador.cpp",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAAYAAABoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-27T23:56:27.152Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Jogador.hpp",
-              "DocumentMoniker": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\include\\Jogador.hpp",
-              "RelativeDocumentMoniker": "include\\Jogador.hpp",
-              "ToolTip": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\include\\Jogador.hpp",
-              "RelativeToolTip": "include\\Jogador.hpp",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAUAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-28T02:31:47.872Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Entidade.hpp",
-              "DocumentMoniker": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\include\\Entidade.hpp",
-              "RelativeDocumentMoniker": "include\\Entidade.hpp",
-              "ToolTip": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\include\\Entidade.hpp",
-              "RelativeToolTip": "include\\Entidade.hpp",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-28T23:43:27.745Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Ente.hpp",
-              "DocumentMoniker": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\include\\Ente.hpp",
-              "RelativeDocumentMoniker": "include\\Ente.hpp",
-              "ToolTip": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\include\\Ente.hpp",
-              "RelativeToolTip": "include\\Ente.hpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-27T23:53:46.772Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Entidade.cpp",
               "DocumentMoniker": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Entidade.cpp",
               "RelativeDocumentMoniker": "src\\Entidade.cpp",
               "ToolTip": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Entidade.cpp",
               "RelativeToolTip": "src\\Entidade.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAsAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-28T23:44:05.837Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Inimigo.cpp",
               "DocumentMoniker": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Inimigo.cpp",
               "RelativeDocumentMoniker": "src\\Inimigo.cpp",
               "ToolTip": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Inimigo.cpp",
               "RelativeToolTip": "src\\Inimigo.cpp",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAEcAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-28T01:15:03.558Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ListaEntidade.cpp",
               "DocumentMoniker": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\ListaEntidade.cpp",
               "RelativeDocumentMoniker": "src\\ListaEntidade.cpp",
@@ -206,19 +154,58 @@
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Personagem.hpp",
-              "DocumentMoniker": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\include\\Personagem.hpp",
-              "RelativeDocumentMoniker": "include\\Personagem.hpp",
-              "ToolTip": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\include\\Personagem.hpp",
-              "RelativeToolTip": "include\\Personagem.hpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-27T22:47:22.59Z",
+              "Title": "Principal.cpp",
+              "DocumentMoniker": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Principal.cpp",
+              "RelativeDocumentMoniker": "src\\Principal.cpp",
+              "ToolTip": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Principal.cpp",
+              "RelativeToolTip": "src\\Principal.cpp",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-27T22:07:28.828Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
+              "Title": "Fase01.cpp",
+              "DocumentMoniker": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Fase01.cpp",
+              "RelativeDocumentMoniker": "src\\Fase01.cpp",
+              "ToolTip": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Fase01.cpp",
+              "RelativeToolTip": "src\\Fase01.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-29T05:38:55.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Fase.cpp",
+              "DocumentMoniker": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Fase.cpp",
+              "RelativeDocumentMoniker": "src\\Fase.cpp",
+              "ToolTip": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Fase.cpp",
+              "RelativeToolTip": "src\\Fase.cpp",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAD0AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-29T03:38:33.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Jogador.cpp",
+              "DocumentMoniker": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Jogador.cpp",
+              "RelativeDocumentMoniker": "src\\Jogador.cpp",
+              "ToolTip": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Jogador.cpp",
+              "RelativeToolTip": "src\\Jogador.cpp",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-27T23:56:27.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Personagem.cpp",
               "DocumentMoniker": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Personagem.cpp",
               "RelativeDocumentMoniker": "src\\Personagem.cpp",
@@ -231,7 +218,55 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Personagem.hpp",
+              "DocumentMoniker": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\include\\Personagem.hpp",
+              "RelativeDocumentMoniker": "include\\Personagem.hpp",
+              "ToolTip": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\include\\Personagem.hpp",
+              "RelativeToolTip": "include\\Personagem.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-27T22:47:22.59Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "Ente.hpp",
+              "DocumentMoniker": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\include\\Ente.hpp",
+              "RelativeDocumentMoniker": "include\\Ente.hpp",
+              "ToolTip": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\include\\Ente.hpp",
+              "RelativeToolTip": "include\\Ente.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-27T23:53:46.772Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Entidade.hpp",
+              "DocumentMoniker": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\include\\Entidade.hpp",
+              "RelativeDocumentMoniker": "include\\Entidade.hpp",
+              "ToolTip": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\include\\Entidade.hpp",
+              "RelativeToolTip": "include\\Entidade.hpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-28T23:43:27.745Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Jogador.hpp",
+              "DocumentMoniker": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\include\\Jogador.hpp",
+              "RelativeDocumentMoniker": "include\\Jogador.hpp",
+              "ToolTip": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\include\\Jogador.hpp",
+              "RelativeToolTip": "include\\Jogador.hpp",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-28T02:31:47.872Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "GerenciadorGrafico.cpp",
               "DocumentMoniker": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\GerenciadorGrafico.cpp",
               "RelativeDocumentMoniker": "src\\GerenciadorGrafico.cpp",
@@ -239,12 +274,11 @@
               "RelativeToolTip": "src\\GerenciadorGrafico.cpp",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAAD0AAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-29T04:56:29.511Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T04:56:29.511Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "Inimigo.hpp",
               "DocumentMoniker": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\include\\Inimigo.hpp",
               "RelativeDocumentMoniker": "include\\Inimigo.hpp",
@@ -252,47 +286,7 @@
               "RelativeToolTip": "include\\Inimigo.hpp",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAwAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-27T23:11:05.89Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Principal.cpp",
-              "DocumentMoniker": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Principal.cpp",
-              "RelativeDocumentMoniker": "src\\Principal.cpp",
-              "ToolTip": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Principal.cpp",
-              "RelativeToolTip": "src\\Principal.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-27T22:07:28.828Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Fase.cpp",
-              "DocumentMoniker": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Fase.cpp",
-              "RelativeDocumentMoniker": "src\\Fase.cpp",
-              "ToolTip": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Fase.cpp",
-              "RelativeToolTip": "src\\Fase.cpp",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAADwAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-29T03:38:33.795Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Fase01.cpp",
-              "DocumentMoniker": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Fase01.cpp",
-              "RelativeDocumentMoniker": "src\\Fase01.cpp",
-              "ToolTip": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Fase01.cpp",
-              "RelativeToolTip": "src\\Fase01.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-29T05:38:55.977Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T23:11:05.89Z"
             },
             {
               "$type": "Document",
@@ -304,8 +298,7 @@
               "RelativeToolTip": "include\\Principal.hpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-27T22:13:09.284Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T22:13:09.284Z"
             },
             {
               "$type": "Document",
@@ -317,8 +310,7 @@
               "RelativeToolTip": "include\\Fase01.hpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-29T05:36:34.923Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T05:36:34.923Z"
             },
             {
               "$type": "Document",
@@ -330,8 +322,7 @@
               "RelativeToolTip": "include\\Fase.hpp",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-29T01:04:17.588Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T01:04:17.588Z"
             },
             {
               "$type": "Document",
@@ -343,8 +334,7 @@
               "RelativeToolTip": "include\\IDs.hpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-29T01:08:56.471Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T01:08:56.471Z"
             },
             {
               "$type": "Document",
@@ -356,8 +346,7 @@
               "RelativeToolTip": "include\\ListaEntidade.hpp",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-28T15:39:58.96Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T15:39:58.96Z"
             },
             {
               "$type": "Document",
@@ -369,8 +358,7 @@
               "RelativeToolTip": "src\\Ente.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-27T23:53:41.062Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T23:53:41.062Z"
             },
             {
               "$type": "Document",
@@ -382,8 +370,7 @@
               "RelativeToolTip": "include\\Elemento.hpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-29T04:31:34.651Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T04:31:34.651Z"
             },
             {
               "$type": "Document",
@@ -395,8 +382,7 @@
               "RelativeToolTip": "include\\Lista.hpp",
               "ViewState": "AgIAAEsAAAAAAAAAAAAswF4AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-28T15:12:06.906Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T15:12:06.906Z"
             },
             {
               "$type": "Document",
@@ -408,8 +394,7 @@
               "RelativeToolTip": "stdafx\\stdafx.hpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-28T02:09:02.92Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T02:09:02.92Z"
             },
             {
               "$type": "Document",
@@ -421,8 +406,7 @@
               "RelativeToolTip": "stdafx\\stdafx.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-28T02:09:01.424Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T02:09:01.424Z"
             },
             {
               "$type": "Document",

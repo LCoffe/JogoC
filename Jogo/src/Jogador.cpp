@@ -39,7 +39,6 @@ namespace Entidade {
 
 			void Jogador::atualizar() {
 				mover();
-				draw();
 			}
 		}
 	}

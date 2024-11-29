@@ -1,4 +1,17 @@
-﻿  Entidade.cpp
-  Inimigo.cpp
-  Gerando Código...
+﻿  Fase01.cpp
+C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\include\Lista.hpp(95,22): warning C4018: '>=': incompatibilidade de signed/unsigned
+  (compilando o arquivo fonte 'src/Fase01.cpp')
+      C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\include\Lista.hpp(95,22):
+      o contexto de instanciação do modelo (o mais antigo primeiro) é
+          C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\include\ListaEntidade.hpp(13,30):
+          consulte a referência à instanciação 'Lista::Lista<Entidade::Entidade>' do modelo da classe que está sendo compilada
+          C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\include\Lista.hpp(94,37):
+          ao compilar a função de membro 'TL *Lista::Lista<TL>::operator [](int)' do modelo da classe
+          with
+          [
+              TL=Entidade::Entidade
+          ]
+              C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\include\ListaEntidade.hpp(21,44):
+              veja a primeira referência a 'Lista::Lista<Entidade::Entidade>::operator []' em 'Lista::ListaEntidade::operator []'
+  
   Jogo.vcxproj -> C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\x64\Debug\Jogo.exe

@@ -59,6 +59,7 @@ namespace Fase {
 		pJogador = getJogador();
 		if (pJogador) {
 			pListaPersona->executar();
+			draw();
 		}
 	}
 }

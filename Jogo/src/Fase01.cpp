@@ -13,5 +13,7 @@ namespace Fase {
 
 		// Criar inimigos
 		criaPersonagem(sf::Vector2f(100, 100), IDs::IDs::inimigo);
+		criaPersonagem(sf::Vector2f(200, 200), IDs::IDs::inimigo);
+
 	}
 }

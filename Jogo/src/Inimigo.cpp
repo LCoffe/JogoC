@@ -67,7 +67,6 @@ namespace Entidade {
 
 			void Inimigo::atualizar() {
 				mover();
-				draw();
 			}
 		}
 	}
