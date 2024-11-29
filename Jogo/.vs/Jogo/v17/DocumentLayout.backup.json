@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Jogador.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|solutionrelative:src\\Jogador.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Fase01.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|solutionrelative:src\\Fase01.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\ListaEntidade.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|solutionrelative:src\\ListaEntidade.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Jogador.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|solutionrelative:src\\Jogador.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D8E113F6-BB66-44DD-AC69-5979E25167F1}|Jogo.vcxproj|C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Inimigo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -110,7 +110,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
@@ -122,8 +122,7 @@
               "RelativeToolTip": "src\\Entidade.cpp",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAsAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-28T23:44:05.837Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T23:44:05.837Z"
             },
             {
               "$type": "Document",
@@ -135,12 +134,11 @@
               "RelativeToolTip": "src\\Inimigo.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-28T01:15:03.558Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T01:15:03.558Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ListaEntidade.cpp",
               "DocumentMoniker": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\ListaEntidade.cpp",
               "RelativeDocumentMoniker": "src\\ListaEntidade.cpp",
@@ -148,8 +146,7 @@
               "RelativeToolTip": "src\\ListaEntidade.cpp",
               "ViewState": "AgIAABgAAAAAAAAAAAAAACcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-28T15:28:33.238Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T15:28:33.238Z"
             },
             {
               "$type": "Document",
@@ -161,12 +158,11 @@
               "RelativeToolTip": "src\\Principal.cpp",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAABoAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-27T22:07:28.828Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T22:07:28.828Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Fase01.cpp",
               "DocumentMoniker": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Fase01.cpp",
               "RelativeDocumentMoniker": "src\\Fase01.cpp",
@@ -174,12 +170,11 @@
               "RelativeToolTip": "src\\Fase01.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-29T05:38:55.977Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T05:38:55.977Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Fase.cpp",
               "DocumentMoniker": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Fase.cpp",
               "RelativeDocumentMoniker": "src\\Fase.cpp",
@@ -187,12 +182,11 @@
               "RelativeToolTip": "src\\Fase.cpp",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAD0AAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-29T03:38:33.795Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T03:38:33.795Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Jogador.cpp",
               "DocumentMoniker": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Jogador.cpp",
               "RelativeDocumentMoniker": "src\\Jogador.cpp",
@@ -213,8 +207,7 @@
               "RelativeToolTip": "src\\Personagem.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-27T23:58:34.26Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T23:58:34.26Z"
             },
             {
               "$type": "Document",

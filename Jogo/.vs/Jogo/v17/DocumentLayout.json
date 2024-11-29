@@ -122,8 +122,7 @@
               "RelativeToolTip": "src\\Entidade.cpp",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAsAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-28T23:44:05.837Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T23:44:05.837Z"
             },
             {
               "$type": "Document",
@@ -135,8 +134,7 @@
               "RelativeToolTip": "src\\Inimigo.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-28T01:15:03.558Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T01:15:03.558Z"
             },
             {
               "$type": "Document",
@@ -148,8 +146,7 @@
               "RelativeToolTip": "src\\ListaEntidade.cpp",
               "ViewState": "AgIAABgAAAAAAAAAAAAAACcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-28T15:28:33.238Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T15:28:33.238Z"
             },
             {
               "$type": "Document",
@@ -161,8 +158,7 @@
               "RelativeToolTip": "src\\Principal.cpp",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAABoAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-27T22:07:28.828Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T22:07:28.828Z"
             },
             {
               "$type": "Document",
@@ -174,8 +170,7 @@
               "RelativeToolTip": "src\\Fase01.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-29T05:38:55.977Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T05:38:55.977Z"
             },
             {
               "$type": "Document",
@@ -187,8 +182,7 @@
               "RelativeToolTip": "src\\Fase.cpp",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAD0AAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-29T03:38:33.795Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T03:38:33.795Z"
             },
             {
               "$type": "Document",
@@ -196,9 +190,9 @@
               "Title": "Jogador.cpp",
               "DocumentMoniker": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Jogador.cpp",
               "RelativeDocumentMoniker": "src\\Jogador.cpp",
-              "ToolTip": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Jogador.cpp",
-              "RelativeToolTip": "src\\Jogador.cpp",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACgAAAAMAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\GITHUB\\Jogo\\Jogo\\src\\Jogador.cpp*",
+              "RelativeToolTip": "src\\Jogador.cpp*",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAACgAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-27T23:56:27.152Z",
               "EditorCaption": ""
@@ -213,8 +207,7 @@
               "RelativeToolTip": "src\\Personagem.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-27T23:58:34.26Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T23:58:34.26Z"
             },
             {
               "$type": "Document",
