@@ -1,5 +1,14 @@
 #include "../include/Personagem.hpp"
 
-Personagem::Personagem(sf::Vector2f pos, sf::Vector2f tam, const string& path): Ente(pos, tam, path), velocidade(sf::Vector2f(0.1f, 0.1f)){}
+namespace Entidade {
+	namespace Personagem {
+		Personagem::Personagem(const sf::Vector2f pos, const sf::Vector2f tam, const float vel, const IDs::IDs ID) : 
+			Entidade(pos, tam, ID), velocidade(sf::Vector2f(vel, vel)) {}
 
-Personagem::~Personagem() {}
+		Personagem::~Personagem() {}
+
+		void Personagem::draw() {
+			pGG->drawElemento(corpo);
+		}
+	}
+}

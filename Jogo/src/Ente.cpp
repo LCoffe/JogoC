@@ -1,16 +1,13 @@
 #include "../include/Ente.hpp"
 
-Ente::Ente(sf::Vector2f pos, sf::Vector2f tam, const string& path): pos(pos), tam(tam){
-	this->setTam(tam);
-	this->setPos(pos);
-	this->setTexture(path);
+Ente::Ente(const IDs::IDs ID) : ID(ID) {
+	pGG = Gerenciador::GerenciadorGrafico::getGerGrafico();
 }
 
 Ente::~Ente() {}
 
-void Ente::setTexture(const string& path) {
-	if (!text.loadFromFile(path)) {
-		cout << "Erro ao carregar textura" << endl;
-	}
-	corpo.setTexture(&text);
+const string Ente::salvarEnte() { 
+	ostringstream ss; 
+	ss << "ID: " << static_cast<int>(ID) << std::endl;
+	return ss.str();
 }

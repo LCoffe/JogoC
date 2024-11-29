@@ -1,15 +1,17 @@
 #pragma once
 
 #include "../stdafx/stdafx.hpp"
+#include "../include/Fase01.hpp"
 #include "Jogador.hpp"
 #include "Inimigo.hpp"
 
+
 class Principal {
 private:
-	sf::RenderWindow window;
+	static Gerenciador::GerenciadorGrafico* pGG;
+	Fase::Fase01 fase;
 	sf::Event event;
-	Jogador jogador;
-	Inimigo inimigo;
+	
 public:
 	Principal();
 	~Principal();

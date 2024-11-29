@@ -1,28 +1,46 @@
 #include "../include/Jogador.hpp"
 
-Jogador::Jogador(sf::Vector2f pos, sf::Vector2f tam, const string& path): Personagem(pos, tam, path) {}
+namespace Entidade {
+	namespace Personagem {
+		namespace Jogador {
+			Jogador::Jogador(const sf::Vector2f pos) :
+				Personagem(pos, sf::Vector2f(TAM_JOGADOR_X, TAM_JOGADOR_Y), VELOCIDADE_JOGADOR, IDs::IDs::jogador) {
+			}
 
-Jogador::~Jogador() {}
+			Jogador::~Jogador() {}
 
-void Jogador::mover() {
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {  // W = cima
-		pos = corpo.getPosition();
-		pos.y -= velocidade.y;
-		corpo.setPosition(pos);
-	}
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) { // S = baixo
-		pos = corpo.getPosition();
-		pos.y += velocidade.y;
-		corpo.setPosition(pos);
-	}
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) { // A = esquerda
-		pos = corpo.getPosition();
-		pos.x -= velocidade.x;
-		corpo.setPosition(pos);
-	}
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) { // D = direita
-		pos = corpo.getPosition();
-		pos.x += velocidade.x;
-		corpo.setPosition(pos);
+			void Jogador::mover() {
+				pos = corpo.getPosition();
+				tam = corpo.getSize();
+				if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {  // W = cima
+					if (pos.y > 0.0f) {
+						corpo.move(0.0f, -velocidade.y);
+					}
+				}
+				if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) { // S = baixo
+					if ((pos.y + tam.y) < 768.0f) {
+						corpo.move(0.0f, velocidade.y);
+					}
+				}
+				if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) { // D = direita
+					if ((pos.x + tam.x) < 1366.0f) {
+						corpo.move(velocidade.x, 0.0f);
+					}
+				}
+				if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) { // A = esquerda
+					if (pos.x > 0.0f) {
+						corpo.move(-velocidade.x, 0.0f);
+					}
+				}
+			}
+			void Jogador::draw() {
+				pGG->drawElemento(corpo);
+			}
+
+			void Jogador::atualizar() {
+				mover();
+				draw();
+			}
+		}
 	}
 }

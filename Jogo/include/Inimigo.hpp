@@ -4,21 +4,30 @@
 #include "../include/Personagem.hpp"
 #include "../include/Jogador.hpp"
 
-class Inimigo : public Personagem {
-	private:
-		Jogador* pJog;
-		sf::RectangleShape visao;
-		sf::Vector2f posVisao;
-	public:
-		Inimigo(sf::Vector2f pos, sf::Vector2f tam, const string& path);
-		~Inimigo();
-		
-		void setJogador(Jogador* pJog) { this->pJog = pJog;}
+#define RAIO_VISAO_X 100.f
+#define RAIO_VISAO_Y 100.f
 
-		void setPosVisao(sf::Vector2f pos) { visao.setPosition(pos); }
-		const sf::Vector2f& getPosVisao() const { return visao.getPosition();}
+#define TAM_INIMIGO_X 50.0f
+#define TAM_INIMIGO_Y 50.0f
 
-		const sf::RectangleShape& getVisao() const { return visao; }
+#define VELOCIDADE_INIMIGO 0.01f
 
-		void procuraJogador();
-};
+namespace Entidade {
+	namespace Personagem {
+		namespace Inimigo {
+			class Inimigo : public Personagem {
+			private:
+				Jogador::Jogador* pJog;
+				bool sentidoMovi; // true = direita, false = esquerda
+			public:
+				Inimigo(const sf::Vector2f pos, Jogador::Jogador* pJ);
+				~Inimigo();
+				void setJogador(Jogador::Jogador* pJog) { this->pJog = pJog; }
+				bool procuraJogador();
+				void draw();
+				void mover();
+				void atualizar();
+			};
+		}
+	}
+}
