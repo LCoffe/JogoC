@@ -9,13 +9,14 @@ namespace Fase {
 
 	void Fase01::criarMapa() {
 		// Criar jogador
-		criaPersonagem(sf::Vector2f(50, 50), IDs::IDs::jogador);
+		criaPersonagem(sf::Vector2f(50, 768 - 101), IDs::IDs::jogador);
 
 		// Criar inimigos
-		criaPersonagem(sf::Vector2f(100, 100), IDs::IDs::inimigo);
-		criaPersonagem(sf::Vector2f(200, 200), IDs::IDs::inimigo);
+		criaPersonagem(sf::Vector2f(600, 768 - 101), IDs::IDs::inimigo);
+		criaPersonagem(sf::Vector2f(400, 768 - 101), IDs::IDs::inimigo);
 
 		// Criar plataformas
-		criaPlataforma(sf::Vector2f(1000, 768 - 100), sf::Vector2f(350, 100), IDs::IDs::plataforma);
+		criaPlataforma(sf::Vector2f(0, 768 - 100), sf::Vector2f(1366, 100), IDs::IDs::plataforma);
+		criaPlataforma(sf::Vector2f(800, 500), sf::Vector2f(100, 268), IDs::IDs::plataforma);
 	}
 }

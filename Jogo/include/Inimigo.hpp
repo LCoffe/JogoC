@@ -28,6 +28,8 @@ namespace Entidade {
 				void mover();
 				void atualizar();
 				void colisao(Entidade* ent, const sf::Vector2f diferenca);
+				bool getSentidoMovi() { return sentidoMovi; }
+				void setSentidoMovi(bool sentido) { sentidoMovi = sentido; }
 			};
 		}
 	}

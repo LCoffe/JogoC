@@ -14,25 +14,24 @@ namespace Entidade {
 				tam = corpo.getSize();
 				if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {  // W = cima
 					if (pos.y > 0.0f) {
-						corpo.move(0.0f, -velocidade.y);
+						corpo.move(0.0f, -velocidadeFinal.y);
 					}
 				}
 				if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) { // S = baixo
 					if ((pos.y + tam.y) < 768.0f) {
-						corpo.move(0.0f, velocidade.y);
+						corpo.move(0.0f, velocidadeFinal.y);
 					}
 				}
 				if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) { // D = direita
 					if ((pos.x + tam.x) < 1366.0f) {
-						corpo.move(velocidade.x, 0.0f);
+						corpo.move(velocidadeFinal.x, 0.0f);
 					}
 				}
 				if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) { // A = esquerda
 					if (pos.x > 0.0f) {
-						corpo.move(-velocidade.x, 0.0f);
+						corpo.move(-velocidadeFinal.x, 0.0f);
 					}
 				}
-				velocidade = sf::Vector2f(VELOCIDADE_JOGADOR, VELOCIDADE_JOGADOR);
 			}
 			void Jogador::draw() {
 				pGG->drawElemento(corpo);

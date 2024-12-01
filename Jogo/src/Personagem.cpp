@@ -3,7 +3,7 @@
 namespace Entidade {
 	namespace Personagem {
 		Personagem::Personagem(const sf::Vector2f pos, const sf::Vector2f tam, const float vel, const IDs::IDs ID) : 
-			Entidade(pos, tam, ID), velocidade(sf::Vector2f(vel, vel)) {}
+			Entidade(pos, tam, ID), velocidadeMax(vel), velocidadeFinal(sf::Vector2f(vel, vel)) {}
 
 		Personagem::~Personagem() {}
 

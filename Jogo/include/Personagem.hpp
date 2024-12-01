@@ -8,12 +8,13 @@ namespace Entidade {
 	namespace Personagem {
 		class Personagem : public Entidade {
 		protected:
-			sf::Vector2f velocidade;
+			float velocidadeMax;
+			sf::Vector2f velocidadeFinal;
 		public:
 			Personagem(const sf::Vector2f pos, const sf::Vector2f tam, const float vel, const IDs::IDs ID);
 			~Personagem();
-			void setVelocidade(sf::Vector2f vel) { velocidade = vel; }
-			const sf::Vector2f& getVelocidade() const { return velocidade; }
+			void setVelocidade(sf::Vector2f vel) { velocidadeFinal = vel; }
+			const sf::Vector2f& getVelocidade() const { return velocidadeFinal; }
 			virtual void draw();
 			virtual void mover() = 0;
 			virtual void atualizar() = 0;
