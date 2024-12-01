@@ -92,7 +92,7 @@ namespace Lista {
 	}
 	template<class TL>
 	TL* Lista<TL>::operator[](int pos) {
-		if (pos < 0 || pos >= tam) {
+		if (pos < 0 || static_cast<unsigned int>(pos) >= tam) {
 			cout << "Posicao invalida" << endl;
 			exit(1);
 		}

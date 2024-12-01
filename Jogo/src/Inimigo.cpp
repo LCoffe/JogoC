@@ -68,6 +68,25 @@ namespace Entidade {
 			void Inimigo::atualizar() {
 				mover();
 			}
+
+			void Inimigo::colisao(Entidade* ent, const sf::Vector2f diferenca) {
+				if (ent->getID() == IDs::IDs::jogador) {
+					cout << "achou jogador" << endl;
+				}
+				switch (ent->getID())
+				{
+					case IDs::IDs::jogador: {
+						cout << "Mamou!" << endl;
+					}
+					break;
+					case IDs::IDs::plataforma: {
+
+					}
+					break;
+					default:
+						break;
+				}
+			}
 		}
 	}
 }

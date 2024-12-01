@@ -6,5 +6,6 @@ namespace IDs {
 		jogador, // 1
 		inimigo,// 2
 		fase01, // 3
+		plataforma // 4
 	};
 }

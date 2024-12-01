@@ -142,7 +142,10 @@
     <ClCompile Include="src\Inimigo.cpp" />
     <ClCompile Include="src\Jogador.cpp" />
     <ClCompile Include="src\ListaEntidade.cpp" />
+    <ClCompile Include="src\Obstaculo.cpp" />
+    <ClCompile Include="src\GerenciadorColisoes.cpp" />
     <ClCompile Include="src\Personagem.cpp" />
+    <ClCompile Include="src\Plataforma.cpp" />
     <ClCompile Include="src\Principal.cpp" />
     <ClCompile Include="stdafx\stdafx.cpp" />
   </ItemGroup>
@@ -152,13 +155,16 @@
     <ClInclude Include="include\Entidade.hpp" />
     <ClInclude Include="include\Fase.hpp" />
     <ClInclude Include="include\Fase01.hpp" />
+    <ClInclude Include="include\GerenciadorColisoes.hpp" />
     <ClInclude Include="include\GerenciadorGrafico.hpp" />
     <ClInclude Include="include\IDs.hpp" />
     <ClInclude Include="include\Inimigo.hpp" />
     <ClInclude Include="include\Jogador.hpp" />
     <ClInclude Include="include\Lista.hpp" />
     <ClInclude Include="include\ListaEntidade.hpp" />
+    <ClInclude Include="include\Obstaculo.hpp" />
     <ClInclude Include="include\Personagem.hpp" />
+    <ClInclude Include="include\Plataforma.hpp" />
     <ClInclude Include="include\Principal.hpp" />
     <ClInclude Include="stdafx\stdafx.hpp" />
   </ItemGroup>

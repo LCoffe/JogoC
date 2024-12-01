@@ -4,8 +4,8 @@
 #include "../include/Personagem.hpp"
 #include "../include/Jogador.hpp"
 
-#define RAIO_VISAO_X 100.f
-#define RAIO_VISAO_Y 100.f
+#define RAIO_VISAO_X 200.f
+#define RAIO_VISAO_Y 200.f
 
 #define TAM_INIMIGO_X 50.0f
 #define TAM_INIMIGO_Y 50.0f
@@ -27,6 +27,7 @@ namespace Entidade {
 				void draw();
 				void mover();
 				void atualizar();
+				void colisao(Entidade* ent, const sf::Vector2f diferenca);
 			};
 		}
 	}

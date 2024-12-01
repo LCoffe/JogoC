@@ -22,9 +22,9 @@ namespace Entidade {
 
 		const sf::RectangleShape& getCorpo() const { return corpo; }
 
-		void setTexture(const sf::Texture* textura) { corpo.setTexture(textura); }
-
 		virtual void draw();
 		virtual void atualizar() = 0;
+
+		virtual void colisao(Entidade* ent, const sf::Vector2f) = 0;
 	};
 }

@@ -19,6 +19,7 @@ namespace Entidade {
 				void mover();
 				void draw();
 				void atualizar();
+				void colisao(Entidade* ent, const sf::Vector2f diferenca);
 			};
 		}
 	}

@@ -32,6 +32,7 @@ namespace Entidade {
 						corpo.move(-velocidade.x, 0.0f);
 					}
 				}
+				velocidade = sf::Vector2f(VELOCIDADE_JOGADOR, VELOCIDADE_JOGADOR);
 			}
 			void Jogador::draw() {
 				pGG->drawElemento(corpo);
@@ -39,6 +40,22 @@ namespace Entidade {
 
 			void Jogador::atualizar() {
 				mover();
+			}
+
+			void Jogador::colisao(Entidade* ent, const sf::Vector2f diferenca) {
+				switch (ent->getID())
+				{	
+					case IDs::IDs::inimigo: {
+						cout << "Ouch!!" << endl;
+					}
+					break;
+					case IDs::IDs::plataforma: {
+	
+					}
+					break;
+				default:
+					break;
+				}
 			}
 		}
 	}
