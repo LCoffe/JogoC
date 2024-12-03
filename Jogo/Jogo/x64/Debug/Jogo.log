@@ -1,9 +1,2 @@
-﻿  main.cpp
-  Fase.cpp
-  Fase01.cpp
-  Inimigo.cpp
-  Obstaculo.cpp
-  Plataforma.cpp
-  Principal.cpp
-  Gerando Código...
+﻿  ObserverJogador.cpp
   Jogo.vcxproj -> C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\x64\Debug\Jogo.exe
