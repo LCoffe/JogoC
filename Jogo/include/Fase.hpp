@@ -25,11 +25,13 @@ namespace Fase {
 
 			void criaPersonagem(const sf::Vector2f pos, const IDs::IDs ID);
 			void criaPlataforma(const sf::Vector2f pos, const sf::Vector2f tam, const IDs::IDs ID);
+			void criaLimite();
 		public:
 			Fase(IDs::IDs ID_Fase);
 			~Fase();
 			Entidade::Personagem::Jogador::Jogador* getJogador() { return pJogador; }
 			void draw();
-			void executar();
+			virtual void executar() = 0;
+			void gerenciarColisoes();
 	};
 }

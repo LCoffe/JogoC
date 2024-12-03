@@ -15,10 +15,10 @@ namespace Entidade {
 			if (diferenca.x < 0.0f && diferenca.y < 0.0f) { //houve colisao
 				if (diferenca.x > diferenca.y) {
 					if (personaPos.x < pos.x) { //colisao em x
-						personaPos.x += diferenca.x;
+						personaPos.x += diferenca.x; //colisao para a direita
 					}
 					else {
-						personaPos.x -= diferenca.x;
+						personaPos.x -= diferenca.x; //colisao para a esquerda
 					}
 				}
 				else {

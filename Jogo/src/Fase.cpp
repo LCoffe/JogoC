@@ -34,29 +34,22 @@ namespace Fase {
 	
 	void Fase::criaPersonagem(const sf::Vector2f pos, const IDs::IDs ID) {
 		Entidade::Entidade* personagem = nullptr;
-		Entidade::Personagem::Inimigo::Inimigo* pInimigo = nullptr;
-		switch (ID) {
-			case IDs::IDs::jogador:
-				pJogador = new Entidade::Personagem::Jogador::Jogador(pos);
-				if (pJogador == nullptr) {
-					cout << "Erro ao criar jogador" << endl;
-				}
-				personagem = static_cast<Entidade::Entidade*>(pJogador);
-				break;
-			case IDs::IDs::inimigo:
-				if (pJogador == nullptr) {
-					cout << "Erro ao criar inimigo, jogador nao foi criado" << endl;
-					break;
-				}
-				pInimigo = new Entidade::Personagem::Inimigo::Inimigo(pos, this->pJogador);
-				if (pInimigo == nullptr) {
-					cout << "Erro ao criar inimigo" << endl;
-					break;
-				}
-				personagem = static_cast<Entidade::Entidade*>(pInimigo);
-				break;
-			default:
-				break;
+		if (ID == IDs::IDs::jogador) {
+			pJogador = new Entidade::Personagem::Jogador::Jogador(pos);
+			if (pJogador == nullptr) {
+				cout << "Erro ao criar jogador" << endl;
+			}
+			personagem = static_cast<Entidade::Entidade*>(pJogador);
+		}
+		if(ID == IDs::IDs::inimigo){
+			if (pJogador == nullptr) {
+				cout << "Erro ao criar inimigo, jogador nao foi criado" << endl;
+			}
+			Entidade::Personagem::Inimigo::Inimigo* pInimigo = new Entidade::Personagem::Inimigo::Inimigo(pos, this->pJogador);
+			if (pInimigo == nullptr) {
+				cout << "Erro ao criar inimigo" << endl;
+			}
+			personagem = static_cast<Entidade::Entidade*>(pInimigo);
 		}
 		if (personagem != nullptr) {
 			pListaPersona->inserirEnt(personagem);
@@ -80,18 +73,39 @@ namespace Fase {
 		}
 	}
 
+	void Fase::criaLimite() {
+		Entidade::Entidade* entidade = nullptr;
+		Entidade::Obstaculos::Plataforma* limite = nullptr;
+		//Limite da Esquerda
+		limite = new Entidade::Obstaculos::Plataforma(sf::Vector2f(0.1 , 768), sf::Vector2f(1366, 110), IDs::IDs::plataforma);
+		limite->getCorpo().setFillColor(sf::Color::Transparent);
+		if (limite != nullptr) {
+			entidade = static_cast<Entidade::Entidade*>(limite);
+		}
+
+		if (entidade != nullptr) {
+			pListaObstaculo->inserirEnt(entidade);
+		}
+		limite = nullptr;
+		entidade = nullptr;
+		//Limite da Direita
+		limite = new Entidade::Obstaculos::Plataforma(sf::Vector2f(1366, 768), sf::Vector2f(1366, 110), IDs::IDs::plataforma);
+		limite->getCorpo().setFillColor(sf::Color::Transparent);
+		if (limite != nullptr) {
+			entidade = static_cast<Entidade::Entidade*>(limite);
+		}
+
+		if (entidade != nullptr) {
+			pListaObstaculo->inserirEnt(entidade);
+		}
+	}
+
+	void Fase::gerenciarColisoes() {
+		pGC->executar();
+	}
+
 	void Fase::draw() {
 		pListaPersona->drawEntidades();
 		pListaObstaculo->drawEntidades();
-	}
-
-	void Fase::executar() {
-		pJogador = getJogador();
-		if (pJogador) {
-			pListaPersona->executar();
-			pListaObstaculo->executar();
-			pGC->executar();
-			draw();
-		}
 	}
 }

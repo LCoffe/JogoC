@@ -1,5 +1,6 @@
 #include "../include/Principal.hpp"
 
+Gerenciador::GerenciadorEventos* Principal::pGE = Gerenciador::GerenciadorEventos::getGerenciadorEventos();
 Gerenciador::GerenciadorGrafico* Principal::pGG = Gerenciador::GerenciadorGrafico::getGerGrafico();
 
 Principal::Principal(): event(), fase() {
@@ -7,24 +8,19 @@ Principal::Principal(): event(), fase() {
 		cout << "Erro ao criar o Gerenciador Grafico" << endl;
 		exit(1);
 	}
+
+	if (pGE == nullptr) {
+		cout << "Erro ao criar o Gerenciador de Eventos" << endl;
+		exit(1);
+	}
 }
 
 Principal::~Principal(){}
 
 void Principal::executar() {
-	while(pGG->estaAberto()) {
-		while (pGG->getWindow()->pollEvent(event)) {
-			if (event.type == sf::Event::Closed) {
-				pGG->fechar();
-			}
-			if (event.type == sf::Event::KeyPressed) {
-				if (event.key.code == sf::Keyboard::Escape) {
-					pGG->fechar();
-				}
-			}
-		}
-
+	while (pGG->estaAberto()) {
 		pGG->limpar();
+		pGE->tratarEventos();
 		fase.executar();
 		pGG->mostrarElementos();
 	}

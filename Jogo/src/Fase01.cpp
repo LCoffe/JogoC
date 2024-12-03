@@ -3,11 +3,15 @@
 namespace Fase {
 	Fase01::Fase01(): Fase(IDs::IDs::fase01){
 		criarMapa();
+		executar();
 	}
 
 	Fase01::~Fase01() {}
 
 	void Fase01::criarMapa() {
+		// Cria limite
+		criaLimite();
+
 		// Criar jogador
 		criaPersonagem(sf::Vector2f(50, 768 - 101), IDs::IDs::jogador);
 
@@ -18,5 +22,15 @@ namespace Fase {
 		// Criar plataformas
 		criaPlataforma(sf::Vector2f(0, 768 - 100), sf::Vector2f(1366, 100), IDs::IDs::plataforma);
 		criaPlataforma(sf::Vector2f(800, 500), sf::Vector2f(100, 268), IDs::IDs::plataforma);
+	}
+
+	void Fase01::executar() {
+		pJogador = getJogador();
+		if (pJogador) {
+			pListaPersona->executar();
+			pListaObstaculo->executar();
+			gerenciarColisoes();
+			draw();
+		}
 	}
 }

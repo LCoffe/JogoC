@@ -12,6 +12,12 @@ namespace Gerenciador {
 		pListaObstaculo = nullptr;
 	}
 
+	const bool GerenciadorColisoes::verificaColisao(Entidade::Entidade* ent1, Entidade::Entidade* ent2) const {
+		sf::FloatRect r1 = static_cast<sf::FloatRect>(ent1->getCorpo().getGlobalBounds());
+		sf::FloatRect r2 = static_cast<sf::FloatRect>(ent2->getCorpo().getGlobalBounds());
+		return r1.intersects(r2);
+	}
+
 	const sf::Vector2f GerenciadorColisoes::calcColisao(Entidade::Entidade* ent1, Entidade::Entidade* ent2) {
 		sf::Vector2f p1 = ent1->getPos();
 		sf::Vector2f p2 = ent2->getPos();
@@ -33,32 +39,33 @@ namespace Gerenciador {
 		);
 	}
 
-	void GerenciadorColisoes::executar() {
-		int i = 0;
-		int j = 0;
-
-		//verifica colisao entre personagem e personagem
-		for (i = 0; i < pListaPersonagem->getTamanho(); i++) { 
+	void GerenciadorColisoes::tratarColisaoJogInimigo() {
+		for (int i = 0; i < pListaPersonagem->getTamanho(); i++) {
 			Entidade::Entidade* ent1 = pListaPersonagem->operator[](i);
-			for (j = i + 1; j < pListaPersonagem->getTamanho(); j++) { //retira jogador do segundo loop.
+			for (int j = i + 1; j < pListaPersonagem->getTamanho(); j++) { //retira jogador do segundo loop.
 				Entidade::Entidade* ent2 = pListaPersonagem->operator[](j);
-				sf::Vector2f diferenca = calcColisao(ent1, ent2);
-				if (diferenca.x < 0.0f && diferenca.y < 0.0f) {
-					ent1->colisao(ent2, diferenca);
+				if (verificaColisao(ent1, ent2)) { //verifica se as entidades colidiram.
+					sf::Vector2f diferenca = calcColisao(ent1, ent2);
+					ent1->colisao(ent2, diferenca); //caso sim chama a funcao colisao.
 				}
 			}
 		}
+	}
 
-		//verifica colisao entre personagem e obstaculo
-		for (i = 0; i < pListaPersonagem->getTamanho(); i++) {
+	void GerenciadorColisoes::tratarColisaoJogObst() {
+		for (int i = 0; i < pListaPersonagem->getTamanho(); i++) {
 			Entidade::Entidade* ent1 = pListaPersonagem->operator[](i);
-			for (j = 0; j < pListaObstaculo->getTamanho(); j++) {
+			for (int j = 0; j < pListaObstaculo->getTamanho(); j++) { 
 				Entidade::Entidade* ent2 = pListaObstaculo->operator[](j);
-				sf::Vector2f diferenca = calcColisao(ent1, ent2);
-				if (diferenca.x < 0.0f && diferenca.y < 0.0f) {
-					ent2->colisao(ent1, diferenca);
+				if (verificaColisao(ent1, ent2)) { //verifica se as entidades colidiram.
+					sf::Vector2f diferenca = calcColisao(ent1, ent2);
+					ent2->colisao(ent1, diferenca); //caso sim chama a funcao colisao.
 				}
 			}
 		}
+	}
+	void GerenciadorColisoes::executar() {
+		tratarColisaoJogInimigo();
+		tratarColisaoJogObst();
 	}
 }

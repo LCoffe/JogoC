@@ -20,7 +20,7 @@ namespace Entidade {
 		void setPos(sf::Vector2f pos) { corpo.setPosition(pos); }
 		const sf::Vector2f& getPos() const { return corpo.getPosition(); }
 
-		const sf::RectangleShape& getCorpo() const { return corpo; }
+		sf::RectangleShape& getCorpo(){ return corpo; }
 
 		virtual void draw();
 		virtual void atualizar() = 0;

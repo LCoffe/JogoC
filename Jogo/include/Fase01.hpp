@@ -8,5 +8,7 @@ namespace Fase {
 		public:
 			Fase01();
 			~Fase01();
+
+			void executar();
 	};
 }
