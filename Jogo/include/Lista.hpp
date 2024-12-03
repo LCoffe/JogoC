@@ -1,27 +1,43 @@
 #pragma once
 
-#include "Elemento.hpp"
+
+#include <iostream>
 
 using namespace std;
 
 namespace Lista {
 	template<class TL>
 	class Lista {
-	private:
-		Elemento<TL>* pInicio;
-		Elemento<TL>* pFim;
-		unsigned int tam; // Tamanho da lista (nao precisa ter sinal)
-	public:
-		Lista();
-		~Lista();
-		void inserir(TL* elemento);
-		void remover(TL* elemento);
-		TL* buscar(const TL* elemento) const;
-		int getTamanho() const { return static_cast<int>(tam); }
-		void limpar();
-		void operator++() { tam++; }
-		void operator--() { tam--; }
-		TL* operator[](int pos);
+		public:
+			//Classe Elemento aninhada na classe Lista
+			template<class TE>
+			class Elemento {
+			private:
+				TE* elemento;
+				Elemento<TE>* prox;
+			public:
+				Elemento() { prox = nullptr; elemento = nullptr; }
+				~Elemento() { prox = nullptr; elemento = nullptr; }
+				void setElemento(TE* elemento) { this->elemento = elemento; }
+				void setProx(Elemento<TE>* prox) { this->prox = prox; }
+				Elemento<TE>* getProx() const { return prox; }
+				TE* getElemento() const { return elemento; }
+			};
+		private:
+			Elemento<TL>* pInicio;
+			Elemento<TL>* pFim;
+			unsigned int tam; // Tamanho da lista (nao precisa ter sinal)
+		public:
+			Lista();
+			~Lista();
+			void inserir(TL* elemento);
+			void remover(TL* elemento);
+			TL* buscar(const TL* elemento) const;
+			int getTamanho() const { return static_cast<int>(tam); }
+			void limpar();
+			void operator++() { tam++; }
+			void operator--() { tam--; }
+			TL* operator[](int pos);
 	};
 	template<class TL>
 	Lista<TL>::Lista() : pInicio(nullptr), pFim(nullptr), tam(0) {}
