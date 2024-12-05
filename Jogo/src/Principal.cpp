@@ -3,7 +3,7 @@
 Gerenciador::GerenciadorEventos* Principal::pGE = Gerenciador::GerenciadorEventos::getGerenciadorEventos();
 Gerenciador::GerenciadorGrafico* Principal::pGG = Gerenciador::GerenciadorGrafico::getGerGrafico();
 
-Principal::Principal(): event(), fase() {
+Principal::Principal(): evento(), fase() {
 	if (pGG == nullptr) {
 		cout << "Erro ao criar o Gerenciador Grafico" << endl;
 		exit(1);

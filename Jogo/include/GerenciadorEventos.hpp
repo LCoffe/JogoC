@@ -3,26 +3,26 @@
 #include <SFML/Graphics.hpp>
 #include "../include/GerenciadorGrafico.hpp"
 
-namespace Subject {
-	class Subject;
+namespace Observado {
+	class Observado;
 }
 
 namespace Gerenciador {
 	class GerenciadorEventos {
 		private:
-			sf::Event event;
+			sf::Event evento;
 			
 			static GerenciadorEventos* pGerenciadorEventos; //Singleton
 			static GerenciadorGrafico* pGG;
-			static Subject::Subject* pSubject;
+			static Observado::Observado* pObservado;
 			GerenciadorEventos();
 		public:
 			~GerenciadorEventos();
 			static GerenciadorEventos* getGerenciadorEventos();
 			void tratarEventoJanela();
-			void tratarKeyPressed();
-			void tratarKeyReleased();
+			void tratarTeclaPressionada();
+			void tratarTeclaUnica();
 			void tratarEventos();
-			const sf::Event getEvent() const;
+			const sf::Event getEvento() const;
 	};
 }

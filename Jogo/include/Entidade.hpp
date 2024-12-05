@@ -1,8 +1,6 @@
 #pragma once
 
-#include "../stdafx/stdafx.hpp"
 #include "../include/Ente.hpp"
-
 
 namespace Entidade {
 	class Entidade: public Ente {
@@ -22,7 +20,7 @@ namespace Entidade {
 
 		sf::RectangleShape& getCorpo(){ return corpo; }
 
-		virtual void draw();
+		virtual void desenhar();
 		virtual void atualizar() = 0;
 
 		virtual void colisao(Entidade* ent, const sf::Vector2f) = 0;

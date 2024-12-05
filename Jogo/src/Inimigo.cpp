@@ -6,7 +6,7 @@ namespace Entidade {
 	namespace Personagem {
 		namespace Inimigo {
 			Inimigo::Inimigo(const sf::Vector2f pos, Jogador::Jogador* pJ) :
-				Personagem(pos, sf::Vector2f(TAM_INIMIGO_X, TAM_INIMIGO_Y), VELOCIDADE_INIMIGO, IDs::IDs::inimigo), pJog(pJ), sentidoMovi(true) {
+				Personagem(pos, sf::Vector2f(TAM_INIMIGO_X, TAM_INIMIGO_Y), VELOCIDADE_INIMIGO, IDs::IDs::inimigo), pJog(pJ){
 			}
 
 			Inimigo::~Inimigo() { pJog = nullptr; }
@@ -27,34 +27,32 @@ namespace Entidade {
 					sf::Vector2f posJog = pJog->getPos();
 					sf::Vector2f posInim = getPos();
 					sf::Vector2f tamInim = getTam();
-					sf::Vector2f vel = getVelocidade();
 					if (posJog.x - posInim.x > 0.0f) {
-						corpo.move(vel.x, 0.0f);
-						sentidoMovi = true; // direita
+						direcao = true;
+						andar(direcao); // direita
 					}
 					else {
-						corpo.move(-vel.x, 0.0f);
-						sentidoMovi = false; // esquerda
+						direcao = false;
+						andar(direcao); // esquerda
 					}
 				}
 				else { // movimento "aleatorio", se nao achou jogador segue em uma linha reta até chegar em um limite.
-					sf::Vector2f vel = getVelocidade();
-					sf::Vector2f posInim = getPos();
-					if (sentidoMovi) {
-						corpo.move(vel.x, 0.0f);
+					if (direcao) {
+						andar(true);
 					}
 					else {
-						corpo.move(-vel.x, 0.0f);
+						andar(false);
 					}
 				}
 			}
 
-			void Inimigo::draw() {
-				pGG->drawElemento(corpo);
+			void Inimigo::desenhar() {
+				pGG->desenharElemento(corpo);
 			}
 
 			void Inimigo::atualizar() {
 				mover();
+				atualizarPosicao();
 			}
 
 			void Inimigo::colisao(Entidade* ent, const sf::Vector2f diferenca) {

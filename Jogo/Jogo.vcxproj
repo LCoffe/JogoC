@@ -143,14 +143,14 @@
     <ClCompile Include="src\Inimigo.cpp" />
     <ClCompile Include="src\Jogador.cpp" />
     <ClCompile Include="src\ListaEntidade.cpp" />
-    <ClCompile Include="src\Observer.cpp" />
-    <ClCompile Include="src\ObserverJogador.cpp" />
+    <ClCompile Include="src\Observador.cpp" />
+    <ClCompile Include="src\ObservadorJogador.cpp" />
     <ClCompile Include="src\Obstaculo.cpp" />
     <ClCompile Include="src\GerenciadorColisoes.cpp" />
     <ClCompile Include="src\Personagem.cpp" />
     <ClCompile Include="src\Plataforma.cpp" />
     <ClCompile Include="src\Principal.cpp" />
-    <ClCompile Include="src\Subject.cpp" />
+    <ClCompile Include="src\Observado.cpp" />
     <ClCompile Include="stdafx\stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -166,13 +166,13 @@
     <ClInclude Include="include\Jogador.hpp" />
     <ClInclude Include="include\Lista.hpp" />
     <ClInclude Include="include\ListaEntidade.hpp" />
-    <ClInclude Include="include\Observer.hpp" />
-    <ClInclude Include="include\ObserverJogador.hpp" />
+    <ClInclude Include="include\Observador.hpp" />
+    <ClInclude Include="include\ObservadorJogador.hpp" />
     <ClInclude Include="include\Obstaculo.hpp" />
     <ClInclude Include="include\Personagem.hpp" />
     <ClInclude Include="include\Plataforma.hpp" />
     <ClInclude Include="include\Principal.hpp" />
-    <ClInclude Include="include\Subject.hpp" />
+    <ClInclude Include="include\Observado.hpp" />
     <ClInclude Include="stdafx\stdafx.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

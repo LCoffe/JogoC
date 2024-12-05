@@ -30,7 +30,7 @@ namespace Fase {
 			Fase(IDs::IDs ID_Fase);
 			~Fase();
 			Entidade::Personagem::Jogador::Jogador* getJogador() { return pJogador; }
-			void draw();
+			void desenhar();
 			virtual void executar() = 0;
 			void gerenciarColisoes();
 	};

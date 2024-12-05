@@ -1,22 +1,22 @@
 #include "../include/GerenciadorEventos.hpp"
-#include "../include/Subject.hpp"
+#include "../include/Observado.hpp"
 
 #include <iostream>
 
 using namespace std;
 
 namespace Gerenciador {
-	Subject::Subject* GerenciadorEventos::pSubject = Subject::Subject::getSubject();
+	Observado::Observado* GerenciadorEventos::pObservado = Observado::Observado::getObservado();
 	GerenciadorEventos* GerenciadorEventos::pGerenciadorEventos = nullptr;
 	GerenciadorGrafico* GerenciadorEventos::pGG = GerenciadorGrafico::getGerGrafico();
 
-	GerenciadorEventos::GerenciadorEventos(): event() {
+	GerenciadorEventos::GerenciadorEventos(): evento() {
 		if (pGG == nullptr) {
 			cout << "Erro ao criar gerenciador de eventos : gerenciador grafico nao foi criado" << endl;
 			exit(1);
 		}
 		
-		if (pSubject == nullptr) {
+		if (pObservado == nullptr) {
 			cout << "Erro ao criar gerenciador de eventos : subject nao foi criado" << endl;
 			exit(1);
 		}
@@ -25,7 +25,7 @@ namespace Gerenciador {
 	GerenciadorEventos::~GerenciadorEventos() {
 		pGG = nullptr;
 		pGerenciadorEventos = nullptr;
-		pSubject = nullptr;
+		pObservado = nullptr;
 	}
 
 	GerenciadorEventos* GerenciadorEventos::getGerenciadorEventos() {
@@ -40,44 +40,44 @@ namespace Gerenciador {
 		pGG->fechar();
 	}
 
-	void GerenciadorEventos::tratarKeyReleased() {
-		if (event.key.code == sf::Keyboard::A) {
-			pSubject->notifyKeyReleased(event.key.code);
+	void GerenciadorEventos::tratarTeclaUnica() {
+		if (evento.key.code == sf::Keyboard::A) {
+			pObservado->notificaTeclaUnica(evento.key.code);
 		}
-		if (event.key.code == sf::Keyboard::D) {
-			pSubject->notifyKeyReleased(event.key.code);
+		if (evento.key.code == sf::Keyboard::D) {
+			pObservado->notificaTeclaUnica(evento.key.code);
 		}
 	}
 
-	void GerenciadorEventos::tratarKeyPressed() {
-		if (event.key.code == sf::Keyboard::W) {
-			pSubject->notifyKeyPressed(event.key.code);
+	void GerenciadorEventos::tratarTeclaPressionada() {
+		if (evento.key.code == sf::Keyboard::W) {
+			pObservado->notificaTeclaPressionada(evento.key.code);
 		}
-		if (event.key.code == sf::Keyboard::A) {
-			pSubject->notifyKeyPressed(event.key.code);
+		if (evento.key.code == sf::Keyboard::A) {
+			pObservado->notificaTeclaPressionada(evento.key.code);
 		}
-		if (event.key.code == sf::Keyboard::D) {
-			pSubject->notifyKeyPressed(event.key.code);
+		if (evento.key.code == sf::Keyboard::D) {
+			pObservado->notificaTeclaPressionada(evento.key.code);
 		}
-		if (event.key.code == sf::Keyboard::Escape) {
+		if (evento.key.code == sf::Keyboard::Escape) {
 			tratarEventoJanela();
 		}
 	}	
 
-	const sf::Event GerenciadorEventos::getEvent() const {
-		return event;
+	const sf::Event GerenciadorEventos::getEvento() const {
+		return evento;
 	}
 
 	void GerenciadorEventos::tratarEventos() {
-		while (pGG->getWindow()->pollEvent(event)) {
-			if (event.type == sf::Event::Closed) {
+		while (pGG->getJanela()->pollEvent(evento)) {
+			if (evento.type == sf::Event::Closed) {
 				tratarEventoJanela();
 			}
-			if (event.type == sf::Event::KeyPressed) {
-				tratarKeyPressed();
+			if (evento.type == sf::Event::KeyPressed) {
+				tratarTeclaPressionada();
 			}
-			if (event.type == sf::Event::KeyReleased) {
-				tratarKeyReleased();
+			if (evento.type == sf::Event::KeyReleased) {
+				tratarTeclaUnica();
 			}
 		}
 	}

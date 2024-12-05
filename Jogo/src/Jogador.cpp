@@ -1,37 +1,31 @@
 #include "../include/Jogador.hpp"
-#include "../include/ObserverJogador.hpp"
+#include "../include/ObservadorJogador.hpp"
 
 namespace Entidade {
 	namespace Personagem {
 		namespace Jogador {
 			Jogador::Jogador(sf::Vector2f pos) :
 			Personagem(pos, sf::Vector2f(TAM_JOGADOR_X, TAM_JOGADOR_Y), VELOCIDADE_JOGADOR, IDs::IDs::jogador),
-			pObs(new Subject::Observer::ObserverJogador(this)), direcao(true){
+			pObs(new Observado::Observador::ObservadorJogador(this)){
 				
 			}
 
 			Jogador::~Jogador() {}
 
-			void Jogador::mover() {
-				if (direcao) { //direita
-					corpo.move(velocidadeFinal.x, 0.0f);
-				}
-				else { //esquerda
-					corpo.move(-velocidadeFinal.x, 0.0f);
-				}
-			}
-
 			void Jogador::pular() {
-				corpo.move(0.0f, -velocidadeFinal.y);
-
+				if (colisaoChao) {
+					velocidadeFinal.y = -sqrt(0.2f * GRAVIDADE * ALTURA_PULO);
+					colisaoChao = false;
+					cout << "pulou" << endl;
+				}
 			}
 
-			void Jogador::draw() {
-				pGG->drawElemento(corpo);
+			void Jogador::desenhar() {
+				pGG->desenharElemento(corpo);
 			}
 
 			void Jogador::atualizar() {
-				
+				atualizarPosicao();
 			}
 
 			void Jogador::colisao(Entidade* ent, const sf::Vector2f diferenca) {
@@ -42,7 +36,7 @@ namespace Entidade {
 					}
 					break;
 					case IDs::IDs::plataforma: {
-	
+		
 					}
 					break;
 				default:

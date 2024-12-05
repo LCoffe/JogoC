@@ -8,21 +8,21 @@
 namespace Gerenciador {
 	class GerenciadorGrafico {
 		private:
-			sf::RenderWindow* window;
+			sf::RenderWindow* janela;
 			sf::Clock relogio;
 			static float tempo;
 
 			//contrutora privada para evitar instanciamento
-			static GerenciadorGrafico* pGrafico;
+			static GerenciadorGrafico* pGG;
 			GerenciadorGrafico();
 		public:
 			~GerenciadorGrafico();
 			static GerenciadorGrafico* getGerGrafico();
-			void setWindow(sf::RenderWindow* window);
-			sf::Texture* includeTexture(const string& path);
-			sf::RenderWindow* getWindow() { return window; }
-			const sf::Vector2f getTamWindow() const ;
-			void drawElemento(sf::RectangleShape corpo);
+			void setJanela(sf::RenderWindow* janela);
+			sf::Texture* incluirTextura(const string& caminho);
+			sf::RenderWindow* getJanela() { return janela; }
+			const sf::Vector2f getTamJanela() const ;
+			void desenharElemento(sf::RectangleShape corpo);
 			void mostrarElementos();
 			void limpar();
 			void fechar();

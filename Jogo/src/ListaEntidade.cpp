@@ -21,9 +21,9 @@ namespace Lista {
 
 	void ListaEntidade::limparLista() { objListaEntidade.limpar(); }
 
-	void ListaEntidade::drawEntidades() {
+	void ListaEntidade::desenharEntidades() {
 		for (int i = 0; i < objListaEntidade.getTamanho(); i++) {
-			objListaEntidade[i]->draw();
+			objListaEntidade[i]->desenhar();
 		}
 	}
 

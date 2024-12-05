@@ -46,7 +46,7 @@ namespace Gerenciador {
 				Entidade::Entidade* ent2 = pListaPersonagem->operator[](j);
 				if (verificaColisao(ent1, ent2)) { //verifica se as entidades colidiram.
 					sf::Vector2f diferenca = calcColisao(ent1, ent2);
-					ent1->colisao(ent2, diferenca); //caso sim chama a funcao colisao.
+					ent1->colisao(ent2, diferenca); //caso sim chama a funcao colisao.]
 				}
 			}
 		}
@@ -65,7 +65,7 @@ namespace Gerenciador {
 		}
 	}
 	void GerenciadorColisoes::executar() {
-		tratarColisaoJogInimigo();
 		tratarColisaoJogObst();
+		tratarColisaoJogInimigo();
 	}
 }

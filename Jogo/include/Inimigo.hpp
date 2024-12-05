@@ -10,7 +10,7 @@
 #define TAM_INIMIGO_X 50.0f
 #define TAM_INIMIGO_Y 50.0f
 
-#define VELOCIDADE_INIMIGO 0.01f
+#define VELOCIDADE_INIMIGO 15000.0f
 
 namespace Entidade {
 	namespace Personagem {
@@ -18,18 +18,15 @@ namespace Entidade {
 			class Inimigo : public Personagem {
 			private:
 				Jogador::Jogador* pJog;
-				bool sentidoMovi; // true = direita, false = esquerda
 			public:
 				Inimigo(const sf::Vector2f pos, Jogador::Jogador* pJ);
 				~Inimigo();
 				void setJogador(Jogador::Jogador* pJog) { this->pJog = pJog; }
 				bool procuraJogador();
-				void draw();
+				void desenhar();
 				void mover();
 				void atualizar();
 				void colisao(Entidade* ent, const sf::Vector2f diferenca);
-				bool getSentidoMovi() { return sentidoMovi; }
-				void setSentidoMovi(bool sentido) { sentidoMovi = sentido; }
 			};
 		}
 	}

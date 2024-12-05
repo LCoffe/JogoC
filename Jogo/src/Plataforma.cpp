@@ -10,8 +10,8 @@ namespace Entidade {
 
 		Plataforma::~Plataforma() {}
 
-		void Plataforma::draw() {
-			pGG->drawElemento(corpo);
+		void Plataforma::desenhar() {
+			pGG->desenharElemento(corpo);
 		}
 
 		void Plataforma::atualizar(){}
@@ -23,12 +23,11 @@ namespace Entidade {
 			else if (ent->getID() == IDs::IDs::inimigo) {
 				Personagem::Personagem* pp = dynamic_cast<Personagem::Personagem*>(ent);
 				colisaoObs(pp, diferenca);
-				Personagem::Inimigo::Inimigo* inimigo = dynamic_cast<Personagem::Inimigo::Inimigo*>(pp);
-				if (inimigo->getPos().x < pos.x && inimigo->getSentidoMovi()) { //se a plataforma estiver a direita do inimigo e ele estiver indo para a direita
-					inimigo->setSentidoMovi(false);
+				if (pp->getPos().x < pos.x && pp->getDirecao()) { //se a plataforma estiver a direita do inimigo e ele estiver indo para a direita
+					pp->setDirecao(false);
 				}
-				else if (inimigo->getPos().x < pos.x && !inimigo->getSentidoMovi()) { //se a plataforma estiver a esquerda do inimigo e ele estiver indo para a esquerda
-					inimigo->setSentidoMovi(true);
+				else if (pp->getPos().x < pos.x && !pp->getDirecao()) { //se a plataforma estiver a esquerda do inimigo e ele estiver indo para a esquerda
+					pp->setDirecao(true);
 				}
 			}
 		}

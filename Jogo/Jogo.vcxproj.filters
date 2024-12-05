@@ -63,13 +63,13 @@
     <ClCompile Include="src\GerenciadorEventos.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
-    <ClCompile Include="src\Subject.cpp">
+    <ClCompile Include="src\Observado.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
-    <ClCompile Include="src\Observer.cpp">
+    <ClCompile Include="src\Observador.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
-    <ClCompile Include="src\ObserverJogador.cpp">
+    <ClCompile Include="src\ObservadorJogador.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
   </ItemGroup>
@@ -125,13 +125,13 @@
     <ClInclude Include="include\GerenciadorEventos.hpp">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
-    <ClInclude Include="include\Subject.hpp">
+    <ClInclude Include="include\Observado.hpp">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
-    <ClInclude Include="include\Observer.hpp">
+    <ClInclude Include="include\Observador.hpp">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
-    <ClInclude Include="include\ObserverJogador.hpp">
+    <ClInclude Include="include\ObservadorJogador.hpp">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
   </ItemGroup>

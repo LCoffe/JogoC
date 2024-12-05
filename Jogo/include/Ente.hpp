@@ -14,5 +14,5 @@ class Ente {
 		Ente(const IDs::IDs ID);
 		virtual ~Ente() = 0;
 		const IDs::IDs getID() const { return ID; }
-		virtual void draw() = 0;
+		virtual void desenhar() = 0;
 };

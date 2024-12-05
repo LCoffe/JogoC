@@ -13,7 +13,7 @@ namespace Fase {
 		criaLimite();
 
 		// Criar jogador
-		criaPersonagem(sf::Vector2f(50, 768 - 101), IDs::IDs::jogador);
+		criaPersonagem(sf::Vector2f(50, 350), IDs::IDs::jogador);
 
 		// Criar inimigos
 		criaPersonagem(sf::Vector2f(600, 768 - 101), IDs::IDs::inimigo);
@@ -30,7 +30,7 @@ namespace Fase {
 			pListaPersona->executar();
 			pListaObstaculo->executar();
 			gerenciarColisoes();
-			draw();
+			desenhar();
 		}
 	}
 }

@@ -77,7 +77,7 @@ namespace Fase {
 		Entidade::Entidade* entidade = nullptr;
 		Entidade::Obstaculos::Plataforma* limite = nullptr;
 		//Limite da Esquerda
-		limite = new Entidade::Obstaculos::Plataforma(sf::Vector2f(0.1 , 768), sf::Vector2f(1366, 110), IDs::IDs::plataforma);
+		limite = new Entidade::Obstaculos::Plataforma(sf::Vector2f(0.1f , 768.0f), sf::Vector2f(1366.0f, 110.0f), IDs::IDs::plataforma);
 		limite->getCorpo().setFillColor(sf::Color::Transparent);
 		if (limite != nullptr) {
 			entidade = static_cast<Entidade::Entidade*>(limite);
@@ -89,7 +89,7 @@ namespace Fase {
 		limite = nullptr;
 		entidade = nullptr;
 		//Limite da Direita
-		limite = new Entidade::Obstaculos::Plataforma(sf::Vector2f(1366, 768), sf::Vector2f(1366, 110), IDs::IDs::plataforma);
+		limite = new Entidade::Obstaculos::Plataforma(sf::Vector2f(1366.0f, 768.0f), sf::Vector2f(1366.0f, 110.0f), IDs::IDs::plataforma);
 		limite->getCorpo().setFillColor(sf::Color::Transparent);
 		if (limite != nullptr) {
 			entidade = static_cast<Entidade::Entidade*>(limite);
@@ -104,8 +104,8 @@ namespace Fase {
 		pGC->executar();
 	}
 
-	void Fase::draw() {
-		pListaPersona->drawEntidades();
-		pListaObstaculo->drawEntidades();
+	void Fase::desenhar() {
+		pListaPersona->desenharEntidades();
+		pListaObstaculo->desenharEntidades();
 	}
 }

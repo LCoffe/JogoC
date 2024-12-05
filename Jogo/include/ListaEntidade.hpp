@@ -21,7 +21,7 @@ namespace Lista {
 			Entidade::Entidade* operator[](int i) { return objListaEntidade[i]; }
 			std::vector<Entidade::Entidade*> getEntidades(IDs::IDs ID);
 			void limparLista();
-			void drawEntidades();
+			void desenharEntidades();
 			void executar();
 	};
 }

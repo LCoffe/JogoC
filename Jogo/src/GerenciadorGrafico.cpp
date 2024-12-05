@@ -1,64 +1,65 @@
 #include "../include/GerenciadorGrafico.hpp"
 
 namespace Gerenciador{
-	GerenciadorGrafico* GerenciadorGrafico::pGrafico = nullptr;
+	GerenciadorGrafico* GerenciadorGrafico::pGG = nullptr;
 	float GerenciadorGrafico::tempo = 0.0f;
 
 	GerenciadorGrafico::GerenciadorGrafico():
-		window(new sf::RenderWindow(sf::VideoMode(TELA_X, TELA_Y), "Jogo")), relogio()
+		janela(new sf::RenderWindow(sf::VideoMode(TELA_X, TELA_Y), "Jogo")), relogio()
 	{
-		if (window == nullptr) {
+		if (janela == nullptr) {
 			std::cerr << "Erro ao criar a janela" << std::endl;
 			exit(1);
 		}
+		janela->setFramerateLimit(60);
 	}
 
 	GerenciadorGrafico::~GerenciadorGrafico() {}
 
 	GerenciadorGrafico* GerenciadorGrafico::getGerGrafico() {
 		//Garante que eu tenha apenas uma instancia do gerenciador grafico.
-		if (pGrafico == nullptr) {
-			pGrafico = new GerenciadorGrafico();
+		if (pGG == nullptr) {
+			pGG = new GerenciadorGrafico();
 		}
-		return pGrafico;
+		return pGG;
 	}
 
-	sf::Texture* GerenciadorGrafico::includeTexture(const string& path) {
+	sf::Texture* GerenciadorGrafico::incluirTextura(const string& caminho) {
 		sf::Texture* text = new sf::Texture();
-		if (!text->loadFromFile(path)) {
+		if (!text->loadFromFile(caminho)) {
 			std::cerr << "Erro ao carregar textura" << std::endl;
 			exit(1);
 		}
 		return text;
 	}
 
-	void GerenciadorGrafico::setWindow(sf::RenderWindow* window) {
-		this->window = window;
+	void GerenciadorGrafico::setJanela(sf::RenderWindow* janela) {
+		this->janela = janela;
 	}
 
-	const sf::Vector2f GerenciadorGrafico::getTamWindow() const {
-		return static_cast<sf::Vector2f>(window->getSize());
+	const sf::Vector2f GerenciadorGrafico::getTamJanela() const {
+		return static_cast<sf::Vector2f>(janela->getSize());
 	}
 
-	void GerenciadorGrafico::drawElemento(sf::RectangleShape corpo) {
-		window->draw(corpo);
+	void GerenciadorGrafico::desenharElemento(sf::RectangleShape corpo) {
+		janela->draw(corpo);
 	}
 
 	void GerenciadorGrafico::mostrarElementos() {
-		window->display();
+		janela->display();
 	}
 
 	void GerenciadorGrafico::limpar() {
-		window->clear();
+		janela->clear();
 	}
 
 	const bool GerenciadorGrafico::estaAberto() {
-		return window->isOpen();
+		return janela->isOpen();
 	}
 
 	void GerenciadorGrafico::fechar() {
 		if (estaAberto()) {
-			window->close();
+			janela->close();
 		}
 	}
 
@@ -66,5 +67,4 @@ namespace Gerenciador{
 		tempo = relogio.getElapsedTime().asSeconds();
 		relogio.restart();
 	}
-
 }

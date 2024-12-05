@@ -6,10 +6,10 @@ constexpr auto PATH_INIMIGO = ".\\assets\\athenasoldier.png";
 namespace Entidade {
 	Entidade::Entidade(sf::Vector2f pos, sf::Vector2f tam, const IDs::IDs ID) : Ente(ID), pos(pos), tam(tam){
 		if (ID == IDs::IDs::jogador) {
-			corpo.setTexture(pGG->includeTexture(PATH_JOGADOR));
+			corpo.setTexture(pGG->incluirTextura(PATH_JOGADOR));
 		}
 		else if (ID == IDs::IDs::inimigo) {
-			corpo.setTexture(pGG->includeTexture(PATH_INIMIGO));
+			corpo.setTexture(pGG->incluirTextura(PATH_INIMIGO));
 		}
 		else {
 			corpo.setFillColor(sf::Color::White);
@@ -20,7 +20,7 @@ namespace Entidade {
 
 	Entidade::~Entidade() {}
 
-	void Entidade::draw() {
-		pGG->drawElemento(corpo);
+	void Entidade::desenhar() {
+		pGG->desenharElemento(corpo);
 	}
 }

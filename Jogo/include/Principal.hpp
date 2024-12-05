@@ -12,7 +12,7 @@ private:
 	static Gerenciador::GerenciadorGrafico* pGG;
 	static Gerenciador::GerenciadorEventos* pGE;
 	Fase::Fase01 fase;
-	sf::Event event;
+	sf::Event evento;
 	
 public:
 	Principal();
