@@ -8,7 +8,6 @@ namespace Observado {
 		class Observador {
 		protected:
 			static Observado* pObservado;
-			std::set<sf::Keyboard::Key> teclasPressionadas;
 		public:
 			Observador();
 			virtual ~Observador();
