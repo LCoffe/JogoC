@@ -7,7 +7,7 @@ namespace Observado {
 	namespace Observador {
 		Observado* Observador::pObservado = Observado::Observado::getObservado();
 
-		Observador::Observador(): teclasPressionadas(){
+		Observador::Observador(){
 			if (pObservado != nullptr) {
 				//cout << "adicionou observer" << endl;
 				pObservado->incluirObservador(this);

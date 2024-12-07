@@ -7,7 +7,7 @@
 #include "Inimigo.hpp"
 
 
-class Principal {
+class Jogo {
 private:
 	static Gerenciador::GerenciadorGrafico* pGG;
 	static Gerenciador::GerenciadorEventos* pGE;
@@ -15,8 +15,8 @@ private:
 	sf::Event evento;
 	
 public:
-	Principal();
-	~Principal();
+	Jogo();
+	~Jogo();
 	void executar();
 };
 

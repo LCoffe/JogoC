@@ -1,2 +1,9 @@
-﻿  Jogador.cpp
-  Jogo.vcxproj -> C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\x64\Debug\Jogo.exe
+﻿  main.cpp
+  GerenciadorEventos.cpp
+C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\main.cpp(2,10): error C1083: Não é possível abrir arquivo incluir: '../Principal.hpp': No such file or directory
+  Jogador.cpp
+  Observador.cpp
+  ObservadorJogador.cpp
+  Jogo.cpp
+  Observado.cpp
+  Gerando Código...

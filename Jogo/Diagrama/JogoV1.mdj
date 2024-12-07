@@ -6380,7 +6380,7 @@
 											"parentStyle": true,
 											"left": 1013,
 											"top": 1909,
-											"width": 123.87451171875,
+											"width": 163.0029296875,
 											"height": 11,
 											"text": "«PRINCIPAL»"
 										},
@@ -6396,7 +6396,7 @@
 											"parentStyle": true,
 											"left": 1013,
 											"top": 1922,
-											"width": 123.87451171875,
+											"width": 163.0029296875,
 											"height": 11,
 											"text": "Jogo"
 										},
@@ -6439,7 +6439,7 @@
 									"parentStyle": true,
 									"left": 1008,
 									"top": 1904,
-									"width": 133.87451171875,
+									"width": 173.0029296875,
 									"height": 34,
 									"stereotypeLabel": {
 										"$ref": "cR2oHxDtjUCuYMw/8oD/zAAA"
@@ -6479,9 +6479,9 @@
 											"parentStyle": true,
 											"left": 1013,
 											"top": 1943,
-											"width": 123.87451171875,
+											"width": 163.0029296875,
 											"height": 11,
-											"text": "+...",
+											"text": "-pGG: static *GerenciadorGrafico",
 											"horizontalAlignment": 0
 										},
 										{
@@ -6499,9 +6499,9 @@
 											"parentStyle": true,
 											"left": 1013,
 											"top": 1956,
-											"width": 123.87451171875,
+											"width": 163.0029296875,
 											"height": 11,
-											"text": "-pJog1: Jogador",
+											"text": "-pGE: static *GerenciadorEvento",
 											"horizontalAlignment": 0
 										},
 										{
@@ -6519,9 +6519,9 @@
 											"parentStyle": true,
 											"left": 1013,
 											"top": 1969,
-											"width": 123.87451171875,
+											"width": 163.0029296875,
 											"height": 11,
-											"text": "-GG: GerenciadorGrafico",
+											"text": "-evento: Event",
 											"horizontalAlignment": 0
 										}
 									],
@@ -6531,7 +6531,7 @@
 									"parentStyle": true,
 									"left": 1008,
 									"top": 1938,
-									"width": 133.87451171875,
+									"width": 173.0029296875,
 									"height": 47
 								},
 								{
@@ -6559,7 +6559,7 @@
 											"parentStyle": true,
 											"left": 1013,
 											"top": 1990,
-											"width": 123.87451171875,
+											"width": 163.0029296875,
 											"height": 11,
 											"text": "«create»+Jogo()",
 											"horizontalAlignment": 0
@@ -6579,7 +6579,7 @@
 											"parentStyle": true,
 											"left": 1013,
 											"top": 2003,
-											"width": 123.87451171875,
+											"width": 163.0029296875,
 											"height": 11,
 											"text": "«destroy»+Jogo()",
 											"horizontalAlignment": 0
@@ -6599,7 +6599,7 @@
 											"parentStyle": true,
 											"left": 1013,
 											"top": 2016,
-											"width": 123.87451171875,
+											"width": 163.0029296875,
 											"height": 11,
 											"text": "+executar(): void",
 											"horizontalAlignment": 0
@@ -6619,7 +6619,7 @@
 											"parentStyle": true,
 											"left": 1013,
 											"top": 2029,
-											"width": 123.87451171875,
+											"width": 163.0029296875,
 											"height": 11,
 											"text": "+...()",
 											"horizontalAlignment": 0
@@ -6631,7 +6631,7 @@
 									"parentStyle": true,
 									"left": 1008,
 									"top": 1985,
-									"width": 133.87451171875,
+									"width": 173.0029296875,
 									"height": 60
 								},
 								{
@@ -6660,7 +6660,7 @@
 							"parentStyle": false,
 							"left": 1008,
 							"top": 1904,
-							"width": 132.87451171875,
+							"width": 172.0029296875,
 							"height": 147,
 							"showProperty": false,
 							"nameCompartment": {
@@ -22939,8 +22939,9 @@
 							"_parent": {
 								"$ref": "lnmEeOvWxEGeGWwDLIc8QQAA"
 							},
-							"name": "...",
-							"type": ""
+							"name": "pGG",
+							"visibility": "private",
+							"type": "static *GerenciadorGrafico"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -22948,11 +22949,9 @@
 							"_parent": {
 								"$ref": "lnmEeOvWxEGeGWwDLIc8QQAA"
 							},
-							"name": "pJog1",
+							"name": "pGE",
 							"visibility": "private",
-							"type": {
-								"$ref": "EIPygiAPBka8vuqR9VvCnQAA"
-							}
+							"type": "static *GerenciadorEvento"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -22960,9 +22959,9 @@
 							"_parent": {
 								"$ref": "lnmEeOvWxEGeGWwDLIc8QQAA"
 							},
-							"name": "GG",
+							"name": "evento",
 							"visibility": "private",
-							"type": "GerenciadorGrafico"
+							"type": "Event"
 						}
 					],
 					"operations": [

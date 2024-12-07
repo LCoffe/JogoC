@@ -18,7 +18,7 @@
     <ClCompile Include="main.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
-    <ClCompile Include="src\Principal.cpp">
+    <ClCompile Include="src\Jogo.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
     <ClCompile Include="stdafx\stdafx.cpp">
@@ -80,7 +80,7 @@
     <ClInclude Include="stdafx\stdafx.hpp">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
-    <ClInclude Include="include\Principal.hpp">
+    <ClInclude Include="include\Jogo.hpp">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
     <ClInclude Include="include\Personagem.hpp">

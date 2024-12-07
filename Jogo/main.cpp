@@ -1,11 +1,10 @@
 #include "stdafx/stdafx.hpp"
-#include "../Principal.hpp"
+#include "../Jogo.hpp"
 
 int main() {
-    // Cria uma janela com título "Minha Janela SFML"
-	Principal p;
+    Jogo jogo;
 
-    p.executar();
+    jogo.executar();
 
     return 0;
 }

@@ -149,7 +149,7 @@
     <ClCompile Include="src\GerenciadorColisoes.cpp" />
     <ClCompile Include="src\Personagem.cpp" />
     <ClCompile Include="src\Plataforma.cpp" />
-    <ClCompile Include="src\Principal.cpp" />
+    <ClCompile Include="src\Jogo.cpp" />
     <ClCompile Include="src\Observado.cpp" />
     <ClCompile Include="stdafx\stdafx.cpp" />
   </ItemGroup>
@@ -171,7 +171,7 @@
     <ClInclude Include="include\Obstaculo.hpp" />
     <ClInclude Include="include\Personagem.hpp" />
     <ClInclude Include="include\Plataforma.hpp" />
-    <ClInclude Include="include\Principal.hpp" />
+    <ClInclude Include="include\Jogo.hpp" />
     <ClInclude Include="include\Observado.hpp" />
     <ClInclude Include="stdafx\stdafx.hpp" />
   </ItemGroup>
