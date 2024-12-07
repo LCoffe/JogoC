@@ -12,13 +12,13 @@ namespace Gerenciador {
 		private:
 			sf::Event evento;
 			
-			static GerenciadorEventos* pGerenciadorEventos; //Singleton
+			static GerenciadorEventos* pGE; //Singleton
 			static GerenciadorGrafico* pGG;
 			static Observado::Observado* pObservado;
 			GerenciadorEventos();
 		public:
 			~GerenciadorEventos();
-			static GerenciadorEventos* getGerenciadorEventos();
+			static GerenciadorEventos* getGerEventos();
 			void tratarEventoJanela();
 			void tratarTeclaPressionada();
 			void tratarTeclaUnica();

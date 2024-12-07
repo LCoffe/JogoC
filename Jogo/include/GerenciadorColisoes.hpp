@@ -10,7 +10,7 @@ namespace Gerenciador {
 	public:
 		GerenciadorColisoes(Lista::ListaEntidade* pListaPersonagem, Lista::ListaEntidade* pListaObstaculo);
 		~GerenciadorColisoes();
-		void tratarColisaoJogObst(); //Tratamento da colisao do jogador com o obstaculo.
+		void tratarColisaoPerObst(); //Tratamento da colisao do personagem com o obstaculo.
 		void tratarColisaoJogInimigo(); //Tratamento da colisao do jogador com o inimigo.
 		const bool verificaColisao(Entidade::Entidade* ent1, Entidade::Entidade* ent2) const;
 		const sf::Vector2f calcColisao(Entidade::Entidade* ent1, Entidade::Entidade* ent2);

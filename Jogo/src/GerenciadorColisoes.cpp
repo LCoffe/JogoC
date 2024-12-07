@@ -52,7 +52,7 @@ namespace Gerenciador {
 		}
 	}
 
-	void GerenciadorColisoes::tratarColisaoJogObst() {
+	void GerenciadorColisoes::tratarColisaoPerObst() {
 		for (int i = 0; i < pListaPersonagem->getTamanho(); i++) {
 			Entidade::Entidade* ent1 = pListaPersonagem->operator[](i);
 			for (int j = 0; j < pListaObstaculo->getTamanho(); j++) { 
@@ -65,7 +65,7 @@ namespace Gerenciador {
 		}
 	}
 	void GerenciadorColisoes::executar() {
-		tratarColisaoJogObst();
+		tratarColisaoPerObst();
 		tratarColisaoJogInimigo();
 	}
 }

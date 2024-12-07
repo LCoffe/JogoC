@@ -11,7 +11,7 @@ namespace Lista {
 	class ListaEntidade {
 		private:
 			Lista<Entidade::Entidade> objListaEntidade;
-			IDs::IDs ID;
+			const IDs::IDs ID;
 		public:
 			ListaEntidade();
 			~ListaEntidade();
@@ -19,7 +19,7 @@ namespace Lista {
 			void removerEnt(Entidade::Entidade* ent);
 			const int getTamanho() const { return objListaEntidade.getTamanho(); }
 			Entidade::Entidade* operator[](int i) { return objListaEntidade[i]; }
-			std::vector<Entidade::Entidade*> getEntidades(IDs::IDs ID);
+			std::vector<Entidade::Entidade*> getEntidades(const IDs::IDs ID);
 			void limparLista();
 			void desenharEntidades();
 			void executar();

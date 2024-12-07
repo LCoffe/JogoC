@@ -16,7 +16,6 @@ namespace Entidade {
 				if (colisaoChao) {
 					velocidadeFinal.y = -sqrt(0.2f * GRAVIDADE * ALTURA_PULO);
 					colisaoChao = false;
-					cout << "pulou" << endl;
 				}
 			}
 
@@ -32,7 +31,7 @@ namespace Entidade {
 				switch (ent->getID())
 				{	
 					case IDs::IDs::inimigo: {
-						cout << "Ouch!!" << endl;
+						
 					}
 					break;
 					case IDs::IDs::plataforma: {

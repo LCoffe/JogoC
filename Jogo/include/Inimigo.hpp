@@ -10,13 +10,13 @@
 #define TAM_INIMIGO_X 50.0f
 #define TAM_INIMIGO_Y 50.0f
 
-#define VELOCIDADE_INIMIGO 15000.0f
+#define VELOCIDADE_INIMIGO 50.0f
 
 namespace Entidade {
 	namespace Personagem {
 		namespace Inimigo {
 			class Inimigo : public Personagem {
-			private:
+			protected:
 				Jogador::Jogador* pJog;
 			public:
 				Inimigo(const sf::Vector2f pos, Jogador::Jogador* pJ);

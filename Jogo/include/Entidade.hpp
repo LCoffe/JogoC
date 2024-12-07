@@ -10,7 +10,7 @@ namespace Entidade {
 		sf::Vector2f tam;
 	public:
 		Entidade(const sf::Vector2f pos, const sf::Vector2f tam, const IDs::IDs ID);
-		~Entidade();
+		virtual ~Entidade();
 
 		void setTam(sf::Vector2f tam) { corpo.setSize(tam); }
 		const sf::Vector2f& getTam() const { return corpo.getSize(); }
@@ -23,6 +23,6 @@ namespace Entidade {
 		virtual void desenhar();
 		virtual void atualizar() = 0;
 
-		virtual void colisao(Entidade* ent, const sf::Vector2f) = 0;
+		virtual void colisao(Entidade* ent, const sf::Vector2f diferenca) = 0;
 	};
 }

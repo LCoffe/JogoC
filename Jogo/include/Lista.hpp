@@ -32,7 +32,6 @@ namespace Lista {
 			~Lista();
 			void inserir(TL* elemento);
 			void remover(TL* elemento);
-			TL* buscar(const TL* elemento) const;
 			int getTamanho() const { return static_cast<int>(tam); }
 			void limpar();
 			void operator++() { tam++; }
@@ -80,18 +79,6 @@ namespace Lista {
 			delete atual;
 			operator--();
 		}
-	}
-
-	template<class TL>
-	TL* Lista<TL>::buscar(const TL * elemento) const {
-		Elemento<TL>* atual = pInicio;
-		while (atual != nullptr && atual->getElemento() != elemento) {
-			atual = atual->getProx();
-		}
-		if (atual != nullptr) { // Elemento encontrado
-			return atual->getElemento();
-		}
-		return nullptr;
 	}
 
 	template<class TL>

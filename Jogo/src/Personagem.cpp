@@ -5,7 +5,7 @@ namespace Entidade {
 	namespace Personagem {
 		Personagem::Personagem(const sf::Vector2f pos, const sf::Vector2f tam, const float vel, const IDs::IDs ID) : 
 			Entidade(pos, tam, ID), velocidadeMax(vel), velocidadeFinal(sf::Vector2f(vel, 0.0f)), tempo(0.0f), 
-			andando(false), direcao(true), colisaoChao(true){}
+			andando(false), direcao(true), colisaoChao(false){}
 
 		Personagem::~Personagem() {}
 
@@ -19,8 +19,7 @@ namespace Entidade {
 		}
 
 		void Personagem::atualizarPosicao() {
-			pGG->resetarRelogio();
-			tempo = pGG->getTempo();
+			tempo = 0.016f; // 60 fps
 			sf::Vector2f soma(0.0f, 0.0f);
 
 			if (andando) {
@@ -30,6 +29,7 @@ namespace Entidade {
 				}
 			}
 
+			//Força da gravidade
 			const float velY = velocidadeFinal.y;
 			velocidadeFinal.y += GRAVIDADE * tempo;
 			soma.y = velY * tempo + (GRAVIDADE * tempo * tempo) / 2.0f;

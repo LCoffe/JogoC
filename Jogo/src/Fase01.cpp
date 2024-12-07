@@ -21,7 +21,7 @@ namespace Fase {
 
 		// Criar plataformas
 		criaPlataforma(sf::Vector2f(0, 768 - 100), sf::Vector2f(1366, 100), IDs::IDs::plataforma);
-		criaPlataforma(sf::Vector2f(800, 500), sf::Vector2f(100, 268), IDs::IDs::plataforma);
+		criaPlataforma(sf::Vector2f(800, 768 - 188), sf::Vector2f(100, 138), IDs::IDs::plataforma);
 	}
 
 	void Fase01::executar() {

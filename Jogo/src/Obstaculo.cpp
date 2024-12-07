@@ -13,8 +13,8 @@ namespace Entidade {
 			sf::Vector2f personaPos = persona->getPos();
 			sf::Vector2f personaTam = persona->getTam();
 			sf::Vector2f personaVelFinal = persona->getVelocidade();
-			//persona->setColisaoChao(false);
-			persona->setColisaoChao(true);
+			
+			persona->setColisaoChao(false);			
 			if (diferenca.x < 0.0f && diferenca.y < 0.0f) { //houve colisao
 				if (diferenca.x > diferenca.y) {
 					if (personaPos.x < pos.x) { //colisao em x
@@ -33,7 +33,7 @@ namespace Entidade {
 						personaPos.y -= diferenca.y;
 					}
 					personaVelFinal.y = 0.0f;
-					//persona->setColisaoChao(false);
+					persona->setColisaoChao(true);
 				}
 			}
 			persona->setPos(personaPos);

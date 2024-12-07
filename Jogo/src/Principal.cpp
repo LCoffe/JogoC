@@ -1,6 +1,6 @@
 #include "../include/Principal.hpp"
 
-Gerenciador::GerenciadorEventos* Principal::pGE = Gerenciador::GerenciadorEventos::getGerenciadorEventos();
+Gerenciador::GerenciadorEventos* Principal::pGE = Gerenciador::GerenciadorEventos::getGerEventos();
 Gerenciador::GerenciadorGrafico* Principal::pGG = Gerenciador::GerenciadorGrafico::getGerGrafico();
 
 Principal::Principal(): evento(), fase() {

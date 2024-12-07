@@ -7,7 +7,7 @@ using namespace std;
 
 namespace Gerenciador {
 	Observado::Observado* GerenciadorEventos::pObservado = Observado::Observado::getObservado();
-	GerenciadorEventos* GerenciadorEventos::pGerenciadorEventos = nullptr;
+	GerenciadorEventos* GerenciadorEventos::pGE = nullptr;
 	GerenciadorGrafico* GerenciadorEventos::pGG = GerenciadorGrafico::getGerGrafico();
 
 	GerenciadorEventos::GerenciadorEventos(): evento() {
@@ -24,16 +24,16 @@ namespace Gerenciador {
 
 	GerenciadorEventos::~GerenciadorEventos() {
 		pGG = nullptr;
-		pGerenciadorEventos = nullptr;
+		pGE = nullptr;
 		pObservado = nullptr;
 	}
 
-	GerenciadorEventos* GerenciadorEventos::getGerenciadorEventos() {
-		if (pGerenciadorEventos == nullptr) {
-			pGerenciadorEventos = new GerenciadorEventos();
+	GerenciadorEventos* GerenciadorEventos::getGerEventos() {
+		if (pGE == nullptr) {
+			pGE = new GerenciadorEventos();
 		}
 
-		return pGerenciadorEventos;
+		return pGE;
 	}
 
 	void GerenciadorEventos::tratarEventoJanela() {
