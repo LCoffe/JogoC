@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../include/Ente.hpp"
+#include "../include/Animacao.hpp"
 
 namespace Entidade {
 	class Entidade: public Ente {
@@ -8,6 +9,9 @@ namespace Entidade {
 		sf::RectangleShape corpo;
 		sf::Vector2f pos;
 		sf::Vector2f tam;
+
+		ElementosGraficos::Animacao sprite;
+
 	public:
 		Entidade(const sf::Vector2f pos, const sf::Vector2f tam, const IDs::IDs ID);
 		virtual ~Entidade();
@@ -24,5 +28,7 @@ namespace Entidade {
 		virtual void atualizar() = 0;
 
 		virtual void colisao(Entidade* ent, const sf::Vector2f diferenca) = 0;
+		virtual void inicializarSprite() = 0;
+
 	};
 }

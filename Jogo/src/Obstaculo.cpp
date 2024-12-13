@@ -39,5 +39,11 @@ namespace Entidade {
 			persona->setPos(personaPos);
 			persona->setVelocidade(personaVelFinal);
 		}
+		void Obstaculo::inicializarSprite()
+		{
+		}
+		void Obstaculo::atualizarSprite(float dt)
+		{
+		}
 	}
 }

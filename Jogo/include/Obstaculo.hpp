@@ -16,6 +16,8 @@ namespace Entidade {
 			void colisaoObs(Personagem::Personagem* persona, const sf::Vector2f diferenca);
 			virtual void desenhar() = 0;
 			virtual void atualizar() = 0;
+			void inicializarSprite();
+			void atualizarSprite(float dt);
 		};
 	}
 }

@@ -31,7 +31,7 @@ namespace Fase {
 		}
 		pGC = nullptr;
 	}
-	
+
 	void Fase::criaPersonagem(const sf::Vector2f pos, const IDs::IDs ID) {
 		Entidade::Entidade* personagem = nullptr;
 		if (ID == IDs::IDs::jogador) {
@@ -41,7 +41,7 @@ namespace Fase {
 			}
 			personagem = static_cast<Entidade::Entidade*>(pJogador);
 		}
-		if(ID == IDs::IDs::inimigo){
+		if (ID == IDs::IDs::inimigo) {
 			if (pJogador == nullptr) {
 				cout << "Erro ao criar inimigo, jogador nao foi criado" << endl;
 			}
@@ -77,7 +77,7 @@ namespace Fase {
 		Entidade::Entidade* entidade = nullptr;
 		Entidade::Obstaculos::Plataforma* limite = nullptr;
 		//Limite da Esquerda
-		limite = new Entidade::Obstaculos::Plataforma(sf::Vector2f(0.1f , 768.0f), sf::Vector2f(1366.0f, 110.0f), IDs::IDs::plataforma);
+		limite = new Entidade::Obstaculos::Plataforma(sf::Vector2f(0.1f, 768.0f), sf::Vector2f(1366.0f, 110.0f), IDs::IDs::plataforma);
 		limite->getCorpo().setFillColor(sf::Color::Transparent);
 		if (limite != nullptr) {
 			entidade = static_cast<Entidade::Entidade*>(limite);

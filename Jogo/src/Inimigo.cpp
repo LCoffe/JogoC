@@ -73,6 +73,12 @@ namespace Entidade {
 						break;
 				}
 			}
+			void Inimigo::inicializarSprite()
+			{
+			}
+			void Inimigo::atualizarSprite(float dt)
+			{
+			}
 		}
 	}
 }
