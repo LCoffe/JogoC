@@ -57,6 +57,7 @@ namespace ElementosGraficos {
 	}
 
 	void Animacao::desenhar(){
+		corpo.setScale(1.0f, 1.0f);
 		pGG->desenharElemento(corpo);	
 	}
 

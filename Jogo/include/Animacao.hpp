@@ -71,6 +71,7 @@ namespace ElementosGraficos {
 					tamRect.width = abs(tamRect.width);
 				}
 
+
 			}
 
 			void resetar() {
@@ -91,7 +92,6 @@ namespace ElementosGraficos {
 	public:
 		Animacao();
 		~Animacao();
-
 		void adicionarNovaAnimacao(ID_ANIMACAO id, const char* path, unsigned int imagemCount);
 		void atualizar(ID_ANIMACAO id, bool olhandoEsquerda, sf::Vector2f pos, float dt);
 		void desenhar();	
