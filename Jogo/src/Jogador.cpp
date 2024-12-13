@@ -14,11 +14,22 @@ namespace Entidade {
 			Jogador::~Jogador() {}
 
 			void Jogador::pular() {
+			
 				if (colisaoChao) {
 					velocidadeFinal.y = -sqrt(0.2f * GRAVIDADE * ALTURA_PULO);
 					colisaoChao = false;
+
 				}
 			}
+
+			bool Jogador::estaPulando()
+			{
+				if (!colisaoChao)
+					return true;
+				else
+					return false;
+			}
+
 
 			void Jogador::desenhar() {
 				sprite.desenhar();
@@ -54,10 +65,12 @@ namespace Entidade {
 			}
 			void Jogador::atualizarSprite(float dt)
 			{
-				if(!colisaoChao)
-					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::jump, direcao, pos, dt);
-				if (andando)
+				if (andando && !estaPulando())
 					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::walk, direcao, pos, dt);
+
+				else if(estaPulando())
+					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::jump, direcao, pos, dt);
+
 				else 
 					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::idle, direcao,pos,dt);
 

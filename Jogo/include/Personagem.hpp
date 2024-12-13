@@ -23,6 +23,7 @@ namespace Entidade {
 			void atualizarPosicao();
 			virtual void desenhar();
 			void andar(const bool direcao);
+			void estaPulando();
 			void parar();
 			void setDirecao(const bool direcao) { this->direcao = direcao; } //Direita = true, Esquerda = false
 			const bool getDirecao() const { return direcao; }

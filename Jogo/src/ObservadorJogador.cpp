@@ -15,6 +15,7 @@ namespace Observado {
 		void ObservadorJogador::upTeclaPressionada(sf::Keyboard::Key tecla) {
 			if (tecla == sf::Keyboard::W) {
 				pJogador->pular();
+				
 			}
 			if (tecla == sf::Keyboard::A) {
 				pJogador->andar(false);

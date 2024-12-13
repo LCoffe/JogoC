@@ -12,13 +12,14 @@ namespace Entidade {
 		if (ID == IDs::IDs::jogador) {
 			corpo.setTexture(pGG->incluirTextura(PATH_JOGADOR));
 		}
-		else if (ID == IDs::IDs::inimigo) {
+		*/
+		if (ID == IDs::IDs::inimigo) {
 			corpo.setTexture(pGG->incluirTextura(PATH_INIMIGO));
 		}
 		else {
 			corpo.setFillColor(sf::Color::White);
 		}
-		*/
+		
 		
 		
 		this->setTam(tam);
