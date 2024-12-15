@@ -1,21 +1,30 @@
 #include "../include/Entidade.hpp"
 
-constexpr auto PATH_JOGADOR = ".\\assets\\greeksoldier.png";
+constexpr auto PATH_JOGADOR = ".\\assets\\jogador\\jogador.png";
 constexpr auto PATH_INIMIGO = ".\\assets\\athenasoldier.png";
 
 namespace Entidade {
-	Entidade::Entidade(sf::Vector2f pos, sf::Vector2f tam, const IDs::IDs ID) : Ente(ID), pos(pos), tam(tam){
+	Entidade::Entidade(sf::Vector2f pos, sf::Vector2f tam, const IDs::IDs ID) : Ente(ID), pos(pos), tam(tam),sprite(){
+		
+		
+		/*
+		
 		if (ID == IDs::IDs::jogador) {
 			corpo.setTexture(pGG->incluirTextura(PATH_JOGADOR));
 		}
-		else if (ID == IDs::IDs::inimigo) {
+		*/
+		if (ID == IDs::IDs::inimigo) {
 			corpo.setTexture(pGG->incluirTextura(PATH_INIMIGO));
 		}
 		else {
 			corpo.setFillColor(sf::Color::White);
 		}
+		
+		
+		
 		this->setTam(tam);
 		this->setPos(pos);
+		
 	}
 
 	Entidade::~Entidade() {}
