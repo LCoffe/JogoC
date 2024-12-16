@@ -1,5 +1,5 @@
 #include "stdafx/stdafx.hpp"
-#include "../Jogo.hpp"
+#include "../Jogo/include/Jogo.hpp"
 
 int main() {
     Jogo jogo;

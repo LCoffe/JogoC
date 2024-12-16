@@ -23,6 +23,7 @@ namespace Entidade {
 			void atualizarPosicao();
 			virtual void desenhar();
 			void andar(const bool direcao);
+			void estaPulando();
 			void parar();
 			void setDirecao(const bool direcao) { this->direcao = direcao; } //Direita = true, Esquerda = false
 			const bool getDirecao() const { return direcao; }
@@ -30,6 +31,8 @@ namespace Entidade {
 			const bool getColisaoChao() const { return colisaoChao; }
 			virtual void atualizar() = 0;
 			virtual void colisao(Entidade* ent, const sf::Vector2f diferenca) = 0;
+			virtual void inicializarSprite() = 0;
+			virtual void atualizarSprite(float dt) = 0;
 		};
 	}
 }

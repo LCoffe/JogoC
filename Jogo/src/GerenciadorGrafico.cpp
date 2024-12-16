@@ -24,13 +24,14 @@ namespace Gerenciador{
 		return pGG;
 	}
 
-	sf::Texture* GerenciadorGrafico::incluirTextura(const string& caminho) {
-		sf::Texture* text = new sf::Texture();
-		if (!text->loadFromFile(caminho)) {
-			std::cerr << "Erro ao carregar textura" << std::endl;
-			exit(1);
+	sf::Texture* GerenciadorGrafico::incluirTextura(const string& path) {
+		sf::Texture* textura = new sf::Texture();
+		if (!textura->loadFromFile(path)) {
+			std::cerr << "Erro: Não foi possível carregar a textura em " << path << std::endl;
+			delete textura;  // Libera memória para evitar vazamento
+			return nullptr;
 		}
-		return text;
+		return textura;
 	}
 
 	void GerenciadorGrafico::setJanela(sf::RenderWindow* janela) {
@@ -43,6 +44,11 @@ namespace Gerenciador{
 
 	void GerenciadorGrafico::desenharElemento(sf::RectangleShape corpo) {
 		janela->draw(corpo);
+	}
+
+	void GerenciadorGrafico::desenharTexto(sf::Text* texto)
+	{
+		janela->draw(*texto);
 	}
 
 	void GerenciadorGrafico::mostrarElementos() {
@@ -67,4 +73,15 @@ namespace Gerenciador{
 		tempo = relogio.getElapsedTime().asSeconds();
 		relogio.restart();
 	}
+
+	/*
+	
+	sf::Font* GerenciadorGrafico::carregarFonte(const char* caminho){
+	
+	
+
+	}
+	
+	*/
+
 }

@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../stdafx/stdafx.hpp"
-#include "../Personagem.hpp"
+#include "Personagem.hpp"
 
 #define VELOCIDADE_JOGADOR 80.0f
 #define ALTURA_PULO 900.0f
@@ -20,13 +20,17 @@ namespace Entidade {
 			class Jogador : public Personagem {
 			private:
 				Observado::Observador::ObservadorJogador* pObs;
+
 			public:
 				Jogador(const sf::Vector2f pos);
 				~Jogador();
 				void pular();
+				bool estaPulando();
 				void desenhar();
 				void atualizar();
 				void colisao(Entidade* ent, const sf::Vector2f diferenca);
+				void inicializarSprite();
+				void atualizarSprite(float dt);
 			};
 		}
 	}

@@ -104,12 +104,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\SFML-2.6.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\alano\source\repos\JogoC\SFML-2.6.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\SFML-2.6.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\alano\source\repos\JogoC\SFML-2.6.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-audio-d.lib;sfml-network-d.lib;sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -121,18 +121,19 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\SFML-2.6.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\aluno\source\repos\JogoC\SFML-2.6.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\SFML-2.6.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\aluno\source\repos\JogoC\SFML-2.6.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-audio.lib;sfml-network.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Animacao.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="src\Ente.cpp" />
     <ClCompile Include="src\Entidade.cpp" />
@@ -151,9 +152,11 @@
     <ClCompile Include="src\Plataforma.cpp" />
     <ClCompile Include="src\Jogo.cpp" />
     <ClCompile Include="src\Observado.cpp" />
+    <ClCompile Include="src\Texto.cpp" />
     <ClCompile Include="stdafx\stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\Animacao.hpp" />
     <ClInclude Include="include\Ente.hpp" />
     <ClInclude Include="include\Entidade.hpp" />
     <ClInclude Include="include\Fase.hpp" />
@@ -173,7 +176,37 @@
     <ClInclude Include="include\Plataforma.hpp" />
     <ClInclude Include="include\Jogo.hpp" />
     <ClInclude Include="include\Observado.hpp" />
+    <ClInclude Include="include\Texto.hpp" />
     <ClInclude Include="stdafx\stdafx.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\athenasoldier.png" />
+    <Image Include="assets\greeksoldier.png" />
+    <Image Include="assets\jogador\jogador.png" />
+    <Image Include="assets\jogador\jogador_andar.png" />
+    <Image Include="assets\jogador\jogador_ataque.png" />
+    <Image Include="assets\jogador\jogador_machucado.png" />
+    <Image Include="assets\jogador\jogador_morte.png" />
+    <Image Include="assets\jogador\jogador_parado.png" />
+    <Image Include="assets\jogador\jogador_pulo.png" />
+    <Image Include="assets\jogador\Jump.png" />
+    <Image Include="assets\jogador\Walk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="assets\Greek-Freak.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="openal32.dll" />
+    <None Include="sfml-audio-2.dll" />
+    <None Include="sfml-audio-d-2.dll" />
+    <None Include="sfml-graphics-2.dll" />
+    <None Include="sfml-graphics-d-2.dll" />
+    <None Include="sfml-network-2.dll" />
+    <None Include="sfml-network-d-2.dll" />
+    <None Include="sfml-system-2.dll" />
+    <None Include="sfml-system-d-2.dll" />
+    <None Include="sfml-window-2.dll" />
+    <None Include="sfml-window-d-2.dll" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

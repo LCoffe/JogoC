@@ -1,4 +1,4 @@
-#include "../include/Inimigo.hpp"
+ #include "../include/Inimigo.hpp"
 #include <math.h>
 
 
@@ -72,6 +72,12 @@ namespace Entidade {
 					default:
 						break;
 				}
+			}
+			void Inimigo::inicializarSprite()
+			{
+			}
+			void Inimigo::atualizarSprite(float dt)
+			{
 			}
 		}
 	}
