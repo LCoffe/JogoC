@@ -29,6 +29,7 @@ namespace Entidade {
 				void colisao(Entidade* ent, const sf::Vector2f diferenca);
 				void inicializarSprite();
 				void atualizarSprite(float dt);
+				void salvar(nlohmann::json& j);
 			};
 		}
 	}

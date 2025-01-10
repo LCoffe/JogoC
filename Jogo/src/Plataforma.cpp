@@ -18,7 +18,12 @@ namespace Entidade {
 
 		void Plataforma::colisao(Entidade* ent, sf::Vector2f diferenca) {
 			if (ent->getID() == IDs::IDs::jogador){
-				colisaoObs(dynamic_cast<Personagem::Personagem*>(ent), diferenca);
+				Personagem::Personagem* pp = dynamic_cast<Personagem::Personagem*>(ent);
+				colisaoObs(pp, diferenca);
+				if (diferenca.x > 0.0f && pp->getVelocidade().x >= 0.0f) {
+					pp->setVelocidade(sf::Vector2f(0.0f, pp->getVelocidade().y));
+					//pp->setVelocidade(sf::Vector2f(pp->getVelocidade().x, 0.0f));
+				}
 			}
 			else if (ent->getID() == IDs::IDs::inimigo) {
 				Personagem::Personagem* pp = dynamic_cast<Personagem::Personagem*>(ent);
@@ -30,6 +35,12 @@ namespace Entidade {
 					pp->setDirecao(true);
 				}
 			}
+		}
+
+		void Plataforma::salvar(nlohmann::json& j) {
+			j["ID"] = (int)getID();
+			j["posicao"] = { {"x", pos.x}, {"y", pos.y} };
+			j["tamanho"] = { {"x", tam.x}, {"y", tam.y} };
 		}
 	}
 }

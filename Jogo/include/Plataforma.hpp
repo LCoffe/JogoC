@@ -16,6 +16,7 @@ namespace Entidade {
 				void colisao(Entidade* ent, const sf::Vector2f diferenca);
 				virtual void desenhar();
 				virtual void atualizar();
+				void salvar(nlohmann::json& j);
 		};
 	}
 }

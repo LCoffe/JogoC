@@ -16,6 +16,7 @@ namespace Entidade {
 			void colisaoObs(Personagem::Personagem* persona, const sf::Vector2f diferenca);
 			virtual void desenhar() = 0;
 			virtual void atualizar() = 0;
+			virtual void salvar(nlohmann::json& j) = 0;
 			void inicializarSprite();
 			void atualizarSprite(float dt);
 		};

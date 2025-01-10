@@ -8,8 +8,6 @@ class Ente {
 	protected:
 		Gerenciador::GerenciadorGrafico* pGG;
 		const IDs::IDs ID;
-
-		const string salvarEnte();
 	public:
 		Ente(const IDs::IDs ID);
 		virtual ~Ente() = 0;

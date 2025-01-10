@@ -2,10 +2,12 @@
 
 #include "../include/Ente.hpp"
 #include "../include/Animacao.hpp"
+#include "../include/json.hpp"
 
 namespace Entidade {
 	class Entidade: public Ente {
 	protected:
+		bool remover;
 		sf::RectangleShape corpo;
 		sf::Vector2f pos;
 		sf::Vector2f tam;
@@ -23,12 +25,12 @@ namespace Entidade {
 		const sf::Vector2f& getPos() const { return corpo.getPosition(); }
 
 		sf::RectangleShape& getCorpo(){ return corpo; }
-
+		void podeRemover() { remover = true; }
+		bool getRemover() { return remover; }
 		virtual void desenhar();
 		virtual void atualizar() = 0;
-
+		virtual void salvar(nlohmann::json& j) = 0;
 		virtual void colisao(Entidade* ent, const sf::Vector2f diferenca) = 0;
 		virtual void inicializarSprite() = 0;
-
 	};
 }

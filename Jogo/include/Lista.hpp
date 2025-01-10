@@ -2,7 +2,7 @@
 
 
 #include <iostream>
-
+#include "IDs.hpp"
 using namespace std;
 
 namespace Lista {
@@ -32,6 +32,7 @@ namespace Lista {
 			~Lista();
 			void inserir(TL* elemento);
 			void remover(TL* elemento);
+			void removerElemento(int pos);
 			int getTamanho() const { return static_cast<int>(tam); }
 			void limpar();
 			void operator++() { tam++; }
@@ -63,6 +64,12 @@ namespace Lista {
 	}
 
 	template<class TL>
+	void Lista<TL>::removerElemento(int pos) {
+		TL* elemento = operator[](pos);
+		remover(elemento);
+	}
+
+	template<class TL>
 	void Lista<TL>::remover(TL * elemento) {
 		Elemento<TL>* anterior = nullptr;
 		Elemento<TL>* atual = pInicio;
@@ -70,24 +77,43 @@ namespace Lista {
 			anterior = atual;
 			atual = atual->getProx();
 		}
-		if (atual != nullptr) { // Elemento encontrado
-			if (anterior == nullptr) { // Elemento a ser removido eh o primeiro
-				pInicio = atual->getProx();
-			}else { // Elemento a ser removido nao eh o primeiro
-				anterior->setProx(atual->getProx());
+		if (atual != nullptr) {
+			if (atual->getElemento() == elemento) { // Elemento encontrado
+				if (atual == pInicio) { // Elemento a ser removido eh o primeiro
+					pInicio = atual->getProx();
+				}
+				else if (atual == pFim) { // Elemento a ser removido eh o ultimo
+					pFim = anterior;
+				}
+				else {
+					anterior->setProx(atual->getProx());
+				}
+				delete atual;
+				atual = nullptr;
+				anterior = nullptr;
+				operator--();
 			}
-			delete atual;
-			operator--();
 		}
 	}
 
 	template<class TL>
 	void Lista<TL>::limpar() {
-		Elemento<TL>* atual = pInicio;
-		while (atual != nullptr) {
-			Elemento<TL>* temp = atual;
-			atual = atual->getProx();
-			delete temp;
+		if (pInicio != nullptr) {
+			Elemento<TL>* aux = pInicio;
+			Elemento<TL>* aux2 = nullptr;
+			int i = 0;
+			while (aux != nullptr && i < (int)tam) {
+				TL* elemento = aux->getElemento();
+				if (elemento != nullptr) {
+					delete(elemento);
+					elemento = nullptr;
+				}
+				aux2 = aux->getProx();
+				delete(aux);
+				aux = nullptr;
+				aux = aux2;
+				i++;
+			}
 		}
 		pInicio = nullptr;
 		pFim = nullptr;
@@ -95,7 +121,7 @@ namespace Lista {
 	}
 	template<class TL>
 	TL* Lista<TL>::operator[](int pos) {
-		if (pos < 0 || static_cast<unsigned int>(pos) >= tam) {
+		if (pos < 0 || pos >= (int)tam) {
 			cout << "Posicao invalida" << endl;
 			exit(1);
 		}
