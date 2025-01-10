@@ -6,9 +6,9 @@
 #include<SFML/Graphics.hpp>
 #include<string>
 
-#define FONT_PATH "./assets/fontes/Greek-Freak.ttf"
+constexpr auto FONT_PATH = "..\\Jogo\\assets\\Fontes\\Greek-Freak.ttf";
 
-namespace ElementosGraficos {
+namespace Menu {
 
 	enum TextAligment {
 		left,
@@ -27,7 +27,7 @@ namespace ElementosGraficos {
 		static Gerenciador::GerenciadorGrafico* pGG;
 
 	public:
-		Texto(const sf::Vector2f pos, std::string info = "",const char* path = FONT_PATH);
+		Texto(const sf::Vector2f pos, std::string info = "", const char* path = FONT_PATH);
 
 		~Texto();
 
@@ -54,5 +54,4 @@ namespace ElementosGraficos {
 
 
 }
-
 

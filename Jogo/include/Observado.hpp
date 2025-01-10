@@ -7,10 +7,11 @@ namespace Observado {
 	class Observado {
 		private:
 			std::vector<Observador::Observador*> observadores;
-			std::vector<Observador::Observador*>::iterator it;
+			int it;
 
 			static Observado* pObservado; //Singleton
 			Observado();
+			bool inicializaIt();
 		public:
 			~Observado();
 

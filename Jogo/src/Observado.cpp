@@ -3,14 +3,21 @@
 namespace Observado {
 	Observado* Observado::pObservado = nullptr;
 
-	Observado::Observado() : it(), observadores() {}
+	Observado::Observado() : observadores(), it() {}
+
+	bool Observado::inicializaIt() {
+		if (!observadores.empty()) {
+			return true;
+		}
+		return false;
+	}
 
 	Observado::~Observado() {
-		for (it = observadores.begin(); it != observadores.end(); it++) {
-			if (*it) {
-				delete* it;
+		for (auto& it : observadores) {
+			if (it) {
+				delete it;
 			}
-			*it = nullptr;
+			it = nullptr;
 		}
 		observadores.clear();
 	}
@@ -28,7 +35,7 @@ namespace Observado {
 	}
 
 	void Observado::removerObservador(Observador::Observador* observador) {
-		for (it = observadores.begin(); it != observadores.end(); it++) {
+		for (auto it = observadores.begin(); it != observadores.end(); it++) {
 			if (*it == observador) {
 				observadores.erase(it);
 				break;
@@ -37,14 +44,24 @@ namespace Observado {
 	}
 
 	void Observado::notificaTeclaPressionada(sf::Keyboard::Key tecla) {
-		for (it = observadores.begin(); it != observadores.end(); it++) {
-			(*it)->upTeclaPressionada(tecla);
+		if (!inicializaIt()) return;
+		for (it = 0; it < (int)observadores.size(); it++) {
+			if (observadores[it]) {
+				if (observadores[it]->getAtivar()) {
+					observadores[it]->attTeclaPressionada(tecla);
+				}
+			}
 		}
 	}
 
 	void Observado::notificaTeclaUnica(sf::Keyboard::Key tecla) {
-		for (it = observadores.begin(); it != observadores.end(); it++) {
-			(*it)->upTeclaUnica(tecla);
+		if (!inicializaIt()) return;
+		for (it = 0; it < (int)observadores.size(); it++) {
+			if (observadores[it]) {
+				if (observadores[it]->getAtivar()) {
+					observadores[it]->attTeclaUnica(tecla);
+				}
+			}
 		}
 	}
 }

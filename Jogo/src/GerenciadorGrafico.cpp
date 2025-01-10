@@ -5,7 +5,8 @@ namespace Gerenciador{
 	float GerenciadorGrafico::tempo = 0.0f;
 
 	GerenciadorGrafico::GerenciadorGrafico():
-		janela(new sf::RenderWindow(sf::VideoMode(TELA_X, TELA_Y), "Jogo")), relogio()
+		janela(new sf::RenderWindow(sf::VideoMode(TELA_X, TELA_Y), "Jogo", sf::Style::Fullscreen)), relogio(), 
+		camera(new Camera(sf::Vector2f(TELA_X,TELA_Y)))
 	{
 		if (janela == nullptr) {
 			std::cerr << "Erro ao criar a janela" << std::endl;
@@ -47,8 +48,10 @@ namespace Gerenciador{
 	}
 
 	void GerenciadorGrafico::desenharTexto(sf::Text* texto)
-	{
-		janela->draw(*texto);
+	{	
+		if (texto) {
+			janela->draw(*texto);
+		}
 	}
 
 	void GerenciadorGrafico::mostrarElementos() {
@@ -74,14 +77,23 @@ namespace Gerenciador{
 		relogio.restart();
 	}
 
-	/*
-	
-	sf::Font* GerenciadorGrafico::carregarFonte(const char* caminho){
-	
-	
-
+	sf::Font* GerenciadorGrafico::carregarFonte(const char* path) {
+		sf::Font* fonte = new sf::Font();
+		if (!fonte->loadFromFile(path)) {
+			std::cerr << "Erro: Não foi possível carregar a fonte em " << path << std::endl;
+			delete fonte;  // Libera memória para evitar vazamento
+			return nullptr;
+		}
+		return fonte;
 	}
-	
-	*/
+
+	void GerenciadorGrafico::atualizarCamera(const sf::Vector2f& pos, const sf::Vector2f tamJanela) {
+		camera->atualizar(pos, tamJanela);
+		janela->setView(getCamera());
+	}
+
+	const sf::View GerenciadorGrafico::getCamera() const {
+		return camera->getCamera();
+	}
 
 }

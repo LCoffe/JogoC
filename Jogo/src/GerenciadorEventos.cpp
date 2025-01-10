@@ -41,26 +41,44 @@ namespace Gerenciador {
 	}
 
 	void GerenciadorEventos::tratarTeclaUnica() {
-		if (evento.key.code == sf::Keyboard::A) {
+		if (evento.key.code >= sf::Keyboard::A && evento.key.code <= sf::Keyboard::Z) {
 			pObservado->notificaTeclaUnica(evento.key.code);
 		}
-		if (evento.key.code == sf::Keyboard::D) {
+		if (evento.key.code == sf::Keyboard::Left) {
+			pObservado->notificaTeclaUnica(evento.key.code);
+		}	
+		if (evento.key.code == sf::Keyboard::Right) {
+			pObservado->notificaTeclaUnica(evento.key.code);
+		}
+		if (evento.key.code == sf::Keyboard::Up) {
+			pObservado->notificaTeclaUnica(evento.key.code);
+		}
+		if (evento.key.code == sf::Keyboard::Down) {
+			pObservado->notificaTeclaUnica(evento.key.code);
+		}
+		if (evento.key.code == sf::Keyboard::Return) {
+			pObservado->notificaTeclaUnica(evento.key.code);
+		}
+		if (evento.key.code == sf::Keyboard::Escape) {
+			pObservado->notificaTeclaUnica(evento.key.code);
+		}
+		if (evento.key.code == sf::Keyboard::BackSpace) {
 			pObservado->notificaTeclaUnica(evento.key.code);
 		}
 	}
 
 	void GerenciadorEventos::tratarTeclaPressionada() {
-		if (evento.key.code == sf::Keyboard::W) {
+		if (evento.key.code >= sf::Keyboard::A && evento.key.code <= sf::Keyboard::Z) {
 			pObservado->notificaTeclaPressionada(evento.key.code);
 		}
-		if (evento.key.code == sf::Keyboard::A) {
+		if (evento.key.code == sf::Keyboard::Up) {
 			pObservado->notificaTeclaPressionada(evento.key.code);
 		}
-		if (evento.key.code == sf::Keyboard::D) {
+		if (evento.key.code == sf::Keyboard::Left) {
 			pObservado->notificaTeclaPressionada(evento.key.code);
 		}
-		if (evento.key.code == sf::Keyboard::Escape) {
-			tratarEventoJanela();
+		if (evento.key.code == sf::Keyboard::Right) {
+			pObservado->notificaTeclaPressionada(evento.key.code);
 		}
 	}	
 

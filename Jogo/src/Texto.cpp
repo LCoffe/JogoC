@@ -2,19 +2,18 @@
 
 #define TEXT_SIZE 24
 
-namespace ElementosGraficos {
+namespace Menu {
 
 	Gerenciador::GerenciadorGrafico* Texto::pGG = Gerenciador::GerenciadorGrafico::getGerGrafico();
 
 	Texto::Texto(const sf::Vector2f pos, std::string info, const char* path):info(info) {
 
 		texto.setString(info);
-		//texto.setFont(*pGG->carregarFonte(path));
+		texto.setFont(*pGG->carregarFonte(path));
 		texto.setCharacterSize(TEXT_SIZE);
 		setAlinhamentoTexto(TextAligment::left);
 		texto.setPosition(sf::Vector2f(pos.x, pos.y));
 		texto.setFillColor(sf::Color::White);
-
 	}
 
 	Texto::~Texto() {};
