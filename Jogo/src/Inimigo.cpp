@@ -51,6 +51,9 @@ namespace Entidade {
 			}
 
 			void Inimigo::atualizar() {
+				if (getMorrendo()) {
+					podeRemover();
+				}
 				mover();
 				atualizarPosicao();
 			}
@@ -78,6 +81,14 @@ namespace Entidade {
 			}
 			void Inimigo::atualizarSprite(float dt)
 			{
+			}
+
+			void Inimigo::salvar(nlohmann::json& j) {
+				j["ID"] = (int)getID();
+				j["posicao"] = { {"x", pos.x}, {"y", pos.y} };
+				j["tamanho"] = { {"x", tam.x}, {"y", tam.y} };
+				j["velocidade"] = { {"x", velocidadeFinal.x}, {"y", velocidadeFinal.y} };
+				j["direcao"] = direcao;
 			}
 		}
 	}
