@@ -8,12 +8,14 @@ namespace Observado {
 		class ObservadorJogador : public Observador {
 		private:
 			Entidade::Personagem::Jogador::Jogador* pJogador;
+			Gerenciador::GerenciadorGrafico* pGG = Gerenciador::GerenciadorGrafico::getGerGrafico();
+			float tempoAtaque;
 		public:
 			ObservadorJogador(Entidade::Personagem::Jogador::Jogador* pJog);
 			~ObservadorJogador();
 
-			void upTeclaPressionada(sf::Keyboard::Key tecla);
-			void upTeclaUnica(sf::Keyboard::Key tecla);
+			void attTeclaPressionada(sf::Keyboard::Key tecla);
+			void attTeclaUnica(sf::Keyboard::Key tecla);
 		};
 	}
 }
