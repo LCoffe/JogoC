@@ -4,7 +4,7 @@ namespace IDs {
 	enum class IDs{
 		nulo = 0, 
 		jogador, // 1
-		inimigo,// 2
+		guerreiraAthena,// 2
 		fase01, // 3
 		plataforma, // 4
 		menuPrincipal, // 5
@@ -28,5 +28,8 @@ namespace IDs {
 		estadoMenuOpcoes, // 23
 		estadoSalvarColocacao, // 24
 		estadoMenuColocacao, // 25
+		espadaJogador, // 26
+		espadaInimigo, // 27
+		gorgona, // 28
 	};
 }
