@@ -5,7 +5,7 @@ namespace Gerenciador{
 	float GerenciadorGrafico::tempo = 0.0f;
 
 	GerenciadorGrafico::GerenciadorGrafico():
-		janela(new sf::RenderWindow(sf::VideoMode(TELA_X, TELA_Y), "Jogo", sf::Style::Fullscreen)), relogio(), 
+		janela(new sf::RenderWindow(sf::VideoMode(TELA_X, TELA_Y), "Jogo")), relogio(), 
 		camera(new Camera(sf::Vector2f(TELA_X,TELA_Y)))
 	{
 		if (janela == nullptr) {

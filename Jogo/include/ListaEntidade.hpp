@@ -8,7 +8,8 @@
 #include "Plataforma.hpp"
 #include "Jogador.hpp"
 #include "Inimigo.hpp"
-
+#include "../include/GuerreiraAthena.hpp"
+#include "../include/Gorgona.hpp"
 
 using namespace std;
 

@@ -12,6 +12,16 @@ namespace Gerenciador {
 		pListaObstaculo = nullptr;
 	}
 
+	void GerenciadorColisoes::verificaDoisJogadores() {
+		Entidade::Entidade* aux = pListaPersonagem->operator[](1); //Segunda pos da lista
+		if (aux->getID() == IDs::IDs::jogador) {
+			auxLista = 2;
+		}
+		else {
+			auxLista = 1;
+		}
+	}
+
 	const bool GerenciadorColisoes::verificaColisao(Entidade::Entidade* ent1, Entidade::Entidade* ent2) const {
 		sf::FloatRect r1 = static_cast<sf::FloatRect>(ent1->getCorpo().getGlobalBounds());
 		sf::FloatRect r2 = static_cast<sf::FloatRect>(ent2->getCorpo().getGlobalBounds());
@@ -40,9 +50,10 @@ namespace Gerenciador {
 	}
 
 	void GerenciadorColisoes::tratarColisaoJogInimigo() {
+		verificaDoisJogadores();
 		for (int i = 0; i < pListaPersonagem->getTamanho(); i++) {
 			Entidade::Entidade* ent1 = pListaPersonagem->operator[](i);
-			for (int j = i + 1; j < pListaPersonagem->getTamanho(); j++) { //retira jogador do segundo loop.
+			for (int j = auxLista; j < pListaPersonagem->getTamanho(); j++) {
 				Entidade::Entidade* ent2 = pListaPersonagem->operator[](j);
 				if (verificaColisao(ent1, ent2)) { //verifica se as entidades colidiram.
 					sf::Vector2f diferenca = calcColisao(ent1, ent2);

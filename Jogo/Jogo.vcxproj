@@ -135,6 +135,7 @@
   <ItemGroup>
     <ClCompile Include="src\Animacao.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\Arma.cpp" />
     <ClCompile Include="src\Botao.cpp" />
     <ClCompile Include="src\Camera.cpp" />
     <ClCompile Include="src\Ente.cpp" />
@@ -148,6 +149,8 @@
     <ClCompile Include="src\GerenciadorEventos.cpp" />
     <ClCompile Include="src\GerenciadorGrafico.cpp" />
     <ClCompile Include="src\GerenciadorSalvar.cpp" />
+    <ClCompile Include="src\Gorgona.cpp" />
+    <ClCompile Include="src\GuerreiraAthena.cpp" />
     <ClCompile Include="src\Inimigo.cpp" />
     <ClCompile Include="src\Jogador.cpp" />
     <ClCompile Include="src\ListaEntidade.cpp" />
@@ -171,6 +174,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Animacao.hpp" />
+    <ClInclude Include="include\Arma.hpp" />
     <ClInclude Include="include\Botao.hpp" />
     <ClInclude Include="include\Camera.hpp" />
     <ClInclude Include="include\Ente.hpp" />
@@ -185,6 +189,8 @@
     <ClInclude Include="include\GerenciadorEventos.hpp" />
     <ClInclude Include="include\GerenciadorGrafico.hpp" />
     <ClInclude Include="include\GerenciadorSalvar.hpp" />
+    <ClInclude Include="include\Gorgona.hpp" />
+    <ClInclude Include="include\GuerreiraAthena.hpp" />
     <ClInclude Include="include\IDs.hpp" />
     <ClInclude Include="include\Inimigo.hpp" />
     <ClInclude Include="include\Jogador.hpp" />

@@ -1,53 +1,80 @@
 [
     {
         "ID": 1,
+        "andando": false,
+        "atacando": false,
         "direcao": true,
         "jogadorUm": true,
+        "levandoDano": false,
+        "posArma": {
+            "x": -500.0,
+            "y": -500.0
+        },
         "posicao": {
-            "x": 114.05830383300781,
-            "y": 429.794677734375
+            "x": 345.9169006347656,
+            "y": 636.5349731445313
         },
         "tamanho": {
             "x": 50.0,
             "y": 50.0
         },
+        "tempoAtaque": 0.0,
         "velocidade": {
             "x": 80.0,
-            "y": 121.26937103271484
-        }
+            "y": 0.0
+        },
+        "vida": 100.0
     },
     {
         "ID": 2,
-        "direcao": true,
+        "andando": true,
+        "atacando": false,
+        "direcao": false,
         "jogadorUm": true,
+        "levandoDano": false,
+        "posArma": {
+            "x": -500.0,
+            "y": -500.0
+        },
         "posicao": {
-            "x": 650.5288696289063,
-            "y": 618.0170288085938
+            "x": 474.54547119140625,
+            "y": 618.0164794921875
         },
         "tamanho": {
             "x": 50.0,
             "y": 50.0
         },
+        "tempoAtaque": 0.0,
         "velocidade": {
             "x": 50.0,
             "y": 0.0
-        }
+        },
+        "vida": 100.0
     },
     {
-        "ID": 2,
-        "direcao": true,
+        "ID": 28,
+        "andando": true,
+        "atacando": false,
+        "direcao": false,
         "jogadorUm": true,
+        "levandoDano": false,
+        "posArma": {
+            "x": -500.0,
+            "y": -500.0
+        },
         "posicao": {
-            "x": 450.5289001464844,
-            "y": 618.0170288085938
+            "x": 674.8911743164063,
+            "y": 618.0164794921875
         },
         "tamanho": {
             "x": 50.0,
             "y": 50.0
         },
+        "tempoAtaque": 0.0,
         "velocidade": {
             "x": 50.0,
             "y": 0.0
-        }
+        },
+        "vida": 100.0
     }
 ]

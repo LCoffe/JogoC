@@ -1,5 +1,6 @@
 C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\src\Animacao.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\Jogo\x64\Debug\Animacao.obj
 C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\main.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\Jogo\x64\Debug\main.obj
+C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\src\Arma.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\Jogo\x64\Debug\Arma.obj
 C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\src\Botao.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\Jogo\x64\Debug\Botao.obj
 C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\src\Camera.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\Jogo\x64\Debug\Camera.obj
 C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\src\Ente.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\Jogo\x64\Debug\Ente.obj
@@ -13,6 +14,8 @@ C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\src\GerenciadorEstado.cpp
 C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\src\GerenciadorEventos.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\Jogo\x64\Debug\GerenciadorEventos.obj
 C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\src\GerenciadorGrafico.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\Jogo\x64\Debug\GerenciadorGrafico.obj
 C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\src\GerenciadorSalvar.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\Jogo\x64\Debug\GerenciadorSalvar.obj
+C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\src\Gorgona.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\Jogo\x64\Debug\Gorgona.obj
+C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\src\GuerreiraAthena.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\Jogo\x64\Debug\GuerreiraAthena.obj
 C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\src\Inimigo.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\Jogo\x64\Debug\Inimigo.obj
 C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\src\Jogador.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\Jogo\x64\Debug\Jogador.obj
 C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\src\ListaEntidade.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\Jogo\x64\Debug\ListaEntidade.obj

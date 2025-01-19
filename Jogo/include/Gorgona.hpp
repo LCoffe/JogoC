@@ -4,9 +4,13 @@
 
 constexpr auto PARADOG_PATH = "..\\Jogo\\assets\\inimigos\\gorgona\\gorgona_parado.png";
 constexpr auto ANDARG_PATH = "..\\Jogo\\assets\\inimigos\\gorgona\\gorgona_andar.png";
+constexpr auto DANOG_PATH = "..\\Jogo\\assets\\inimigos\\gorgona\\gorgona_machucado.png";
+constexpr auto ATAQUEG_PATH = "..\\Jogo\\assets\\inimigos\\gorgona\\gorgona_ataque.png";
 
-//constexpr auto PULO_PATH = "..\\Jogo\\assets\\jogador\\jogador_pulo.png";
-//constexpr auto ATAQUE_PATH = "..\\Jogo\\assets\\jogador\\jogador_ataque.png";
+#define DANO_GORGONA 10.0f
+#define VIDA_GORGONA 100.0f
+#define TAMANHO_GORGONA_X 50.0f
+#define TAMANHO_GORGONA_Y 50.0f
 
 namespace Entidade {
 	namespace Personagem {
@@ -14,17 +18,17 @@ namespace Entidade {
 
 			class Gorgona : public Inimigo
 			{
-			public:
-				Gorgona(const sf::Vector2f pos, Jogador::Jogador* pJ);
-				~Gorgona();
+				private:
+					void inicializarSprite();
+					void atualizarSprite(float dt);
+				public:
+					Gorgona(const sf::Vector2f pos, Jogador::Jogador* pJ);
+					Gorgona(const sf::Vector2f pos, Jogador::Jogador* pJ, Jogador::Jogador* pJ2);
+					~Gorgona();
 
-				void atualizar() override;
-				void	desenhar();
-				void salvar(nlohmann::json& j) override;
-				void colisao(Entidade* ent, const sf::Vector2f diferenca) override;
-				void inicializarSprite() override;
-				void atualizarSprite(float dt) override;
-
+					void desenhar();
+					//void atualizarTempoAtaque();
+					void salvar(nlohmann::json& j);
 			};
 		}
 	}

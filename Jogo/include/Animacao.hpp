@@ -8,7 +8,8 @@ namespace ElementosGraficos {
 		walk = 0,
 		idle = 1,
 		attack = 2,
-		jump = 3
+		jump = 3,
+		levouDano = 4
 	};
 
 	class Animacao

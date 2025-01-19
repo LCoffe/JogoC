@@ -3,6 +3,7 @@
 #include "../include/Ente.hpp"
 #include "../include/Animacao.hpp"
 #include "../include/json.hpp"
+#include "../stdafx/stdafx.hpp"
 
 namespace Entidade {
 	class Entidade: public Ente {
@@ -21,7 +22,7 @@ namespace Entidade {
 		void setTam(sf::Vector2f tam) { corpo.setSize(tam); }
 		const sf::Vector2f& getTam() const { return corpo.getSize(); }
 
-		void setPos(sf::Vector2f pos) { corpo.setPosition(pos); }
+		void setPos(sf::Vector2f pos) { corpo.setPosition(pos);}
 		const sf::Vector2f& getPos() const { return corpo.getPosition(); }
 
 		sf::RectangleShape& getCorpo(){ return corpo; }
