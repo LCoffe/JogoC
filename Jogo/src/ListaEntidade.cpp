@@ -57,8 +57,13 @@ namespace Lista {
 					aux->salvar(jsonAux);
 					jsonReturn.push_back(jsonAux);
 				}
-				if ((aux->getID() == IDs::IDs::inimigo)) {
-					aux = static_cast<Entidade::Personagem::Inimigo::Inimigo*>(aux);
+				if ((aux->getID() == IDs::IDs::guerreiraAthena)) {
+					aux = static_cast<Entidade::Personagem::Inimigo::GuerreiraAthena*>(aux);
+					aux->salvar(jsonAux);
+					jsonReturn.push_back(jsonAux);
+				}
+				if (aux->getID() == IDs::IDs::gorgona) {
+					aux = static_cast<Entidade::Personagem::Inimigo::Gorgona*>(aux);
 					aux->salvar(jsonAux);
 					jsonReturn.push_back(jsonAux);
 				}

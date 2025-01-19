@@ -25,7 +25,7 @@ namespace Entidade {
 					//pp->setVelocidade(sf::Vector2f(pp->getVelocidade().x, 0.0f));
 				}
 			}
-			else if (ent->getID() == IDs::IDs::inimigo) {
+			else if (ent->getID() == IDs::IDs::guerreiraAthena || ent->getID() == IDs::IDs::gorgona) {
 				Personagem::Personagem* pp = dynamic_cast<Personagem::Personagem*>(ent);
 				colisaoObs(pp, diferenca);
 				if (pp->getPos().x < pos.x && pp->getDirecao()) { //se a plataforma estiver a direita do inimigo e ele estiver indo para a direita

@@ -1,11 +1,12 @@
 #include "../include/Personagem.hpp"
+#include "../include/Arma.hpp"
 #include "stdlib.h"
 
 namespace Entidade {
 	namespace Personagem {
 		Personagem::Personagem(const sf::Vector2f pos, const sf::Vector2f tam, const float vel, const IDs::IDs ID) : 
-			Entidade(pos, tam, ID), velocidadeMax(vel), velocidadeFinal(sf::Vector2f(vel, 0.0f)), tempo(0.0f), 
-			andando(false), direcao(true), colisaoChao(false), atacando(false), dano(0.0f), morrendo(false){}
+			Entidade(pos, tam, ID), velocidadeMax(vel), velocidadeFinal(sf::Vector2f(vel, 0.0f)), tempo(0.0f), tempoAtaque(0.0f),
+			andando(false), direcao(true), colisaoChao(false), atacando(false), dano(0.0f), morrendo(false), levandoDano(false), vida(0.0f), tempoDano(0.0f), pArma(nullptr){}
 
 		Personagem::~Personagem() {}
 
@@ -13,6 +14,9 @@ namespace Entidade {
 			atacando = false;
 			andando = true;
 			this->direcao = direcao;
+
+			pArma->setPos(sf::Vector2f(-500.0f, -500.0f));
+			tempoAtaque = 0.0f;
 		}
 
 		void Personagem::parar() {
@@ -21,6 +25,22 @@ namespace Entidade {
 
 		void Personagem::atacar(const bool atacando) {
 			this->atacando = atacando;
+		}
+
+		void Personagem::tomarDano(const float dano) {
+			if (!levandoDano) {
+				vida -= dano;
+				levandoDano = true;
+				if (vida <= 0.0f) {
+					cout << vida << endl;
+					vida = 0.0f;
+					morrendo = true;
+				}
+			}
+		}
+
+		void Personagem::setPosArma(const sf::Vector2f pos) {
+			pArma->setPos(pos);
 		}
 
 		void Personagem::atualizarPosicao() {
@@ -44,6 +64,18 @@ namespace Entidade {
 			pos.y = corpo.getPosition().y;
 
 			velocidadeFinal.x = velocidadeMax;
+
+			atualizaTempoDano();
+		}
+
+		void Personagem::atualizaTempoDano() {
+			if (levandoDano) {
+				tempoDano += pGG->getTempo();
+			}
+			if (levandoDano && tempoDano > 1.0f) {
+				levandoDano = false;
+				tempoDano = 0.0f;
+			}
 		}
 
 		void Personagem::desenhar() {
