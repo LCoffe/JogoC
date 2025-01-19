@@ -12,8 +12,11 @@
 #include "../include/GerenciadorColisoes.hpp"
 #include "../include/GerenciadorSalvar.hpp"
 
+#include "../include/GuerreiraAthena.hpp"
+#include "../include/Gorgona.hpp"
 #include "../include/Inimigo.hpp"
 #include "../include/Jogador.hpp"
+#include "../include/Arma.hpp"
 
 namespace Observado {
 	namespace Observador {
@@ -36,7 +39,7 @@ namespace Fase {
 			Gerenciador::GerenciadorSalvar* pGS;
 
 			void criaPersonagem(const sf::Vector2f pos, const IDs::IDs ID, bool jogadorUm);
-			void criaPersonagem(const sf::Vector2f pos, const IDs::IDs ID, const sf::Vector2f tam, const sf::Vector2f vel, bool direcao, bool jogadorUm);
+			void criaPersonagem(const sf::Vector2f pos, const IDs::IDs ID, const sf::Vector2f tam, const sf::Vector2f vel, bool direcao, bool jogadorUm, float vida, float tempoAtaque, sf::Vector2f posArma, bool atacando, bool andando, bool levandoDano);
 			void criaPlataforma(const sf::Vector2f pos, const sf::Vector2f tam, const IDs::IDs ID);
 			void criaLimite();
 		public:
@@ -48,6 +51,7 @@ namespace Fase {
 			bool getDoisJogadores() { return doisJogadores; }
 			void setPontuacao(int pontuacao) { this->pontuacao = pontuacao; }
 			int getPontuacao() { return pontuacao; }
+			void atualizaPontuacao();
 			void salvarColocacao(string nome);
 			void desenhar();
 			void setAtivoObs(const bool ativo);

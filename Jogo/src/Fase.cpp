@@ -44,6 +44,7 @@ namespace Fase {
 
 	void Fase::criaPersonagem(const sf::Vector2f pos, const IDs::IDs ID, bool jogadorUm) {
 		Entidade::Entidade* personagem = nullptr;
+		Entidade::Entidade* pArma = nullptr;
 		if (ID == IDs::IDs::jogador) {
 			if (jogadorUm) {
 				pJogador = new Entidade::Personagem::Jogador::Jogador(pos);
@@ -51,7 +52,10 @@ namespace Fase {
 					cout << "Erro ao criar jogador" << endl;
 				}
 				pJogador->setJogadorUm(true);
+				Entidade::Item::Arma* armaJog = new Entidade::Item::Arma(static_cast<Entidade::Personagem::Personagem*>(pJogador), sf::Vector2f(10.0f, 10.0f), IDs::IDs::espadaJogador);
+				//pJogador->setArma(armaJog);
 				personagem = static_cast<Entidade::Entidade*>(pJogador);
+				pArma = static_cast<Entidade::Entidade*>(armaJog);
 			}
 			else {
 				doisJogadores = true;
@@ -59,14 +63,51 @@ namespace Fase {
 				if (pJogadorDois == nullptr) {
 					cout << "Erro ao criar jogador" << endl;
 				}
+				Entidade::Item::Arma* armaJog = new Entidade::Item::Arma(static_cast<Entidade::Personagem::Personagem*>(pJogadorDois), sf::Vector2f(10.0f, 10.0f), IDs::IDs::espadaJogador);
+				//pJogador->setArma(armaJog);
 				personagem = static_cast<Entidade::Entidade*>(pJogadorDois);
+				pArma = static_cast<Entidade::Entidade*>(armaJog);
 			}
 		}
-		if (ID == IDs::IDs::inimigo) {
+		else if (ID == IDs::IDs::guerreiraAthena) {
 			if (pJogador == nullptr) {
 				cout << "Erro ao criar inimigo, jogador nao foi criado" << endl;
 			}
-			Entidade::Personagem::Inimigo::Inimigo* pInimigo = new Entidade::Personagem::Inimigo::Inimigo(pos, this->pJogador);
+			Entidade::Personagem::Inimigo::GuerreiraAthena* pInimigo = nullptr;
+			if (doisJogadores) {
+				pInimigo = new Entidade::Personagem::Inimigo::GuerreiraAthena(pos, this->pJogador, this->pJogadorDois);
+				Entidade::Item::Arma* armaInim = new Entidade::Item::Arma(static_cast<Entidade::Personagem::Personagem*>(pInimigo), sf::Vector2f(10.0f, 10.0f), IDs::IDs::espadaInimigo);
+				//pInimigo->setArma(armaInim);
+				pArma = static_cast<Entidade::Entidade*>(armaInim);
+			}
+			else {
+				pInimigo = new Entidade::Personagem::Inimigo::GuerreiraAthena(pos, this->pJogador);
+				Entidade::Item::Arma* armaInim = new Entidade::Item::Arma(static_cast<Entidade::Personagem::Personagem*>(pInimigo), sf::Vector2f(10.0f, 10.0f), IDs::IDs::espadaInimigo);
+				//pInimigo->setArma(armaInim);
+				pArma = static_cast<Entidade::Entidade*>(armaInim);
+			}
+			if (pInimigo == nullptr) {
+				cout << "Erro ao criar inimigo" << endl;
+			}
+			personagem = static_cast<Entidade::Entidade*>(pInimigo);
+		}
+		else if (ID == IDs::IDs::gorgona) {
+			if (pJogador == nullptr) {
+				cout << "Erro ao criar inimigo, jogador nao foi criado" << endl;
+			}
+			Entidade::Personagem::Inimigo::Gorgona* pInimigo = nullptr;
+			if (doisJogadores) {
+				pInimigo = new Entidade::Personagem::Inimigo::Gorgona(pos, this->pJogador, this->pJogadorDois);
+				Entidade::Item::Arma* armaInim = new Entidade::Item::Arma(static_cast<Entidade::Personagem::Personagem*>(pInimigo), sf::Vector2f(10.0f, 10.0f), IDs::IDs::espadaInimigo);
+				//pInimigo->setArma(armaInim);
+				pArma = static_cast<Entidade::Entidade*>(armaInim);
+			}
+			else {
+				pInimigo = new Entidade::Personagem::Inimigo::Gorgona(pos, this->pJogador);
+				Entidade::Item::Arma* armaInim = new Entidade::Item::Arma(static_cast<Entidade::Personagem::Personagem*>(pInimigo), sf::Vector2f(10.0f, 10.0f), IDs::IDs::espadaInimigo);
+				//pInimigo->setArma(armaInim);
+				pArma = static_cast<Entidade::Entidade*>(armaInim);
+			}
 			if (pInimigo == nullptr) {
 				cout << "Erro ao criar inimigo" << endl;
 			}
@@ -74,38 +115,130 @@ namespace Fase {
 		}
 		if (personagem != nullptr) {
 			pListaPersona->inserirEnt(personagem);
+			if (pArma != nullptr) {
+				pListaPersona->inserirEnt(pArma);
+			}
 		}
 	}
 
-	void Fase::criaPersonagem(const sf::Vector2f pos, const IDs::IDs ID, const sf::Vector2f tam, const sf::Vector2f vel, bool direcao, bool jogadorUm) {
+	void Fase::criaPersonagem(const sf::Vector2f pos, const IDs::IDs ID, const sf::Vector2f tam, const sf::Vector2f vel, bool direcao, bool jogadorUm, float vida, float tempoAtaque, sf::Vector2f posArma, bool atacando, bool andando, bool levandoDano) {
 		Entidade::Entidade* personagem = nullptr;
+		Entidade::Entidade* arma = nullptr;
 		if (ID == IDs::IDs::jogador) {
-			pJogador = new Entidade::Personagem::Jogador::Jogador(pos);
-			if (pJogador == nullptr) {
-				cout << "Erro ao criar jogador" << endl;
+			if (jogadorUm) {
+				pJogador = new Entidade::Personagem::Jogador::Jogador(pos);
+				Entidade::Item::Arma* pArma = new Entidade::Item::Arma(static_cast<Entidade::Personagem::Personagem*>(pJogador), sf::Vector2f(10.0f, 10.0f), IDs::IDs::espadaJogador);
+				if (pArma == nullptr) {
+					cout << "Erro ao criar arma" << endl;
+				}
+				cout << posArma.x << " " << posArma.y << endl;
+				//pArma->setPos(posArma);
+				//pJogador->setArma(pArma);
+				if (pJogador == nullptr) {
+					cout << "Erro ao criar jogador" << endl;
+				}
+				pJogador->setPosArma(posArma);
+				pJogador->setTam(tam);
+				pJogador->setVelocidade(vel);
+				pJogador->setDirecao(direcao);
+				pJogador->setJogadorUm(jogadorUm);
+				pJogador->setVida(vida);
+				pJogador->setTempoAtaque(tempoAtaque);
+				pJogador->atacar(atacando);
+				//pJogador->andar(andando);
+
+				pJogador->setAtivoObs(true);
+				personagem = static_cast<Entidade::Entidade*>(pJogador);
+				arma = static_cast<Entidade::Entidade*>(pArma);
 			}
-			pJogador->setTam(tam);
-			pJogador->setVelocidade(vel);
-			pJogador->setDirecao(direcao);
-			pJogador->setJogadorUm(jogadorUm);
-			pJogador->setAtivoObs(true);
-			personagem = static_cast<Entidade::Entidade*>(pJogador);
+			else {
+				doisJogadores = true;
+				pJogadorDois = new Entidade::Personagem::Jogador::Jogador(pos);
+				Entidade::Item::Arma* pArma = new Entidade::Item::Arma(static_cast<Entidade::Personagem::Personagem*>(pJogadorDois), sf::Vector2f(10.0f, 10.0f), IDs::IDs::espadaJogador);
+				if (pArma == nullptr) {
+					cout << "Erro ao criar arma" << endl;
+				}
+				pJogadorDois->setArma(pArma);
+				if (pJogadorDois == nullptr) {
+					cout << "Erro ao criar jogador" << endl;
+				}
+				pJogadorDois->setPosArma(posArma);
+				pJogadorDois->setTam(tam);
+				pJogadorDois->setVelocidade(vel);
+				pJogadorDois->setDirecao(direcao);
+				pJogadorDois->setJogadorUm(jogadorUm);
+				pJogadorDois->setVida(vida);
+				pJogadorDois->setTempoAtaque(tempoAtaque);
+				pJogadorDois->atacar(atacando);
+				//pJogadorDois->andar(andando);
+
+				pJogadorDois->setAtivoObs(true);
+				personagem = static_cast<Entidade::Entidade*>(pJogadorDois);
+				arma = static_cast<Entidade::Entidade*>(pArma);
+			}
 		}
-		if (ID == IDs::IDs::inimigo) {
+		else if (ID == IDs::IDs::guerreiraAthena) {
 			if (pJogador == nullptr) {
 				cout << "Erro ao criar inimigo, jogador nao foi criado" << endl;
 			}
-			Entidade::Personagem::Inimigo::Inimigo* pInimigo = new Entidade::Personagem::Inimigo::Inimigo(pos, this->pJogador);
+			Entidade::Personagem::Inimigo::GuerreiraAthena* pInimigo = nullptr;
+			if (doisJogadores) {
+				pInimigo = new Entidade::Personagem::Inimigo::GuerreiraAthena(pos, this->pJogador, this->pJogadorDois);
+			}
+			else {
+				pInimigo = new Entidade::Personagem::Inimigo::GuerreiraAthena(pos, this->pJogador);
+			}
+			Entidade::Item::Arma* pArma = new Entidade::Item::Arma(static_cast<Entidade::Personagem::Personagem*>(pInimigo), sf::Vector2f(10.0f, 10.0f), IDs::IDs::espadaInimigo);
+			if (pArma == nullptr) {
+				cout << "Erro ao criar arma" << endl;
+			}
 			if (pInimigo == nullptr) {
 				cout << "Erro ao criar inimigo" << endl;
 			}
+			pInimigo->setPosArma(posArma);
 			pInimigo->setTam(tam);
 			pInimigo->setVelocidade(vel);
 			pInimigo->setDirecao(direcao);
+			pInimigo->setVida(vida);
+			pInimigo->setTempoAtaque(tempoAtaque);
+			pInimigo->atacar(atacando);
+
 			personagem = static_cast<Entidade::Entidade*>(pInimigo);
+			arma = static_cast<Entidade::Entidade*>(pArma);
+		}
+		else if (ID == IDs::IDs::gorgona) {
+			if (pJogador == nullptr) {
+				cout << "Erro ao criar inimigo, jogador nao foi criado" << endl;
+			}
+			Entidade::Personagem::Inimigo::Gorgona* pInimigo = nullptr;
+			if (doisJogadores) {
+				pInimigo = new Entidade::Personagem::Inimigo::Gorgona(pos, this->pJogador, this->pJogadorDois);
+			}
+			else {
+				pInimigo = new Entidade::Personagem::Inimigo::Gorgona(pos, this->pJogador);
+			}
+			Entidade::Item::Arma* pArma = new Entidade::Item::Arma(static_cast<Entidade::Personagem::Personagem*>(pInimigo), sf::Vector2f(10.0f, 10.0f), IDs::IDs::espadaInimigo);
+			if (pArma == nullptr) {
+				cout << "Erro ao criar arma" << endl;
+			}
+			if (pInimigo == nullptr) {
+				cout << "Erro ao criar inimigo" << endl;
+			}
+			pInimigo->setPosArma(posArma);
+			pInimigo->setTam(tam);
+			pInimigo->setVelocidade(vel);
+			pInimigo->setDirecao(direcao);
+			pInimigo->setVida(vida);
+			pInimigo->setTempoAtaque(tempoAtaque);
+
+			personagem = static_cast<Entidade::Entidade*>(pInimigo);
+			arma = static_cast<Entidade::Entidade*>(pArma);
 		}
 		if (personagem != nullptr) {
 			pListaPersona->inserirEnt(personagem);
+			if (arma != nullptr) {
+				pListaPersona->inserirEnt(arma);
+			}
 		}
 	}
 
@@ -164,6 +297,15 @@ namespace Fase {
 
 	void Fase::gerenciarColisoes() {
 		pGC->executar();
+	}
+
+	void Fase::atualizaPontuacao() {
+		if (pJogador != nullptr) {
+			pontuacao = pJogador->getPontuacao();
+		}
+		if (pJogadorDois != nullptr) {
+			pontuacao += pJogadorDois->getPontuacao();
+		}
 	}
 
 	void Fase::desenhar() {
