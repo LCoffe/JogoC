@@ -40,11 +40,13 @@ namespace Entidade {
 			const bool getDirecao() const { return direcao; }
 			void setColisaoChao(const bool colisaoChao) { this->colisaoChao = colisaoChao; }
 			const bool getColisaoChao() const { return colisaoChao; }
+			const bool getLevandoDano() const { return levandoDano; }
 			void atacar(const bool atacando);
 			const bool getAtacando() const { return atacando; }
 			void setDano(const float dano) { this->dano = dano; }
 			void setVida(const float vida) { this->vida = vida; }
 			void setTempoAtaque(const float tempoAtaque) { this->tempoAtaque = tempoAtaque; }
+			void setLevandoDano(const bool levandoDano) { this->levandoDano = levandoDano; }
 			virtual void tomarDano(const float dano);
 			void atualizaTempoDano();
 			void setMorrendo(const bool morrendo) { this->morrendo = morrendo; }
@@ -54,7 +56,7 @@ namespace Entidade {
 			Item::Arma* getArma() { return pArma; }
 			void setPosArma(const sf::Vector2f pos);
 			virtual void atualizar() = 0;
-			virtual void colisao(Entidade* ent, const sf::Vector2f diferenca) = 0;
+			virtual void colisao(Entidade* ent, sf::Vector2f diferenca) = 0;
 			virtual void inicializarSprite() = 0;
 			virtual void atualizarSprite(float dt) = 0;
 			virtual void salvar(nlohmann::json& j) = 0;

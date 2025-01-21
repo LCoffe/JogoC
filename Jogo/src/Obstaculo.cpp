@@ -9,7 +9,7 @@ namespace Entidade {
 
 		Obstaculo::~Obstaculo() {}
 
-		void Obstaculo::colisaoObs(Personagem::Personagem* persona, const sf::Vector2f diferenca) {
+		void Obstaculo::colisaoObs(Personagem::Personagem* persona, sf::Vector2f diferenca) {
 			sf::Vector2f personaPos = persona->getPos();
 			sf::Vector2f personaTam = persona->getTam();
 			sf::Vector2f personaVelFinal = persona->getVelocidade();

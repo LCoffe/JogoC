@@ -13,7 +13,7 @@ namespace Entidade {
 			Obstaculo(const sf::Vector2f pos, const sf::Vector2f tam, const IDs::IDs ID);
 			~Obstaculo();
 			virtual void colisao(Entidade* ent, const sf::Vector2f diferenca) = 0;
-			void colisaoObs(Personagem::Personagem* persona, const sf::Vector2f diferenca);
+			void colisaoObs(Personagem::Personagem* persona, sf::Vector2f diferenca);
 			virtual void desenhar() = 0;
 			virtual void atualizar() = 0;
 			virtual void salvar(nlohmann::json& j) = 0;

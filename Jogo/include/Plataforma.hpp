@@ -13,7 +13,7 @@ namespace Entidade {
 			public:
 				Plataforma(const sf::Vector2f pos, const sf::Vector2f tam, const IDs::IDs ID);
 				~Plataforma();
-				void colisao(Entidade* ent, const sf::Vector2f diferenca);
+				void colisao(Entidade* ent, sf::Vector2f diferenca);
 				virtual void desenhar();
 				virtual void atualizar();
 				void salvar(nlohmann::json& j);
