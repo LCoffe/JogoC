@@ -333,7 +333,7 @@ namespace Fase {
 		pJogador = getJogador();
 		pJogadorDois = getJogadorDois();
 		if (pJogadorDois != nullptr) {
-			if (pJogador || pJogadorDois) {
+			if (!pJogador->getMorrendo() && !pJogadorDois->getMorrendo()) {
 
 				// Atualizar camera
 				sf::Vector2f pos;
@@ -358,6 +358,9 @@ namespace Fase {
 
 				gerenciarColisoes();
 				atualizaPontuacao();
+			}
+			else {
+				pObsFase->jogadorMorreu();
 			}
 		}
 		else {

@@ -96,11 +96,11 @@ namespace Entidade {
 					}
 					else {
 						tomarDano(arma->getDano());
-						if (!getMorrendo()) {
-							sf::Vector2f posInimigo = getPos();
-							bool direcaoInimigo = arma->getPersonagem()->getDirecao();
-							setPos(sf::Vector2f(direcaoInimigo ? posInimigo.x + 10.0f : posInimigo.x - 10.0f, posInimigo.y + 5.0f));
-						}
+					}
+					if (!getMorrendo()) {
+						sf::Vector2f posInimigo = getPos();
+						bool direcaoInimigo = arma->getPersonagem()->getDirecao();
+						setPos(sf::Vector2f(direcaoInimigo ? posInimigo.x + 10.0f : posInimigo.x - 10.0f, posInimigo.y + 5.0f));
 					}
 				}
 				else if(ent->getID() == IDs::IDs::plataforma) {

@@ -1,9 +1,9 @@
-﻿  MenuOpcoes.cpp
-C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\include\Animacao.hpp(47,42): warning C4244: '=': conversão de 'float' para 'T', possível perda de dados
-C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\include\Animacao.hpp(47,42): warning C4244:         with
-C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\include\Animacao.hpp(47,42): warning C4244:         [
-C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\include\Animacao.hpp(47,42): warning C4244:             T=int
-C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\include\Animacao.hpp(47,42): warning C4244:         ]
-  (compilando o arquivo fonte 'src/MenuOpcoes.cpp')
+﻿  Jogador.cpp
+C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\include\Animacao.hpp(47,42): warning C4244: '=': conversão de 'float' para 'T', possível perda de dados
+C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\include\Animacao.hpp(47,42): warning C4244:         with
+C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\include\Animacao.hpp(47,42): warning C4244:         [
+C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\include\Animacao.hpp(47,42): warning C4244:             T=int
+C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\include\Animacao.hpp(47,42): warning C4244:         ]
+  (compilando o arquivo fonte 'src/Jogador.cpp')
   
-  Jogo.vcxproj -> C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\Jogo\x64\Debug\Jogo.exe
+  Jogo.vcxproj -> C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\x64\Debug\Jogo.exe

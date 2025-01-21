@@ -32,7 +32,6 @@ namespace Entidade {
 				vida -= dano;
 				levandoDano = true;
 				if (vida <= 0.0f) {
-					cout << vida << endl;
 					vida = 0.0f;
 					morrendo = true;
 				}
