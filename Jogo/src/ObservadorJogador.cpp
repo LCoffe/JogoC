@@ -19,13 +19,15 @@ namespace Observado {
 					pJogador->pular();
 				}
 				if (tecla == sf::Keyboard::A) {
-					pJogador->andar(false);
+					if (!pJogador->getPetrificado() && !pJogador->getLevandoDano())
+						pJogador->andar(false);
 				}
 				if (tecla == sf::Keyboard::D) {
-					pJogador->andar(true);
+					if (!pJogador->getPetrificado() && !pJogador->getLevandoDano())
+						pJogador->andar(true);
 				}
 				if (tecla == sf::Keyboard::E) {
-					pJogador->atualizarTempoAtaque();
+					pJogador->atacar(true);
 				}
 			}
 			else {
@@ -33,13 +35,15 @@ namespace Observado {
 					pJogador->pular();
 				}
 				if (tecla == sf::Keyboard::Left) {
-					pJogador->andar(false);
+					if (!pJogador->getPetrificado() && !pJogador->getLevandoDano())
+						pJogador->andar(false);
 				}
-				if (tecla == sf::Keyboard::Right) {
-					pJogador->andar(true);
+				if (tecla == sf::Keyboard::Right && !pJogador->getLevandoDano()) {
+					if (!pJogador->getPetrificado())
+						pJogador->andar(true);
 				}
 				if (tecla == sf::Keyboard::L) {
-					pJogador->atualizarTempoAtaque();
+					pJogador->atacar(true);
 				}
 			}
 		}

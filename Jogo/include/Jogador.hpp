@@ -30,20 +30,24 @@ namespace Entidade {
 			class Jogador : public Personagem {
 			private:
 				Observado::Observador::ObservadorJogador* pObs;
+				bool petrificado;
 				bool podePular;
 				bool jogadorUm;
 				int pontuacao;
+				float tempoPetrificado;
 			public:
 				Jogador(const sf::Vector2f pos);
 				~Jogador();
 				void pular();
 				void setJogadorUm(bool jogadorUm) { this->jogadorUm = jogadorUm; }
 				bool getJogadorUm() { return jogadorUm; }
+				void setPetrificado(bool petrificado) { this->petrificado = petrificado; }
+				bool getPetrificado() { return petrificado; }
 				void desenhar();
 				void atualizar();
 				void addPontuacao(int pontuacao) { this->pontuacao += pontuacao; }
 				int getPontuacao() { return pontuacao; }
-				void colisao(Entidade* ent, const sf::Vector2f diferenca);
+				void colisao(Entidade* ent, sf::Vector2f diferenca);
 				void setAtivoObs(const bool ativo);
 				void inicializarSprite();
 				void atualizarTempoAtaque();

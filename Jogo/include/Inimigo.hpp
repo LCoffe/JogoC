@@ -33,7 +33,7 @@ namespace Entidade {
 				virtual void tomarDano(const float dano);
 				void desenharInimigo();
 				void atualizar();
-				void colisao(Entidade* ent, const sf::Vector2f diferenca);
+				void colisao(Entidade* ent, sf::Vector2f diferenca);
 				
 				virtual void salvar(nlohmann::json& j) = 0;
 			};

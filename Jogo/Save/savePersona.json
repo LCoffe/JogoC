@@ -1,18 +1,18 @@
 [
     {
         "ID": 1,
-        "andando": false,
         "atacando": false,
         "direcao": true,
         "jogadorUm": true,
         "levandoDano": false,
+        "petrificado": true,
         "posArma": {
             "x": -500.0,
             "y": -500.0
         },
         "posicao": {
-            "x": 345.9169006347656,
-            "y": 636.5349731445313
+            "x": 563.78369140625,
+            "y": 636.5359497070313
         },
         "tamanho": {
             "x": 50.0,
@@ -23,54 +23,29 @@
             "x": 80.0,
             "y": 0.0
         },
-        "vida": 100.0
-    },
-    {
-        "ID": 2,
-        "andando": true,
-        "atacando": false,
-        "direcao": false,
-        "jogadorUm": true,
-        "levandoDano": false,
-        "posArma": {
-            "x": -500.0,
-            "y": -500.0
-        },
-        "posicao": {
-            "x": 474.54547119140625,
-            "y": 618.0164794921875
-        },
-        "tamanho": {
-            "x": 50.0,
-            "y": 50.0
-        },
-        "tempoAtaque": 0.0,
-        "velocidade": {
-            "x": 50.0,
-            "y": 0.0
-        },
-        "vida": 100.0
+        "vida": 90.0
     },
     {
         "ID": 28,
-        "andando": true,
-        "atacando": false,
+        "atacando": true,
+        "ataquePetrificante": false,
         "direcao": false,
         "jogadorUm": true,
         "levandoDano": false,
+        "petrificado": true,
         "posArma": {
             "x": -500.0,
             "y": -500.0
         },
         "posicao": {
-            "x": 674.8911743164063,
-            "y": 618.0164794921875
+            "x": 613.7325439453125,
+            "y": 636.5359497070313
         },
         "tamanho": {
             "x": 50.0,
             "y": 50.0
         },
-        "tempoAtaque": 0.0,
+        "tempoAtaque": 0.6559997797012329,
         "velocidade": {
             "x": 50.0,
             "y": 0.0

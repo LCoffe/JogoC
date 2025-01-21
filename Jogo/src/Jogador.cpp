@@ -32,12 +32,28 @@ namespace Entidade {
 					colisaoChao = false;
 				}
 
+				if (petrificado) {
+					if (levandoDano) {
+						petrificado = false;
+						tempoPetrificado = 0.0f;
+					}
+					else{
+						andando = false;
+						tempoPetrificado += 0.016f;
+						if (tempoPetrificado > 3.0f) {
+							petrificado = false;
+							tempoPetrificado = 0.0f;
+						}
+					}
+				}
+
 				if (getMorrendo()) {
 					podeRemover();
 					cout << "Tu eh ruim em pai" << endl;
 				}
 
 				atualizarPosicao();
+				atualizarTempoAtaque();
 				atualizarSprite(pGG->getTempo());
 			}
 
@@ -50,31 +66,19 @@ namespace Entidade {
 				}
 			}
 
-			void Jogador::colisao(Entidade* ent, const sf::Vector2f diferenca) {
+			void Jogador::colisao(Entidade* ent, sf::Vector2f diferenca) {
 				if (ent->getID() == IDs::IDs::guerreiraAthena) {
 					Personagem* p = dynamic_cast<Personagem*>(ent);
-					/*if (atacando) {
-							if (!p->getMorrendo()) {
-								p->tomarDano(dano);
-								sf::Vector2f posInimigo = p->getPos();
-								if (pos.x < posInimigo.x) {
-									p->setPos(sf::Vector2f(posInimigo.x + 10.0f, posInimigo.y + 5.0f));
-								}
-								else {
-									p->setPos(sf::Vector2f(posInimigo.x - 10.0f, posInimigo.y + 5.0f));
-								}
-								if (p->getMorrendo()) {
-									pontuacao += 100;
-								}
-							}
-						}*/
 					p->parar();
 					p->atacar(true);
 				}
 				else if (ent->getID() == IDs::IDs::gorgona) {
 					Personagem* p = dynamic_cast<Personagem*>(ent);
-					p->parar();
-					p->atacar(true);
+					sf::Vector2f posInimigo = p->getPos();
+					if (diferenca.x < -35.0f && diferenca.x > -40.f) {
+						p->parar();
+						p->atacar(true);
+					}
 				}
 				else if(ent->getID() == IDs::IDs::espadaInimigo){
 					Item::Arma* arma = static_cast<Item::Arma*>(ent);
@@ -83,6 +87,20 @@ namespace Entidade {
 						sf::Vector2f posInimigo = getPos();
 						bool direcaoInimigo = arma->getPersonagem()->getDirecao();
 						setPos(sf::Vector2f(direcaoInimigo ? posInimigo.x + 10.0f : posInimigo.x - 10.0f, posInimigo.y + 5.0f));
+					}
+				}
+				else if (ent->getID() == IDs::IDs::cobrasGorgona) {
+					Item::Arma* arma = static_cast<Item::Arma*>(ent);
+					if (arma->getAtaquePetrificante()) {
+						petrificado = true;
+					}
+					else {
+						tomarDano(arma->getDano());
+						if (!getMorrendo()) {
+							sf::Vector2f posInimigo = getPos();
+							bool direcaoInimigo = arma->getPersonagem()->getDirecao();
+							setPos(sf::Vector2f(direcaoInimigo ? posInimigo.x + 10.0f : posInimigo.x - 10.0f, posInimigo.y + 5.0f));
+						}
 					}
 				}
 				else if(ent->getID() == IDs::IDs::plataforma) {
@@ -107,34 +125,27 @@ namespace Entidade {
 
 			void Jogador::atualizarTempoAtaque()
 			{	
-				if (!getAtacando() && andando || levandoDano) {
-					tempoAtaque = 0.0f;
-					setPosArma(sf::Vector2f(-500.0f, -500.0f));
-				}
-				if (!getAtacando() && !andando && !levandoDano) {
-					tempoAtaque += pGG->getTempo();
-					setPosArma(sf::Vector2f(-500.0f, -500.0f));
-				}
-				if (tempoAtaque > 0.35f) {
-					tempoAtaque -= pGG->getTempo();
-					atacar(true);
-					sf::Vector2f posArma;
-					if (direcao) {
-						posArma = sf::Vector2f(getPos().x + pArma->getTam().x + 30.0f, getPos().y + 30.0f);
-					}
-					else {
-						posArma = sf::Vector2f(getPos().x - pArma->getTam().x - 30.0f, getPos().y) / 2.0f;
-					}
-					setPosArma(posArma);
-				}
-				else if (getAtacando()) {
-					tempoAtaque -= pGG->getTempo();
-					if (tempoAtaque <= 0.0f) {
+				if (getAtacando() && !andando && !levandoDano) {
+					tempoAtaque += 0.016f;
+					pArma->setPos(sf::Vector2f(-500.0f, -500.0f));
+					if (tempoAtaque > 0.9f) {
 						tempoAtaque = 0.0f;
 						atacar(false);
-						setPosArma(sf::Vector2f(-500.0f, -500.0f));
+						pArma->setPos(sf::Vector2f(-500.0f, -500.0f));
+					}
+					else if (tempoAtaque > 0.36f) {
+						pArma->setPos(sf::Vector2f(-500.0f, -500.0f));
+					}
+					else if (tempoAtaque > 0.35f) {
+						setPosArma(sf::Vector2f(direcao ? pos.x + pArma->getTam().x + 30.0f : pos.x - pArma->getTam().x, pos.y + 10.0f));
 					}
 				}
+				else if (andando || levandoDano) {
+					tempoAtaque = 0.0f;
+					pArma->setPos(sf::Vector2f(-500.0f, -500.0f));
+					atacar(false);
+				}
+
 			}
 
 			void Jogador::atualizarSprite(float dt)
@@ -166,8 +177,8 @@ namespace Entidade {
 				j["tempoAtaque"] = tempoAtaque;
 				j["posArma"] = { {"x", pArma->getPos().x}, {"y", pArma->getPos().y} };
 				j["atacando"] = atacando;
-				j["andando"] = andando;
 				j["levandoDano"] = levandoDano;
+				j["petrificado"] = petrificado;
 			}
 		}
 	}
