@@ -39,7 +39,7 @@ namespace Fase {
 			Gerenciador::GerenciadorSalvar* pGS;
 
 			void criaPersonagem(const sf::Vector2f pos, const IDs::IDs ID, bool jogadorUm);
-			void criaPersonagem(const sf::Vector2f pos, const IDs::IDs ID, const sf::Vector2f tam, const sf::Vector2f vel, bool direcao, bool jogadorUm, float vida, float tempoAtaque, sf::Vector2f posArma, bool atacando, bool andando, bool levandoDano);
+			void criaPersonagem(const sf::Vector2f pos, const IDs::IDs ID, const sf::Vector2f tam, const sf::Vector2f vel, bool direcao, bool jogadorUm, float vida, float tempoAtaque, sf::Vector2f posArma, bool atacando, bool petrifica, bool levandoDano);
 			void criaPlataforma(const sf::Vector2f pos, const sf::Vector2f tam, const IDs::IDs ID);
 			void criaLimite();
 		public:
@@ -55,7 +55,7 @@ namespace Fase {
 			void salvarColocacao(string nome);
 			void desenhar();
 			void setAtivoObs(const bool ativo);
-			virtual void executar() = 0;
+			void executar();
 			void salvar();
 			void gerenciarColisoes();
 	};

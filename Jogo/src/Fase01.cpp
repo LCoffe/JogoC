@@ -48,7 +48,7 @@ namespace Fase {
 			sf::Vector2f vel(it["velocidade"]["x"], it["velocidade"]["y"]);
 			bool direcao = it["direcao"];
 			bool atacando = it["atacando"];
-			bool andando = it["andando"];
+			bool petrifica = it["petrificado"];
 			float vida = it["vida"];
 			float tempoAtaque = it["tempoAtaque"];
 			sf::Vector2f posArma(it["posArma"]["x"], it["posArma"]["y"]);
@@ -56,10 +56,10 @@ namespace Fase {
 
 			if (ID == IDs::IDs::jogador) {
 				bool jogadorUm = it["jogadorUm"];
-				criaPersonagem(pos, ID, tam, vel, direcao, jogadorUm, vida, tempoAtaque, posArma, atacando, andando, levandoDano);
+				criaPersonagem(pos, ID, tam, vel, direcao, jogadorUm, vida, tempoAtaque, posArma, atacando, petrifica, levandoDano);
 			}
 			if (ID == IDs::IDs::guerreiraAthena || ID == IDs::IDs::gorgona) {
-				criaPersonagem(pos, ID, tam, vel, direcao, false, vida, tempoAtaque, posArma, atacando, andando, levandoDano);
+				criaPersonagem(pos, ID, tam, vel, direcao, false, vida, tempoAtaque, posArma, atacando, petrifica, levandoDano);
 			}
 		}
 
@@ -71,52 +71,6 @@ namespace Fase {
 			sf::Vector2f tam(it["tamanho"]["x"], it["tamanho"]["y"]);
 			if (ID == IDs::IDs::plataforma) {
 				criaPlataforma(pos, tam, ID);
-			}
-		}
-	}
-
-	void Fase01::executar() {
-		pJogador = getJogador();
-		pJogadorDois = getJogadorDois();
-		if (pJogadorDois != nullptr) {
-			if (pJogador || pJogadorDois) {
-
-				// Atualizar camera
-				sf::Vector2f pos;
-				if (pJogador) {
-					pos = pJogador->getPos();
-					if (pJogadorDois) {
-						pos = (pJogador->getPos() + pJogadorDois->getPos()) / 2.0f;
-						if (pJogador->getPos().x - pJogadorDois->getPos().x > pGG->getTamJanela().x || pJogador->getPos().x - pJogadorDois->getPos().x < -pGG->getTamJanela().x) {
-							pos.x = 0.0f;
-						}
-					}
-				}
-
-				if (pos.x != 0.0f) {
-					pGG->atualizarCamera(pos, pGG->getTamJanela());
-				}
-
-				// Atualizar e desenhar entidades
-				pListaPersona->executar();
-				pListaObstaculo->executar();
-				desenhar();
-
-				gerenciarColisoes();
-				atualizaPontuacao();
-			}
-		}
-		else {
-			if (pJogador) {
-				pGG->atualizarCamera(pJogador->getPos(), pGG->getTamJanela());
-				
-				pListaPersona->executar();
-				pListaObstaculo->executar();
-				
-				desenhar();
-				
-				gerenciarColisoes();
-				atualizaPontuacao();
 			}
 		}
 	}

@@ -98,13 +98,13 @@ namespace Fase {
 			Entidade::Personagem::Inimigo::Gorgona* pInimigo = nullptr;
 			if (doisJogadores) {
 				pInimigo = new Entidade::Personagem::Inimigo::Gorgona(pos, this->pJogador, this->pJogadorDois);
-				Entidade::Item::Arma* armaInim = new Entidade::Item::Arma(static_cast<Entidade::Personagem::Personagem*>(pInimigo), sf::Vector2f(10.0f, 10.0f), IDs::IDs::espadaInimigo);
+				Entidade::Item::Arma* armaInim = new Entidade::Item::Arma(static_cast<Entidade::Personagem::Personagem*>(pInimigo), sf::Vector2f(10.0f, 10.0f), IDs::IDs::cobrasGorgona);
 				//pInimigo->setArma(armaInim);
 				pArma = static_cast<Entidade::Entidade*>(armaInim);
 			}
 			else {
 				pInimigo = new Entidade::Personagem::Inimigo::Gorgona(pos, this->pJogador);
-				Entidade::Item::Arma* armaInim = new Entidade::Item::Arma(static_cast<Entidade::Personagem::Personagem*>(pInimigo), sf::Vector2f(10.0f, 10.0f), IDs::IDs::espadaInimigo);
+				Entidade::Item::Arma* armaInim = new Entidade::Item::Arma(static_cast<Entidade::Personagem::Personagem*>(pInimigo), sf::Vector2f(10.0f, 10.0f), IDs::IDs::cobrasGorgona);
 				//pInimigo->setArma(armaInim);
 				pArma = static_cast<Entidade::Entidade*>(armaInim);
 			}
@@ -121,7 +121,7 @@ namespace Fase {
 		}
 	}
 
-	void Fase::criaPersonagem(const sf::Vector2f pos, const IDs::IDs ID, const sf::Vector2f tam, const sf::Vector2f vel, bool direcao, bool jogadorUm, float vida, float tempoAtaque, sf::Vector2f posArma, bool atacando, bool andando, bool levandoDano) {
+	void Fase::criaPersonagem(const sf::Vector2f pos, const IDs::IDs ID, const sf::Vector2f tam, const sf::Vector2f vel, bool direcao, bool jogadorUm, float vida, float tempoAtaque, sf::Vector2f posArma, bool atacando, bool petrifica, bool levandoDano) {
 		Entidade::Entidade* personagem = nullptr;
 		Entidade::Entidade* arma = nullptr;
 		if (ID == IDs::IDs::jogador) {
@@ -145,7 +145,8 @@ namespace Fase {
 				pJogador->setVida(vida);
 				pJogador->setTempoAtaque(tempoAtaque);
 				pJogador->atacar(atacando);
-				//pJogador->andar(andando);
+				pJogador->setPetrificado(petrifica);
+				pJogador->setLevandoDano(levandoDano);
 
 				pJogador->setAtivoObs(true);
 				personagem = static_cast<Entidade::Entidade*>(pJogador);
@@ -170,7 +171,8 @@ namespace Fase {
 				pJogadorDois->setVida(vida);
 				pJogadorDois->setTempoAtaque(tempoAtaque);
 				pJogadorDois->atacar(atacando);
-				//pJogadorDois->andar(andando);
+				pJogadorDois->setPetrificado(petrifica);
+				pJogadorDois->setLevandoDano(levandoDano);
 
 				pJogadorDois->setAtivoObs(true);
 				personagem = static_cast<Entidade::Entidade*>(pJogadorDois);
@@ -202,6 +204,7 @@ namespace Fase {
 			pInimigo->setVida(vida);
 			pInimigo->setTempoAtaque(tempoAtaque);
 			pInimigo->atacar(atacando);
+			pInimigo->setLevandoDano(levandoDano);
 
 			personagem = static_cast<Entidade::Entidade*>(pInimigo);
 			arma = static_cast<Entidade::Entidade*>(pArma);
@@ -217,7 +220,7 @@ namespace Fase {
 			else {
 				pInimigo = new Entidade::Personagem::Inimigo::Gorgona(pos, this->pJogador);
 			}
-			Entidade::Item::Arma* pArma = new Entidade::Item::Arma(static_cast<Entidade::Personagem::Personagem*>(pInimigo), sf::Vector2f(10.0f, 10.0f), IDs::IDs::espadaInimigo);
+			Entidade::Item::Arma* pArma = new Entidade::Item::Arma(static_cast<Entidade::Personagem::Personagem*>(pInimigo), sf::Vector2f(10.0f, 10.0f), IDs::IDs::cobrasGorgona);
 			if (pArma == nullptr) {
 				cout << "Erro ao criar arma" << endl;
 			}
@@ -230,6 +233,9 @@ namespace Fase {
 			pInimigo->setDirecao(direcao);
 			pInimigo->setVida(vida);
 			pInimigo->setTempoAtaque(tempoAtaque);
+			pInimigo->atacar(atacando);
+			pInimigo->setAtaquePetrificante(petrifica);
+			pInimigo->setLevandoDano(levandoDano);
 
 			personagem = static_cast<Entidade::Entidade*>(pInimigo);
 			arma = static_cast<Entidade::Entidade*>(pArma);
@@ -321,5 +327,55 @@ namespace Fase {
 
 	void Fase::salvar() {
 		pGS->salvarJogo(*pListaPersona, *pListaObstaculo, getID(), getDoisJogadores());
+	}
+
+	void Fase::executar() {
+		pJogador = getJogador();
+		pJogadorDois = getJogadorDois();
+		if (pJogadorDois != nullptr) {
+			if (pJogador || pJogadorDois) {
+
+				// Atualizar camera
+				sf::Vector2f pos;
+				if (pJogador) {
+					pos = pJogador->getPos();
+					if (pJogadorDois) {
+						pos = (pJogador->getPos() + pJogadorDois->getPos()) / 2.0f;
+						if (pJogador->getPos().x - pJogadorDois->getPos().x > pGG->getTamJanela().x || pJogador->getPos().x - pJogadorDois->getPos().x < -pGG->getTamJanela().x) {
+							pos.x = 0.0f;
+						}
+					}
+				}
+
+				if (pos.x != 0.0f) {
+					pGG->atualizarCamera(pos, pGG->getTamJanela());
+				}
+
+				// Atualizar e desenhar entidades
+				pListaPersona->executar();
+				pListaObstaculo->executar();
+				desenhar();
+
+				gerenciarColisoes();
+				atualizaPontuacao();
+			}
+		}
+		else {
+			if (!pJogador->getMorrendo()) {
+				pGG->atualizarCamera(pJogador->getPos(), pGG->getTamJanela());
+
+				pListaPersona->executar();
+				pListaObstaculo->executar();
+				pontuacao = pJogador->getPontuacao();
+
+				desenhar();
+
+				gerenciarColisoes();
+				atualizaPontuacao();
+			}
+			else {
+				pObsFase->jogadorMorreu();
+			}
+		}
 	}
 }

@@ -156,6 +156,7 @@
     <ClCompile Include="src\ListaEntidade.cpp" />
     <ClCompile Include="src\Menu.cpp" />
     <ClCompile Include="src\MenuColocacao.cpp" />
+    <ClCompile Include="src\MenuMorreu.cpp" />
     <ClCompile Include="src\MenuOpcoes.cpp" />
     <ClCompile Include="src\MenuPrincipal.cpp" />
     <ClCompile Include="src\MenuSalvarColocacao.cpp" />
@@ -199,6 +200,7 @@
     <ClInclude Include="include\ListaEntidade.hpp" />
     <ClInclude Include="include\Menu.hpp" />
     <ClInclude Include="include\MenuColocacao.hpp" />
+    <ClInclude Include="include\MenuMorreu.hpp" />
     <ClInclude Include="include\MenuOpcoes.hpp" />
     <ClInclude Include="include\MenuPrincipal.hpp" />
     <ClInclude Include="include\MenuSalvarColocacao.hpp" />

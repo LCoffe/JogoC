@@ -11,7 +11,6 @@ namespace Fase {
 
 			void iniciaFase(bool doisJogadores);
 			void carregaFase();
-			void executar();
 			void carregar();
 	};
 }
