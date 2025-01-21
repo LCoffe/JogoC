@@ -4,7 +4,7 @@ namespace Entidade {
     namespace Personagem {
         namespace Inimigo {
             Gorgona::Gorgona(const sf::Vector2f pos, Jogador::Jogador* pJ)
-                : Inimigo(pos, sf::Vector2f(TAMANHO_GORGONA_X, TAMANHO_GORGONA_Y), pJ, IDs::IDs::gorgona) {
+                : Inimigo(pos, sf::Vector2f(TAMANHO_GORGONA_X, TAMANHO_GORGONA_Y), pJ, IDs::IDs::gorgona), ataquePetrificante(false) {
 				vida = VIDA_GORGONA;
 				setDano(DANO_GORGONA);
                 inicializarSprite();
@@ -23,6 +23,36 @@ namespace Entidade {
                 desenharInimigo();
             }
 
+            void Gorgona::atualizarTempoAtaque() {
+                if (getAtacando() && !andando && !levandoDano) {
+                    tempoAtaque += 0.016f;
+                    pArma->setPos(sf::Vector2f(-500.0f, -500.0f));
+                    if (tempoAtaque > 1.35f) {
+                        tempoAtaque = 0.0f;
+                        atacar(false);
+                        pArma->setPos(sf::Vector2f(-500.0f, -500.0f));
+						ataquePetrificante = false;
+						pArma->setAtaquePetrificante(false);
+                    }
+                    else if (tempoAtaque > 1.25f) {
+                        pArma->setPos(sf::Vector2f(-500.0f, -500.0f));
+                    }
+                    else if (tempoAtaque > 1.20f) {
+						if (rand() % 100 <= 5) { // 5% de chance de petrificar o jogador
+                            ataquePetrificante = true;
+							pArma->setAtaquePetrificante(true);
+                        }
+							
+                        setPosArma(sf::Vector2f(direcao ? pos.x + pArma->getTam().x + 5.0f : pos.x - pArma->getTam().x - 5.0f, pos.y + 10.0f));
+                    }
+                }
+                else if (andando || levandoDano) {
+                    tempoAtaque = 0.0f;
+                    pArma->setPos(sf::Vector2f(-500.0f, -500.0f));
+                    atacar(false);
+                }
+            }
+
             void Gorgona::salvar(nlohmann::json& j)
             {
 
@@ -35,6 +65,7 @@ namespace Entidade {
                 j["tempoAtaque"] = tempoAtaque;
                 j["posArma"] = { {"x", pArma->getPos().x}, {"y", pArma->getPos().y} };
                 j["atacando"] = atacando;
+				j["ataquePetrificante"] = ataquePetrificante;
 
             }
 

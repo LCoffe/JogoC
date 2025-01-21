@@ -9,6 +9,7 @@ namespace Entidade {
 		class Arma : public Entidade {
 		protected:
 			float dano;
+			bool ataquePetrificante;
 			Personagem::Personagem *pPersonagem;
 		
 		public:
@@ -16,6 +17,8 @@ namespace Entidade {
 			~Arma();
 			float getDano() { return dano; }
 			Personagem::Personagem* getPersonagem() { return pPersonagem; }
+			void setAtaquePetrificante(const bool ataquePetrificante) { this->ataquePetrificante = ataquePetrificante; }
+			bool getAtaquePetrificante() { return ataquePetrificante; }
 			virtual void desenhar();
 			virtual void atualizar();
 			virtual	void inicializarSprite();

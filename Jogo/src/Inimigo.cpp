@@ -96,14 +96,7 @@ namespace Entidade {
 						pArma->setPos(sf::Vector2f(-500.0f, -500.0f));
 					}
 					else if (tempoAtaque > 1.20f) {
-						sf::Vector2f posArma;
-						if (direcao) {
-							posArma = sf::Vector2f(getPos().x + pArma->getTam().x + 40.0f, getPos().y);
-						}
-						else {
-							posArma = sf::Vector2f(getPos().x - pArma->getTam().x - 40.0f, getPos().y);
-						}
-						pArma->setPos(posArma);
+						setPosArma(sf::Vector2f(direcao ? pos.x + pArma->getTam().x + 9.0f : pos.x - pArma->getTam().x - 9.0f, pos.y));
 					}
 				}
 				else if (andando || levandoDano) {
@@ -123,7 +116,7 @@ namespace Entidade {
 				atualizarSprite(pGG->getTempo());
 			}
 
-			void Inimigo::colisao(Entidade* ent, const sf::Vector2f diferenca) {
+			void Inimigo::colisao(Entidade* ent, sf::Vector2f diferenca) {
 				if (ent->getID() == IDs::IDs::jogador) {
 				}
 				switch (ent->getID())
