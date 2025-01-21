@@ -19,5 +19,10 @@ namespace Observado {
 				//cout << "Pausou" << endl;
 			}
 		}
+		void ObservadorFase::jogadorMorreu() {
+			if (pGEst != nullptr) {
+				pGEst->incluiEstado(IDs::IDs::estadoMorreu, IDs::IDs::nulo, false);
+			}
+		}
 	}
 }

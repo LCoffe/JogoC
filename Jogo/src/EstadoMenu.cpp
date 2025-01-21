@@ -3,6 +3,7 @@
 #include "../include/MenuOpcoes.hpp"
 #include "../include/MenuSalvarColocacao.hpp"
 #include "../include/MenuColocacao.hpp"
+#include "../include/MenuMorreu.hpp"
 
 namespace Estado {
 	EstadoMenu::EstadoMenu(const IDs::IDs ID) : Estado(ID), menu(nullptr) {
@@ -28,6 +29,13 @@ namespace Estado {
 				menuSalvarColocacao->setFase(fase);
 			}
 		}
+		else if (ID == IDs::IDs::estadoMorreu) {
+			Menu::MenuMorreu* menuMorreu = static_cast<Menu::MenuMorreu*>(menu);
+			if (menuMorreu != nullptr) {
+				menuMorreu->setFase(fase);
+				menuMorreu->criarTextoPontuacao();
+			}
+		}
 
 	}
 
@@ -36,6 +44,12 @@ namespace Estado {
 			Menu::MenuOpcoes* menuOpcoes = static_cast<Menu::MenuOpcoes*>(menu);
 			if (menuOpcoes != nullptr) {
 				return menuOpcoes->getFase();
+			}
+		}
+		if (ID == IDs::IDs::estadoMorreu) {
+			Menu::MenuMorreu* menuMorreu = static_cast<Menu::MenuMorreu*>(menu);
+			if (menuMorreu != nullptr) {
+				return menuMorreu->getFase();
 			}
 		}
 		return nullptr;
@@ -78,6 +92,13 @@ namespace Estado {
 				throw std::invalid_argument("Menu invalido");
 			}
 			menu = static_cast<Menu::Menu*>(menuColocacao);
+		}
+		else if (ID == IDs::IDs::estadoMorreu) {
+			Menu::MenuMorreu* menuMorreu = new Menu::MenuMorreu();
+			if (menuMorreu == nullptr) {
+				throw std::invalid_argument("Menu invalido");
+			}
+			menu = static_cast<Menu::Menu*>(menuMorreu);
 		}
 		else {
 			throw std::invalid_argument("ID invalido");

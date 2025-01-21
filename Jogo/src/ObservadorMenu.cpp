@@ -74,7 +74,7 @@ namespace Observado {
 							pFase->salvar();
 						}
 					}
-					if (pMenu->getID() == IDs::IDs::menuSalvarColocao) {
+					if (pEst->getID() == IDs::IDs::estadoSalvarColocacao) {
 						Estado::EstadoMenu* pEM = static_cast<Estado::EstadoMenu*>(pEst);
 						Menu::Menu* pMenu = pEM->getMenu();
 						string nome = pMenu->getNome();
@@ -87,7 +87,7 @@ namespace Observado {
 				}
 				else if (pMenu->getIDBotao() == IDs::IDs::botaoSalvarColocacao) {
 					Estado::Estado* pEst = pGEst->getEstado();
-					if (pEst->getID() == IDs::IDs::estadoMenuOpcoes) {
+					if (pEst->getID() == IDs::IDs::estadoMorreu) {
 						Estado::EstadoMenu* pEM = static_cast<Estado::EstadoMenu*>(pEst);
 						Menu::MenuOpcoes* pMenuOp = static_cast<Menu::MenuOpcoes*>(pEM->getMenu());
 						Fase::Fase* pFase = pMenuOp->getFase();

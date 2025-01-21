@@ -11,25 +11,28 @@ namespace IDs {
 		menuOpcoes, // 6
 		menuSalvarColocao, // 7
 		menuColocacao, // 8
-		botaoJogar1Jog, // 9
-		botaoJogar2Jog, // 10
-		botaoCarregar, // 11
-		botaoSalvar, // 12
-		botaoSalvarColocacao, // 13
-		botaoVoltar, // 14
-		botaoMenuPrincipal, // 15
-		botaoColocacao, // 16
-		botaoTextoColocacao, // 17
-		botaoLimpar, //18
-		botaoSair, // 19
-		estadoMenuPrincipal, // 20
-		estadoJogar1Jog, // 21
-		estadoJogar2Jog, // 22
-		estadoMenuOpcoes, // 23
-		estadoSalvarColocacao, // 24
-		estadoMenuColocacao, // 25
-		espadaJogador, // 26
-		espadaInimigo, // 27
-		gorgona, // 28
+		menuMorreu, // 9
+		botaoJogar1Jog, // 10
+		botaoJogar2Jog, // 11
+		botaoCarregar, // 12
+		botaoSalvar, // 13
+		botaoSalvarColocacao, // 14
+		botaoVoltar, // 15
+		botaoMenuPrincipal, // 16
+		botaoColocacao, // 17
+		botaoTextoColocacao, // 18
+		botaoLimpar, //19
+		botaoSair, // 20
+		estadoMenuPrincipal, // 21
+		estadoJogar1Jog, // 22
+		estadoJogar2Jog, // 23
+		estadoMenuOpcoes, // 24
+		estadoSalvarColocacao, // 25
+		estadoMenuColocacao, // 26
+		estadoMorreu, // 27
+		espadaJogador, // 28
+		espadaInimigo, // 29
+		gorgona, // 30
+		cobrasGorgona, // 31
 	};
 }

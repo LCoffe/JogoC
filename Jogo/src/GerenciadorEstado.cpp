@@ -73,16 +73,29 @@ namespace Gerenciador {
 		}
 		else if (ID == IDs::IDs::estadoSalvarColocacao) {
 			Fase::Fase* pFase = nullptr;
-			if (getEstado()->getID() == IDs::IDs::estadoMenuOpcoes) {
+			if (getEstado()->getID() == IDs::IDs::estadoMorreu) {
 				Estado::EstadoMenu* pAux = static_cast<Estado::EstadoMenu*>(getEstado());
 				pFase = pAux->getFase();
 			}
 			Estado::EstadoMenu* pEM = new Estado::EstadoMenu(ID);
-			pEM->setFase(pFase);
+			if (pFase != nullptr) {
+				pEM->setFase(pFase);
+			}
+			//pEM->setFase(pFase);
 			estado = static_cast<Estado::Estado*>(pEM);
 		}
 		else if (ID == IDs::IDs::estadoMenuColocacao) {
 			estado = static_cast<Estado::Estado*>(new Estado::EstadoMenu(ID));
+		}
+		else if (ID == IDs::IDs::estadoMorreu) {
+			Fase::Fase* pFase = nullptr;
+			if (getEstado()->getID() == IDs::IDs::estadoJogar1Jog || getEstado()->getID() == IDs::IDs::estadoJogar2Jog) {
+				Estado::EstadoJogar* pEJ = static_cast<Estado::EstadoJogar*>(getEstado());
+				pFase = pEJ->getFase();
+			}
+			Estado::EstadoMenu* pEM = new Estado::EstadoMenu(ID);
+			pEM->setFase(pFase);
+			estado = static_cast<Estado::Estado*>(pEM);
 		}
 		else {
 			std::cerr << "ID invalido" << std::endl;
