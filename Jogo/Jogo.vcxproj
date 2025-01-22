@@ -231,6 +231,7 @@
     <Image Include="assets\jogador\jogador.png" />
     <Image Include="assets\jogador\jogador_andar.png" />
     <Image Include="assets\jogador\jogador_ataque.png" />
+    <Image Include="assets\jogador\jogador_ataque1.png" />
     <Image Include="assets\jogador\jogador_machucado.png" />
     <Image Include="assets\jogador\jogador_morte.png" />
     <Image Include="assets\jogador\jogador_parado.png" />
