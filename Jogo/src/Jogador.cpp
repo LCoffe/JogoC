@@ -40,7 +40,7 @@ namespace Entidade {
 					else{
 						andando = false;
 						tempoPetrificado += 0.016f;
-						if (tempoPetrificado > 3.0f) {
+						if (tempoPetrificado > 1.0f) {
 							petrificado = false;
 							tempoPetrificado = 0.0f;
 						}
@@ -100,7 +100,7 @@ namespace Entidade {
 					if (!getMorrendo()) {
 						sf::Vector2f posInimigo = getPos();
 						bool direcaoInimigo = arma->getPersonagem()->getDirecao();
-						setPos(sf::Vector2f(direcaoInimigo ? posInimigo.x + 10.0f : posInimigo.x - 10.0f, posInimigo.y + 5.0f));
+						setPos(sf::Vector2f(direcaoInimigo ? posInimigo.x + 40.0f : posInimigo.x - 40.0f, posInimigo.y + 5.0f));
 					}
 				}
 				else if(ent->getID() == IDs::IDs::plataforma) {

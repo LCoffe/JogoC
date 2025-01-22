@@ -4,7 +4,7 @@ namespace Entidade {
     namespace Personagem {
         namespace Inimigo {
             Gorgona::Gorgona(const sf::Vector2f pos, Jogador::Jogador* pJ)
-                : Inimigo(pos, sf::Vector2f(TAMANHO_GORGONA_X, TAMANHO_GORGONA_Y), pJ, IDs::IDs::gorgona), ataquePetrificante(false) {
+                : Inimigo(pos, sf::Vector2f(TAMANHO_GORGONA_X, TAMANHO_GORGONA_Y), pJ, IDs::IDs::gorgona), ataquePetrificante(false), ataqueBasico(false) {
 				vida = VIDA_GORGONA;
 				setDano(DANO_GORGONA);
                 inicializarSprite();
@@ -37,7 +37,7 @@ namespace Entidade {
 
             void Gorgona::atualizarTempoAtaque() {
 				float aux = rand() % 100;
-                if (!ataquePetrificante && aux <= 5 && getAtacando()) {
+                if (!ataquePetrificante && aux <= 100 && getAtacando() && !ataqueBasico) {
                     ataquePetrificante = true;
 					pArma->setAtaquePetrificante(true);
                 }
@@ -56,17 +56,13 @@ namespace Entidade {
                         atacar(false);
                         pArma->setPos(sf::Vector2f(-500.0f, -500.0f));
 						ataquePetrificante = false;
+                        ataqueBasico = false;
 						pArma->setAtaquePetrificante(false);
                     }
                     else if (tempoAtaque > 1.25f) {
                         pArma->setPos(sf::Vector2f(-500.0f, -500.0f));
                     }
                     else if (tempoAtaque > 1.20f) {
-                        if (rand() % 100 <= 5) { // 5% de chance de petrificar o jogador
-                            ataquePetrificante = true;
-                            pArma->setAtaquePetrificante(true);
-                        }
-
                         setPosArma(sf::Vector2f(direcao ? pos.x + pArma->getTam().x + 5.0f : pos.x - pArma->getTam().x - 5.0f, pos.y + 10.0f));
                     }
                 }
@@ -74,6 +70,7 @@ namespace Entidade {
                     tempoAtaque = 0.0f;
                     pArma->setPos(sf::Vector2f(-500.0f, -500.0f));
                     atacar(false);
+					ataqueBasico = false;
 					if (ataquePetrificante) {
 						ataquePetrificante = false;
 						pArma->setAtaquePetrificante(false);
@@ -116,7 +113,7 @@ namespace Entidade {
                 else if (ataquePetrificante && atacando && !andando) {
                     sprite.atualizar(ElementosGraficos::ID_ANIMACAO::especialGorgona, direcao, pos, dt);
                 }
-				else if (atacando && !andando && !ataquePetrificante) {
+				else if (atacando && ataqueBasico && !andando) {
 					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::attack, direcao, pos, dt);
 				}
 				else if (levandoDano) {
