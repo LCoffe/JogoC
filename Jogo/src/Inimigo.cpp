@@ -51,7 +51,7 @@ namespace Entidade {
 						sf::Vector2f posJog = aux->getPos();
 						sf::Vector2f posInim = getPos();
 						sf::Vector2f tamInim = getTam();
-						if (posJog.x - posInim.x > 0.0f) {
+						if (posJog.x - posInim.x >= 10.0f) {
 							direcao = true;
 							andar(direcao); // direita
 						}
@@ -108,7 +108,11 @@ namespace Entidade {
 
 			void Inimigo::atualizar() {
 				if (getMorrendo()) {
-					podeRemover();
+					tempoMorte += 0.016f;
+					morrendo = true;
+					if (tempoMorte > 1.25f) {
+						podeRemover();
+					}
 				}
 				mover();
 				atualizarPosicao();

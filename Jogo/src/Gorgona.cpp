@@ -20,24 +20,15 @@ namespace Entidade {
             Gorgona::~Gorgona() {}
 
             void Gorgona::desenhar() {
+               //pGG->desenharElemento(corpo);
                 desenharInimigo();
             }
 
-			bool Gorgona::chanceAtaqueEspecial() {
-                if (!ataquePetrificante) {
-                    float aux = rand() % 100;
-                    cout << aux << endl;
-                    if (aux <= 0.1) {
-                        ataquePetrificante = true;
-                        return true;
-                    }
-                }
-                return false;
-			}
-
             void Gorgona::atualizarTempoAtaque() {
-				float aux = rand() % 100;
-                if (!ataquePetrificante && aux <= 100 && getAtacando() && !ataqueBasico) {
+                float aux = static_cast<float>(rand() % 100);
+
+                //15% de chance de ataque petrificante
+                if (!ataquePetrificante && aux <= 15 && getAtacando() && !ataqueBasico) {
                     ataquePetrificante = true;
 					pArma->setAtaquePetrificante(true);
                 }
@@ -63,7 +54,12 @@ namespace Entidade {
                         pArma->setPos(sf::Vector2f(-500.0f, -500.0f));
                     }
                     else if (tempoAtaque > 1.20f) {
-                        setPosArma(sf::Vector2f(direcao ? pos.x + pArma->getTam().x + 5.0f : pos.x - pArma->getTam().x - 5.0f, pos.y + 10.0f));
+                        if (ataquePetrificante) {
+                            setPosArma(sf::Vector2f(direcao ? pos.x + pArma->getTam().x + 45.0f : pos.x - pArma->getTam().x - 10.0f, pos.y + 10.0f));
+                        }
+                        else {
+                            setPosArma(sf::Vector2f(direcao ? pos.x + pArma->getTam().x + 15.0f : pos.x - pArma->getTam().x + 3.0f, pos.y + 10.0f));
+                        }
                     }
                 }
                 else if (andando || levandoDano) {
@@ -99,15 +95,25 @@ namespace Entidade {
                 sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::walk, ANDARG_PATH, 13);
 				sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::attack, ATAQUEG_PATH, 16);
 				sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::levouDano, DANOG_PATH, 3);
+                sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::morte, MORTEG_PATH, 7);
 				sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::especialGorgona, ESPECIALG_PATH, 5);
             }
 
             void Gorgona::atualizarSprite(float dt) {
 
-                pos.x += TAMANHO_GORGONA_X / 2.4f;
-                pos.y += TAMANHO_GORGONA_Y / 2.7f;
-
-                if (andando && colisaoChao) {
+                if (direcao) {
+                    pos.x += TAMANHO_GORGONA_X / 0.65f;
+                    pos.y += TAMANHO_GORGONA_Y / 2.7f;
+                }
+                else {
+					pos.x += TAMANHO_GORGONA_X / 0.5f;
+					pos.y += TAMANHO_GORGONA_Y / 2.7f;
+                }
+                
+                if (morrendo) {
+                    sprite.atualizar(ElementosGraficos::ID_ANIMACAO::morte, direcao, pos, dt);
+                }
+                else if (andando && colisaoChao) {
                     sprite.atualizar(ElementosGraficos::ID_ANIMACAO::walk, direcao, pos, dt);
 				}
                 else if (ataquePetrificante && atacando && !andando) {

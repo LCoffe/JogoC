@@ -333,7 +333,7 @@ namespace Fase {
 		pJogador = getJogador();
 		pJogadorDois = getJogadorDois();
 		if (pJogadorDois != nullptr) {
-			if (!pJogador->getMorrendo() && !pJogadorDois->getMorrendo()) {
+			if (pJogador->getTempoMorte() <= 1.25f && pJogadorDois->getTempoMorte() <= 1.25f) {
 
 				// Atualizar camera
 				sf::Vector2f pos;
@@ -364,7 +364,7 @@ namespace Fase {
 			}
 		}
 		else {
-			if (!pJogador->getMorrendo()) {
+			if (pJogador->getTempoMorte() <= 1.25f) {
 				pGG->atualizarCamera(pJogador->getPos(), pGG->getTamJanela());
 
 				pListaPersona->executar();

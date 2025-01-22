@@ -1,0 +1,1 @@
+  Este é um projeto voltado para a criação de um jogo em C++ a partir da biblioteca SFML, projeto criado seguindo, ou tentando seguir, requerimentos do professor Jean Simão, lecionando a materia Tecnicas de Programação na UTFPR(Universidade Tecnologica Federal do Paraná).

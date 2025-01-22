@@ -66,7 +66,7 @@ namespace Menu {
 			botao->seleciona();
 			posVec--;
 			if (posVec < 0) {
-				posVec = botoes.size() - 1;
+				posVec = static_cast<int>(botoes.size()) - 1;
 			}
 			botao = botoes[posVec];
 			botao->seleciona();

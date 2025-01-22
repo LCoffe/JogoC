@@ -7,6 +7,7 @@ constexpr auto ANDARG_PATH = "..\\Jogo\\assets\\inimigos\\gorgona\\gorgona_andar
 constexpr auto DANOG_PATH = "..\\Jogo\\assets\\inimigos\\gorgona\\gorgona_machucado.png";
 constexpr auto ATAQUEG_PATH = "..\\Jogo\\assets\\inimigos\\gorgona\\gorgona_ataque.png";
 constexpr auto ESPECIALG_PATH = "..\\Jogo\\assets\\inimigos\\gorgona\\gorgona_especial.png";
+constexpr auto MORTEG_PATH = "..\\Jogo\\assets\\inimigos\\gorgona\\gorgona_morte.png";
 
 #define DANO_GORGONA 10.0f
 #define VIDA_GORGONA 100.0f
@@ -31,7 +32,6 @@ namespace Entidade {
 					~Gorgona();
 					void setAtaquePetrificante(bool ataquePetrificante) { this->ataquePetrificante = ataquePetrificante; }
 					bool getAtaquePetrificante() { return ataquePetrificante; }
-					bool chanceAtaqueEspecial();
 					void desenhar();
 					void atualizarTempoAtaque();
 					void salvar(nlohmann::json& j);

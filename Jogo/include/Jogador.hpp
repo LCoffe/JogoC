@@ -18,6 +18,7 @@ constexpr auto PULO_PATH = "..\\Jogo\\assets\\jogador\\jogador_pulo.png";
 constexpr auto ATAQUE_PATH = "..\\Jogo\\assets\\jogador\\jogador_ataque.png";
 constexpr auto DANO_PATH = "..\\Jogo\\assets\\jogador\\jogador_machucado.png";
 constexpr auto PETRIFICADO_PATH = "..\\Jogo\\assets\\jogador\\jogador_pedra.png";
+constexpr auto MORTE_PATH = "..\\Jogo\\assets\\jogador\\jogador_morte.png";
 
 namespace Observado {
 	namespace Observador {

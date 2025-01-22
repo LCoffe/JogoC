@@ -22,10 +22,15 @@ namespace Entidade {
 			}
 
 			void Jogador::desenhar() {
+				//pGG->desenharElemento(corpo);
 				sprite.desenhar();
 			}
 
 			void Jogador::atualizar() {
+				if (getMorrendo()) {
+					tempoMorte += 0.016f;
+				}
+
 				if (podePular) {
 					velocidadeFinal.y = -sqrt(0.2f * GRAVIDADE * ALTURA_PULO);
 					podePular = false;
@@ -45,11 +50,6 @@ namespace Entidade {
 							tempoPetrificado = 0.0f;
 						}
 					}
-				}
-
-				if (getMorrendo()) {
-					podeRemover();
-					cout << "Tu eh ruim em pai" << endl;
 				}
 
 				atualizarPosicao();
@@ -75,7 +75,8 @@ namespace Entidade {
 				else if (ent->getID() == IDs::IDs::gorgona) {
 					Personagem* p = dynamic_cast<Personagem*>(ent);
 					sf::Vector2f posInimigo = p->getPos();
-					if (diferenca.x < -35.0f && diferenca.x > -40.f) {
+					bool direcaoInimigo = p->getDirecao();
+					if (diferenca.x < -35.0f && diferenca.x > -40.0f) {
 						p->parar();
 						p->atacar(true);
 					}
@@ -121,6 +122,7 @@ namespace Entidade {
 				sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::jump, PULO_PATH, 3);
 				sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::attack, ATAQUE_PATH, 6);
 				sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::levouDano, DANO_PATH, 7);
+				sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::morte, MORTE_PATH, 7);
 				sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::petrificado, PETRIFICADO_PATH, 5);
 			}
 
@@ -138,7 +140,7 @@ namespace Entidade {
 						pArma->setPos(sf::Vector2f(-500.0f, -500.0f));
 					}
 					else if (tempoAtaque > 0.35f) {
-						setPosArma(sf::Vector2f(direcao ? pos.x + pArma->getTam().x + 30.0f : pos.x - pArma->getTam().x, pos.y + 10.0f));
+						setPosArma(sf::Vector2f(direcao ? pos.x + pArma->getTam().x + 40.0f : pos.x - pArma->getTam().x, pos.y + 10.0f));
 					}
 				}
 				else if (andando || levandoDano) {
@@ -151,12 +153,13 @@ namespace Entidade {
 
 			void Jogador::atualizarSprite(float dt)
 			{
-				pos.x += TAM_JOGADOR_X / 2.4f;
+				pos.x += TAM_JOGADOR_X / 0.65f;
 				pos.y += TAM_JOGADOR_Y / 2.7f;
 
-				if (andando && colisaoChao)
+				if(morrendo)
+					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::morte, direcao, pos, dt);
+				else if (andando && colisaoChao)
 					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::walk, direcao, pos, dt);
-
 				else if(!colisaoChao)
 					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::jump, direcao, pos, dt);
 				else if (atacando)

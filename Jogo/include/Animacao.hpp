@@ -11,7 +11,8 @@ namespace ElementosGraficos {
 		jump = 3,
 		levouDano = 4,
 		especialGorgona = 5,
-		petrificado = 6
+		petrificado = 6,
+		morte = 7
 	};
 
 	class Animacao
@@ -46,7 +47,7 @@ namespace ElementosGraficos {
 					exit(1);
 				}
 
-				tamRect.width = textura->getSize().x / float(imagemCount);
+				tamRect.width = textura->getSize().x / imagemCount;
 				tamRect.height = textura->getSize().y;
 			}
 			

@@ -21,6 +21,7 @@ namespace Entidade {
 			bool levandoDano;
 			bool morrendo;
 			float tempoAtaque;
+			float tempoMorte;
 			float tempoDano;
 			float vida;
 			const float velocidadeMax;
@@ -43,6 +44,7 @@ namespace Entidade {
 			const bool getLevandoDano() const { return levandoDano; }
 			void atacar(const bool atacando);
 			const bool getAtacando() const { return atacando; }
+			const float getTempoMorte() const { return tempoMorte; }
 			void setDano(const float dano) { this->dano = dano; }
 			void setVida(const float vida) { this->vida = vida; }
 			void setTempoAtaque(const float tempoAtaque) { this->tempoAtaque = tempoAtaque; }

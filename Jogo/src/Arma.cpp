@@ -2,16 +2,16 @@
 
 namespace Entidade {
 	namespace Item {
-		Arma::Arma(Personagem::Personagem* p, sf::Vector2f tam, const IDs::IDs ID) : Entidade(sf::Vector2f(-500.0f, -500.0f), tam, ID), dano(0.0f), pPersonagem(p) {
+		Arma::Arma(Personagem::Personagem* p, sf::Vector2f tam, const IDs::IDs ID) : Entidade(sf::Vector2f(-500.0f, -500.0f), tam, ID), dano(0.0f), pPersonagem(p), ataquePetrificante(false) {
 			if (pPersonagem != nullptr) {
 				dano = pPersonagem->getDano();
 			}
 			pPersonagem->setArma(this);
-			corpo.setFillColor(sf::Color::Red);
+			//corpo.setFillColor(sf::Color::Red);
 		}
 		Arma::~Arma() { pPersonagem = nullptr; }
 		void Arma::desenhar() {
-			pGG->desenharElemento(corpo);
+			//pGG->desenharElemento(corpo);
 		}
 
 		void Arma::atualizar() {}

@@ -37,7 +37,7 @@ namespace Menu {
 			for (auto& it : nomes) {
 				std::string aux = it;
 				std::string pontuacao = std::to_string(pontuacoes[i]);
-				int size = it.size() + pontuacao.size();
+				int size = static_cast<int>(it.size() + pontuacao.size());
 				for (int j = 0; j < 40 - size; j++) {
 					aux += ".";
 				}

@@ -6,7 +6,7 @@ namespace Entidade {
 	namespace Personagem {
 		Personagem::Personagem(const sf::Vector2f pos, const sf::Vector2f tam, const float vel, const IDs::IDs ID) : 
 			Entidade(pos, tam, ID), velocidadeMax(vel), velocidadeFinal(sf::Vector2f(vel, 0.0f)), tempo(0.0f), tempoAtaque(0.0f),
-			andando(false), direcao(true), colisaoChao(false), atacando(false), dano(0.0f), morrendo(false), levandoDano(false), vida(0.0f), tempoDano(0.0f), pArma(nullptr){}
+			andando(false), direcao(true), colisaoChao(false), atacando(false), dano(0.0f), morrendo(false), levandoDano(false), vida(0.0f), tempoDano(0.0f), pArma(nullptr), tempoMorte(0.0f){}
 
 		Personagem::~Personagem() {}
 

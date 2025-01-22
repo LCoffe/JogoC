@@ -265,9 +265,6 @@
     <Image Include="assets\greeksoldier.png">
       <Filter>Arquivos de Recurso</Filter>
     </Image>
-    <Image Include="assets\jogador\jogador_ataque.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
     <Image Include="assets\jogador\jogador.png">
       <Filter>Arquivos de Recurso</Filter>
     </Image>
@@ -293,6 +290,36 @@
       <Filter>Arquivos de Recurso</Filter>
     </Image>
     <Image Include="assets\gamemenu.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="assets\inimigos\gorgona\gorgona_andar.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="assets\inimigos\gorgona\gorgona_ataque.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="assets\inimigos\gorgona\gorgona_especial.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="assets\inimigos\gorgona\gorgona_especial1.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="assets\inimigos\gorgona\gorgona_especial2.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="assets\inimigos\gorgona\gorgona_machucado.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="assets\inimigos\gorgona\gorgona_morte.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="assets\inimigos\gorgona\gorgona_parado.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="assets\jogador\jogador_ataque.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="assets\jogador\jogador_pedra.png">
       <Filter>Arquivos de Recurso</Filter>
     </Image>
   </ItemGroup>

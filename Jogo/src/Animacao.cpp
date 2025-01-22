@@ -2,7 +2,7 @@
 
 namespace ElementosGraficos {
 
-	const float Animacao::AnimacaoUnica::switchTime = 0.2;
+	const float Animacao::AnimacaoUnica::switchTime = 0.2f;
 
 	Gerenciador::GerenciadorGrafico* Animacao::pGG = Gerenciador::GerenciadorGrafico::getGerGrafico();
 
@@ -31,8 +31,8 @@ namespace ElementosGraficos {
 
 		sf::IntRect tamRect = tmp->getTam();
 
-		corpo.setSize(sf::Vector2f(tamRect.width, tamRect.height));
-		corpo.setOrigin(sf::Vector2f(tamRect.width, tamRect.height) / 2.0f);
+		corpo.setSize(sf::Vector2f(static_cast<float>(tamRect.width), static_cast<float>(tamRect.height)));
+		corpo.setOrigin(sf::Vector2f(static_cast<float>(tamRect.width), static_cast<float>(tamRect.height) / 2.0f));
 
 	}
 
@@ -44,8 +44,7 @@ namespace ElementosGraficos {
 				return;
 			}
 			else {
-			mapaAnimacao[IDatual]->resetar();	
-
+				mapaAnimacao[IDatual]->resetar();	
 			}
 		}
 
