@@ -1,48 +1,219 @@
-﻿  Animacao.cpp
-C:\Users\aluno\source\repos\JogoC\Jogo\include\Animacao.hpp(46,42): warning C4244: '=': conversão de 'float' para 'T', possível perda de dados
-C:\Users\aluno\source\repos\JogoC\Jogo\include\Animacao.hpp(46,42): warning C4244:         with
-C:\Users\aluno\source\repos\JogoC\Jogo\include\Animacao.hpp(46,42): warning C4244:         [
-C:\Users\aluno\source\repos\JogoC\Jogo\include\Animacao.hpp(46,42): warning C4244:             T=int
-C:\Users\aluno\source\repos\JogoC\Jogo\include\Animacao.hpp(46,42): warning C4244:         ]
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(5,52): warning C4305: 'inicializando': truncamento de 'double' para 'float'
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(34,52): warning C4244: 'argumento': conversão de 'T' para 'T', possível perda de dados
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(34,52): warning C4244:         with
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(34,52): warning C4244:         [
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(34,52): warning C4244:             T=int
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(34,52): warning C4244:         ]
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(34,52): warning C4244:         and
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(34,52): warning C4244:         [
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(34,52): warning C4244:             T=float
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(34,52): warning C4244:         ]
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(34,37): warning C4244: 'argumento': conversão de 'T' para 'T', possível perda de dados
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(34,37): warning C4244:         with
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(34,37): warning C4244:         [
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(34,37): warning C4244:             T=int
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(34,37): warning C4244:         ]
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(34,37): warning C4244:         and
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(34,37): warning C4244:         [
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(34,37): warning C4244:             T=float
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(34,37): warning C4244:         ]
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(35,54): warning C4244: 'argumento': conversão de 'T' para 'T', possível perda de dados
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(35,54): warning C4244:         with
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(35,54): warning C4244:         [
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(35,54): warning C4244:             T=int
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(35,54): warning C4244:         ]
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(35,54): warning C4244:         and
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(35,54): warning C4244:         [
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(35,54): warning C4244:             T=float
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(35,54): warning C4244:         ]
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(35,39): warning C4244: 'argumento': conversão de 'T' para 'T', possível perda de dados
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(35,39): warning C4244:         with
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(35,39): warning C4244:         [
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(35,39): warning C4244:             T=int
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(35,39): warning C4244:         ]
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(35,39): warning C4244:         and
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(35,39): warning C4244:         [
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(35,39): warning C4244:             T=float
-C:\Users\aluno\source\repos\JogoC\Jogo\src\Animacao.cpp(35,39): warning C4244:         ]
-  Gerando código
-  Previous IPDB and IOBJ mismatch, fall back to full compilation.
-  All 485 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  Finalizada a geração de código
-  Jogo.vcxproj -> C:\Users\aluno\source\repos\JogoC\Jogo\x64\Release\Jogo.exe
+﻿  main.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:             T=int
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         ]
+  (compiling source file 'main.cpp')
+  
+  Arma.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:             T=int
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         ]
+  (compiling source file 'src/Arma.cpp')
+  
+  EstadoJogar.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:             T=int
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         ]
+  (compiling source file 'src/EstadoJogar.cpp')
+  
+  EstadoMenu.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:             T=int
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         ]
+  (compiling source file 'src/EstadoMenu.cpp')
+  
+  Fase.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:             T=int
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         ]
+  (compiling source file 'src/Fase.cpp')
+  
+  Fase01.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:             T=int
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         ]
+  (compiling source file 'src/Fase01.cpp')
+  
+  GerenciadorColisoes.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:             T=int
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         ]
+  (compiling source file 'src/GerenciadorColisoes.cpp')
+  
+  GerenciadorEstado.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:             T=int
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         ]
+  (compiling source file 'src/GerenciadorEstado.cpp')
+  
+  GerenciadorSalvar.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:             T=int
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         ]
+  (compiling source file 'src/GerenciadorSalvar.cpp')
+  
+  Gorgona.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:             T=int
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         ]
+  (compiling source file 'src/Gorgona.cpp')
+  
+C:\Users\alano\source\repos\JogoC\Jogo\src\Gorgona.cpp(28,31): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\src\Gorgona.cpp(39,15): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  GuerreiraAthena.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:             T=int
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         ]
+  (compiling source file 'src/GuerreiraAthena.cpp')
+  
+  Inimigo.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:             T=int
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         ]
+  (compiling source file 'src/Inimigo.cpp')
+  
+  Jogador.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:             T=int
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         ]
+  (compiling source file 'src/Jogador.cpp')
+  
+  Jogo.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:             T=int
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         ]
+  (compiling source file 'src/Jogo.cpp')
+  
+  ListaEntidade.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:             T=int
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         ]
+  (compiling source file 'src/ListaEntidade.cpp')
+  
+  Menu.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:             T=int
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         ]
+  (compiling source file 'src/Menu.cpp')
+  
+C:\Users\alano\source\repos\JogoC\Jogo\src\Menu.cpp(69,28): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  MenuColocacao.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:             T=int
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         ]
+  (compiling source file 'src/MenuColocacao.cpp')
+  
+C:\Users\alano\source\repos\JogoC\Jogo\src\MenuColocacao.cpp(40,14): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  MenuMorreu.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:             T=int
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         ]
+  (compiling source file 'src/MenuMorreu.cpp')
+  
+  MenuOpcoes.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:             T=int
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         ]
+  (compiling source file 'src/MenuOpcoes.cpp')
+  
+  MenuSalvarColocacao.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:             T=int
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         ]
+  (compiling source file 'src/MenuSalvarColocacao.cpp')
+  
+  Compiling...
+  ObservadorFase.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:             T=int
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         ]
+  (compiling source file 'src/ObservadorFase.cpp')
+  
+  ObservadorJogador.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:             T=int
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         ]
+  (compiling source file 'src/ObservadorJogador.cpp')
+  
+  ObservadorMenu.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:             T=int
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         ]
+  (compiling source file 'src/ObservadorMenu.cpp')
+  
+  Obstaculo.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:             T=int
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         ]
+  (compiling source file 'src/Obstaculo.cpp')
+  
+  Personagem.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:             T=int
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         ]
+  (compiling source file 'src/Personagem.cpp')
+  
+  Plataforma.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:             T=int
+C:\Users\alano\source\repos\JogoC\Jogo\include\Animacao.hpp(49,42): warning C4244:         ]
+  (compiling source file 'src/Plataforma.cpp')
+  
+  Generating code
+  2 of 2254 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    5 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Jogo.vcxproj -> C:\Users\alano\source\repos\JogoC\Jogo\x64\Release\Jogo.exe

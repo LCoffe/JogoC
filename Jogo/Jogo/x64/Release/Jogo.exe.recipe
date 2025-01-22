@@ -2,10 +2,14 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\aluno\source\repos\JogoC\Jogo\x64\Release\Jogo.exe</FullPath>
+      <FullPath>C:\Users\alano\source\repos\JogoC\Jogo\x64\Release\Jogo.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
-  <ContentFiles />
+  <ContentFiles>
+    <ContentFile>
+      <FullPath>C:\Users\alano\source\repos\JogoC\Jogo\assets\Fontes\Greek-Freak.ttf</FullPath>
+    </ContentFile>
+  </ContentFiles>
   <SatelliteDlls />
   <NonRecipeFileRefs />
 </Project>

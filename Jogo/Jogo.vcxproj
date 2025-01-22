@@ -121,14 +121,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\SFML-2.6.2\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\alano\source\repos\JogoC\SFML-2.6.2\include;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\SFML-2.6.2\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\SFML-2.6.2\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\alano\source\repos\JogoC\SFML-2.6.2\lib;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\SFML-2.6.2\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-audio.lib;sfml-network.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -220,12 +220,22 @@
     <Image Include="assets\athenasoldier.png" />
     <Image Include="assets\gamemenu.png" />
     <Image Include="assets\greeksoldier.png" />
+    <Image Include="assets\inimigos\gorgona\gorgona_andar.png" />
+    <Image Include="assets\inimigos\gorgona\gorgona_ataque.png" />
+    <Image Include="assets\inimigos\gorgona\gorgona_especial.png" />
+    <Image Include="assets\inimigos\gorgona\gorgona_especial1.png" />
+    <Image Include="assets\inimigos\gorgona\gorgona_especial2.png" />
+    <Image Include="assets\inimigos\gorgona\gorgona_machucado.png" />
+    <Image Include="assets\inimigos\gorgona\gorgona_morte.png" />
+    <Image Include="assets\inimigos\gorgona\gorgona_parado.png" />
     <Image Include="assets\jogador\jogador.png" />
     <Image Include="assets\jogador\jogador_andar.png" />
     <Image Include="assets\jogador\jogador_ataque.png" />
+    <Image Include="assets\jogador\jogador_ataque1.png" />
     <Image Include="assets\jogador\jogador_machucado.png" />
     <Image Include="assets\jogador\jogador_morte.png" />
     <Image Include="assets\jogador\jogador_parado.png" />
+    <Image Include="assets\jogador\jogador_pedra.png" />
     <Image Include="assets\jogador\jogador_pulo.png" />
     <Image Include="assets\jogador\Jump.png" />
     <Image Include="assets\jogador\Walk.png" />
