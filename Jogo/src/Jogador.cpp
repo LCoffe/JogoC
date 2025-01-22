@@ -121,6 +121,7 @@ namespace Entidade {
 				sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::jump, PULO_PATH, 3);
 				sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::attack, ATAQUE_PATH, 6);
 				sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::levouDano, DANO_PATH, 7);
+				sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::petrificado, PETRIFICADO_PATH, 5);
 			}
 
 			void Jogador::atualizarTempoAtaque()
@@ -162,6 +163,8 @@ namespace Entidade {
 					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::attack, direcao, pos, dt);
 				else if (levandoDano)
 					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::levouDano, direcao, pos, dt);
+				else if (petrificado)
+					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::petrificado, direcao, pos, dt);
 				else
 					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::idle, direcao,pos,dt);
 			}

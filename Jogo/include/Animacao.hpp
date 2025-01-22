@@ -9,7 +9,9 @@ namespace ElementosGraficos {
 		idle = 1,
 		attack = 2,
 		jump = 3,
-		levouDano = 4
+		levouDano = 4,
+		especialGorgona = 5,
+		petrificado = 6
 	};
 
 	class Animacao
