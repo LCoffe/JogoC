@@ -37,7 +37,9 @@ namespace Entidade {
 
             void Gorgona::atualizarTempoAtaque() {
 				float aux = rand() % 100;
-                if (!ataquePetrificante && aux <= 100 && getAtacando() && !ataqueBasico) {
+
+                //15% de chance de ataque petrificante
+                if (!ataquePetrificante && aux <= 15 && getAtacando() && !ataqueBasico) {
                     ataquePetrificante = true;
 					pArma->setAtaquePetrificante(true);
                 }
