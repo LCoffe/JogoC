@@ -20,17 +20,34 @@ namespace Entidade {
 			GuerreiraAthena::~GuerreiraAthena() {}
 
 			void GuerreiraAthena::inicializarSprite() {
-				/*sprite.setSpriteSheet("GuerreiraAthena");
-				sprite.setEscala(0.5f, 0.5f);
-				sprite.setOrigem(0.5f, 0.5f);
-				sprite.setPosicao(posicao);*/
+				sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::idle, PARADOGA_PATH, 4);
+				sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::walk, ANDANDOGA_PATH, 6);
+				sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::attack, ATAQUEGA_PATH, 6);
+				sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::levouDano, MACHUCADOGA_PATH, 7);
 			}
 
 			void GuerreiraAthena::atualizarSprite(float dt) {
-				/*sprite.setPosicao(posicao);
-				sprite.atualizar(dt);*/
+				if (direcao) {
+					pos.x += TAMANHO_GUERREIRA_ATHENA_X / 0.50f;
+					pos.y += TAMANHO_GUERREIRA_ATHENA_Y / 2.7f;
+				}
+				else {
+					pos.x += TAMANHO_GUERREIRA_ATHENA_X / 0.90f;
+					pos.y += TAMANHO_GUERREIRA_ATHENA_Y / 2.7f;
+				}
+				
+
+				if (andando && colisaoChao)
+					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::walk, direcao, pos, dt);
+				else if (atacando)
+					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::attack, direcao, pos, dt);
+				else if(levandoDano)
+					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::levouDano, direcao, pos, dt);
+				else
+					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::idle, direcao, pos, dt);
 			}
 			void GuerreiraAthena::desenhar() {
+				//pGG->desenharElemento(corpo);
 				desenharInimigo();
 			}
 

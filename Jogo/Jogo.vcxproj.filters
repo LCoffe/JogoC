@@ -322,6 +322,15 @@
     <Image Include="assets\jogador\jogador_pedra.png">
       <Filter>Arquivos de Recurso</Filter>
     </Image>
+    <Image Include="assets\inimigos\athena\guerreira_andando.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="assets\inimigos\athena\guerreira_parado.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="assets\inimigos\athena\guerreira_ataque.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Font Include="assets\Fontes\Greek-Freak.ttf" />

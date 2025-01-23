@@ -27,8 +27,8 @@ namespace Fase {
 		}
 
 		// Criar inimigos
-		//criaPersonagem(sf::Vector2f(600, 768 - 101), IDs::IDs::guerreiraAthena, false);
-		criaPersonagem(sf::Vector2f(400, 768 - 101), IDs::IDs::gorgona, false);
+		criaPersonagem(sf::Vector2f(600, 768 - 101), IDs::IDs::guerreiraAthena, false);
+		//criaPersonagem(sf::Vector2f(400, 768 - 101), IDs::IDs::gorgona, false);
 		//criaPersonagem(sf::Vector2f(400, 768 - 101), IDs::IDs::guerreiraAthena, false);
 
 		// Criar plataformas

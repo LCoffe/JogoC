@@ -87,16 +87,16 @@ namespace Entidade {
 				if (getAtacando() && !andando && !levandoDano) {
 					tempoAtaque += 0.016f;
 					pArma->setPos(sf::Vector2f(-500.0f, -500.0f));
-					if (tempoAtaque > 1.35f) {
+					if (tempoAtaque > 1.15f) {
 						tempoAtaque = 0.0f;
 						atacar(false);
 						pArma->setPos(sf::Vector2f(-500.0f, -500.0f));
 					}
-					else if (tempoAtaque > 1.25f) {
-						pArma->setPos(sf::Vector2f(-500.0f, -500.0f));
+					else if (tempoAtaque > 1.05f) {
+						setPosArma(sf::Vector2f(direcao ? pos.x + pArma->getTam().x + 40.0f : pos.x - pArma->getTam().x, pos.y + 10.0f));
 					}
-					else if (tempoAtaque > 1.20f) {
-						setPosArma(sf::Vector2f(direcao ? pos.x + pArma->getTam().x + 9.0f : pos.x - pArma->getTam().x - 9.0f, pos.y));
+					else if (tempoAtaque > 1.10f) {
+						setPosArma(sf::Vector2f(-500.0f, -500.0f));
 					}
 				}
 				else if (andando || levandoDano) {

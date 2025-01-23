@@ -15,7 +15,7 @@
 constexpr auto PARADO_PATH = "..\\Jogo\\assets\\jogador\\jogador_parado.png";
 constexpr auto ANDAR_PATH = "..\\Jogo\\assets\\jogador\\jogador_andar.png";
 constexpr auto PULO_PATH = "..\\Jogo\\assets\\jogador\\jogador_pulo.png";
-constexpr auto ATAQUE_PATH = "..\\Jogo\\assets\\jogador\\jogador_ataque1.png";
+constexpr auto ATAQUE_PATH = "..\\Jogo\\assets\\jogador\\jogador_ataque.png";
 constexpr auto DANO_PATH = "..\\Jogo\\assets\\jogador\\jogador_machucado.png";
 constexpr auto PETRIFICADO_PATH = "..\\Jogo\\assets\\jogador\\jogador_pedra.png";
 constexpr auto MORTE_PATH = "..\\Jogo\\assets\\jogador\\jogador_morte.png";

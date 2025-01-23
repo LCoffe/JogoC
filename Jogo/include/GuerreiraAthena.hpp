@@ -9,6 +9,11 @@
 
 #define VIDA_GUERREIRA_ATHENA 100.0f
 
+constexpr const char* const PARADOGA_PATH = "..\\Jogo\\assets\\inimigos\\athena\\guerreira_parado.png";
+constexpr const char* const ANDANDOGA_PATH = "..\\Jogo\\assets\\inimigos\\athena\\guerreira_andando.png";
+constexpr const char* const ATAQUEGA_PATH = "..\\Jogo\\assets\\inimigos\\athena\\guerreira_ataque.png";
+constexpr const char* const MACHUCADOGA_PATH = "..\\Jogo\\assets\\inimigos\\athena\\guerreira_machucado.png";
+
 namespace Entidade {
 	namespace Personagem {
 		namespace Inimigo {

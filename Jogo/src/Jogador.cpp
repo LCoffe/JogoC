@@ -140,7 +140,7 @@ namespace Entidade {
 						pArma->setPos(sf::Vector2f(-500.0f, -500.0f));
 					}
 					else if (tempoAtaque > 0.35f) {
-						setPosArma(sf::Vector2f(direcao ? pos.x + pArma->getTam().x + 40.0f : pos.x - pArma->getTam().x, pos.y + 10.0f));
+						setPosArma(sf::Vector2f(direcao ? pos.x + pArma->getTam().x + 30.0f : pos.x - pArma->getTam().x + 15.0f, pos.y + 10.0f));
 					}
 				}
 				else if (andando || levandoDano) {
