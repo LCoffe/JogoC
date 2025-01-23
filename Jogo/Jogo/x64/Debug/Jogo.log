@@ -1,4 +1,20 @@
-﻿  Camera.cpp
+﻿  main.cpp
+  EstadoJogar.cpp
+  EstadoMenu.cpp
   Fase.cpp
+  Fase01.cpp
+  GerenciadorColisoes.cpp
+  GerenciadorEstado.cpp
+  GerenciadorSalvar.cpp
+  GuerreiraAthena.cpp
+  Jogo.cpp
+  ListaEntidade.cpp
+  Menu.cpp
+  MenuColocacao.cpp
+  MenuMorreu.cpp
+  MenuOpcoes.cpp
+  MenuSalvarColocacao.cpp
+  ObservadorFase.cpp
+  ObservadorMenu.cpp
   Gerando Código...
   Jogo.vcxproj -> C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\x64\Debug\Jogo.exe

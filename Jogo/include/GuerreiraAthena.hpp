@@ -13,6 +13,7 @@ constexpr const char* const PARADOGA_PATH = "..\\Jogo\\assets\\inimigos\\athena\
 constexpr const char* const ANDANDOGA_PATH = "..\\Jogo\\assets\\inimigos\\athena\\guerreira_andando.png";
 constexpr const char* const ATAQUEGA_PATH = "..\\Jogo\\assets\\inimigos\\athena\\guerreira_ataque.png";
 constexpr const char* const MACHUCADOGA_PATH = "..\\Jogo\\assets\\inimigos\\athena\\guerreira_machucado.png";
+constexpr const char* const MORREGA_PATH = "..\\Jogo\\assets\\inimigos\\athena\\guerreira_morte.png";
 
 namespace Entidade {
 	namespace Personagem {
