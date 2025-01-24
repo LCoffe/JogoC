@@ -87,7 +87,11 @@ namespace Entidade {
                 j["posArma"] = { {"x", pArma->getPos().x}, {"y", pArma->getPos().y} };
                 j["atacando"] = atacando;
 				j["ataquePetrificante"] = ataquePetrificante;
-
+				j["ataqueBasico"] = ataqueBasico;
+				j["levandoDano"] = levandoDano;
+				j["tempoDano"] = tempoDano;
+				j["morrendo"] = morrendo;
+                j["tempoMorte"] = tempoMorte;
             }
 
             void Gorgona::inicializarSprite() {

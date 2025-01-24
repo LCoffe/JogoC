@@ -9,3 +9,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
     return 0;
 }
+
+/*int main() {
+	Jogo jogo;
+	jogo.executar();
+	return 0;
+}*/

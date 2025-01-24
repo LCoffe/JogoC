@@ -15,14 +15,16 @@ namespace Entidade {
 			sf::Vector2f personaVelFinal = persona->getVelocidade();
 			
 			persona->setColisaoChao(false);		
+			persona->setColisaoParede(false);
 			if (diferenca.x < 0.0f && diferenca.y < 0.0f) { //houve colisao
-				if (diferenca.x > diferenca.y) {
-					if (personaPos.x < pos.x) { //colisao em x
+				if (diferenca.x > diferenca.y) { //colisao em x
+					if (personaPos.x < pos.x) { 
 						personaPos.x += diferenca.x; //colisao para a direita
 					}
 					else {
 						personaPos.x -= diferenca.x; //colisao para a esquerda
 					}
+					persona->setColisaoParede(true);
 					personaVelFinal.x = 0.0f;
 				}
 				else {

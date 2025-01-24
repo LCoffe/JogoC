@@ -109,7 +109,8 @@ namespace Entidade {
 						colisaoChao = true;
 						velocidadeFinal.y = 0.0f;
 					}
-					if (diferenca.x <= 0.0f && !direcao) {
+					if (diferenca.x <= 0.0f && colisaoParede) {
+						andando = false;
 						velocidadeFinal.x = 0.0f;
 					}
 				}
@@ -168,6 +169,8 @@ namespace Entidade {
 					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::levouDano, direcao, pos, dt);
 				else if (petrificado)
 					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::petrificado, direcao, pos, dt);
+				else if (colisaoParede)
+					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::idle, direcao, pos, dt);
 				else
 					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::idle, direcao,pos,dt);
 			}
@@ -184,7 +187,12 @@ namespace Entidade {
 				j["posArma"] = { {"x", pArma->getPos().x}, {"y", pArma->getPos().y} };
 				j["atacando"] = atacando;
 				j["levandoDano"] = levandoDano;
+				j["tempoDano"] = tempoDano;
 				j["petrificado"] = petrificado;
+				j["tempoPetrificado"] = tempoPetrificado;
+				j["morrendo"] = morrendo;
+				j["tempoMorte"] = tempoMorte;
+				j["pontuacao"] = pontuacao;
 			}
 		}
 	}

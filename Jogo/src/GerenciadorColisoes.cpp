@@ -3,7 +3,7 @@
 namespace Gerenciador {
 	GerenciadorColisoes::GerenciadorColisoes(Lista::ListaEntidade* listaPersonagem, Lista::ListaEntidade* listaObstaculo):
 		pListaPersonagem(listaPersonagem),
-		pListaObstaculo(listaObstaculo)
+		pListaObstaculo(listaObstaculo), auxLista(0)
 	{
 	}
 

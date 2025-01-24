@@ -52,12 +52,22 @@ namespace Entidade {
 						sf::Vector2f posInim = getPos();
 						sf::Vector2f tamInim = getTam();
 						if (posJog.x - posInim.x >= 10.0f) {
-							direcao = true;
-							andar(direcao); // direita
+							if (colisaoParede) {
+								andando = false;
+							}
+							else {
+								direcao = true;
+								andar(direcao); // direita
+							}
 						}
 						else {
-							direcao = false;
-							andar(direcao); // esquerda
+							if (colisaoParede) {
+								andando = false;
+							}
+							else {
+								direcao = false;
+								andar(direcao); // esquerda
+							}
 						}
 					}
 					else { // movimento "aleatorio", se nao achou jogador segue em uma linha reta até chegar em um limite.

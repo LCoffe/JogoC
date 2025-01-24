@@ -28,13 +28,14 @@ namespace Fase {
 
 		// Criar inimigos
 		criaPersonagem(sf::Vector2f(600, 768 - 101), IDs::IDs::guerreiraAthena, false);
-		//criaPersonagem(sf::Vector2f(400, 768 - 101), IDs::IDs::gorgona, false);
+		criaPersonagem(sf::Vector2f(1400, 768 - 101), IDs::IDs::gorgona, false);
 		//criaPersonagem(sf::Vector2f(400, 768 - 101), IDs::IDs::guerreiraAthena, false);
 
 		// Criar plataformas
 		criaPlataforma(sf::Vector2f(0, 768 - 100), sf::Vector2f(1366, 100), IDs::IDs::plataforma);
 		criaPlataforma(sf::Vector2f(1366, 768 - 100), sf::Vector2f(1366, 100), IDs::IDs::plataforma);
 		criaPlataforma(sf::Vector2f(800, 768 - 188), sf::Vector2f(100, 138), IDs::IDs::plataforma);
+		criaPlataforma(sf::Vector2f(1600, 768 - 188), sf::Vector2f(100, 138), IDs::IDs::plataforma);
 	}
 
 	void Fase01::carregar() {
@@ -53,13 +54,17 @@ namespace Fase {
 			float tempoAtaque = it["tempoAtaque"];
 			sf::Vector2f posArma(it["posArma"]["x"], it["posArma"]["y"]);
 			bool levandoDano = it["levandoDano"];
+			float tempoDano = it["tempoDano"];
+			bool morrendo = it["morrendo"];
+			float tempoMorte = it["tempoMorte"];
+			int pontuacao = it["pontuacao"];
 
 			if (ID == IDs::IDs::jogador) {
 				bool jogadorUm = it["jogadorUm"];
-				criaPersonagem(pos, ID, tam, vel, direcao, jogadorUm, vida, tempoAtaque, posArma, atacando, petrifica, levandoDano);
+				criaPersonagem(pos, ID, tam, vel, direcao, jogadorUm, vida, tempoAtaque, posArma, atacando, petrifica, levandoDano, tempoDano, morrendo, tempoMorte, pontuacao);
 			}
 			if (ID == IDs::IDs::guerreiraAthena || ID == IDs::IDs::gorgona) {
-				criaPersonagem(pos, ID, tam, vel, direcao, false, vida, tempoAtaque, posArma, atacando, petrifica, levandoDano);
+				criaPersonagem(pos, ID, tam, vel, direcao, false, vida, tempoAtaque, posArma, atacando, petrifica, levandoDano, tempoDano, morrendo, tempoMorte, 0);
 			}
 		}
 

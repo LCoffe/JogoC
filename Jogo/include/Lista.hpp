@@ -48,7 +48,7 @@ namespace Lista {
 	template<class TL>
 	void Lista<TL>::inserir(TL* elemento) {
 		if(elemento == nullptr){
-			cout << "Elemento nulo" << endl;
+			//cout << "Elemento nulo" << endl;
 			exit(1);
 		}
 		Elemento<TL>* novo = new Elemento<TL>();
@@ -122,7 +122,7 @@ namespace Lista {
 	template<class TL>
 	TL* Lista<TL>::operator[](int pos) {
 		if (pos < 0 || pos >= (int)tam) {
-			cout << "Posicao invalida" << endl;
+			//cout << "Posicao invalida" << endl;
 			exit(1);
 		}
 		Elemento<TL>* atual = pInicio;

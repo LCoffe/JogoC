@@ -20,18 +20,18 @@ namespace Entidade {
 			if (ent->getID() == IDs::IDs::jogador){
 				Personagem::Personagem* pp = dynamic_cast<Personagem::Personagem*>(ent);
 				colisaoObs(pp, diferenca);
-				if (diferenca.x > 0.0f && pp->getVelocidade().x >= 0.0f) {
-					pp->setVelocidade(sf::Vector2f(0.0f, pp->getVelocidade().y));
-					//pp->setVelocidade(sf::Vector2f(pp->getVelocidade().x, 0.0f));
+				if (pp->getColisaoParede()) {
+					pp->setAndando(false);
+					pp->setVelocidade(sf::Vector2f(0.0f, 0.0f));
 				}
 			}
 			else if (ent->getID() == IDs::IDs::guerreiraAthena || ent->getID() == IDs::IDs::gorgona) {
 				Personagem::Personagem* pp = dynamic_cast<Personagem::Personagem*>(ent);
 				colisaoObs(pp, diferenca);
-				if (pp->getPos().x < pos.x && pp->getDirecao()) { //se a plataforma estiver a direita do inimigo e ele estiver indo para a direita
+				if (pp->getColisaoParede() && pp->getDirecao()) { //se a plataforma estiver a direita do inimigo e ele estiver indo para a direita
 					pp->setDirecao(false);
 				}
-				else if (pp->getPos().x < pos.x && !pp->getDirecao()) { //se a plataforma estiver a esquerda do inimigo e ele estiver indo para a esquerda
+				else if (pp->getColisaoParede() && !pp->getDirecao()) { //se a plataforma estiver a esquerda do inimigo e ele estiver indo para a esquerda
 					pp->setDirecao(true);
 				}
 			}

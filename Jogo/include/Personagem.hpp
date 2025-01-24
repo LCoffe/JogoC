@@ -17,6 +17,7 @@ namespace Entidade {
 			bool andando;
 			bool direcao;
 			bool colisaoChao;
+			bool colisaoParede;
 			bool atacando;
 			bool levandoDano;
 			bool morrendo;
@@ -35,21 +36,26 @@ namespace Entidade {
 			const sf::Vector2f& getVelocidade() const { return velocidadeFinal; }
 			void atualizarPosicao();
 			virtual void desenhar();
+			void setAndando(const bool andando) { this->andando = andando; }
 			void andar(const bool direcao);
 			void parar();
 			void setDirecao(const bool direcao) { this->direcao = direcao; } //Direita = true, Esquerda = false
 			const bool getDirecao() const { return direcao; }
 			void setColisaoChao(const bool colisaoChao) { this->colisaoChao = colisaoChao; }
 			const bool getColisaoChao() const { return colisaoChao; }
+			void setColisaoParede(const bool colisaoParede) { this->colisaoParede = colisaoParede; }
+			const bool getColisaoParede() const { return colisaoParede; }
 			const bool getLevandoDano() const { return levandoDano; }
 			void atacar(const bool atacando);
 			const bool getAtacando() const { return atacando; }
+			void setTempoMorte(const float tempoMorte) { this->tempoMorte = tempoMorte; }
 			const float getTempoMorte() const { return tempoMorte; }
 			void setDano(const float dano) { this->dano = dano; }
 			void setVida(const float vida) { this->vida = vida; }
 			void setTempoAtaque(const float tempoAtaque) { this->tempoAtaque = tempoAtaque; }
 			void setLevandoDano(const bool levandoDano) { this->levandoDano = levandoDano; }
 			virtual void tomarDano(const float dano);
+			void setTempoDano(const float tempoDano) { this->tempoDano = tempoDano; }
 			void atualizaTempoDano();
 			void setMorrendo(const bool morrendo) { this->morrendo = morrendo; }
 			const bool getMorrendo() const { return morrendo; }

@@ -39,7 +39,8 @@ namespace Fase {
 			Gerenciador::GerenciadorSalvar* pGS;
 
 			void criaPersonagem(const sf::Vector2f pos, const IDs::IDs ID, bool jogadorUm);
-			void criaPersonagem(const sf::Vector2f pos, const IDs::IDs ID, const sf::Vector2f tam, const sf::Vector2f vel, bool direcao, bool jogadorUm, float vida, float tempoAtaque, sf::Vector2f posArma, bool atacando, bool petrifica, bool levandoDano);
+			void criaPersonagem(const sf::Vector2f pos, const IDs::IDs ID, const sf::Vector2f tam, const sf::Vector2f vel, bool direcao, bool jogadorUm, float vida, float tempoAtaque, sf::Vector2f posArma, bool atacando, bool petrifica, bool levandoDano
+				, float tempoDano, bool morrendo, float tempoMorrendo, int pontuacao); //Metodo usado para carregar os personagens
 			void criaPlataforma(const sf::Vector2f pos, const sf::Vector2f tam, const IDs::IDs ID);
 			void criaLimite();
 		public:

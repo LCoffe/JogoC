@@ -65,6 +65,9 @@ namespace Entidade {
 				j["atacando"] = atacando;
 				j["andando"] = andando;
 				j["levandoDano"] = levandoDano;
+				j["tempoDano"] = tempoDano;
+				j["morrendo"] = morrendo;
+				j["tempoMorte"] = tempoMorte;
 			}
 		}
 	}

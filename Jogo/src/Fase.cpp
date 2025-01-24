@@ -127,7 +127,8 @@ namespace Fase {
 		}
 	}
 
-	void Fase::criaPersonagem(const sf::Vector2f pos, const IDs::IDs ID, const sf::Vector2f tam, const sf::Vector2f vel, bool direcao, bool jogadorUm, float vida, float tempoAtaque, sf::Vector2f posArma, bool atacando, bool petrifica, bool levandoDano) {
+	void Fase::criaPersonagem(const sf::Vector2f pos, const IDs::IDs ID, const sf::Vector2f tam, const sf::Vector2f vel, bool direcao, bool jogadorUm, float vida, float tempoAtaque, sf::Vector2f posArma, bool atacando, bool petrifica, bool levandoDano, 
+		float tempoDano, bool morrendo, float tempoMorrendo, int pontuacao) {
 		Entidade::Entidade* personagem = nullptr;
 		Entidade::Entidade* arma = nullptr;
 		if (ID == IDs::IDs::jogador) {
@@ -155,6 +156,10 @@ namespace Fase {
 				pJogador->atacar(atacando);
 				pJogador->setPetrificado(petrifica);
 				pJogador->setLevandoDano(levandoDano);
+				pJogador->setTempoDano(tempoDano);
+				pJogador->setMorrendo(morrendo);
+				pJogador->setTempoMorte(tempoMorrendo);
+				pJogador->addPontuacao(pontuacao);
 
 				pJogador->setAtivoObs(true);
 				personagem = static_cast<Entidade::Entidade*>(pJogador);
@@ -183,6 +188,10 @@ namespace Fase {
 				pJogadorDois->atacar(atacando);
 				pJogadorDois->setPetrificado(petrifica);
 				pJogadorDois->setLevandoDano(levandoDano);
+				pJogadorDois->setTempoDano(tempoDano);
+				pJogadorDois->setMorrendo(morrendo);
+				pJogadorDois->setTempoMorte(tempoMorrendo);
+				pJogadorDois->addPontuacao(pontuacao);
 
 				pJogadorDois->setAtivoObs(true);
 				personagem = static_cast<Entidade::Entidade*>(pJogadorDois);
@@ -218,6 +227,9 @@ namespace Fase {
 			pInimigo->setTempoAtaque(tempoAtaque);
 			pInimigo->atacar(atacando);
 			pInimigo->setLevandoDano(levandoDano);
+			pInimigo->setTempoDano(tempoDano);
+			pInimigo->setMorrendo(morrendo);
+			pInimigo->setTempoMorte(tempoMorrendo);
 
 			personagem = static_cast<Entidade::Entidade*>(pInimigo);
 			arma = static_cast<Entidade::Entidade*>(pArma);
@@ -252,6 +264,9 @@ namespace Fase {
 			pInimigo->atacar(atacando);
 			pInimigo->setAtaquePetrificante(petrifica);
 			pInimigo->setLevandoDano(levandoDano);
+			pInimigo->setTempoDano(tempoDano);
+			pInimigo->setMorrendo(morrendo);
+			pInimigo->setTempoMorte(tempoMorrendo);
 
 			personagem = static_cast<Entidade::Entidade*>(pInimigo);
 			arma = static_cast<Entidade::Entidade*>(pArma);
