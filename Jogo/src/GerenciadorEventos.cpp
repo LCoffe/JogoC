@@ -12,12 +12,12 @@ namespace Gerenciador {
 
 	GerenciadorEventos::GerenciadorEventos(): evento() {
 		if (pGG == nullptr) {
-			cout << "Erro ao criar gerenciador de eventos : gerenciador grafico nao foi criado" << endl;
+			//cout << "Erro ao criar gerenciador de eventos : gerenciador grafico nao foi criado" << endl;
 			exit(1);
 		}
 		
 		if (pObservado == nullptr) {
-			cout << "Erro ao criar gerenciador de eventos : subject nao foi criado" << endl;
+			//cout << "Erro ao criar gerenciador de eventos : subject nao foi criado" << endl;
 			exit(1);
 		}
 	}

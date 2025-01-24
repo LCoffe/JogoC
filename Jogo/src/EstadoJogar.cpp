@@ -23,7 +23,8 @@ namespace Estado {
 				fase01->iniciaFase(false);
 				fase = static_cast<Fase::Fase*>(fase01);
 				if (fase == nullptr) {
-					throw std::invalid_argument("Fase invalida");
+					//throw std::invalid_argument("Fase invalida");
+					exit(1);
 				}
 			}
 			
@@ -34,7 +35,8 @@ namespace Estado {
 				fase01->iniciaFase(true);
 				fase = static_cast<Fase::Fase*>(fase01);
 				if (fase == nullptr) {
-					throw std::invalid_argument("Fase invalida");
+					//throw std::invalid_argument("Fase invalida");
+					exit(1);
 				}
 			}
 		}
@@ -49,7 +51,8 @@ namespace Estado {
 			fase01->carregaFase();
 			fase = static_cast<Fase::Fase*>(fase01);
 			if (fase == nullptr) {
-				throw std::invalid_argument("Fase invalida");
+				//throw std::invalid_argument("Fase invalida");
+				exit(1);
 			}
 		}
 	}

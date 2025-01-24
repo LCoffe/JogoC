@@ -49,7 +49,8 @@ namespace Fase {
 			if (jogadorUm) {
 				pJogador = new Entidade::Personagem::Jogador::Jogador(pos);
 				if (pJogador == nullptr) {
-					cout << "Erro ao criar jogador" << endl;
+					//cout << "Erro ao criar jogador" << endl;
+					exit(1);
 				}
 				pJogador->setJogadorUm(true);
 				Entidade::Item::Arma* armaJog = new Entidade::Item::Arma(static_cast<Entidade::Personagem::Personagem*>(pJogador), sf::Vector2f(10.0f, 10.0f), IDs::IDs::espadaJogador);
@@ -61,7 +62,8 @@ namespace Fase {
 				doisJogadores = true;
 				pJogadorDois = new Entidade::Personagem::Jogador::Jogador(pos);
 				if (pJogadorDois == nullptr) {
-					cout << "Erro ao criar jogador" << endl;
+					//cout << "Erro ao criar jogador" << endl;
+					exit(1);
 				}
 				Entidade::Item::Arma* armaJog = new Entidade::Item::Arma(static_cast<Entidade::Personagem::Personagem*>(pJogadorDois), sf::Vector2f(10.0f, 10.0f), IDs::IDs::espadaJogador);
 				//pJogador->setArma(armaJog);
@@ -71,7 +73,8 @@ namespace Fase {
 		}
 		else if (ID == IDs::IDs::guerreiraAthena) {
 			if (pJogador == nullptr) {
-				cout << "Erro ao criar inimigo, jogador nao foi criado" << endl;
+				//cout << "Erro ao criar inimigo, jogador nao foi criado" << endl;
+				exit(1);
 			}
 			Entidade::Personagem::Inimigo::GuerreiraAthena* pInimigo = nullptr;
 			if (doisJogadores) {
@@ -87,13 +90,15 @@ namespace Fase {
 				pArma = static_cast<Entidade::Entidade*>(armaInim);
 			}
 			if (pInimigo == nullptr) {
-				cout << "Erro ao criar inimigo" << endl;
+				//cout << "Erro ao criar inimigo" << endl;
+				exit(1);
 			}
 			personagem = static_cast<Entidade::Entidade*>(pInimigo);
 		}
 		else if (ID == IDs::IDs::gorgona) {
 			if (pJogador == nullptr) {
-				cout << "Erro ao criar inimigo, jogador nao foi criado" << endl;
+				//cout << "Erro ao criar inimigo, jogador nao foi criado" << endl;
+				exit(1);
 			}
 			Entidade::Personagem::Inimigo::Gorgona* pInimigo = nullptr;
 			if (doisJogadores) {
@@ -109,7 +114,8 @@ namespace Fase {
 				pArma = static_cast<Entidade::Entidade*>(armaInim);
 			}
 			if (pInimigo == nullptr) {
-				cout << "Erro ao criar inimigo" << endl;
+				//cout << "Erro ao criar inimigo" << endl;
+				exit(1);
 			}
 			personagem = static_cast<Entidade::Entidade*>(pInimigo);
 		}
@@ -129,13 +135,15 @@ namespace Fase {
 				pJogador = new Entidade::Personagem::Jogador::Jogador(pos);
 				Entidade::Item::Arma* pArma = new Entidade::Item::Arma(static_cast<Entidade::Personagem::Personagem*>(pJogador), sf::Vector2f(10.0f, 10.0f), IDs::IDs::espadaJogador);
 				if (pArma == nullptr) {
-					cout << "Erro ao criar arma" << endl;
+					//cout << "Erro ao criar arma" << endl;
+					exit(1);
 				}
 				cout << posArma.x << " " << posArma.y << endl;
 				//pArma->setPos(posArma);
 				//pJogador->setArma(pArma);
 				if (pJogador == nullptr) {
-					cout << "Erro ao criar jogador" << endl;
+					//cout << "Erro ao criar jogador" << endl;
+					exit(1);
 				}
 				pJogador->setPosArma(posArma);
 				pJogador->setTam(tam);
@@ -157,11 +165,13 @@ namespace Fase {
 				pJogadorDois = new Entidade::Personagem::Jogador::Jogador(pos);
 				Entidade::Item::Arma* pArma = new Entidade::Item::Arma(static_cast<Entidade::Personagem::Personagem*>(pJogadorDois), sf::Vector2f(10.0f, 10.0f), IDs::IDs::espadaJogador);
 				if (pArma == nullptr) {
-					cout << "Erro ao criar arma" << endl;
+					//cout << "Erro ao criar arma" << endl;
+					exit(1);
 				}
 				pJogadorDois->setArma(pArma);
 				if (pJogadorDois == nullptr) {
-					cout << "Erro ao criar jogador" << endl;
+					//cout << "Erro ao criar jogador" << endl;
+					exit(1);
 				}
 				pJogadorDois->setPosArma(posArma);
 				pJogadorDois->setTam(tam);
@@ -181,7 +191,8 @@ namespace Fase {
 		}
 		else if (ID == IDs::IDs::guerreiraAthena) {
 			if (pJogador == nullptr) {
-				cout << "Erro ao criar inimigo, jogador nao foi criado" << endl;
+				//cout << "Erro ao criar inimigo, jogador nao foi criado" << endl;
+				exit(1);
 			}
 			Entidade::Personagem::Inimigo::GuerreiraAthena* pInimigo = nullptr;
 			if (doisJogadores) {
@@ -192,10 +203,12 @@ namespace Fase {
 			}
 			Entidade::Item::Arma* pArma = new Entidade::Item::Arma(static_cast<Entidade::Personagem::Personagem*>(pInimigo), sf::Vector2f(10.0f, 10.0f), IDs::IDs::espadaInimigo);
 			if (pArma == nullptr) {
-				cout << "Erro ao criar arma" << endl;
+				//cout << "Erro ao criar arma" << endl;
+				exit(1);
 			}
 			if (pInimigo == nullptr) {
-				cout << "Erro ao criar inimigo" << endl;
+				//cout << "Erro ao criar inimigo" << endl;
+				exit(1);
 			}
 			pInimigo->setPosArma(posArma);
 			pInimigo->setTam(tam);
@@ -211,7 +224,8 @@ namespace Fase {
 		}
 		else if (ID == IDs::IDs::gorgona) {
 			if (pJogador == nullptr) {
-				cout << "Erro ao criar inimigo, jogador nao foi criado" << endl;
+				//cout << "Erro ao criar inimigo, jogador nao foi criado" << endl;
+				exit(1);
 			}
 			Entidade::Personagem::Inimigo::Gorgona* pInimigo = nullptr;
 			if (doisJogadores) {
@@ -222,10 +236,12 @@ namespace Fase {
 			}
 			Entidade::Item::Arma* pArma = new Entidade::Item::Arma(static_cast<Entidade::Personagem::Personagem*>(pInimigo), sf::Vector2f(10.0f, 10.0f), IDs::IDs::cobrasGorgona);
 			if (pArma == nullptr) {
-				cout << "Erro ao criar arma" << endl;
+				//cout << "Erro ao criar arma" << endl;
+				exit(1);
 			}
 			if (pInimigo == nullptr) {
-				cout << "Erro ao criar inimigo" << endl;
+				//cout << "Erro ao criar inimigo" << endl;
+				exit(1);
 			}
 			pInimigo->setPosArma(posArma);
 			pInimigo->setTam(tam);
@@ -254,7 +270,8 @@ namespace Fase {
 			Entidade::Obstaculos::Plataforma* plataforma = nullptr;
 			plataforma = new Entidade::Obstaculos::Plataforma(pos, tam, ID);
 			if (plataforma == nullptr) {
-				cout << "Erro ao criar plataforma" << endl;
+				//cout << "Erro ao criar plataforma" << endl;
+				exit(1);
 			}
 			entidade = static_cast<Entidade::Entidade*>(plataforma);
 		}

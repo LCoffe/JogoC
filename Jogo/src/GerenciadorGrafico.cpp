@@ -9,9 +9,15 @@ namespace Gerenciador{
 		camera(new Camera(sf::Vector2f(TELA_X,TELA_Y)))
 	{
 		if (janela == nullptr) {
-			std::cerr << "Erro ao criar a janela" << std::endl;
+			//std::cerr << "Erro ao criar a janela" << std::endl;
 			exit(1);
 		}
+		sf::Image icon;
+		if (!icon.loadFromFile(CAMINHO_ICONE)) {
+			//std::cerr << "Erro ao carregar o icone" << std::endl;
+			exit(1);
+		}
+		janela->setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
 		janela->setFramerateLimit(60);
 	}
 
@@ -28,7 +34,7 @@ namespace Gerenciador{
 	sf::Texture* GerenciadorGrafico::incluirTextura(const string& path) {
 		sf::Texture* textura = new sf::Texture();
 		if (!textura->loadFromFile(path)) {
-			std::cerr << "Erro: Não foi possível carregar a textura em " << path << std::endl;
+			//std::cerr << "Erro: Não foi possível carregar a textura em " << path << std::endl;
 			delete textura;  // Libera memória para evitar vazamento
 			return nullptr;
 		}
@@ -80,7 +86,7 @@ namespace Gerenciador{
 	sf::Font* GerenciadorGrafico::carregarFonte(const char* path) {
 		sf::Font* fonte = new sf::Font();
 		if (!fonte->loadFromFile(path)) {
-			std::cerr << "Erro: Não foi possível carregar a fonte em " << path << std::endl;
+			//std::cerr << "Erro: Não foi possível carregar a fonte em " << path << std::endl;
 			delete fonte;  // Libera memória para evitar vazamento
 			return nullptr;
 		}

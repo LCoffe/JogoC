@@ -98,12 +98,12 @@ namespace Gerenciador {
 			estado = static_cast<Estado::Estado*>(pEM);
 		}
 		else {
-			std::cerr << "ID invalido" << std::endl;
+			//std::cerr << "ID invalido" << std::endl;
 			exit(1);
 		}
 
 		if (estado == nullptr) {
-			std::cerr << "Erro ao criar o estado" << std::endl;
+			//std::cerr << "Erro ao criar o estado" << std::endl;
 			exit(1);
 		}
 

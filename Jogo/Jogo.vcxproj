@@ -107,7 +107,7 @@
       <AdditionalIncludeDirectories>C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\SFML-2.6.2\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\SFML-2.6.2\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-audio-d.lib;sfml-network-d.lib;sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -124,7 +124,7 @@
       <AdditionalIncludeDirectories>C:\Users\alano\source\repos\JogoC\SFML-2.6.2\include;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\SFML-2.6.2\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -220,6 +220,7 @@
     <Image Include="assets\athenasoldier.png" />
     <Image Include="assets\gamemenu.png" />
     <Image Include="assets\greeksoldier.png" />
+    <Image Include="assets\icone\iconeJogo.jpg" />
     <Image Include="assets\inimigos\athena\guerreira_ataque.png" />
     <Image Include="assets\inimigos\gorgona\gorgona_andar.png" />
     <Image Include="assets\inimigos\gorgona\gorgona_ataque.png" />

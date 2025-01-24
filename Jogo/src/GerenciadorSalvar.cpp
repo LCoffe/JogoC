@@ -76,12 +76,12 @@ namespace Gerenciador {
 	nlohmann::json GerenciadorSalvar::carregarPersonagem(Fase::Fase01 &Fase) {
 		std::ifstream jsonIn = abreArqLoad(CAMINHO_SAVE_PERSONA);
 		if (!jsonIn.is_open()) {
-			std::cerr << "Erro ao abrir o arquivo." << std::endl;
-			// Trate o erro apropriadamente
+			//std::cerr << "Erro ao abrir o arquivo." << std::endl;
+			exit(1);
 		}
 		if (jsonIn.peek() == std::ifstream::traits_type::eof()) {
-			std::cerr << "Arquivo está vazio." << std::endl;
-			// Trate o erro apropriadamente
+			//std::cerr << "Arquivo está vazio." << std::endl;
+			exit(1);
 		}
 		nlohmann::json jsonLoad = nlohmann::json::parse(jsonIn);
 		fechaArqLoad(jsonIn);
@@ -129,12 +129,12 @@ namespace Gerenciador {
 	nlohmann::json GerenciadorSalvar::carregarFase() {
 		std::ifstream jsonIn = abreArqLoad(CAMINHO_SAVE_FASE);
 		if (!jsonIn.is_open()) {
-			std::cerr << "Erro ao abrir o arquivo." << std::endl;
-			// Trate o erro apropriadamente
+			//std::cerr << "Erro ao abrir o arquivo." << std::endl;
+			exit(1);
 		}
 		if (jsonIn.peek() == std::ifstream::traits_type::eof()) {
-			std::cerr << "Arquivo está vazio." << std::endl;
-			// Trate o erro apropriadamente
+			//std::cerr << "Arquivo está vazio." << std::endl;
+			exit(1);
 		}
 		nlohmann::json jsonLoad = nlohmann::json::parse(jsonIn);
 		fechaArqLoad(jsonIn);
@@ -144,8 +144,8 @@ namespace Gerenciador {
 	nlohmann::json GerenciadorSalvar::carregarColocacao() {
 		std::ifstream jsonIn = abreArqLoad(CAMINHO_SAVE_COLOCACAO);
 		if (!jsonIn.is_open()) {
-			std::cerr << "Erro ao abrir o arquivo." << std::endl;
-			// Trate o erro apropriadamente
+			//std::cerr << "Erro ao abrir o arquivo." << std::endl;
+			exit(1);
 		}
 		if (jsonIn.peek() == std::ifstream::traits_type::eof()) {
 			return nullptr;

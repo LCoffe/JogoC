@@ -68,40 +68,46 @@ namespace Estado {
 		if (ID == IDs::IDs::estadoMenuPrincipal) {
 			Menu::MenuPrincipal* menuPrincipal = new Menu::MenuPrincipal();
 			if (menuPrincipal == nullptr) {
-				throw std::invalid_argument("Menu invalido");
+				//throw std::invalid_argument("Menu invalido");
+				exit(1);
 			}
 			menu = static_cast<Menu::Menu*>(menuPrincipal);
 		}
 		else if (ID == IDs::IDs::estadoMenuOpcoes) {
 			Menu::MenuOpcoes* menuOpcoes = new Menu::MenuOpcoes();
 			if (menuOpcoes == nullptr) {
-				throw std::invalid_argument("Menu invalido");
+				//throw std::invalid_argument("Menu invalido");
+				exit(1);
 			}
 			menu = static_cast<Menu::Menu*>(menuOpcoes);
 		}
 		else if (ID == IDs::IDs::estadoSalvarColocacao) {
 			Menu::MenuSalvarColocacao* menuSalvarColocacao = new Menu::MenuSalvarColocacao();
 			if (menuSalvarColocacao == nullptr) {
-				throw std::invalid_argument("Menu invalido");
+				//throw std::invalid_argument("Menu invalido");
+				exit(1);
 			}
 			menu = static_cast<Menu::Menu*>(menuSalvarColocacao);
 		}
 		else if (ID == IDs::IDs::estadoMenuColocacao) {
 			Menu::MenuColocacao* menuColocacao = new Menu::MenuColocacao();
 			if (menuColocacao == nullptr) {
-				throw std::invalid_argument("Menu invalido");
+				//throw std::invalid_argument("Menu invalido");
+				exit(1);
 			}
 			menu = static_cast<Menu::Menu*>(menuColocacao);
 		}
 		else if (ID == IDs::IDs::estadoMorreu) {
 			Menu::MenuMorreu* menuMorreu = new Menu::MenuMorreu();
 			if (menuMorreu == nullptr) {
-				throw std::invalid_argument("Menu invalido");
+				//throw std::invalid_argument("Menu invalido");
+				exit(1);
 			}
 			menu = static_cast<Menu::Menu*>(menuMorreu);
 		}
 		else {
-			throw std::invalid_argument("ID invalido");
+			//throw std::invalid_argument("ID invalido");
+			exit(1);
 		}
 	}
 

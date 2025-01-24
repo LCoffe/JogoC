@@ -23,7 +23,7 @@ namespace ElementosGraficos {
 		AnimacaoUnica* tmp = new AnimacaoUnica(path, imagemCount);
 
 		if (tmp == NULL) {
-			std::cout << " Erro criando a animacao" << std::endl;
+			//std::cout << " Erro criando a animacao" << std::endl;
 			exit(1);
 		}
 
@@ -40,7 +40,7 @@ namespace ElementosGraficos {
 		if (IDatual != id) {
 			IDatual = id;
 			if (this == nullptr) {
-				std::cerr << "Erro: Tentativa de acessar um objeto nulo em resetar()." << std::endl;
+				//std::cerr << "Erro: Tentativa de acessar um objeto nulo em resetar()." << std::endl;
 				return;
 			}
 			else {

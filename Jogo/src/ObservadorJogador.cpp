@@ -5,7 +5,7 @@ namespace Observado {
 		ObservadorJogador::ObservadorJogador(Entidade::Personagem::Jogador::Jogador* pJog) : Observador(), pJogador(pJog),
 		tempoAtaque(0.0f){
 			if (pJogador == nullptr) {
-				cout << "Erro ao criar observer do jogador : jogador nao foi criado" << endl;
+				//cout << "Erro ao criar observer do jogador : jogador nao foi criado" << endl;
 				exit(1);
 			}
 		}

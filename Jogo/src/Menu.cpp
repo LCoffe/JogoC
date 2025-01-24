@@ -54,7 +54,7 @@ namespace Menu {
 			botao->seleciona();
 		}
 		else {
-			cout << "Botao nulo" << endl;
+			//cout << "Botao nulo" << endl;
 			exit(1);
 		}
 	}
@@ -72,7 +72,7 @@ namespace Menu {
 			botao->seleciona();
 		}
 		else {
-			cout << "Botao nulo" << endl;
+			//cout << "Botao nulo" << endl;
 			exit(1);
 		}
 	}

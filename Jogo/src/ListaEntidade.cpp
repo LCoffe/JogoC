@@ -79,13 +79,13 @@ namespace Lista {
 
 	void ListaEntidade::carregar(nlohmann::json& j, Entidade::Personagem::Jogador::Jogador* pJog) {
 		Entidade::Entidade* aux = nullptr;
-		cout << "Carregando" << endl;
+		//cout << "Carregando" << endl;
 		
 		nlohmann::json::iterator it = j.begin();
-		cout << "begin" << endl;
+		//cout << "begin" << endl;
 		for (auto& it : j) {
 			IDs::IDs ID = it["ID"];
-			cout << (int)ID << endl;
+			//cout << (int)ID << endl;
 		}
 
 		/*for (it) {

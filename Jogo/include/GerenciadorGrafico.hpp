@@ -3,6 +3,8 @@
 #include "../stdafx/stdafx.hpp"
 #include "../include/Camera.hpp"
 
+constexpr const char* const CAMINHO_ICONE = "..\\Jogo\\assets\\icone\\iconeJogo.jpg";
+
 #define TELA_X 1366
 #define TELA_Y 768
 
