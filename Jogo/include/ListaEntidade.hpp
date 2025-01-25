@@ -10,6 +10,7 @@
 #include "Inimigo.hpp"
 #include "../include/GuerreiraAthena.hpp"
 #include "../include/Gorgona.hpp"
+#include "../include/Caixa.hpp"
 
 using namespace std;
 

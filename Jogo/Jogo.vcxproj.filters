@@ -132,6 +132,9 @@
     <ClCompile Include="src\MenuMorreu.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
+    <ClCompile Include="src\Caixa.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Jogador.hpp">
@@ -257,6 +260,9 @@
     <ClInclude Include="include\MenuMorreu.hpp">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
+    <ClInclude Include="include\Caixa.hpp">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\athenasoldier.png">
@@ -332,6 +338,12 @@
       <Filter>Arquivos de Recurso</Filter>
     </Image>
     <Image Include="assets\icone\iconeJogo.jpg">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="assets\obstaculos\caixa\caixa_arrastado.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="assets\obstaculos\caixa\caixa_parado.png">
       <Filter>Arquivos de Recurso</Filter>
     </Image>
   </ItemGroup>

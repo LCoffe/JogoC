@@ -2,9 +2,10 @@
     {
         "ID": 1,
         "atacando": false,
+        "colisaoChao": true,
         "direcao": true,
         "jogadorUm": true,
-        "levandoDano": true,
+        "levandoDano": false,
         "morrendo": false,
         "petrificado": false,
         "pontuacao": 0,
@@ -13,27 +14,28 @@
             "y": -500.0
         },
         "posicao": {
-            "x": 492.85394287109375,
-            "y": 641.535888671875
+            "x": 563.8720703125,
+            "y": 568.0167846679688
         },
         "tamanho": {
             "x": 50.0,
             "y": 50.0
         },
         "tempoAtaque": 0.0,
-        "tempoDano": 0.03425700217485428,
+        "tempoDano": 0.0,
         "tempoMorte": 0.0,
         "tempoPetrificado": 0.0,
         "velocidade": {
             "x": 80.0,
             "y": 0.0
         },
-        "vida": 90.0
+        "vida": 100.0
     },
     {
         "ID": 2,
-        "andando": false,
-        "atacando": true,
+        "andando": true,
+        "atacando": false,
+        "colisaoChao": true,
         "direcao": false,
         "jogadorUm": true,
         "levandoDano": false,
@@ -41,18 +43,18 @@
         "petrificado": false,
         "pontuacao": 0,
         "posArma": {
-            "x": 475.47894287109375,
-            "y": 628.0173950195313
+            "x": -500.0,
+            "y": -500.0
         },
         "posicao": {
-            "x": 541.0344848632813,
-            "y": 636.535888671875
+            "x": 665.1351928710938,
+            "y": 636.5352783203125
         },
         "tamanho": {
             "x": 50.0,
             "y": 50.0
         },
-        "tempoAtaque": 1.0879993438720703,
+        "tempoAtaque": 0.0,
         "tempoDano": 0.0,
         "tempoMorte": 0.0,
         "tempoPetrificado": 0.0,
@@ -60,14 +62,15 @@
             "x": 50.0,
             "y": 0.0
         },
-        "vida": 80.0
+        "vida": 100.0
     },
     {
         "ID": 30,
-        "andando": false,
+        "andando": true,
         "atacando": false,
         "ataqueBasico": false,
         "ataquePetrificante": false,
+        "colisaoChao": true,
         "direcao": false,
         "jogadorUm": true,
         "levandoDano": false,
@@ -79,8 +82,8 @@
             "y": -500.0
         },
         "posicao": {
-            "x": 1178.7672119140625,
-            "y": 636.535888671875
+            "x": 1029.3963623046875,
+            "y": 636.5352783203125
         },
         "tamanho": {
             "x": 50.0,

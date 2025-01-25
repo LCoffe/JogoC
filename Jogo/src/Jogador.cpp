@@ -153,26 +153,27 @@ namespace Entidade {
 			}
 
 			void Jogador::atualizarSprite(float dt)
-			{
-				pos.x += TAM_JOGADOR_X / 0.65f;
-				pos.y += TAM_JOGADOR_Y / 2.7f;
+			{	
+				sf::Vector2f posicao = pos;
+				posicao.x += TAM_JOGADOR_X / 0.65f;
+				posicao.y += TAM_JOGADOR_Y / 2.7f;
 
 				if(morrendo)
-					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::morte, direcao, pos, dt);
+					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::morte, direcao, posicao, dt);
 				else if (andando && colisaoChao)
-					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::walk, direcao, pos, dt);
+					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::walk, direcao, posicao, dt);
 				else if(!colisaoChao)
-					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::jump, direcao, pos, dt);
+					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::jump, direcao, posicao, dt);
 				else if (atacando)
-					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::attack, direcao, pos, dt);
+					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::attack, direcao, posicao, dt);
 				else if (levandoDano)
-					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::levouDano, direcao, pos, dt);
+					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::levouDano, direcao, posicao, dt);
 				else if (petrificado)
-					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::petrificado, direcao, pos, dt);
+					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::petrificado, direcao, posicao, dt);
 				else if (colisaoParede)
-					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::idle, direcao, pos, dt);
+					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::idle, direcao, posicao, dt);
 				else
-					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::idle, direcao,pos,dt);
+					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::idle, direcao, posicao,dt);
 			}
 
 			void Jogador::salvar(nlohmann::json& j) {
@@ -193,6 +194,7 @@ namespace Entidade {
 				j["morrendo"] = morrendo;
 				j["tempoMorte"] = tempoMorte;
 				j["pontuacao"] = pontuacao;
+				j["colisaoChao"] = colisaoChao;
 			}
 		}
 	}

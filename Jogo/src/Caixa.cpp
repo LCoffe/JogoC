@@ -1,0 +1,105 @@
+#include "../include/Caixa.hpp"
+
+namespace Entidade {
+	namespace Obstaculos {
+		Caixa::Caixa(sf::Vector2f pos, sf::Vector2f tam) : Obstaculo(pos, tam, IDs::IDs::caixa), arrastado(false), lentidao(0.15f){
+			inicializarSprite();
+		}
+		Caixa::~Caixa() {}
+		void Caixa::colisao(Entidade* ent, const sf::Vector2f diferenca) {
+			if (ent->getID() == IDs::IDs::jogador) {
+				Personagem::Personagem* pp = dynamic_cast<Personagem::Personagem*>(ent);
+				colisaoObs(pp, diferenca);
+			}
+			else if (ent->getID() == IDs::IDs::guerreiraAthena || ent->getID() == IDs::IDs::gorgona) {
+				Personagem::Personagem* pp = dynamic_cast<Personagem::Personagem*>(ent);
+				colisaoObs(pp, diferenca);
+				if (pp->getColisaoParede() && pp->getDirecao()) { //se a plataforma estiver a direita do inimigo e ele estiver indo para a direita
+					pp->setDirecao(false);
+				}
+				else if (pp->getColisaoParede() && !pp->getDirecao()) { //se a plataforma estiver a esquerda do inimigo e ele estiver indo para a esquerda
+					pp->setDirecao(true);
+				}
+			}
+		}
+
+		void Caixa::colisaoObs(Personagem::Personagem* persona, sf::Vector2f diferenca) {
+			sf::Vector2f personaPos = persona->getPos();
+			sf::Vector2f personaTam = persona->getTam();
+			sf::Vector2f personaVelFinal = persona->getVelocidade();
+			arrastado = false;
+			persona->setColisaoParede(false);
+			if (diferenca.x < 0.0f && diferenca.y < 0.0f) { //houve colisao
+				if (diferenca.x > diferenca.y) { //colisao em x
+					if (persona->getID() == IDs::IDs::jogador) {
+						personaVelFinal.x *= lentidao;
+						arrastado = true;
+						if (personaPos.x < pos.x) {
+							pos.x -= diferenca.x;
+						}
+						else {
+							pos.x += diferenca.x;
+						}
+						setPos(pos);
+					}
+					else {
+
+						if (personaPos.x < pos.x) {
+							personaPos.x += diferenca.x; //colisao para a direita
+						}
+						else {
+							personaPos.x -= diferenca.x; //colisao para a esquerda
+						}
+					}
+					persona->setColisaoParede(true);
+				}
+				else {
+					if (personaPos.y < pos.y) { //colisao em y
+						personaPos.y += diferenca.y;
+					}
+					else {
+						personaPos.y -= diferenca.y;
+					}
+					personaVelFinal.y = 0.0f;
+					persona->setColisaoChao(true);
+				}
+			}
+			persona->setPos(personaPos);
+			persona->setVelocidade(personaVelFinal);
+		}
+
+		void Caixa::desenhar() {			
+			sprite.desenhar();
+			//pGG->desenharElemento(corpo);
+		}
+		void Caixa::atualizar() {
+			atualizarSprite(pGG->getTempo());
+			if (arrastado) {
+				arrastado = false;
+			}
+		}
+		void Caixa::salvar(nlohmann::json& j) {
+			j["ID"] = (int)getID();
+			j["posicao"] = { {"x", pos.x}, {"y", pos.y} };
+			j["tamanho"] = { {"x", tam.x}, {"y", tam.y} };
+			j["arrastado"] = arrastado;
+		}
+		void Caixa::inicializarSprite() {
+			sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::walk, CAIXA_ARRASTADO_PATH, 8);
+			sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::idle, CAIXA_PARADO_PATH, 1);
+			
+		}
+		void Caixa::atualizarSprite(float dt) {
+			sf::Vector2f posicao = pos;
+			posicao.x += tam.x / 0.685f;
+			posicao.y += tam.y / 2.8f;
+
+			if (arrastado) {
+				sprite.atualizar(ElementosGraficos::ID_ANIMACAO::walk, true, posicao, dt);
+			}
+			else {
+				sprite.atualizar(ElementosGraficos::ID_ANIMACAO::idle, true, posicao, dt);
+			}
+		}
+	}
+}

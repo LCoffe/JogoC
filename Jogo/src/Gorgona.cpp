@@ -76,7 +76,6 @@ namespace Entidade {
 
             void Gorgona::salvar(nlohmann::json& j)
             {
-
                 j["ID"] = (int)getID();
                 j["posicao"] = { {"x", pos.x}, {"y", pos.y} };
                 j["tamanho"] = { {"x", tam.x}, {"y", tam.y} };
@@ -92,6 +91,8 @@ namespace Entidade {
 				j["tempoDano"] = tempoDano;
 				j["morrendo"] = morrendo;
                 j["tempoMorte"] = tempoMorte;
+                j["pontuacao"] = 0;
+				j["colisaoChao"] = colisaoChao;
             }
 
             void Gorgona::inicializarSprite() {
@@ -104,33 +105,33 @@ namespace Entidade {
             }
 
             void Gorgona::atualizarSprite(float dt) {
-
+				sf::Vector2f posicao = pos;
                 if (direcao) {
-                    pos.x += TAMANHO_GORGONA_X / 0.65f;
-                    pos.y += TAMANHO_GORGONA_Y / 2.7f;
+                    posicao.x += TAMANHO_GORGONA_X / 0.65f;
+                    posicao.y += TAMANHO_GORGONA_Y / 2.7f;
                 }
                 else {
-					pos.x += TAMANHO_GORGONA_X / 0.5f;
-					pos.y += TAMANHO_GORGONA_Y / 2.7f;
+					posicao.x += TAMANHO_GORGONA_X / 0.5f;
+					posicao.y += TAMANHO_GORGONA_Y / 2.7f;
                 }
                 
                 if (morrendo) {
-                    sprite.atualizar(ElementosGraficos::ID_ANIMACAO::morte, direcao, pos, dt);
+                    sprite.atualizar(ElementosGraficos::ID_ANIMACAO::morte, direcao, posicao, dt);
                 }
                 else if (andando && colisaoChao) {
-                    sprite.atualizar(ElementosGraficos::ID_ANIMACAO::walk, direcao, pos, dt);
+                    sprite.atualizar(ElementosGraficos::ID_ANIMACAO::walk, direcao, posicao, dt);
 				}
                 else if (ataquePetrificante && atacando && !andando) {
-                    sprite.atualizar(ElementosGraficos::ID_ANIMACAO::especialGorgona, direcao, pos, dt);
+                    sprite.atualizar(ElementosGraficos::ID_ANIMACAO::especialGorgona, direcao, posicao, dt);
                 }
 				else if (atacando && ataqueBasico && !andando) {
-					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::attack, direcao, pos, dt);
+					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::attack, direcao, posicao, dt);
 				}
 				else if (levandoDano) {
-					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::levouDano, direcao, pos, dt);
+					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::levouDano, direcao, posicao, dt);
 				}
                 else
-                    sprite.atualizar(ElementosGraficos::ID_ANIMACAO::idle, direcao, pos, dt);
+                    sprite.atualizar(ElementosGraficos::ID_ANIMACAO::idle, direcao, posicao, dt);
 
             }
 

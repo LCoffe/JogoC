@@ -1,6 +1,7 @@
 [
     {
         "ID": 4,
+        "arrastado": false,
         "posicao": {
             "x": 0.0,
             "y": 668.0
@@ -12,6 +13,7 @@
     },
     {
         "ID": 4,
+        "arrastado": false,
         "posicao": {
             "x": 1366.0,
             "y": 668.0
@@ -23,6 +25,7 @@
     },
     {
         "ID": 4,
+        "arrastado": false,
         "posicao": {
             "x": 800.0,
             "y": 580.0
@@ -34,6 +37,7 @@
     },
     {
         "ID": 4,
+        "arrastado": false,
         "posicao": {
             "x": 1600.0,
             "y": 580.0
@@ -41,6 +45,18 @@
         "tamanho": {
             "x": 100.0,
             "y": 138.0
+        }
+    },
+    {
+        "ID": 32,
+        "arrastado": false,
+        "posicao": {
+            "x": 560.41650390625,
+            "y": 618.0
+        },
+        "tamanho": {
+            "x": 50.0,
+            "y": 50.0
         }
     }
 ]

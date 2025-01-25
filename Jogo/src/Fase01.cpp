@@ -36,12 +36,31 @@ namespace Fase {
 		criaPlataforma(sf::Vector2f(1366, 768 - 100), sf::Vector2f(1366, 100), IDs::IDs::plataforma);
 		criaPlataforma(sf::Vector2f(800, 768 - 188), sf::Vector2f(100, 138), IDs::IDs::plataforma);
 		criaPlataforma(sf::Vector2f(1600, 768 - 188), sf::Vector2f(100, 138), IDs::IDs::plataforma);
+		criaPlataforma(sf::Vector2f(500, 768-150), sf::Vector2f(50, 50), IDs::IDs::caixa);
 	}
 
 	void Fase01::carregar() {
-		nlohmann::json json = pGS->carregarPersonagem(*this);
+		nlohmann::json json;
 		nlohmann::json::iterator it = json.begin();
 		Entidade::Entidade* aux = nullptr;
+
+		json = pGS->carregarObstaculo(*this);
+		it = json.begin();
+		for (auto& it : json) {
+			IDs::IDs ID = static_cast<IDs::IDs>(it["ID"]);
+			sf::Vector2f pos(it["posicao"]["x"], it["posicao"]["y"]);
+			sf::Vector2f tam(it["tamanho"]["x"], it["tamanho"]["y"]);
+			bool arrastado = it["arrastado"];
+			if (ID == IDs::IDs::plataforma) {
+				criaPlataforma(pos, tam, ID);
+			}
+			if (ID == IDs::IDs::caixa) {
+				cout << pos.x << " " << pos.y << endl;
+				criaPlataforma(pos, tam, ID, arrastado);
+			}
+		}
+
+		json = pGS->carregarPersonagem(*this);
 		for (auto& it : json) {
 			IDs::IDs ID = static_cast<IDs::IDs>(it["ID"]);
 			sf::Vector2f pos(it["posicao"]["x"], it["posicao"]["y"]);
@@ -58,24 +77,14 @@ namespace Fase {
 			bool morrendo = it["morrendo"];
 			float tempoMorte = it["tempoMorte"];
 			int pontuacao = it["pontuacao"];
+			bool colisaoChao = it["colisaoChao"];
 
 			if (ID == IDs::IDs::jogador) {
 				bool jogadorUm = it["jogadorUm"];
-				criaPersonagem(pos, ID, tam, vel, direcao, jogadorUm, vida, tempoAtaque, posArma, atacando, petrifica, levandoDano, tempoDano, morrendo, tempoMorte, pontuacao);
+				criaPersonagem(pos, ID, tam, vel, direcao, jogadorUm, vida, tempoAtaque, posArma, atacando, petrifica, levandoDano, tempoDano, morrendo, tempoMorte, pontuacao, colisaoChao);
 			}
 			if (ID == IDs::IDs::guerreiraAthena || ID == IDs::IDs::gorgona) {
-				criaPersonagem(pos, ID, tam, vel, direcao, false, vida, tempoAtaque, posArma, atacando, petrifica, levandoDano, tempoDano, morrendo, tempoMorte, 0);
-			}
-		}
-
-		json = pGS->carregarObstaculo(*this);
-		it = json.begin();
-		for (auto& it : json) {
-			IDs::IDs ID = static_cast<IDs::IDs>(it["ID"]);
-			sf::Vector2f pos(it["posicao"]["x"], it["posicao"]["y"]);
-			sf::Vector2f tam(it["tamanho"]["x"], it["tamanho"]["y"]);
-			if (ID == IDs::IDs::plataforma) {
-				criaPlataforma(pos, tam, ID);
+				criaPersonagem(pos, ID, tam, vel, direcao, false, vida, tempoAtaque, posArma, atacando, petrifica, levandoDano, tempoDano, morrendo, tempoMorte, 0, colisaoChao);
 			}
 		}
 	}

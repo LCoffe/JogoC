@@ -72,6 +72,11 @@ namespace Lista {
 					aux->salvar(jsonAux);
 					jsonReturn.push_back(jsonAux);
 				}
+				if ((aux->getID() == IDs::IDs::caixa)) {
+					aux = static_cast<Entidade::Obstaculos::Caixa*>(aux);
+					aux->salvar(jsonAux);
+					jsonReturn.push_back(jsonAux);
+				}
 			}
 		}
 		return jsonReturn;

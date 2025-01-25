@@ -128,7 +128,7 @@ namespace Fase {
 	}
 
 	void Fase::criaPersonagem(const sf::Vector2f pos, const IDs::IDs ID, const sf::Vector2f tam, const sf::Vector2f vel, bool direcao, bool jogadorUm, float vida, float tempoAtaque, sf::Vector2f posArma, bool atacando, bool petrifica, bool levandoDano, 
-		float tempoDano, bool morrendo, float tempoMorrendo, int pontuacao) {
+		float tempoDano, bool morrendo, float tempoMorrendo, int pontuacao, bool colisaoChao) { //Usado para carregar os personagens
 		Entidade::Entidade* personagem = nullptr;
 		Entidade::Entidade* arma = nullptr;
 		if (ID == IDs::IDs::jogador) {
@@ -139,9 +139,6 @@ namespace Fase {
 					//cout << "Erro ao criar arma" << endl;
 					exit(1);
 				}
-				cout << posArma.x << " " << posArma.y << endl;
-				//pArma->setPos(posArma);
-				//pJogador->setArma(pArma);
 				if (pJogador == nullptr) {
 					//cout << "Erro ao criar jogador" << endl;
 					exit(1);
@@ -160,6 +157,7 @@ namespace Fase {
 				pJogador->setMorrendo(morrendo);
 				pJogador->setTempoMorte(tempoMorrendo);
 				pJogador->addPontuacao(pontuacao);
+				pJogador->setColisaoChao(colisaoChao);
 
 				pJogador->setAtivoObs(true);
 				personagem = static_cast<Entidade::Entidade*>(pJogador);
@@ -192,6 +190,7 @@ namespace Fase {
 				pJogadorDois->setMorrendo(morrendo);
 				pJogadorDois->setTempoMorte(tempoMorrendo);
 				pJogadorDois->addPontuacao(pontuacao);
+				pJogadorDois->setColisaoChao(colisaoChao);
 
 				pJogadorDois->setAtivoObs(true);
 				personagem = static_cast<Entidade::Entidade*>(pJogadorDois);
@@ -230,6 +229,7 @@ namespace Fase {
 			pInimigo->setTempoDano(tempoDano);
 			pInimigo->setMorrendo(morrendo);
 			pInimigo->setTempoMorte(tempoMorrendo);
+			pInimigo->setColisaoChao(colisaoChao);
 
 			personagem = static_cast<Entidade::Entidade*>(pInimigo);
 			arma = static_cast<Entidade::Entidade*>(pArma);
@@ -267,6 +267,7 @@ namespace Fase {
 			pInimigo->setTempoDano(tempoDano);
 			pInimigo->setMorrendo(morrendo);
 			pInimigo->setTempoMorte(tempoMorrendo);
+			pInimigo->setColisaoChao(colisaoChao);
 
 			personagem = static_cast<Entidade::Entidade*>(pInimigo);
 			arma = static_cast<Entidade::Entidade*>(pArma);
@@ -290,7 +291,42 @@ namespace Fase {
 			}
 			entidade = static_cast<Entidade::Entidade*>(plataforma);
 		}
+		if (ID == IDs::IDs::caixa) {
+			Entidade::Obstaculos::Caixa* caixa = nullptr;
+			caixa = new Entidade::Obstaculos::Caixa(pos, tam);
+			if (caixa == nullptr) {
+				//cout << "Erro ao criar caixa" << endl;
+				exit(1);
+			}
+			entidade = static_cast<Entidade::Entidade*>(caixa);
+		}
 
+		if (entidade != nullptr) {
+			pListaObstaculo->inserirEnt(entidade);
+		}
+	}
+
+	void Fase::criaPlataforma(const sf::Vector2f pos, const sf::Vector2f tam, const IDs::IDs ID, bool arrastado) {
+		Entidade::Entidade* entidade = nullptr;
+		if (ID == IDs::IDs::plataforma) {
+			Entidade::Obstaculos::Plataforma* plataforma = nullptr;
+			plataforma = new Entidade::Obstaculos::Plataforma(pos, tam, ID);
+			if (plataforma == nullptr) {
+				//cout << "Erro ao criar plataforma" << endl;
+				exit(1);
+			}
+			entidade = static_cast<Entidade::Entidade*>(plataforma);
+		}
+		if (ID == IDs::IDs::caixa) {
+			Entidade::Obstaculos::Caixa* caixa = nullptr;
+			caixa = new Entidade::Obstaculos::Caixa(pos, tam);
+			if (caixa == nullptr) {
+				//cout << "Erro ao criar caixa" << endl;
+				exit(1);
+			}
+			caixa->setArrastado(arrastado);
+			entidade = static_cast<Entidade::Entidade*>(caixa);
+		}
 		if (entidade != nullptr) {
 			pListaObstaculo->inserirEnt(entidade);
 		}

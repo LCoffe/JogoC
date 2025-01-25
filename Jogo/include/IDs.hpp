@@ -34,5 +34,6 @@ namespace IDs {
 		espadaInimigo, // 29
 		gorgona, // 30
 		cobrasGorgona, // 31
+		caixa, // 32
 	};
 }

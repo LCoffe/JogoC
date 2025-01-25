@@ -28,25 +28,26 @@ namespace Entidade {
 			}
 
 			void GuerreiraAthena::atualizarSprite(float dt) {
+				sf::Vector2f posicao = pos;
 				if (direcao) {
-					pos.x += TAMANHO_GUERREIRA_ATHENA_X / 0.50f;
-					pos.y += TAMANHO_GUERREIRA_ATHENA_Y / 2.7f;
+					posicao.x += TAMANHO_GUERREIRA_ATHENA_X / 0.50f;
+					posicao.y += TAMANHO_GUERREIRA_ATHENA_Y / 2.7f;
 				}
 				else {
-					pos.x += TAMANHO_GUERREIRA_ATHENA_X / 0.90f;
-					pos.y += TAMANHO_GUERREIRA_ATHENA_Y / 2.7f;
+					posicao.x += TAMANHO_GUERREIRA_ATHENA_X / 0.90f;
+					posicao.y += TAMANHO_GUERREIRA_ATHENA_Y / 2.7f;
 				}
 				
 				if(morrendo)
-					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::morte, direcao, pos, dt);
+					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::morte, direcao, posicao, dt);
 				else if (andando && colisaoChao)
-					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::walk, direcao, pos, dt);
+					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::walk, direcao, posicao, dt);
 				else if (atacando)
-					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::attack, direcao, pos, dt);
+					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::attack, direcao, posicao, dt);
 				else if(levandoDano)
-					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::levouDano, direcao, pos, dt);
+					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::levouDano, direcao, posicao, dt);
 				else
-					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::idle, direcao, pos, dt);
+					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::idle, direcao, posicao, dt);
 			}
 			void GuerreiraAthena::desenhar() {
 				//pGG->desenharElemento(corpo);
@@ -68,6 +69,8 @@ namespace Entidade {
 				j["tempoDano"] = tempoDano;
 				j["morrendo"] = morrendo;
 				j["tempoMorte"] = tempoMorte;
+				j["pontuacao"] = 0;
+				j["colisaoChao"] = colisaoChao;
 			}
 		}
 	}
