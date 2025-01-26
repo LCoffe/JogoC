@@ -1,8 +1,8 @@
 #pragma once
 
 #include "../stdafx/stdafx.hpp"
-#include "../include/IDs.hpp"
-#include "../include/Ente.hpp"
+#include "../IDs.hpp"
+#include "../entes/Ente.hpp"
 
 
 namespace Estado {

@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../stdafx/stdafx.hpp"
-#include "../include/GerenciadorEstado.hpp"
+#include "../gerenciadores/GerenciadorEstado.hpp"
 
 namespace Gerenciador {
 	class GerenciadorEstado;

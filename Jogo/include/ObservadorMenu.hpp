@@ -1,9 +1,9 @@
 #pragma once
 
 #include "../include/Observador.hpp"
-#include "../include/Menu.hpp"
-#include "../include/Fase.hpp"
-#include "../include/GerenciadorEstado.hpp"
+#include "../menus/Menu.hpp"
+#include "../fases/Fase.hpp"
+#include "../gerenciadores/GerenciadorEstado.hpp"
 
 namespace Observado {
 	namespace Observador {

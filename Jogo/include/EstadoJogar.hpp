@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../include/Estado.hpp"
-#include "../include/Fase.hpp"
+#include "../fases/Fase.hpp"
 
 namespace Estado {
 	class EstadoJogar : public Estado {

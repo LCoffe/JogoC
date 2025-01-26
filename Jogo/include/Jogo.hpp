@@ -1,11 +1,11 @@
 #pragma once
 
 #include "../stdafx/stdafx.hpp"
-#include "../include/Fase01.hpp"
-#include "../include/GerenciadorEventos.hpp"
-#include "Jogador.hpp"
-#include "Inimigo.hpp"
-#include "GerenciadorEstado.hpp"
+#include "../fases/Fase01.hpp"
+#include "../gerenciadores/GerenciadorEventos.hpp"
+#include "../entes/personagens/jogador/Jogador.hpp"
+#include "../entes/personagens/Inimigos/Inimigo.hpp"
+#include "../gerenciadores/GerenciadorEstado.hpp"
 
 
 class Jogo {
@@ -15,9 +15,12 @@ private:
 	static Gerenciador::GerenciadorEstado* pGEst;
 	sf::Event evento;
 	
+
+
 public:
 	Jogo();
 	~Jogo();
 	void executar();
+	bool carregarRecursos();
 };
 
