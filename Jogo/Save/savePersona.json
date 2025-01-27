@@ -2,7 +2,7 @@
     {
         "ID": 1,
         "atacando": false,
-        "colisaoChao": true,
+        "colisaoChao": false,
         "direcao": true,
         "jogadorUm": true,
         "levandoDano": false,
@@ -14,8 +14,8 @@
             "y": -500.0
         },
         "posicao": {
-            "x": 701.2952270507813,
-            "y": 618.0157470703125
+            "x": 1296.18359375,
+            "y": 819.5158081054688
         },
         "tamanho": {
             "x": 50.0,
@@ -26,8 +26,8 @@
         "tempoMorte": 0.0,
         "tempoPetrificado": 0.0,
         "velocidade": {
-            "x": 12.0,
-            "y": 0.0
+            "x": 80.0,
+            "y": 321.0667724609375
         },
         "vida": 100.0
     },
@@ -48,8 +48,8 @@
             "y": -500.0
         },
         "posicao": {
-            "x": 1383.1954345703125,
-            "y": 618.0157470703125
+            "x": -1932.033935546875,
+            "y": 253915.21875
         },
         "tamanho": {
             "x": 50.0,
@@ -61,7 +61,7 @@
         "tempoPetrificado": 0.0,
         "velocidade": {
             "x": 50.0,
-            "y": 0.0
+            "y": 7796.8857421875
         },
         "vida": 100.0
     }

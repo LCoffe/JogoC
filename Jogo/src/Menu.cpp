@@ -5,7 +5,6 @@ namespace Menu {
 	Menu::Menu(IDs::IDs ID) : Ente(ID), pObsMenu(new Observado::Observador::ObservadorMenu(this)),
 		titulo(nullptr), posImagem(sf::Vector2f(0.0f, 0.0f)), 
 		fundo(nullptr), botoes(), posVec(0), nome(nullptr){
-		pGG->atualizarCamera(sf::Vector2f(pGG->getTamJanela().x / 2.0f, pGG->getTamJanela().y / 2.0f), pGG->getTamJanela());
 		botoes.clear();
 		if (ID == IDs::IDs::menuSalvarColocao) {
 			nome = new Texto(sf::Vector2f(pGG->getTamJanela().x / 2.3f, pGG->getTamJanela().y / 2.8f), "");
@@ -125,8 +124,9 @@ namespace Menu {
 	}
 
 	void Menu::desenhar() {
+		pGG->atualizarCamera(sf::Vector2f(pGG->getTamJanela().x / 2.0f, pGG->getTamJanela().y / 2.0f), pGG->getTamJanela());
 		if (fundo) {
-			pGG->desenharElemento(*fundo);
+			//pGG->desenharElemento(*fundo);
 		}
 		if (titulo) {
 			titulo->desenhar();

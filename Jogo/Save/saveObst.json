@@ -8,7 +8,7 @@
             "y": 668.0
         },
         "tamanho": {
-            "x": 1366.0,
+            "x": 900.0,
             "y": 100.0
         }
     },
@@ -30,7 +30,7 @@
         "arrastado": false,
         "colisaoParede": false,
         "posicao": {
-            "x": 800.0,
+            "x": 901.0,
             "y": 530.0
         },
         "tamanho": {
@@ -53,10 +53,10 @@
     },
     {
         "ID": 32,
-        "arrastado": true,
-        "colisaoParede": true,
+        "arrastado": false,
+        "colisaoParede": false,
         "posicao": {
-            "x": 750.0,
+            "x": 851.0,
             "y": 618.0
         },
         "tamanho": {

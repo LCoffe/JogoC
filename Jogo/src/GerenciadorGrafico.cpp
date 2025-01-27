@@ -113,7 +113,7 @@ namespace Gerenciador {
 			static_cast<float>(TELA_X) / texturaFundo.getSize().x,
 			static_cast<float>(TELA_Y) / texturaFundo.getSize().y
 		);
-		spriteFundo.setPosition(0, 0);
+		spriteFundo.setPosition(-TELA_X, -TELA_Y);
 
 		if (!shaderParallax.loadFromMemory(
 			"uniform float offset;"
