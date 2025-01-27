@@ -346,13 +346,12 @@
     <Image Include="assets\obstaculos\caixa\caixa_parado.png">
       <Filter>Arquivos de Recurso</Filter>
     </Image>
-    <Image Include="assets\icone\iconeJogo.ico">
+    <Image Include="..\..\..\..\OneDrive\Área de Trabalho\nature_3\orig.png">
       <Filter>Arquivos de Recurso</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
     <Font Include="assets\Fontes\Greek-Freak.ttf" />
-    <Font Include="assets\Greek-Freak.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="openal32.dll" />

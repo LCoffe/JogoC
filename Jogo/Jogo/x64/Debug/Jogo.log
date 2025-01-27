@@ -1,2 +1,163 @@
-﻿  Caixa.cpp
-  Jogo.vcxproj -> C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\x64\Debug\Jogo.exe
+﻿  Animacao.cpp
+  main.cpp
+  Arma.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/Animacao.cpp')
+  
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'main.cpp')
+  
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/Arma.cpp')
+  
+  Botao.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/Botao.cpp')
+  
+  Caixa.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/Caixa.cpp')
+  
+  Camera.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/Camera.cpp')
+  
+  Ente.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/Ente.cpp')
+  
+  Entidade.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/Entidade.cpp')
+  
+  Estado.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/Estado.cpp')
+  
+  EstadoJogar.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/EstadoJogar.cpp')
+  
+  EstadoMenu.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/EstadoMenu.cpp')
+  
+  Fase.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/Fase.cpp')
+  
+  Fase01.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/Fase01.cpp')
+  
+  GerenciadorEstado.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\include\GerenciadorEstado.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/GerenciadorEstado.cpp')
+  
+  GerenciadorEventos.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\include\GerenciadorEventos.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/GerenciadorEventos.cpp')
+  
+  GerenciadorGrafico.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/GerenciadorGrafico.cpp')
+  
+  GerenciadorSalvar.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/GerenciadorSalvar.cpp')
+  
+  Gorgona.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/Gorgona.cpp')
+  
+  GuerreiraAthena.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/GuerreiraAthena.cpp')
+  
+  Inimigo.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/Inimigo.cpp')
+  
+  Generating Code...
+  Compiling...
+  Jogador.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/Jogador.cpp')
+  
+  ListaEntidade.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/ListaEntidade.cpp')
+  
+  Menu.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/Menu.cpp')
+  
+  MenuColocacao.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/MenuColocacao.cpp')
+  
+  MenuMorreu.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/MenuMorreu.cpp')
+  
+  MenuOpcoes.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/MenuOpcoes.cpp')
+  
+  MenuPrincipal.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/MenuPrincipal.cpp')
+  
+  MenuSalvarColocacao.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/MenuSalvarColocacao.cpp')
+  
+  Observador.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/Observador.cpp')
+  
+  ObservadorFase.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/ObservadorFase.cpp')
+  
+  ObservadorJogador.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/ObservadorJogador.cpp')
+  
+  ObservadorMenu.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/ObservadorMenu.cpp')
+  
+  Obstaculo.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/Obstaculo.cpp')
+  
+  GerenciadorColisoes.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/GerenciadorColisoes.cpp')
+  
+  Personagem.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/Personagem.cpp')
+  
+  Plataforma.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/Plataforma.cpp')
+  
+  Jogo.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/Jogo.cpp')
+  
+  Observado.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\include\Observado.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/Observado.cpp')
+  
+  Texto.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'src/Texto.cpp')
+  
+  stdafx.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.hpp(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'stdafx/stdafx.cpp')
+  
+  Generating Code...

@@ -219,6 +219,7 @@
     <ClInclude Include="stdafx\stdafx.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="..\..\..\..\OneDrive\Área de Trabalho\nature_3\orig.png" />
     <Image Include="assets\athenasoldier.png" />
     <Image Include="assets\gamemenu.png" />
     <Image Include="assets\greeksoldier.png" />
