@@ -13,6 +13,7 @@ namespace Gerenciador {
 		~GerenciadorColisoes();
 		void tratarColisaoPerObst(); //Tratamento da colisao do personagem com o obstaculo.
 		void tratarColisaoJogInimigo(); //Tratamento da colisao do jogador com o inimigo.
+		void tratarColisaoObstObst(); //Tratamento da colisao do obstaculo com o obstaculo.
 		void verificaDoisJogadores();
 		const bool verificaColisao(Entidade::Entidade* ent1, Entidade::Entidade* ent2) const;
 		const sf::Vector2f calcColisao(Entidade::Entidade* ent1, Entidade::Entidade* ent2);

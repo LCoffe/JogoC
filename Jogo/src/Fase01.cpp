@@ -32,10 +32,10 @@ namespace Fase {
 		//criaPersonagem(sf::Vector2f(400, 768 - 101), IDs::IDs::guerreiraAthena, false);
 
 		// Criar plataformas
-		criaPlataforma(sf::Vector2f(0, 768 - 100), sf::Vector2f(1366, 100), IDs::IDs::plataforma);
+		criaPlataforma(sf::Vector2f(0, 768 - 100), sf::Vector2f(900, 100), IDs::IDs::plataforma);
 		criaPlataforma(sf::Vector2f(1366, 768 - 100), sf::Vector2f(1366, 100), IDs::IDs::plataforma);
-		criaPlataforma(sf::Vector2f(800, 768 - 188), sf::Vector2f(100, 138), IDs::IDs::plataforma);
-		criaPlataforma(sf::Vector2f(1600, 768 - 188), sf::Vector2f(100, 138), IDs::IDs::plataforma);
+		criaPlataforma(sf::Vector2f(901, 768 - 238), sf::Vector2f(100, 138), IDs::IDs::plataforma);
+		criaPlataforma(sf::Vector2f(1600, 768 - 238), sf::Vector2f(100, 138), IDs::IDs::plataforma);
 		criaPlataforma(sf::Vector2f(500, 768-150), sf::Vector2f(50, 50), IDs::IDs::caixa);
 	}
 
@@ -51,12 +51,12 @@ namespace Fase {
 			sf::Vector2f pos(it["posicao"]["x"], it["posicao"]["y"]);
 			sf::Vector2f tam(it["tamanho"]["x"], it["tamanho"]["y"]);
 			bool arrastado = it["arrastado"];
+			bool colisaoParede = it["colisaoParede"];
 			if (ID == IDs::IDs::plataforma) {
 				criaPlataforma(pos, tam, ID);
 			}
 			if (ID == IDs::IDs::caixa) {
-				cout << pos.x << " " << pos.y << endl;
-				criaPlataforma(pos, tam, ID, arrastado);
+				criaPlataforma(pos, tam, ID, arrastado, colisaoParede);
 			}
 		}
 

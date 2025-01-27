@@ -346,9 +346,13 @@
     <Image Include="assets\obstaculos\caixa\caixa_parado.png">
       <Filter>Arquivos de Recurso</Filter>
     </Image>
+    <Image Include="assets\icone\iconeJogo.ico">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Font Include="assets\Fontes\Greek-Freak.ttf" />
+    <Font Include="assets\Greek-Freak.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="openal32.dll" />

@@ -75,8 +75,25 @@ namespace Gerenciador {
 			}
 		}
 	}
+
+	void GerenciadorColisoes::tratarColisaoObstObst() {
+		for (int i = 0; i < pListaObstaculo->getTamanho(); i++) {
+			Entidade::Entidade* ent1 = pListaObstaculo->operator[](i);
+			if (ent1->getID() == IDs::IDs::caixa) {
+				for (int j = 0; j < pListaObstaculo->getTamanho(); j++) {
+					Entidade::Entidade* ent2 = pListaObstaculo->operator[](j);
+					if (verificaColisao(ent1, ent2)) { //verifica se as entidades colidiram.
+						sf::Vector2f diferenca = calcColisao(ent1, ent2);
+						ent1->colisao(ent2, diferenca); //caso sim chama a funcao colisao.
+					}
+				}
+			}
+		}
+	}
+
 	void GerenciadorColisoes::executar() {
 		tratarColisaoPerObst();
 		tratarColisaoJogInimigo();
+		tratarColisaoObstObst();
 	}
 }

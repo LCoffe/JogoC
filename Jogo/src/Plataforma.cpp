@@ -20,10 +20,6 @@ namespace Entidade {
 			if (ent->getID() == IDs::IDs::jogador){
 				Personagem::Personagem* pp = dynamic_cast<Personagem::Personagem*>(ent);
 				colisaoObs(pp, diferenca);
-				if (pp->getColisaoParede()) {
-					pp->setAndando(false);
-					pp->setVelocidade(sf::Vector2f(0.0f, 0.0f));
-				}
 			}
 			else if (ent->getID() == IDs::IDs::guerreiraAthena || ent->getID() == IDs::IDs::gorgona) {
 				Personagem::Personagem* pp = dynamic_cast<Personagem::Personagem*>(ent);
@@ -42,6 +38,7 @@ namespace Entidade {
 			j["posicao"] = { {"x", pos.x}, {"y", pos.y} };
 			j["tamanho"] = { {"x", tam.x}, {"y", tam.y} };
 			j["arrastado"] = false;
+			j["colisaoParede"] = false;
 		}
 	}
 }

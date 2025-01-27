@@ -170,8 +170,6 @@ namespace Entidade {
 					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::levouDano, direcao, posicao, dt);
 				else if (petrificado)
 					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::petrificado, direcao, posicao, dt);
-				else if (colisaoParede)
-					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::idle, direcao, posicao, dt);
 				else
 					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::idle, direcao, posicao,dt);
 			}

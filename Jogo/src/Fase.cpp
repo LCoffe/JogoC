@@ -306,7 +306,7 @@ namespace Fase {
 		}
 	}
 
-	void Fase::criaPlataforma(const sf::Vector2f pos, const sf::Vector2f tam, const IDs::IDs ID, bool arrastado) {
+	void Fase::criaPlataforma(const sf::Vector2f pos, const sf::Vector2f tam, const IDs::IDs ID, bool arrastado, bool colisaoParede) {
 		Entidade::Entidade* entidade = nullptr;
 		if (ID == IDs::IDs::plataforma) {
 			Entidade::Obstaculos::Plataforma* plataforma = nullptr;
@@ -325,6 +325,7 @@ namespace Fase {
 				exit(1);
 			}
 			caixa->setArrastado(arrastado);
+			caixa->setColisaoParede(colisaoParede);
 			entidade = static_cast<Entidade::Entidade*>(caixa);
 		}
 		if (entidade != nullptr) {

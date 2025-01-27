@@ -9,6 +9,7 @@ namespace Entidade {
 	namespace Obstaculos {
 		class Caixa : public Obstaculo {
 			private:
+				bool colisaoParede;
 				bool arrastado;
 				float lentidao;
 
@@ -18,8 +19,12 @@ namespace Entidade {
 				Caixa(sf::Vector2f pos, sf::Vector2f tam);
 				~Caixa();
 				void setArrastado(bool arrastado) { this->arrastado = arrastado; }
+				bool getArrastado() { return arrastado; }
+				void setColisaoParede(bool colisaoParede) { this->colisaoParede = colisaoParede; }
+				bool getColisaoParede() { return colisaoParede; }
 				void colisao(Entidade* ent, const sf::Vector2f diferenca);
 				void colisaoObs(Personagem::Personagem* persona, sf::Vector2f diferenca);
+				void colisaoPlataforma(Entidade* ent, const sf::Vector2f diferenca);
 				void desenhar();
 				void atualizar();
 				void salvar(nlohmann::json& j);
