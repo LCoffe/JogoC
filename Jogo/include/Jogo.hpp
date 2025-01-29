@@ -6,7 +6,7 @@
 #include "Jogador.hpp"
 #include "Inimigo.hpp"
 #include "GerenciadorEstado.hpp"
-
+#include "Parallax.hpp"
 
 class Jogo {
 private:
@@ -15,7 +15,7 @@ private:
 	static Gerenciador::GerenciadorEstado* pGEst;
 	sf::Event evento;
 
-
+	Parallax parallax;
 
 public:
 	Jogo();

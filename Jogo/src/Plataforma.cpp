@@ -6,12 +6,13 @@ namespace Entidade {
 			corpo.setFillColor(sf::Color::Red);
 			corpo.setSize(tam);
 			corpo.setPosition(pos);
+			inicializarSprite();
 		}
 
 		Plataforma::~Plataforma() {}
 
 		void Plataforma::desenhar() {
-			pGG->desenharElemento(corpo);
+			pGG->getJanela()->draw(sprite);
 		}
 
 		void Plataforma::atualizar(){}
@@ -32,6 +33,25 @@ namespace Entidade {
 				}
 			}
 		}
+
+		void Plataforma::inicializarSprite()
+		{
+			if (!textura.loadFromFile(PLATAFORMA_PATH)) {
+				std::cerr << "Erro ao carregar textura da plataforma: " << PLATAFORMA_PATH << std::endl;
+			}
+			// Ativa a repetição da textura
+			textura.setRepeated(true);
+
+			sprite.setTexture(textura);
+
+			// Define a área da textura que será repetida no tamanho do corpo da plataforma
+			sprite.setTextureRect(sf::IntRect(0, 0, corpo.getSize().x, corpo.getSize().y));
+
+			sprite.setPosition(corpo.getPosition());
+
+		}
+
+
 
 		void Plataforma::salvar(nlohmann::json& j) {
 			j["ID"] = (int)getID();

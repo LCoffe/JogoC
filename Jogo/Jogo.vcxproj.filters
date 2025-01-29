@@ -135,6 +135,9 @@
     <ClCompile Include="src\Caixa.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
+    <ClCompile Include="src\Parallax.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Jogador.hpp">
@@ -263,6 +266,9 @@
     <ClInclude Include="include\Caixa.hpp">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
+    <ClInclude Include="include\Parallax.hpp">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\athenasoldier.png">
@@ -349,9 +355,25 @@
     <Image Include="..\..\..\..\OneDrive\Área de Trabalho\nature_3\orig.png">
       <Filter>Arquivos de Recurso</Filter>
     </Image>
+    <Image Include="assets\icone\iconeJogo.ico">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="assets\fundos\fundo01.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="assets\fundos\fundo02.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="assets\fundos\fundo03.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="assets\obstaculos\plataforma.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Font Include="assets\Fontes\Greek-Freak.ttf" />
+    <Font Include="assets\Greek-Freak.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="openal32.dll" />
