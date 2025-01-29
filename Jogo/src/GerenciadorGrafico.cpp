@@ -6,12 +6,18 @@ namespace Gerenciador {
 
 	GerenciadorGrafico::GerenciadorGrafico() :
 		janela(new sf::RenderWindow(sf::VideoMode(TELA_X, TELA_Y), "Jogo")), relogio(),
-		camera(new Camera(sf::Vector2f(TELA_X, TELA_Y)))
+		camera(new Camera(sf::Vector2f(TELA_X, TELA_Y))), offsetParallax(0.0f)
 	{
 		if (janela == nullptr) {
-			std::cerr << "Erro ao criar a janela" << std::endl;
+			//std::cerr << "Erro ao criar a janela" << std::endl;
 			exit(1);
 		}
+		sf::Image icone;
+		if (!icone.loadFromFile(CAMINHO_ICONE)) {
+			//std::cerr << "Erro ao carregar o icone" << std::endl;
+			exit(1);
+		}
+		janela->setIcon(icone.getSize().x, icone.getSize().y, icone.getPixelsPtr());
 		janela->setFramerateLimit(60);
 	}
 

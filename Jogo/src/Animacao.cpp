@@ -2,7 +2,7 @@
 
 namespace ElementosGraficos {
 
-	const float Animacao::AnimacaoUnica::switchTime = 0.1f;
+	const float Animacao::AnimacaoUnica::switchTime = 0.25f;
 
 	Gerenciador::GerenciadorGrafico* Animacao::pGG = Gerenciador::GerenciadorGrafico::getGerGrafico();
 
