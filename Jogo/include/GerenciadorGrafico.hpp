@@ -3,10 +3,10 @@
 #include "../../stdafx/stdafx.hpp"
 #include "../../include/Camera.hpp"
 
+
 #define TELA_X 1366
 #define TELA_Y 768
 
-constexpr auto CAMINHO_TEX_FUNDO = "assets/fundos/fundo01.png";
 
 namespace Gerenciador {
 	class GerenciadorGrafico {
@@ -16,11 +16,6 @@ namespace Gerenciador {
 		sf::Clock relogio;
 		static float tempo;
 		std::map<const char*, sf::Font*> mapaFontes;
-
-		sf::Texture texturaFundo;
-		sf::Sprite spriteFundo;
-		sf::Shader shaderParallax;
-		float offsetParallax;
 
 		//contrutora privada para evitar instanciamento
 		static GerenciadorGrafico* pGG;
@@ -44,9 +39,6 @@ namespace Gerenciador {
 		const float getTempo() const { return tempo; }
 		sf::Font* carregarFonte(const char* caminho);
 
-		bool carregarTexturaFundo(const std::string& caminho);
-		void atualizarParallax();
-		void desenharFundo();
 
 	};
 }

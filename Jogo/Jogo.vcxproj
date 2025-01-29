@@ -167,6 +167,7 @@
     <ClCompile Include="src\ObservadorMenu.cpp" />
     <ClCompile Include="src\Obstaculo.cpp" />
     <ClCompile Include="src\GerenciadorColisoes.cpp" />
+    <ClCompile Include="src\Parallax.cpp" />
     <ClCompile Include="src\Personagem.cpp" />
     <ClCompile Include="src\Plataforma.cpp" />
     <ClCompile Include="src\Jogo.cpp" />
@@ -211,6 +212,7 @@
     <ClInclude Include="include\ObservadorJogador.hpp" />
     <ClInclude Include="include\ObservadorMenu.hpp" />
     <ClInclude Include="include\Obstaculo.hpp" />
+    <ClInclude Include="include\Parallax.hpp" />
     <ClInclude Include="include\Personagem.hpp" />
     <ClInclude Include="include\Plataforma.hpp" />
     <ClInclude Include="include\Jogo.hpp" />
@@ -221,6 +223,9 @@
   <ItemGroup>
     <Image Include="..\..\..\..\OneDrive\Área de Trabalho\nature_3\orig.png" />
     <Image Include="assets\athenasoldier.png" />
+    <Image Include="assets\fundos\fundo01.png" />
+    <Image Include="assets\fundos\fundo02.png" />
+    <Image Include="assets\fundos\fundo03.png" />
     <Image Include="assets\gamemenu.png" />
     <Image Include="assets\greeksoldier.png" />
     <Image Include="assets\icone\iconeJogo.ico" />
@@ -248,6 +253,7 @@
     <Image Include="assets\jogador\Walk.png" />
     <Image Include="assets\obstaculos\caixa\caixa_arrastado.png" />
     <Image Include="assets\obstaculos\caixa\caixa_parado.png" />
+    <Image Include="assets\obstaculos\plataforma.png" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="assets\Fontes\Greek-Freak.ttf">

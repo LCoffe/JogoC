@@ -13,6 +13,8 @@ namespace Gerenciador {
 			exit(1);
 		}
 		janela->setFramerateLimit(60);
+
+
 	}
 
 	GerenciadorGrafico::~GerenciadorGrafico() {}
@@ -101,44 +103,6 @@ namespace Gerenciador {
 		return camera->getCamera();
 	}
 
-	bool GerenciadorGrafico::carregarTexturaFundo(const std::string& caminho) {
-		if (!texturaFundo.loadFromFile(caminho)) {
-			std::cerr << "Erro: Não foi possível carregar a textura do fundo: " << caminho << std::endl;
-			return false;
-		}
-		texturaFundo.setRepeated(true);
-		spriteFundo.setTexture(texturaFundo);
-		spriteFundo.setTextureRect(sf::IntRect(0, 0, TELA_X * 3, TELA_Y));
-		spriteFundo.setScale(
-			static_cast<float>(TELA_X) / texturaFundo.getSize().x,
-			static_cast<float>(TELA_Y) / texturaFundo.getSize().y
-		);
-		spriteFundo.setPosition(-TELA_X, -TELA_Y);
-
-		if (!shaderParallax.loadFromMemory(
-			"uniform float offset;"
-			"void main() {"
-			"    gl_Position = gl_ProjectionMatrix * gl_ModelViewMatrix * gl_Vertex;"
-			"    gl_TexCoord[0] = gl_TextureMatrix[0] * gl_MultiTexCoord0;"
-			"    gl_TexCoord[0].x = gl_TexCoord[0].x + offset;"
-			"    gl_FrontColor = gl_Color;"
-			"}", sf::Shader::Vertex)) {
-			std::cerr << "Erro ao carregar o shader de paralax!" << std::endl;
-			return false;
-		}
-
-		offsetParallax = 0.f;
-		return true;
-	}
-
-	void GerenciadorGrafico::atualizarParallax() {
-		offsetParallax += relogio.getElapsedTime().asSeconds();  // Ajuste a velocidade conforme necessário
-		shaderParallax.setUniform("offset", offsetParallax);
-		relogio.restart();
-	}
-
-	void GerenciadorGrafico::desenharFundo() {
-		janela->draw(spriteFundo, &shaderParallax);
-	}
+	
 
 }
