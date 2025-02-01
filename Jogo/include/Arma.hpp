@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../include/Entidade.hpp"
-#include "../include/Jogador.hpp"
-#include "../include/Personagem.hpp"
+#include "../include/entes/Entidade.hpp"
+#include "../include/entes/personagens/jogador/Jogador.hpp"
+#include "../include/entes/personagens/Personagem.hpp"
 
 namespace Entidade {
 	namespace Item {

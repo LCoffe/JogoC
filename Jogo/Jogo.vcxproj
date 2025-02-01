@@ -107,7 +107,7 @@
       <AdditionalIncludeDirectories>C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\SFML-2.6.2\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\SFML-2.6.2\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-audio-d.lib;sfml-network-d.lib;sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -124,7 +124,7 @@
       <AdditionalIncludeDirectories>C:\Users\alano\source\repos\JogoC\SFML-2.6.2\include;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\SFML-2.6.2\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -133,103 +133,100 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\Animacao.cpp" />
+    <ClCompile Include="src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp" />
+    <ClCompile Include="src\ElementosGraficos\animacoes\AnimacaoEstatica.cpp" />
+    <ClCompile Include="src\ElementosGraficos\animacoes\AnimacaoUnica.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="src\Arma.cpp" />
-    <ClCompile Include="src\Botao.cpp" />
-    <ClCompile Include="src\Caixa.cpp" />
     <ClCompile Include="src\Camera.cpp" />
-    <ClCompile Include="src\Ente.cpp" />
-    <ClCompile Include="src\Entidade.cpp" />
+    <ClCompile Include="src\ElementosGraficos\animacoes\Animacao.cpp" />
+    <ClCompile Include="src\ElementosGraficos\Botao.cpp" />
+    <ClCompile Include="src\ElementosGraficos\Texto.cpp" />
+    <ClCompile Include="src\Entes\Ente.cpp" />
+    <ClCompile Include="src\Entes\Entidade.cpp" />
+    <ClCompile Include="src\Entes\Obstaculos\Obstaculo.cpp" />
+    <ClCompile Include="src\Entes\Obstaculos\Plataforma.cpp" />
+    <ClCompile Include="src\Entes\Personagens\Inimigos\Gorgona.cpp" />
+    <ClCompile Include="src\Entes\Personagens\Inimigos\GuerreiraAthena.cpp" />
+    <ClCompile Include="src\Entes\Personagens\Inimigos\Inimigo.cpp" />
+    <ClCompile Include="src\Entes\Personagens\Jogador\Jogador.cpp" />
+    <ClCompile Include="src\Entes\Personagens\Personagem.cpp" />
     <ClCompile Include="src\Estado.cpp" />
     <ClCompile Include="src\EstadoJogar.cpp" />
     <ClCompile Include="src\EstadoMenu.cpp" />
-    <ClCompile Include="src\Fase.cpp" />
-    <ClCompile Include="src\Fase01.cpp" />
-    <ClCompile Include="src\GerenciadorEstado.cpp" />
-    <ClCompile Include="src\GerenciadorEventos.cpp" />
-    <ClCompile Include="src\GerenciadorGrafico.cpp" />
-    <ClCompile Include="src\GerenciadorSalvar.cpp" />
-    <ClCompile Include="src\Gorgona.cpp" />
-    <ClCompile Include="src\GuerreiraAthena.cpp" />
-    <ClCompile Include="src\Inimigo.cpp" />
-    <ClCompile Include="src\Jogador.cpp" />
-    <ClCompile Include="src\ListaEntidade.cpp" />
-    <ClCompile Include="src\Menu.cpp" />
-    <ClCompile Include="src\MenuColocacao.cpp" />
-    <ClCompile Include="src\MenuMorreu.cpp" />
-    <ClCompile Include="src\MenuOpcoes.cpp" />
-    <ClCompile Include="src\MenuPrincipal.cpp" />
-    <ClCompile Include="src\MenuSalvarColocacao.cpp" />
+    <ClCompile Include="src\Fases\Fase.cpp" />
+    <ClCompile Include="src\Fases\Fase01.cpp" />
+    <ClCompile Include="src\Gerenciadores\GerenciadorColisoes.cpp" />
+    <ClCompile Include="src\Gerenciadores\GerenciadorEstado.cpp" />
+    <ClCompile Include="src\Gerenciadores\GerenciadorEventos.cpp" />
+    <ClCompile Include="src\Gerenciadores\GerenciadorGrafico.cpp" />
+    <ClCompile Include="src\Gerenciadores\GerenciadorSalvar.cpp" />
+    <ClCompile Include="src\Listas\ListaEntidade.cpp" />
+    <ClCompile Include="src\Menus\Menu.cpp" />
+    <ClCompile Include="src\Menus\MenuColocacao.cpp" />
+    <ClCompile Include="src\Menus\MenuMorreu.cpp" />
+    <ClCompile Include="src\Menus\MenuOpcoes.cpp" />
+    <ClCompile Include="src\Menus\MenuPrincipal.cpp" />
+    <ClCompile Include="src\Menus\MenuSalvarColocacao.cpp" />
     <ClCompile Include="src\Observador.cpp" />
     <ClCompile Include="src\ObservadorFase.cpp" />
     <ClCompile Include="src\ObservadorJogador.cpp" />
     <ClCompile Include="src\ObservadorMenu.cpp" />
-    <ClCompile Include="src\Obstaculo.cpp" />
-    <ClCompile Include="src\GerenciadorColisoes.cpp" />
-    <ClCompile Include="src\Parallax.cpp" />
-    <ClCompile Include="src\Personagem.cpp" />
-    <ClCompile Include="src\Plataforma.cpp" />
     <ClCompile Include="src\Jogo.cpp" />
     <ClCompile Include="src\Observado.cpp" />
-    <ClCompile Include="src\Texto.cpp" />
     <ClCompile Include="stdafx\stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\Animacao.hpp" />
+    <ClInclude Include="include\ElementosGraficos\animacoes\AnimacaoMovimento.hpp" />
+    <ClInclude Include="include\ElementosGraficos\animacoes\AnimacaoEstatica.hpp" />
+    <ClInclude Include="include\ElementosGraficos\animacoes\AnimacaoUnica.hpp" />
     <ClInclude Include="include\Arma.hpp" />
-    <ClInclude Include="include\Botao.hpp" />
-    <ClInclude Include="include\Caixa.hpp" />
     <ClInclude Include="include\Camera.hpp" />
-    <ClInclude Include="include\Ente.hpp" />
-    <ClInclude Include="include\Entidade.hpp" />
+    <ClInclude Include="include\ElementosGraficos\animacoes\Animacao.hpp" />
+    <ClInclude Include="include\ElementosGraficos\Botao.hpp" />
+    <ClInclude Include="include\ElementosGraficos\Texto.hpp" />
+    <ClInclude Include="include\Entes\Ente.hpp" />
+    <ClInclude Include="include\Entes\Entidade.hpp" />
+    <ClInclude Include="include\Entes\Obstaculos\Obstaculo.hpp" />
+    <ClInclude Include="include\Entes\Obstaculos\Plataforma.hpp" />
+    <ClInclude Include="include\Entes\Personagens\Inimigos\Gorgona.hpp" />
+    <ClInclude Include="include\Entes\Personagens\Inimigos\GuerreiraAthena.hpp" />
+    <ClInclude Include="include\Entes\Personagens\Inimigos\Inimigo.hpp" />
+    <ClInclude Include="include\Entes\Personagens\jogador\Jogador.hpp" />
+    <ClInclude Include="include\Entes\Personagens\Personagem.hpp" />
     <ClInclude Include="include\Estado.hpp" />
     <ClInclude Include="include\EstadoJogar.hpp" />
     <ClInclude Include="include\EstadoMenu.hpp" />
-    <ClInclude Include="include\Fase.hpp" />
-    <ClInclude Include="include\Fase01.hpp" />
-    <ClInclude Include="include\GerenciadorColisoes.hpp" />
-    <ClInclude Include="include\GerenciadorEstado.hpp" />
-    <ClInclude Include="include\GerenciadorEventos.hpp" />
-    <ClInclude Include="include\GerenciadorGrafico.hpp" />
-    <ClInclude Include="include\GerenciadorSalvar.hpp" />
-    <ClInclude Include="include\Gorgona.hpp" />
-    <ClInclude Include="include\GuerreiraAthena.hpp" />
+    <ClInclude Include="include\Fases\Fase.hpp" />
+    <ClInclude Include="include\Fases\Fase01.hpp" />
+    <ClInclude Include="include\Gerenciadores\GerenciadorColisoes.hpp" />
+    <ClInclude Include="include\Gerenciadores\GerenciadorEstado.hpp" />
+    <ClInclude Include="include\Gerenciadores\GerenciadorEventos.hpp" />
+    <ClInclude Include="include\Gerenciadores\GerenciadorGrafico.hpp" />
+    <ClInclude Include="include\Gerenciadores\GerenciadorSalvar.hpp" />
     <ClInclude Include="include\IDs.hpp" />
-    <ClInclude Include="include\Inimigo.hpp" />
-    <ClInclude Include="include\Jogador.hpp" />
     <ClInclude Include="include\json.hpp" />
-    <ClInclude Include="include\Lista.hpp" />
-    <ClInclude Include="include\ListaEntidade.hpp" />
-    <ClInclude Include="include\Menu.hpp" />
-    <ClInclude Include="include\MenuColocacao.hpp" />
-    <ClInclude Include="include\MenuMorreu.hpp" />
-    <ClInclude Include="include\MenuOpcoes.hpp" />
-    <ClInclude Include="include\MenuPrincipal.hpp" />
-    <ClInclude Include="include\MenuSalvarColocacao.hpp" />
+    <ClInclude Include="include\Listas\Lista.hpp" />
+    <ClInclude Include="include\Listas\ListaEntidade.hpp" />
+    <ClInclude Include="include\Menus\Menu.hpp" />
+    <ClInclude Include="include\Menus\MenuColocacao.hpp" />
+    <ClInclude Include="include\Menus\MenuMorreu.hpp" />
+    <ClInclude Include="include\Menus\MenuOpcoes.hpp" />
+    <ClInclude Include="include\Menus\MenuPrincipal.hpp" />
+    <ClInclude Include="include\Menus\MenuSalvarColocacao.hpp" />
     <ClInclude Include="include\Observador.hpp" />
     <ClInclude Include="include\ObservadorFase.hpp" />
     <ClInclude Include="include\ObservadorJogador.hpp" />
     <ClInclude Include="include\ObservadorMenu.hpp" />
-    <ClInclude Include="include\Obstaculo.hpp" />
-    <ClInclude Include="include\Parallax.hpp" />
-    <ClInclude Include="include\Personagem.hpp" />
-    <ClInclude Include="include\Plataforma.hpp" />
     <ClInclude Include="include\Jogo.hpp" />
     <ClInclude Include="include\Observado.hpp" />
-    <ClInclude Include="include\Texto.hpp" />
     <ClInclude Include="stdafx\stdafx.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\..\..\OneDrive\Área de Trabalho\nature_3\orig.png" />
     <Image Include="assets\athenasoldier.png" />
-    <Image Include="assets\fundos\fundo01.png" />
-    <Image Include="assets\fundos\fundo02.png" />
-    <Image Include="assets\fundos\fundo03.png" />
+    <Image Include="assets\fundos\fundo1.png" />
     <Image Include="assets\gamemenu.png" />
     <Image Include="assets\greeksoldier.png" />
-    <Image Include="assets\icone\iconeJogo.ico" />
-    <Image Include="assets\icone\iconeJogo.jpg" />
     <Image Include="assets\inimigos\athena\guerreira_ataque.png" />
     <Image Include="assets\inimigos\gorgona\gorgona_andar.png" />
     <Image Include="assets\inimigos\gorgona\gorgona_ataque.png" />
@@ -251,18 +248,19 @@
     <Image Include="assets\jogador\jogador_pulo.png" />
     <Image Include="assets\jogador\Jump.png" />
     <Image Include="assets\jogador\Walk.png" />
-    <Image Include="assets\obstaculos\caixa\caixa_arrastado.png" />
-    <Image Include="assets\obstaculos\caixa\caixa_parado.png" />
-    <Image Include="assets\obstaculos\plataforma.png" />
+    <Image Include="assets\plataformas\pedra.png" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="assets\Fontes\Greek-Freak.ttf">
       <DeploymentContent>true</DeploymentContent>
     </Font>
-    <Font Include="assets\Greek-Freak.ttf" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".gitattributes" />
+    <None Include=".gitignore" />
+    <None Include="Jogo.exe" />
     <None Include="openal32.dll" />
+    <None Include="README.md" />
     <None Include="save.dat" />
     <None Include="sfml-audio-2.dll" />
     <None Include="sfml-audio-d-2.dll" />

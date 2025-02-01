@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../include/Observador.hpp"
-#include "../include/Jogador.hpp"
+#include "../entes/personagens/jogador/Jogador.hpp"
 
 namespace Observado {
 	namespace Observador {

@@ -1,8 +1,8 @@
 #pragma once
 
 #include "../include/Observador.hpp"
-#include "../include/Fase.hpp"
-#include "../include/GerenciadorEstado.hpp"
+#include "../fases/Fase.hpp"
+#include "../gerenciadores/GerenciadorEstado.hpp"
 
 namespace Observado{
 	namespace Observador {

@@ -1,9 +1,9 @@
 #include "../include/EstadoMenu.hpp"
-#include "../include/MenuPrincipal.hpp"
-#include "../include/MenuOpcoes.hpp"
-#include "../include/MenuSalvarColocacao.hpp"
-#include "../include/MenuColocacao.hpp"
-#include "../include/MenuMorreu.hpp"
+#include "../include/menus/MenuPrincipal.hpp"
+#include "../include/menus/MenuOpcoes.hpp"
+#include "../include/menus/MenuSalvarColocacao.hpp"
+#include "../include/menus/MenuColocacao.hpp"
+#include "../include/menus/MenuMorreu.hpp"
 
 namespace Estado {
 	EstadoMenu::EstadoMenu(const IDs::IDs ID) : Estado(ID), menu(nullptr) {

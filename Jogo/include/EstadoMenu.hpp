@@ -1,8 +1,8 @@
 #pragma once
 
 #include "../include/Estado.hpp"
-#include "../include/Menu.hpp"
-#include "../include/Fase.hpp"
+#include "../menus/Menu.hpp"
+#include "../fases/Fase.hpp"
 
 namespace Estado {
 	class EstadoMenu : public Estado {

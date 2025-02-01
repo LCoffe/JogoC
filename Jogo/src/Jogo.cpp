@@ -20,23 +20,22 @@ Jogo::Jogo() : evento() {
 		exit(1);
 	}
 
-	if (!parallax.carregarTextura(CAMINHO_TEX_FUNDO)) {
-		std::cerr << "Erro ao carregar textura do fundo." << std::endl;
+	if (!pGG->carregarTexturaFundo(CAMINHO_TEX_FUNDO)) {
+		cout << "Erro ao carregar fundo paralax!" << endl;
+		exit(1);
 	}
 
 	pGEst->incluiEstado(IDs::IDs::estadoMenuPrincipal, IDs::IDs::nulo, false);
-
-}
+	
+}	
 
 Jogo::~Jogo() {}
 
 void Jogo::executar() {
 	while (pGG->estaAberto()) {
 		pGG->limpar();
-
-		parallax.atualizar();
-		parallax.desenhar(*pGG->getJanela());
-
+		pGG->atualizarParallax();
+		pGG->desenharFundo();
 		pGE->tratarEventos();
 		pGEst->executar();
 		pGG->mostrarElementos();

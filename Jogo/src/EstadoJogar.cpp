@@ -1,5 +1,5 @@
 #include "../include/EstadoJogar.hpp"
-#include "../include/Fase01.hpp"
+#include "../include/fases/Fase01.hpp"
 
 namespace Estado {
 	EstadoJogar::EstadoJogar(IDs::IDs ID, IDs::IDs IDFase) : Estado(ID), fase(nullptr) {

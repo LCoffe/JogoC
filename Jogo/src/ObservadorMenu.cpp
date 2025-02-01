@@ -1,9 +1,9 @@
 #include "../include/ObservadorMenu.hpp"
 #include "../include/EstadoJogar.hpp"
 #include "../include/EstadoMenu.hpp"
-#include "../include/MenuOpcoes.hpp"
-#include "../include/MenuSalvarColocacao.hpp"
-#include "../include/MenuColocacao.hpp"
+#include "../include/menus/MenuOpcoes.hpp"
+#include "../include/menus/MenuSalvarColocacao.hpp"
+#include "../include/menus/MenuColocacao.hpp"
 
 namespace Observado {
 	namespace Observador {
