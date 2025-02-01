@@ -383,7 +383,12 @@ namespace Fase {
 		}
 	}
 
+	void Fase::atualizaFundo() {
+		fundo->atualizar();
+	}
+
 	void Fase::desenhar() {
+		fundo->desenhar(*pGG->getJanela());
 		pListaPersona->desenharEntidades();
 		pListaObstaculo->desenharEntidades();
 	}
@@ -420,7 +425,8 @@ namespace Fase {
 					pGG->atualizarCamera(pos, pGG->getTamJanela());
 				}
 
-				// Atualizar e desenhar entidades
+				// Atualizar e desenhar entidades e fundo
+				atualizaFundo();
 				pListaPersona->executar();
 				pListaObstaculo->executar();
 				desenhar();
@@ -435,7 +441,8 @@ namespace Fase {
 		else {
 			if (pJogador->getTempoMorte() <= 1.25f) {
 				pGG->atualizarCamera(pJogador->getPos(), pGG->getTamJanela());
-
+				
+				atualizaFundo();
 				pListaPersona->executar();
 				pListaObstaculo->executar();
 				pontuacao = pJogador->getPontuacao();

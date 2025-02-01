@@ -4,6 +4,7 @@
 #include "../entes/Ente.hpp"
 #include "../elementosGraficos/Texto.hpp"
 #include "../elementosGraficos/Botao.hpp"
+#include "../../include/Parallax.hpp"
 
 namespace Observado {
 	namespace Observador {
@@ -20,6 +21,7 @@ namespace Menu {
 			Texto* titulo;
 			Texto* nome;
 			sf::Vector2f posImagem;
+			Fundo::Parallax* fundoParallax;
 			sf::RectangleShape* fundo;
 			virtual void criarBotoes() = 0;
 			virtual void criarTitulo() = 0;

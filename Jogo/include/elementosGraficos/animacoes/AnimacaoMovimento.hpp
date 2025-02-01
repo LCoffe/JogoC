@@ -24,7 +24,7 @@ namespace ElementosGraficos {
 		public:
 			AnimacaoMovimento();
 			~AnimacaoMovimento();
-			void adicionarNovaAnimacao(ID_ANIMACAO id, const char* path, unsigned int imagemCount,const float switchTime = 0.1f);
+			void adicionarNovaAnimacao(ID_ANIMACAO id, const char* path, unsigned int imagemCount,const float switchTime = 0.25f);
 			void atualizar(ID_ANIMACAO id, bool olhandoEsquerda, sf::Vector2f pos, float dt);
 
 

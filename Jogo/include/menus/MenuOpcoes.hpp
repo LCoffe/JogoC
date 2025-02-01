@@ -16,6 +16,7 @@ namespace Menu {
 			~MenuOpcoes();
 			void setFase(Fase::Fase* pFase) { this->pFase = pFase; }
 			Fase::Fase* getFase() { return pFase; }
+			void criaFundoParallax();
 			void executar();
 	};
 }

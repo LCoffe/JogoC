@@ -21,6 +21,7 @@ namespace Estado {
 			Menu::MenuOpcoes* menuOpcoes = static_cast<Menu::MenuOpcoes*>(menu);
 			if (menuOpcoes != nullptr) {
 				menuOpcoes->setFase(fase);
+				menuOpcoes->criaFundoParallax();
 			}
 		}
 		else if (ID == IDs::IDs::estadoSalvarColocacao) {

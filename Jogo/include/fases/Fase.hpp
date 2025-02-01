@@ -5,6 +5,7 @@
 #include "../../include/listas/ListaEntidade.hpp"
 #include "../../include/entes/Entidade.hpp"
 #include "../../include/entes/personagens/Personagem.hpp"
+#include "../../include/Parallax.hpp"
 
 #include "../../include/entes/obstaculos/Obstaculo.hpp"
 #include "../../include/entes/obstaculos/Plataforma.hpp"
@@ -30,6 +31,8 @@ namespace Fase {
 	private:
 		static Observado::Observador::ObservadorFase* pObsFase;
 	protected:
+		Fundo::Parallax* fundo;
+
 		Lista::ListaEntidade* pListaPersona;
 		Lista::ListaEntidade* pListaObstaculo;
 		static Entidade::Personagem::Jogador::Jogador* pJogador;
@@ -39,6 +42,7 @@ namespace Fase {
 		Gerenciador::GerenciadorColisoes* pGC;
 		Gerenciador::GerenciadorSalvar* pGS;
 
+		virtual void iniciaFundo() = 0;
 		void criaPersonagem(const sf::Vector2f pos, const IDs::IDs ID, bool jogadorUm);
 		void criaPersonagem(const sf::Vector2f pos, const IDs::IDs ID, const sf::Vector2f tam, const sf::Vector2f vel, bool direcao, bool jogadorUm, float vida, float tempoAtaque, sf::Vector2f posArma, bool atacando, bool petrifica, bool levandoDano
 			, float tempoDano, bool morrendo, float tempoMorrendo, int pontuacao, bool colisaoChao); //Metodo usado para carregar os personagens
@@ -55,6 +59,7 @@ namespace Fase {
 		void setPontuacao(int pontuacao) { this->pontuacao = pontuacao; }
 		int getPontuacao() { return pontuacao; }
 		void atualizaPontuacao();
+		void atualizaFundo();
 		void salvarColocacao(string nome);
 		void desenhar();
 		void setAtivoObs(const bool ativo);

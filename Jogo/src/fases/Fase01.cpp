@@ -2,6 +2,7 @@
 
 namespace Fase {
 	Fase01::Fase01() : Fase(IDs::IDs::fase01) {
+		iniciaFundo();
 	}
 
 	Fase01::~Fase01() {
@@ -12,6 +13,15 @@ namespace Fase {
 	void Fase01::iniciaFase(bool doisJogadres) {
 		criarMapa(doisJogadres);
 		executar();
+	}
+
+	void Fase01::iniciaFundo() {
+		fundo = new Fundo::Parallax();
+		fundo->carregarTextura(CAMINHO_TEX_FUNDO);
+		if (fundo == nullptr) {
+			//cout << "Erro ao criar o fundo" << endl;
+			exit(1);
+		}
 	}
 
 	void Fase01::carregaFase() {

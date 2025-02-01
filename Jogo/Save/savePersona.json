@@ -2,6 +2,39 @@
     {
         "ID": 1,
         "atacando": false,
+        "colisaoChao": false,
+        "direcao": true,
+        "jogadorUm": true,
+        "levandoDano": false,
+        "morrendo": false,
+        "petrificado": false,
+        "pontuacao": 0,
+        "posArma": {
+            "x": -500.0,
+            "y": -500.0
+        },
+        "posicao": {
+            "x": 50.0,
+            "y": 460.4811096191406
+        },
+        "tamanho": {
+            "x": 50.0,
+            "y": 50.0
+        },
+        "tempoAtaque": 0.0,
+        "tempoDano": 0.0,
+        "tempoMorte": 0.0,
+        "tempoPetrificado": 0.0,
+        "velocidade": {
+            "x": 80.0,
+            "y": 162.83554077148438
+        },
+        "vida": 100.0
+    },
+    {
+        "ID": 2,
+        "andando": true,
+        "atacando": false,
         "colisaoChao": true,
         "direcao": true,
         "jogadorUm": true,
@@ -14,41 +47,8 @@
             "y": -500.0
         },
         "posicao": {
-            "x": 592.90576171875,
-            "y": 568.908203125
-        },
-        "tamanho": {
-            "x": 50.0,
-            "y": 50.0
-        },
-        "tempoAtaque": 0.0,
-        "tempoDano": 0.0,
-        "tempoMorte": 0.0,
-        "tempoPetrificado": 0.0,
-        "velocidade": {
-            "x": 80.0,
-            "y": 0.0
-        },
-        "vida": 100.0
-    },
-    {
-        "ID": 2,
-        "andando": true,
-        "atacando": false,
-        "colisaoChao": true,
-        "direcao": false,
-        "jogadorUm": true,
-        "levandoDano": false,
-        "morrendo": false,
-        "petrificado": false,
-        "pontuacao": 0,
-        "posArma": {
-            "x": -500.0,
-            "y": -500.0
-        },
-        "posicao": {
-            "x": 656.624755859375,
-            "y": 618.0172729492188
+            "x": 692.2213745117188,
+            "y": 618.0176391601563
         },
         "tamanho": {
             "x": 50.0,
@@ -71,7 +71,7 @@
         "ataqueBasico": false,
         "ataquePetrificante": false,
         "colisaoChao": true,
-        "direcao": false,
+        "direcao": true,
         "jogadorUm": true,
         "levandoDano": false,
         "morrendo": false,
@@ -82,8 +82,8 @@
             "y": -500.0
         },
         "posicao": {
-            "x": 1278.8121337890625,
-            "y": 652.4312133789063
+            "x": 1467.84814453125,
+            "y": 618.0176391601563
         },
         "tamanho": {
             "x": 50.0,
@@ -95,7 +95,7 @@
         "tempoPetrificado": 0.0,
         "velocidade": {
             "x": 50.0,
-            "y": 90.90384674072266
+            "y": 0.0
         },
         "vida": 100.0
     }

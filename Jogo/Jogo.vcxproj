@@ -175,6 +175,7 @@
     <ClCompile Include="src\ObservadorMenu.cpp" />
     <ClCompile Include="src\Jogo.cpp" />
     <ClCompile Include="src\Observado.cpp" />
+    <ClCompile Include="src\Parallax.cpp" />
     <ClCompile Include="stdafx\stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>

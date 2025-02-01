@@ -1,2 +1,9 @@
-﻿  Fase01.cpp
+﻿  main.cpp
+  Caixa.cpp
+  EstadoMenu.cpp
+  Fase.cpp
+  GerenciadorGrafico.cpp
+  GerenciadorSalvar.cpp
+  ObservadorMenu.cpp
+  Gerando Código...
   Jogo.vcxproj -> C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\x64\Debug\Jogo.exe
