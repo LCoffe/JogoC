@@ -45,7 +45,7 @@ namespace Entidade {
 			sprite.setTexture(textura);
 
 			// Define a área da textura que será repetida no tamanho do corpo da plataforma
-			sprite.setTextureRect(sf::IntRect(0, 0, corpo.getSize().x, corpo.getSize().y));
+			sprite.setTextureRect(sf::IntRect(0, 0, (int)corpo.getSize().x, (int)corpo.getSize().y));
 
 			sprite.setPosition(corpo.getPosition());
 

@@ -3,7 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
-constexpr auto CAMINHO_TEX_FUNDO = "assets/fundos/fundo01.png";
+constexpr const char* const CAMINHO_TEX_FUNDO = "assets/fundos/fundo01.png";
 
 class Parallax {
 private:

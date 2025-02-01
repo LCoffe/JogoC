@@ -7,6 +7,7 @@
 #define TELA_X 1366
 #define TELA_Y 768
 
+constexpr const char* const CAMINHO_ICONE = "assets/icone/iconeJogo.jpg";
 
 namespace Gerenciador {
 	class GerenciadorGrafico {
