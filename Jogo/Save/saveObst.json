@@ -30,8 +30,8 @@
         "arrastado": false,
         "colisaoParede": false,
         "posicao": {
-            "x": 901.0,
-            "y": 530.0
+            "x": 800.0,
+            "y": 580.0
         },
         "tamanho": {
             "x": 100.0,
@@ -44,7 +44,7 @@
         "colisaoParede": false,
         "posicao": {
             "x": 1600.0,
-            "y": 530.0
+            "y": 580.0
         },
         "tamanho": {
             "x": 100.0,
@@ -56,7 +56,7 @@
         "arrastado": false,
         "colisaoParede": false,
         "posicao": {
-            "x": 851.0,
+            "x": 600.0,
             "y": 618.0
         },
         "tamanho": {

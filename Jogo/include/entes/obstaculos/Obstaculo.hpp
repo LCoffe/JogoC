@@ -9,7 +9,7 @@ namespace Entidade {
 	namespace Obstaculos {
 		class Obstaculo : public Entidade {
 		protected:
-			ElementosGraficos::AnimacaoEstatica sprite;
+			
 		public:
 			Obstaculo(const sf::Vector2f pos, const sf::Vector2f tam, const IDs::IDs ID);
 			~Obstaculo();

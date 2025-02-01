@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../include/Obstaculo.hpp"
+#include "../../include/entes/obstaculos/Obstaculo.hpp"
 
 constexpr const char* const CAIXA_PARADO_PATH = "..\\Jogo\\assets\\obstaculos\\caixa\\caixa_parado.png";
 constexpr const char* const CAIXA_ARRASTADO_PATH = "..\\Jogo\\assets\\obstaculos\\caixa\\caixa_arrastado.png";
@@ -12,8 +12,9 @@ namespace Entidade {
 				bool colisaoParede;
 				bool arrastado;
 				float lentidao;
+				ElementosGraficos::AnimacaoMovimento sprite;
 
-				void inicializarSprite();
+				void inicializar();
 				void atualizarSprite(float dt);
 			public:
 				Caixa(sf::Vector2f pos, sf::Vector2f tam);

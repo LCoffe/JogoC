@@ -10,6 +10,7 @@
 #include "../entes/personagens/Inimigos/Inimigo.hpp"
 #include "../entes/personagens/Inimigos/GuerreiraAthena.hpp"
 #include "../entes/personagens/Inimigos/Gorgona.hpp"
+#include "../entes/obstaculos/Caixa.hpp"
 
 using namespace std;
 

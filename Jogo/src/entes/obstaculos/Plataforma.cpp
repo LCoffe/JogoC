@@ -14,7 +14,7 @@ namespace Entidade {
 		Plataforma::~Plataforma() {}
 
 		void Plataforma::desenhar() {
-			pGG->getJanela()->draw(sprite);
+			sprite.desenhar();
 		}
 
 		void Plataforma::colisao(Entidade* ent, sf::Vector2f diferenca) {

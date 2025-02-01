@@ -2,20 +2,20 @@
     {
         "ID": 1,
         "atacando": false,
-        "colisaoChao": false,
+        "colisaoChao": true,
         "direcao": true,
         "jogadorUm": true,
         "levandoDano": false,
         "morrendo": false,
         "petrificado": false,
-        "pontuacao": 100,
+        "pontuacao": 0,
         "posArma": {
             "x": -500.0,
             "y": -500.0
         },
         "posicao": {
-            "x": 1296.18359375,
-            "y": 819.5158081054688
+            "x": 592.90576171875,
+            "y": 568.908203125
         },
         "tamanho": {
             "x": 50.0,
@@ -27,12 +27,46 @@
         "tempoPetrificado": 0.0,
         "velocidade": {
             "x": 80.0,
-            "y": 321.0667724609375
+            "y": 0.0
+        },
+        "vida": 100.0
+    },
+    {
+        "ID": 2,
+        "andando": true,
+        "atacando": false,
+        "colisaoChao": true,
+        "direcao": false,
+        "jogadorUm": true,
+        "levandoDano": false,
+        "morrendo": false,
+        "petrificado": false,
+        "pontuacao": 0,
+        "posArma": {
+            "x": -500.0,
+            "y": -500.0
+        },
+        "posicao": {
+            "x": 656.624755859375,
+            "y": 618.0172729492188
+        },
+        "tamanho": {
+            "x": 50.0,
+            "y": 50.0
+        },
+        "tempoAtaque": 0.0,
+        "tempoDano": 0.0,
+        "tempoMorte": 0.0,
+        "tempoPetrificado": 0.0,
+        "velocidade": {
+            "x": 50.0,
+            "y": 0.0
         },
         "vida": 100.0
     },
     {
         "ID": 30,
+        "andando": true,
         "atacando": false,
         "ataqueBasico": false,
         "ataquePetrificante": false,
@@ -48,8 +82,8 @@
             "y": -500.0
         },
         "posicao": {
-            "x": -1932.033935546875,
-            "y": 253915.21875
+            "x": 1278.8121337890625,
+            "y": 652.4312133789063
         },
         "tamanho": {
             "x": 50.0,
@@ -61,7 +95,7 @@
         "tempoPetrificado": 0.0,
         "velocidade": {
             "x": 50.0,
-            "y": 7796.8857421875
+            "y": 90.90384674072266
         },
         "vida": 100.0
     }

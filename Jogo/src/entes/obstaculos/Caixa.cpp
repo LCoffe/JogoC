@@ -1,9 +1,9 @@
-#include "../include/Caixa.hpp"
+#include "../../include/entes/obstaculos/Caixa.hpp"
 
 namespace Entidade {
 	namespace Obstaculos {
 		Caixa::Caixa(sf::Vector2f pos, sf::Vector2f tam) : Obstaculo(pos, tam, IDs::IDs::caixa), arrastado(false), lentidao(0.15f){
-			inicializarSprite();
+			inicializar();
 		}
 		Caixa::~Caixa() {}
 		void Caixa::colisao(Entidade* ent, const sf::Vector2f diferenca) {
@@ -121,7 +121,7 @@ namespace Entidade {
 			j["arrastado"] = arrastado;
 			j["colisaoParede"] = colisaoParede;
 		}
-		void Caixa::inicializarSprite() {
+		void Caixa::inicializar() {
 			sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::walk, CAIXA_ARRASTADO_PATH, 8);
 			sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::idle, CAIXA_PARADO_PATH, 1);
 			

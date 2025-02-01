@@ -204,10 +204,10 @@ namespace Fase {
 			}
 			Entidade::Personagem::Inimigo::GuerreiraAthena* pInimigo = nullptr;
 			if (doisJogadores) {
-				pInimigo = new Entidade::Personagem::Inimigo::GuerreiraAthena(pos, this->pJogador, this->pJogadorDois);
+				pInimigo = new Entidade::Personagem::Inimigo::GuerreiraAthena(pos, pJogador, pJogadorDois);
 			}
 			else {
-				pInimigo = new Entidade::Personagem::Inimigo::GuerreiraAthena(pos, this->pJogador);
+				pInimigo = new Entidade::Personagem::Inimigo::GuerreiraAthena(pos, pJogador);
 			}
 			Entidade::Item::Arma* pArma = new Entidade::Item::Arma(static_cast<Entidade::Personagem::Personagem*>(pInimigo), sf::Vector2f(10.0f, 10.0f), IDs::IDs::espadaInimigo);
 			if (pArma == nullptr) {
@@ -241,10 +241,10 @@ namespace Fase {
 			}
 			Entidade::Personagem::Inimigo::Gorgona* pInimigo = nullptr;
 			if (doisJogadores) {
-				pInimigo = new Entidade::Personagem::Inimigo::Gorgona(pos, this->pJogador, this->pJogadorDois);
+				pInimigo = new Entidade::Personagem::Inimigo::Gorgona(pos, pJogador, pJogadorDois);
 			}
 			else {
-				pInimigo = new Entidade::Personagem::Inimigo::Gorgona(pos, this->pJogador);
+				pInimigo = new Entidade::Personagem::Inimigo::Gorgona(pos, pJogador);
 			}
 			Entidade::Item::Arma* pArma = new Entidade::Item::Arma(static_cast<Entidade::Personagem::Personagem*>(pInimigo), sf::Vector2f(10.0f, 10.0f), IDs::IDs::cobrasGorgona);
 			if (pArma == nullptr) {

@@ -21,6 +21,5 @@ public:
 	Jogo();
 	~Jogo();
 	void executar();
-	bool carregarRecursos();
 };
 
