@@ -2,7 +2,7 @@
 
 #include "Menu.hpp"
 
-constexpr const char* FUNDO_PATH = "..\\Jogo\\assets\\gamemenu.png";
+constexpr const char* FUNDO_PATH = "..\\Jogo\\assets\\gamemenu.jpg";
 
 namespace Menu {
 	class MenuPrincipal : public Menu {

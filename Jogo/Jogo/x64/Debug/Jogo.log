@@ -1,9 +1,22 @@
-﻿  main.cpp
-  Caixa.cpp
-  EstadoMenu.cpp
-  Fase.cpp
-  GerenciadorGrafico.cpp
-  GerenciadorSalvar.cpp
-  ObservadorMenu.cpp
-  Gerando Código...
-  Jogo.vcxproj -> C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\x64\Debug\Jogo.exe
+﻿  Fase01.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\src\Fases\Fase01.cpp(70,42): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\src\Fases\Fase01.cpp(70,42): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\src\Fases\Fase01.cpp(70,42): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\src\Fases\Fase01.cpp(70,42): warning C4244:             T=float
+C:\Users\alano\source\repos\JogoC\Jogo\src\Fases\Fase01.cpp(70,42): warning C4244:         ]
+C:\Users\alano\source\repos\JogoC\Jogo\src\Fases\Fase01.cpp(70,27): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\src\Fases\Fase01.cpp(70,27): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\src\Fases\Fase01.cpp(70,27): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\src\Fases\Fase01.cpp(70,27): warning C4244:             T=float
+C:\Users\alano\source\repos\JogoC\Jogo\src\Fases\Fase01.cpp(70,27): warning C4244:         ]
+C:\Users\alano\source\repos\JogoC\Jogo\src\Fases\Fase01.cpp(71,36): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\src\Fases\Fase01.cpp(71,36): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\src\Fases\Fase01.cpp(71,36): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\src\Fases\Fase01.cpp(71,36): warning C4244:             T=float
+C:\Users\alano\source\repos\JogoC\Jogo\src\Fases\Fase01.cpp(71,36): warning C4244:         ]
+C:\Users\alano\source\repos\JogoC\Jogo\src\Fases\Fase01.cpp(71,25): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\src\Fases\Fase01.cpp(71,25): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\src\Fases\Fase01.cpp(71,25): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\src\Fases\Fase01.cpp(71,25): warning C4244:             T=float
+C:\Users\alano\source\repos\JogoC\Jogo\src\Fases\Fase01.cpp(71,25): warning C4244:         ]
+  Jogo.vcxproj -> C:\Users\alano\source\repos\JogoC\Jogo\x64\Debug\Jogo.exe

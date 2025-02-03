@@ -147,6 +147,9 @@
     <ClCompile Include="src\Parallax.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
+    <ClCompile Include="src\mapas\Mapa.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx\stdafx.hpp">
@@ -287,6 +290,9 @@
     <ClInclude Include="include\Parallax.hpp">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
+    <ClInclude Include="include\mapas\Mapa.hpp">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\athenasoldier.png">
@@ -367,6 +373,12 @@
     <Image Include="assets\fundos\fundo1.png">
       <Filter>Arquivos de Recurso</Filter>
     </Image>
+    <Image Include="assets\gamemenu.jpg">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="assets\tilesets\babylon.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Font Include="assets\Fontes\Greek-Freak.ttf" />
@@ -388,5 +400,11 @@
     <None Include=".gitignore" />
     <None Include="Jogo.exe" />
     <None Include="README.md" />
+    <None Include="assets\mapas\mapa1.tmj" />
+    <None Include="assets\mapas\mapa2.tmj" />
+    <None Include="assets\mapas\mapaTeste.tmj" />
+    <None Include="assets\tilesets\babylon.tsj" />
+    <None Include="assets\tilesets\babylon.tsx" />
+    <None Include="assets\tilesets\greece.tsx" />
   </ItemGroup>
 </Project>

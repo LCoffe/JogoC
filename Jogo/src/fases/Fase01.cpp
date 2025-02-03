@@ -6,6 +6,7 @@ namespace Fase {
 	}
 
 	Fase01::~Fase01() {
+
 		pListaObstaculo->limparLista();
 		pListaPersona->limparLista();
 	}
@@ -36,7 +37,50 @@ namespace Fase {
 			criaPersonagem(sf::Vector2f(30, 350), IDs::IDs::jogador, false);
 		}
 
+		std::ifstream arquivo("assets/mapas/mapa1.tmj");
+		if (!arquivo.is_open()) {
+			std::cerr << "Erro ao abrir o mapa!" << std::endl;
+			return;
+		}
+
+		nlohmann::json jsonMapa;
+		arquivo >> jsonMapa;
+		arquivo.close();
+
+	
+		std::cout << "Mapa carregado! Tamanho: " << jsonMapa["width"] << "x" << jsonMapa["height"] << std::endl;
+		std::cout << "Tile Size: " << jsonMapa["tilewidth"] << " x " << jsonMapa["tileheight"] << std::endl;
+
+		int tileWidth = jsonMapa["tilewidth"];
+		int tileHeight = jsonMapa["tileheight"];
+		int width = jsonMapa["width"];
+		int height = jsonMapa["height"];
+
+		
+		for (const auto& layer : jsonMapa["layers"]) {
+			if (layer["name"] == "Tile Layer 1") {
+				std::vector<int> tiles = layer["data"];
+
+				for (int y = 0; y < height; y++) {
+					for (int x = 0; x < width; x++) {
+						int index = y * width + x;
+						int tileID = tiles[index];
+
+						if (tileID != 0) { // Se não for um tile vazio
+							sf::Vector2f pos(x * tileWidth, y * tileHeight);
+							sf::Vector2f tam(tileWidth * 0.9f, tileHeight * 0.9f);
+
+							criaPlataforma(pos, tam, IDs::IDs::plataforma);
+						}
+					}
+				}
+			}
+		}
+
+
 		// Criar inimigos
+
+		/*
 		criaPersonagem(sf::Vector2f(600, 768 - 101), IDs::IDs::guerreiraAthena, false);
 		criaPersonagem(sf::Vector2f(1400, 768 - 101), IDs::IDs::gorgona, false);
 		//criaPersonagem(sf::Vector2f(400, 768 - 101), IDs::IDs::guerreiraAthena, false);
@@ -47,6 +91,9 @@ namespace Fase {
 		criaPlataforma(sf::Vector2f(800, 768 - 188), sf::Vector2f(100, 138), IDs::IDs::plataforma);
 		criaPlataforma(sf::Vector2f(1600, 768 - 188), sf::Vector2f(100, 138), IDs::IDs::plataforma);
 		criaPlataforma(sf::Vector2f(600, 768 - 200), sf::Vector2f(50, 50), IDs::IDs::caixa);
+		
+		
+		*/
 	}
 
 	void Fase01::carregar() {

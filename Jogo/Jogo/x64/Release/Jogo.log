@@ -1,71 +1,7 @@
-﻿  main.cpp
-  Arma.cpp
-  AnimacaoMovimento.cpp
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(30,52): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(30,52): warning C4244:         with
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(30,52): warning C4244:         [
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(30,52): warning C4244:             T=int
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(30,52): warning C4244:         ]
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(30,52): warning C4244:         and
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(30,52): warning C4244:         [
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(30,52): warning C4244:             T=float
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(30,52): warning C4244:         ]
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(30,37): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(30,37): warning C4244:         with
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(30,37): warning C4244:         [
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(30,37): warning C4244:             T=int
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(30,37): warning C4244:         ]
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(30,37): warning C4244:         and
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(30,37): warning C4244:         [
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(30,37): warning C4244:             T=float
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(30,37): warning C4244:         ]
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(31,54): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(31,54): warning C4244:         with
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(31,54): warning C4244:         [
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(31,54): warning C4244:             T=int
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(31,54): warning C4244:         ]
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(31,54): warning C4244:         and
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(31,54): warning C4244:         [
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(31,54): warning C4244:             T=float
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(31,54): warning C4244:         ]
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(31,39): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(31,39): warning C4244:         with
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(31,39): warning C4244:         [
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(31,39): warning C4244:             T=int
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(31,39): warning C4244:         ]
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(31,39): warning C4244:         and
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(31,39): warning C4244:         [
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(31,39): warning C4244:             T=float
-C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp(31,39): warning C4244:         ]
-  Entidade.cpp
-  Obstaculo.cpp
-  Plataforma.cpp
-  Gorgona.cpp
-  GuerreiraAthena.cpp
-  Inimigo.cpp
-  Jogador.cpp
-  Personagem.cpp
-  EstadoJogar.cpp
-  EstadoMenu.cpp
-  Fase.cpp
-  Fase01.cpp
-  GerenciadorColisoes.cpp
-  GerenciadorEstado.cpp
-  GerenciadorSalvar.cpp
-  Jogo.cpp
-  ListaEntidade.cpp
-  Compiling...
-  Menu.cpp
-  MenuColocacao.cpp
-  MenuMorreu.cpp
-  MenuOpcoes.cpp
-  MenuSalvarColocacao.cpp
-  ObservadorFase.cpp
-  ObservadorJogador.cpp
-  ObservadorMenu.cpp
+﻿  Plataforma.cpp
   Generating code
-  4 of 2273 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+  1 of 2439 functions (<0.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    9 functions had inline decision re-evaluated but remain unchanged
+    4 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Jogo.vcxproj -> C:\Users\alano\source\repos\JogoC\Jogo\x64\Release\Jogo.exe
