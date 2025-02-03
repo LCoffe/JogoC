@@ -8,18 +8,13 @@ namespace Entidade {
 		
 			corpo.setSize(tam);
 			corpo.setPosition(pos);
-			
+			inicializar();
 		}
 
 		Plataforma::~Plataforma() {}
 
 		void Plataforma::desenhar() {
-			sf::RectangleShape debugShape;
-			debugShape.setSize(corpo.getSize());  // Usa o tamanho correto da plataforma
-			debugShape.setPosition(corpo.getPosition()); // Garante que a posição é a mesma
-			debugShape.setFillColor(sf::Color::Red); // Apenas para debug
-
-			pGG->getJanela()->draw(debugShape);
+			sprite.desenhar();
 		}
 
 		void Plataforma::colisao(Entidade* ent, sf::Vector2f diferenca) {

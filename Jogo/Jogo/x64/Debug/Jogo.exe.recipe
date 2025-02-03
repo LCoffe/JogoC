@@ -2,12 +2,12 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\alano\source\repos\JogoC\Jogo\x64\Debug\Jogo.exe</FullPath>
+      <FullPath>C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\x64\Debug\Jogo.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles>
     <ContentFile>
-      <FullPath>C:\Users\alano\source\repos\JogoC\Jogo\assets\Fontes\Greek-Freak.ttf</FullPath>
+      <FullPath>C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\assets\Fontes\Greek-Freak.ttf</FullPath>
     </ContentFile>
   </ContentFiles>
   <SatelliteDlls />

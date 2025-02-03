@@ -2,8 +2,6 @@
 #include "../Jogo/include/Jogo.hpp"
 #include <windows.h>
 
-
-/*
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
     Jogo jogo;
 
@@ -11,10 +9,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
     return 0;
 }
-*/
 
-int main() {
+/*int main() {
 	Jogo jogo;
 	jogo.executar();
 	return 0;
-}
+}*/

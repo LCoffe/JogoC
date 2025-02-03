@@ -104,12 +104,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\alano\source\repos\JogoC\SFML-2.6.2\include;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\SFML-2.6.2\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\SFML-2.6.2\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\alano\source\repos\JogoC\SFML-2.6.2\lib;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\SFML-2.6.2\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\SFML-2.6.2\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-audio-d.lib;sfml-network-d.lib;sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -124,7 +124,7 @@
       <AdditionalIncludeDirectories>C:\Users\alano\source\repos\JogoC\SFML-2.6.2\include;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\SFML-2.6.2\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -133,7 +133,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\mapas\Mapa.cpp" />
     <ClCompile Include="src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp" />
     <ClCompile Include="src\ElementosGraficos\animacoes\AnimacaoEstatica.cpp" />
     <ClCompile Include="src\ElementosGraficos\animacoes\AnimacaoUnica.cpp" />
@@ -225,13 +224,11 @@
     <ClInclude Include="include\Jogo.hpp" />
     <ClInclude Include="include\Observado.hpp" />
     <ClInclude Include="include\Parallax.hpp" />
-    <ClInclude Include="include\mapas\Mapa.hpp" />
     <ClInclude Include="stdafx\stdafx.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\athenasoldier.png" />
     <Image Include="assets\fundos\fundo1.png" />
-    <Image Include="assets\gamemenu.jpg" />
     <Image Include="assets\gamemenu.png" />
     <Image Include="assets\greeksoldier.png" />
     <Image Include="assets\inimigos\athena\guerreira_ataque.png" />
@@ -256,7 +253,6 @@
     <Image Include="assets\jogador\Jump.png" />
     <Image Include="assets\jogador\Walk.png" />
     <Image Include="assets\plataformas\pedra.png" />
-    <Image Include="assets\tilesets\babylon.png" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="assets\Fontes\Greek-Freak.ttf">
@@ -266,12 +262,6 @@
   <ItemGroup>
     <None Include=".gitattributes" />
     <None Include=".gitignore" />
-    <None Include="assets\mapas\mapa1.tmj" />
-    <None Include="assets\mapas\mapa2.tmj" />
-    <None Include="assets\mapas\mapaTeste.tmj" />
-    <None Include="assets\tilesets\babylon.tsj" />
-    <None Include="assets\tilesets\babylon.tsx" />
-    <None Include="assets\tilesets\greece.tsx" />
     <None Include="Jogo.exe" />
     <None Include="openal32.dll" />
     <None Include="README.md" />
