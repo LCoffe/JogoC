@@ -147,6 +147,9 @@
     <ClCompile Include="src\Parallax.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
+    <ClCompile Include="src\mapas\Mapa.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx\stdafx.hpp">
@@ -287,6 +290,9 @@
     <ClInclude Include="include\Parallax.hpp">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
+    <ClInclude Include="include\mapas\Mapa.hpp">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\athenasoldier.png">
@@ -367,9 +373,34 @@
     <Image Include="assets\fundos\fundo1.png">
       <Filter>Arquivos de Recurso</Filter>
     </Image>
+    <Image Include="assets\tilesets\babylon.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="assets\fundos\fundo01.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="assets\fundos\fundo02.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="assets\inimigos\athena\guerreira_morte.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="assets\inimigos\athena\guerreira_machucado.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="assets\obstaculos\caixa\caixa_arrastado.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="assets\obstaculos\caixa\caixa_parado.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
+    <Image Include="assets\obstaculos\plataforma.png">
+      <Filter>Arquivos de Recurso</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Font Include="assets\Fontes\Greek-Freak.ttf" />
+    <Font Include="assets\Greek-Freak.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="openal32.dll" />
@@ -388,5 +419,7 @@
     <None Include=".gitignore" />
     <None Include="Jogo.exe" />
     <None Include="README.md" />
+    <None Include="assets\mapas\mapa1.tmj" />
+    <None Include="assets\tilesets\greece.tsx" />
   </ItemGroup>
 </Project>

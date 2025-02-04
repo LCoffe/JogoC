@@ -148,5 +148,6 @@ void Mapa::desenharMapa(sf::RenderWindow& janela) {
     sf::RenderStates estados;
     estados.texture = &texturaTileset;
 
+    
     janela.draw(vertices, estados);
 }

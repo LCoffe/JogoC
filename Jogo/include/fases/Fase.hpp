@@ -19,6 +19,7 @@
 #include "../../include/entes/personagens/jogador/Jogador.hpp"
 #include "../../include/entes/obstaculos/Caixa.hpp"
 #include "../../include/Arma.hpp"
+#include "../mapas/Mapa.hpp"
 
 namespace Observado {
 	namespace Observador {
@@ -32,7 +33,7 @@ namespace Fase {
 		static Observado::Observador::ObservadorFase* pObsFase;
 	protected:
 		Fundo::Parallax* fundo;
-
+		Mapa* mapa;
 		Lista::ListaEntidade* pListaPersona;
 		Lista::ListaEntidade* pListaObstaculo;
 		static Entidade::Personagem::Jogador::Jogador* pJogador;
@@ -46,10 +47,10 @@ namespace Fase {
 		void criaPersonagem(const sf::Vector2f pos, const IDs::IDs ID, bool jogadorUm);
 		void criaPersonagem(const sf::Vector2f pos, const IDs::IDs ID, const sf::Vector2f tam, const sf::Vector2f vel, bool direcao, bool jogadorUm, float vida, float tempoAtaque, sf::Vector2f posArma, bool atacando, bool petrifica, bool levandoDano
 			, float tempoDano, bool morrendo, float tempoMorrendo, int pontuacao, bool colisaoChao); //Metodo usado para carregar os personagens
-		void criaPlataforma(const sf::Vector2f pos, const sf::Vector2f tam, const IDs::IDs ID);
-		void criaPlataforma(const sf::Vector2f pos, const sf::Vector2f tam, const IDs::IDs ID, bool arrastado, bool colisaoParede);
 		void criaLimite();
 	public:
+		void criaPlataforma(const sf::Vector2f pos, const sf::Vector2f tam, const IDs::IDs ID, bool arrastado, bool colisaoParede);
+		void criaPlataforma(const sf::Vector2f pos, const sf::Vector2f tam, const IDs::IDs ID);
 		Fase(IDs::IDs ID_Fase);
 		~Fase();
 		Entidade::Personagem::Jogador::Jogador* getJogador() { return pJogador; }
@@ -62,6 +63,7 @@ namespace Fase {
 		void atualizaFundo();
 		void salvarColocacao(string nome);
 		void desenhar();
+		virtual void desenharMapa() {}
 		void setAtivoObs(const bool ativo);
 		void executar();
 		void salvar();

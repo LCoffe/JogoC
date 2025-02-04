@@ -96,12 +96,8 @@ namespace Gerenciador {
 	}
 
 	void GerenciadorGrafico::atualizarCamera(const sf::Vector2f& pos, const sf::Vector2f tamJanela) {
-		sf::View view = janela->getView();
-		view.setSize(TELA_X, TELA_Y);
-		view.setCenter(TELA_X / 2.0f, TELA_Y / 2.0f);
-		janela->setView(view);
-
 		camera->atualizar(pos, tamJanela);
+		janela->setView(camera->getCamera());
 	}
 
 	const sf::View GerenciadorGrafico::getCamera() const {
