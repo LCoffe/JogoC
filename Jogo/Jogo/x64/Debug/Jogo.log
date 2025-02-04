@@ -1,9 +1,30 @@
 ﻿  main.cpp
-  Caixa.cpp
+  Obstaculo.cpp
+  Plataforma.cpp
+  Gorgona.cpp
+  GuerreiraAthena.cpp
+  Inimigo.cpp
+  Jogador.cpp
+  EstadoJogar.cpp
   EstadoMenu.cpp
   Fase.cpp
-  GerenciadorGrafico.cpp
+  Fase01.cpp
+  GerenciadorColisoes.cpp
+  GerenciadorEstado.cpp
   GerenciadorSalvar.cpp
+  Jogo.cpp
+  ListaEntidade.cpp
+  Menu.cpp
+  MenuColocacao.cpp
+  MenuMorreu.cpp
+  MenuOpcoes.cpp
+  Gerando Código...
+  Compilando...
+  MenuSalvarColocacao.cpp
+  ObservadorFase.cpp
+  ObservadorJogador.cpp
   ObservadorMenu.cpp
+  Projetil.cpp
+  Caixa.cpp
   Gerando Código...
   Jogo.vcxproj -> C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\x64\Debug\Jogo.exe

@@ -37,8 +37,8 @@ namespace Fase {
 		}
 
 		// Criar inimigos
-		criaPersonagem(sf::Vector2f(600, 768 - 101), IDs::IDs::guerreiraAthena, false);
-		criaPersonagem(sf::Vector2f(1400, 768 - 101), IDs::IDs::gorgona, false);
+		//criaPersonagem(sf::Vector2f(600, 768 - 101), IDs::IDs::guerreiraAthena, false);
+		criaPersonagem(sf::Vector2f(600, 768 - 101), IDs::IDs::gorgona, false);
 		//criaPersonagem(sf::Vector2f(400, 768 - 101), IDs::IDs::guerreiraAthena, false);
 
 		// Criar plataformas
@@ -46,7 +46,7 @@ namespace Fase {
 		criaPlataforma(sf::Vector2f(1366, 768 - 100), sf::Vector2f(1366, 100), IDs::IDs::plataforma);
 		criaPlataforma(sf::Vector2f(800, 768 - 188), sf::Vector2f(100, 138), IDs::IDs::plataforma);
 		criaPlataforma(sf::Vector2f(1600, 768 - 188), sf::Vector2f(100, 138), IDs::IDs::plataforma);
-		criaPlataforma(sf::Vector2f(600, 768 - 200), sf::Vector2f(50, 50), IDs::IDs::caixa);
+		//criaPlataforma(sf::Vector2f(600, 768 - 200), sf::Vector2f(50, 50), IDs::IDs::caixa);
 	}
 
 	void Fase01::carregar() {

@@ -7,7 +7,7 @@ namespace Fase {
 	Entidade::Personagem::Jogador::Jogador* Fase::pJogadorDois = nullptr;
 	Observado::Observador::ObservadorFase* Fase::pObsFase = nullptr;
 
-	Fase::Fase(IDs::IDs ID_Fase) : Ente(ID_Fase), pGS(), doisJogadores(false), pontuacao(0) {
+	Fase::Fase(IDs::IDs ID_Fase) : Ente(ID_Fase), pGS(), doisJogadores(false), pontuacao(0), fundo(nullptr) {
 		pListaPersona = new Lista::ListaEntidade();
 		pListaObstaculo = new Lista::ListaEntidade();
 
@@ -45,6 +45,7 @@ namespace Fase {
 	void Fase::criaPersonagem(const sf::Vector2f pos, const IDs::IDs ID, bool jogadorUm) {
 		Entidade::Entidade* personagem = nullptr;
 		Entidade::Entidade* pArma = nullptr;
+		Entidade::Entidade* pArmaDois = nullptr;
 		if (ID == IDs::IDs::jogador) {
 			if (jogadorUm) {
 				pJogador = new Entidade::Personagem::Jogador::Jogador(pos);
@@ -54,9 +55,12 @@ namespace Fase {
 				}
 				pJogador->setJogadorUm(true);
 				Entidade::Item::Arma* armaJog = new Entidade::Item::Arma(static_cast<Entidade::Personagem::Personagem*>(pJogador), sf::Vector2f(10.0f, 10.0f), IDs::IDs::espadaJogador);
-				//pJogador->setArma(armaJog);
+				Entidade::Item::Projetil* armaJogProj = new Entidade::Item::Projetil(static_cast<Entidade::Personagem::Personagem*>(pJogador), sf::Vector2f(10.0f, 10.0f));
+				pJogador->operator+=(armaJog);
+				pJogador->operator+=(armaJogProj);
 				personagem = static_cast<Entidade::Entidade*>(pJogador);
 				pArma = static_cast<Entidade::Entidade*>(armaJog);
+				pArmaDois = static_cast<Entidade::Entidade*>(armaJogProj);
 			}
 			else {
 				doisJogadores = true;
@@ -123,6 +127,9 @@ namespace Fase {
 			pListaPersona->inserirEnt(personagem);
 			if (pArma != nullptr) {
 				pListaPersona->inserirEnt(pArma);
+			}
+			if (pArmaDois != nullptr) {
+				pListaPersona->inserirEnt(pArmaDois);
 			}
 		}
 	}

@@ -1,8 +1,6 @@
 #pragma once
 
-#include "../include/entes/Entidade.hpp"
-#include "../include/entes/personagens/jogador/Jogador.hpp"
-#include "../include/entes/personagens/Personagem.hpp"
+#include "../../include/entes/personagens/Personagem.hpp"
 
 namespace Entidade {
 	namespace Item {
@@ -22,8 +20,8 @@ namespace Entidade {
 			virtual void desenhar();
 			virtual void atualizar();
 			virtual	void inicializarSprite();
-			void colisao(Entidade* ent, const sf::Vector2f diferenca);
-			void salvar(nlohmann::json& j);
+			virtual void colisao(Entidade* ent, const sf::Vector2f diferenca);
+			virtual void salvar(nlohmann::json& j);
 		};
 	}
 }

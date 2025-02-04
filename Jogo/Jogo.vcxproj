@@ -107,7 +107,7 @@
       <AdditionalIncludeDirectories>C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\SFML-2.6.2\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\SFML-2.6.2\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-audio-d.lib;sfml-network-d.lib;sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -124,7 +124,7 @@
       <AdditionalIncludeDirectories>C:\Users\alano\source\repos\JogoC\SFML-2.6.2\include;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\JogoC\SFML-2.6.2\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -176,6 +176,7 @@
     <ClCompile Include="src\Jogo.cpp" />
     <ClCompile Include="src\Observado.cpp" />
     <ClCompile Include="src\Parallax.cpp" />
+    <ClCompile Include="src\Projetil.cpp" />
     <ClCompile Include="stdafx\stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -224,6 +225,7 @@
     <ClInclude Include="include\Jogo.hpp" />
     <ClInclude Include="include\Observado.hpp" />
     <ClInclude Include="include\Parallax.hpp" />
+    <ClInclude Include="include\Projetil.hpp" />
     <ClInclude Include="stdafx\stdafx.hpp" />
   </ItemGroup>
   <ItemGroup>

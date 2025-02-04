@@ -4,6 +4,7 @@
 #include "../../include/entes/personagens/Personagem.hpp"
 #include "../../include/json.hpp"
 #include "../../include/Arma.hpp"
+#include "../../include/Projetil.hpp"
 
 #define VELOCIDADE_JOGADOR 80.0f
 #define ALTURA_PULO 900.0f
@@ -31,6 +32,8 @@ namespace Entidade {
 		namespace Jogador {
 			class Jogador : public Personagem {
 			private:
+				vector<Item::Arma*> armas;
+				int armaAtual;
 				Observado::Observador::ObservadorJogador* pObs;
 				bool petrificado;
 				bool podePular;
@@ -51,10 +54,12 @@ namespace Entidade {
 				int getPontuacao() { return pontuacao; }
 				void colisao(Entidade* ent, sf::Vector2f diferenca);
 				void setAtivoObs(const bool ativo);
+				void trocarArma();
 				void inicializarSprite();
 				void atualizarTempoAtaque();
 				void atualizarSprite(float dt);
 				void salvar(nlohmann::json& j);
+				void operator+=(Item::Arma* pArma) { armas.push_back(pArma); }
 			};
 		}
 	}

@@ -59,6 +59,9 @@ namespace Observado {
 				if (tecla == sf::Keyboard::E) {
 					pJogador->atacar(false);
 				}
+				if (tecla == sf::Keyboard::R) {
+					pJogador->trocarArma();
+				}
 			}
 			else{
 				if (tecla == sf::Keyboard::Left) {

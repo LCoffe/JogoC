@@ -19,6 +19,7 @@
 #include "../../include/entes/personagens/jogador/Jogador.hpp"
 #include "../../include/entes/obstaculos/Caixa.hpp"
 #include "../../include/Arma.hpp"
+#include "../../include/Projetil.hpp"
 
 namespace Observado {
 	namespace Observador {

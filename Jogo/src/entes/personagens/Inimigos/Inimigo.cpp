@@ -79,6 +79,7 @@ namespace Entidade {
 					if (vida <= 0.0f) {
 						vida = 0.0f;
 						setMorrendo(true);
+						pJog->addPontuacao(100);
 					}
 				}
 			}
