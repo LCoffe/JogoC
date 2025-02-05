@@ -48,7 +48,7 @@ namespace Entidade {
 				if (ent->getID() == IDs::IDs::gorgona || ent->getID() == IDs::IDs::guerreiraAthena) {
 					Personagem::Personagem* p = dynamic_cast<Personagem::Personagem*>(ent);
 					if (!p->getMorrendo()) {
-						p->tomarDano(dano);
+						p->tomarDano(dano, pPersonagem);
 						setColidiu(true);
 						if (p->getMorrendo()) {
 							//Morreu
@@ -80,6 +80,7 @@ namespace Entidade {
 		void Projetil::atualizar() {
 			if (!colidiu) {
 				atualizarPosicao();
+				//cout << pos.x << " " << pos.y << endl;
 				//atualizarSprite(pGG->getTempo());
 				desenhar();
 			}

@@ -15,13 +15,6 @@ namespace Entidade {
 			}
 
 			Jogador::~Jogador() {
-				delete pObs;
-				pObs = nullptr;
-
-				for (auto& a : armas) {
-					delete& a;
-				}
-				armas.clear();
 			}
 
 			void Jogador::pular() {
@@ -92,7 +85,7 @@ namespace Entidade {
 				}
 				else if(ent->getID() == IDs::IDs::espadaInimigo){
 					Item::Arma* arma = static_cast<Item::Arma*>(ent);
-					tomarDano(arma->getDano());
+					tomarDano(arma->getDano(), nullptr);
 					if (!getMorrendo()) {
 						sf::Vector2f posInimigo = getPos();
 						bool direcaoInimigo = arma->getPersonagem()->getDirecao();
@@ -105,7 +98,7 @@ namespace Entidade {
 						petrificado = true;
 					}
 					else {
-						tomarDano(arma->getDano());
+						tomarDano(arma->getDano(), nullptr);
 					}
 					if (!getMorrendo()) {
 						sf::Vector2f posInimigo = getPos();
@@ -155,7 +148,10 @@ namespace Entidade {
 				}
 				else if (andando || levandoDano) {
 					tempoAtaque = 0.0f;
-					pArma->setPos(sf::Vector2f(-500.0f, -500.0f));
+					if (pArma->getID() != IDs::IDs::projetil) {
+						pArma->setPos(sf::Vector2f(-500.0f, -500.0f));
+					}
+					
 					atacar(false);
 				}
 
@@ -163,7 +159,7 @@ namespace Entidade {
 					tempoAtaque += 0.016f;
 					if (tempoAtaque > 0.9f) {
 						if (pArma != nullptr) {
-							Item::Projetil* p = dynamic_cast<Item::Projetil*>(pArma);
+							Item::Projetil* p = static_cast<Item::Projetil*>(pArma);
 							p->setPos(sf::Vector2f(direcao ? pos.x + pArma->getTam().x + 30.0f : pos.x + pArma->getTam().x + 15.0f, pos.y + 10.0f));
 							p->setColidiu(false);	
 							p->setVelocidade(sf::Vector2f(200.0f, 5.0f));
@@ -190,7 +186,7 @@ namespace Entidade {
 			void Jogador::atualizarSprite(float dt)
 			{	
 				sf::Vector2f posicao = pos;
-				posicao.x += TAM_JOGADOR_X / 0.65f;
+				posicao.x += TAM_JOGADOR_X / 1.55f;
 				posicao.y += TAM_JOGADOR_Y / 2.7f;
 
 				if(morrendo)
@@ -220,6 +216,7 @@ namespace Entidade {
 				j["armaAtual"] = armaAtual;
 				j["tempoAtaque"] = tempoAtaque;
 				j["posArma"] = { {"x", pArma->getPos().x}, {"y", pArma->getPos().y} };
+				j["IDArma"] = (int)pArma->getID();
 				j["atacando"] = atacando;
 				j["levandoDano"] = levandoDano;
 				j["tempoDano"] = tempoDano;
@@ -229,6 +226,18 @@ namespace Entidade {
 				j["tempoMorte"] = tempoMorte;
 				j["pontuacao"] = pontuacao;
 				j["colisaoChao"] = colisaoChao;
+
+				if (pArma->getID() == IDs::IDs::projetil) {
+					Item::Projetil* p = dynamic_cast<Item::Projetil*>(pArma);
+					j["velocidadeArma"] = { {"x", p->getVelocidade().x}, {"y", p->getVelocidade().y} };
+					j["colidiu"] = p->getColidiu();
+					j["direcaoArma"] = p->getDirecao();
+				}
+				else {
+					j["velocidadeArma"] = { {"x", 0.0f}, {"y", 0.0f} };
+					j["colidiu"] = false;
+					j["direcaoArma"] = false;
+				}
 			}
 		}
 	}

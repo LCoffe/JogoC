@@ -30,7 +30,7 @@ namespace Entidade {
 				~Inimigo();
 				void setJogador(Jogador::Jogador* pJog) { this->pJog = pJog; }
 				void setJogador2(Jogador::Jogador* pJog2) { this->pJog2 = pJog2; }
-				virtual void tomarDano(const float dano);
+				virtual void tomarDano(const float dano, Personagem* pP);
 				void desenharInimigo();
 				void atualizar();
 				void colisao(Entidade* ent, sf::Vector2f diferenca);

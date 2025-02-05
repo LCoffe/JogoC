@@ -23,7 +23,7 @@ namespace Entidade {
 				if (ent->getID() == IDs::IDs::guerreiraAthena || ent->getID() == IDs::IDs::gorgona) {
 					Personagem::Personagem* p = dynamic_cast<Personagem::Personagem*>(ent);
 					if (!p->getMorrendo()) {
-						p->tomarDano(dano);
+						p->tomarDano(dano, pPersonagem);
 						if (p->getMorrendo()) {
 							//Morreu
 						}

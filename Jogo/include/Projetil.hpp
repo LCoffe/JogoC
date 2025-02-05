@@ -18,8 +18,11 @@ namespace Entidade {
 				Projetil(Personagem::Personagem* p, sf::Vector2f tam);
 				~Projetil();
 				void setDirecao(const bool direcao) { this->direcao = direcao; if (!direcao) { velocidade.x *= -1; } }
+				bool getDirecao() { return direcao; }
 				void setVelocidade(const sf::Vector2f velocidade) { this->velocidade = velocidade; }
+				sf::Vector2f getVelocidade() { return velocidade; }
 				void setColidiu(const bool colidiu);
+				bool getColidiu() { return colidiu; }
 				void atualizarPosicao();
 				void atualizarSprite(float dt);
 				void inicializarSprite();

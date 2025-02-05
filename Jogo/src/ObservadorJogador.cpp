@@ -60,7 +60,9 @@ namespace Observado {
 					pJogador->atacar(false);
 				}
 				if (tecla == sf::Keyboard::R) {
-					pJogador->trocarArma();
+					if (pJogador->getTamanhoArmas() > 1) {
+						pJogador->trocarArma();
+					}	
 				}
 			}
 			else{

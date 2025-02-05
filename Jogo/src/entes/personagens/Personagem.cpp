@@ -15,7 +15,10 @@ namespace Entidade {
 			andando = true;
 			this->direcao = direcao;
 
-			pArma->setPos(sf::Vector2f(-500.0f, -500.0f));
+			if (pArma->getID() != IDs::IDs::projetil) {
+				pArma->setPos(sf::Vector2f(-500.0f, -500.0f));
+			}
+			
 			tempoAtaque = 0.0f;
 		}
 
@@ -27,7 +30,7 @@ namespace Entidade {
 			this->atacando = atacando;
 		}
 
-		void Personagem::tomarDano(const float dano) {
+		void Personagem::tomarDano(const float dano, Personagem* pP) {
 			if (!levandoDano) {
 				vida -= dano;
 				levandoDano = true;

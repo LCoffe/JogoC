@@ -54,7 +54,7 @@ namespace Entidade {
 			void setVida(const float vida) { this->vida = vida; }
 			void setTempoAtaque(const float tempoAtaque) { this->tempoAtaque = tempoAtaque; }
 			void setLevandoDano(const bool levandoDano) { this->levandoDano = levandoDano; }
-			virtual void tomarDano(const float dano);
+			virtual void tomarDano(const float dano, Personagem* pP);
 			void setTempoDano(const float tempoDano) { this->tempoDano = tempoDano; }
 			void atualizaTempoDano();
 			void setMorrendo(const bool morrendo) { this->morrendo = morrendo; }

@@ -55,6 +55,8 @@ namespace Entidade {
 				void colisao(Entidade* ent, sf::Vector2f diferenca);
 				void setAtivoObs(const bool ativo);
 				void trocarArma();
+				void setArmaAtual(int pos) { armaAtual = pos; }
+				int getTamanhoArmas() { return static_cast<int>(armas.size()); }
 				void inicializarSprite();
 				void atualizarTempoAtaque();
 				void atualizarSprite(float dt);

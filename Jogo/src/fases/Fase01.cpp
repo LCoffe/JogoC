@@ -30,16 +30,20 @@ namespace Fase {
 	}
 
 	void Fase01::criarMapa(bool doisJogadores) {
-		// Criar jogador
-		criaPersonagem(sf::Vector2f(50, 350), IDs::IDs::jogador, true);
 		if (doisJogadores) {
-			criaPersonagem(sf::Vector2f(30, 350), IDs::IDs::jogador, false);
-		}
+			//Cria Jogadores
+			criaPersonagem2Jog(sf::Vector2f(100, 768 - 101), IDs::IDs::jogador, true);
+			criaPersonagem2Jog(sf::Vector2f(200, 768 - 101), IDs::IDs::jogador, false);
 
-		// Criar inimigos
-		//criaPersonagem(sf::Vector2f(600, 768 - 101), IDs::IDs::guerreiraAthena, false);
-		criaPersonagem(sf::Vector2f(600, 768 - 101), IDs::IDs::gorgona, false);
-		//criaPersonagem(sf::Vector2f(400, 768 - 101), IDs::IDs::guerreiraAthena, false);
+			// Criar inimigos
+			criaPersonagem2Jog(sf::Vector2f(600, 768 - 101), IDs::IDs::gorgona, false);
+		}
+		else {
+			//Cria Jogador
+			criaPersonagem1Jog(sf::Vector2f(100, 768 - 101), IDs::IDs::jogador);
+			// Criar inimigos
+			criaPersonagem1Jog(sf::Vector2f(600, 768 - 101), IDs::IDs::gorgona);
+		}
 
 		// Criar plataformas
 		criaPlataforma(sf::Vector2f(0, 768 - 100), sf::Vector2f(900, 100), IDs::IDs::plataforma);
@@ -53,6 +57,13 @@ namespace Fase {
 		nlohmann::json json;
 		nlohmann::json::iterator it = json.begin();
 		Entidade::Entidade* aux = nullptr;
+
+		json = pGS->carregarFase();
+		it = json.begin();
+		bool doisJogadores = false;
+		for (auto& it : json) {
+			doisJogadores = it["doisJogadores"];
+		}
 
 		json = pGS->carregarObstaculo(*this);
 		it = json.begin();
@@ -81,21 +92,37 @@ namespace Fase {
 			bool petrifica = it["petrificado"];
 			float vida = it["vida"];
 			float tempoAtaque = it["tempoAtaque"];
+			int armaAtual = it["armaAtual"];
 			sf::Vector2f posArma(it["posArma"]["x"], it["posArma"]["y"]);
+			IDs::IDs IDArma = static_cast<IDs::IDs>(it["IDArma"]);
+			sf::Vector2f velArma(it["velocidadeArma"]["x"], it["velocidadeArma"]["y"]);
+			bool colidiu = it["colidiu"];
+			bool direcaoArma = it["direcaoArma"];
 			bool levandoDano = it["levandoDano"];
 			float tempoDano = it["tempoDano"];
 			bool morrendo = it["morrendo"];
 			float tempoMorte = it["tempoMorte"];
 			int pontuacao = it["pontuacao"];
 			bool colisaoChao = it["colisaoChao"];
-
-			if (ID == IDs::IDs::jogador) {
-				bool jogadorUm = it["jogadorUm"];
-				criaPersonagem(pos, ID, tam, vel, direcao, jogadorUm, vida, tempoAtaque, posArma, atacando, petrifica, levandoDano, tempoDano, morrendo, tempoMorte, pontuacao, colisaoChao);
+			if (doisJogadores) {
+				if (ID == IDs::IDs::jogador) {
+					bool jogadorUm = it["jogadorUm"];
+					carregaPersonagem2Jog(pos, ID, tam, vel, direcao, jogadorUm, vida, tempoAtaque, posArma, velArma, colidiu, direcaoArma, atacando, petrifica, levandoDano, tempoDano, morrendo, tempoMorte, pontuacao, colisaoChao);
+				}
+				if (ID == IDs::IDs::guerreiraAthena || ID == IDs::IDs::gorgona) {
+					carregaPersonagem2Jog(pos, ID, tam, vel, direcao, false, vida, tempoAtaque, posArma, velArma, colidiu, direcaoArma, atacando, petrifica, levandoDano, tempoDano, morrendo, tempoMorte, 0, colisaoChao);
+				}
 			}
-			if (ID == IDs::IDs::guerreiraAthena || ID == IDs::IDs::gorgona) {
-				criaPersonagem(pos, ID, tam, vel, direcao, false, vida, tempoAtaque, posArma, atacando, petrifica, levandoDano, tempoDano, morrendo, tempoMorte, 0, colisaoChao);
+			else {
+				if (ID == IDs::IDs::jogador) {
+					bool jogadorUm = it["jogadorUm"];
+					carregaPersonagem1Jog(pos, ID, tam, vel, direcao, jogadorUm, vida, tempoAtaque, armaAtual, posArma, IDArma, velArma, colidiu, direcaoArma, atacando, petrifica, levandoDano, tempoDano, morrendo, tempoMorte, pontuacao, colisaoChao);
+				}
+				if (ID == IDs::IDs::guerreiraAthena || ID == IDs::IDs::gorgona) {
+					carregaPersonagem1Jog(pos, ID, tam, vel, direcao, false, vida, tempoAtaque, armaAtual, posArma, IDArma, velArma, colidiu, direcaoArma, atacando, petrifica, levandoDano, tempoDano, morrendo, tempoMorte, pontuacao, colisaoChao);
+				}
 			}
+			
 		}
 	}
 }

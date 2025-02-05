@@ -71,7 +71,8 @@ namespace Entidade {
 				}
 			}
 
-			void Inimigo::tomarDano(const float dano) {
+			void Inimigo::tomarDano(const float dano, Personagem* pP) {
+				Jogador::Jogador* pJog = dynamic_cast<Jogador::Jogador*>(pP);
 				if (!getMorrendo()) {
 					vida -= dano;
 					levandoDano = true;
@@ -79,7 +80,9 @@ namespace Entidade {
 					if (vida <= 0.0f) {
 						vida = 0.0f;
 						setMorrendo(true);
-						pJog->addPontuacao(100);
+						if (pJog != nullptr) {
+							pJog->addPontuacao(100);
+						}
 					}
 				}
 			}

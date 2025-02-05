@@ -44,11 +44,15 @@ namespace Fase {
 		Gerenciador::GerenciadorSalvar* pGS;
 
 		virtual void iniciaFundo() = 0;
-		void criaPersonagem(const sf::Vector2f pos, const IDs::IDs ID, bool jogadorUm);
-		void criaPersonagem(const sf::Vector2f pos, const IDs::IDs ID, const sf::Vector2f tam, const sf::Vector2f vel, bool direcao, bool jogadorUm, float vida, float tempoAtaque, sf::Vector2f posArma, bool atacando, bool petrifica, bool levandoDano
-			, float tempoDano, bool morrendo, float tempoMorrendo, int pontuacao, bool colisaoChao); //Metodo usado para carregar os personagens
+		void criaPersonagem1Jog(const sf::Vector2f pos, const IDs::IDs ID);
+		void criaPersonagem2Jog(const sf::Vector2f pos, const IDs::IDs ID, bool jogadorUm);
+		void carregaPersonagem1Jog(const sf::Vector2f pos, const IDs::IDs ID, const sf::Vector2f tam, const sf::Vector2f vel, bool direcao, bool jogadorUm, float vida, float tempoAtaque, int armaAtual, sf::Vector2f posArma, const IDs::IDs IDArma, sf::Vector2f velArma, bool colidiu, bool direcaoArma, bool atacando, bool petrifica, bool levandoDano
+			, float tempoDano, bool morrendo, float tempoMorrendo, int pontuacao, bool colisaoChao); //Metodo usado para carregar os personagens com 1 jogador
+		void carregaPersonagem2Jog(const sf::Vector2f pos, const IDs::IDs ID, const sf::Vector2f tam, const sf::Vector2f vel, bool direcao, bool jogadorUm, float vida, float tempoAtaque, sf::Vector2f posArma, sf::Vector2f velArma, bool colidiu, bool direcaoArma, bool atacando, bool petrifica, bool levandoDano
+			, float tempoDano, bool morrendo, float tempoMorrendo, int pontuacao, bool colisaoChao); //Metodo usado para carregar os personagens com 2 jogadores
 		void criaPlataforma(const sf::Vector2f pos, const sf::Vector2f tam, const IDs::IDs ID);
 		void criaPlataforma(const sf::Vector2f pos, const sf::Vector2f tam, const IDs::IDs ID, bool arrastado, bool colisaoParede);
+		Entidade::Item::Arma* carregaArma(Entidade::Personagem::Personagem* p, const sf::Vector2f pos, const sf::Vector2f tam, const IDs::IDs ID, bool colidiu, bool direcao, const sf::Vector2f velocidade, bool ataquePetrificante);
 		void criaLimite();
 	public:
 		Fase(IDs::IDs ID_Fase);
