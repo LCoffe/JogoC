@@ -63,9 +63,35 @@ C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoM
   ObservadorFase.cpp
   ObservadorJogador.cpp
   ObservadorMenu.cpp
+  Caixa.cpp
+  Mapa.cpp
+C:\Users\alano\source\repos\JogoC\Jogo\src\mapas\Mapa.cpp(68,61): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\src\mapas\Mapa.cpp(68,61): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\src\mapas\Mapa.cpp(68,61): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\src\mapas\Mapa.cpp(68,61): warning C4244:             T=float
+C:\Users\alano\source\repos\JogoC\Jogo\src\mapas\Mapa.cpp(68,61): warning C4244:         ]
+C:\Users\alano\source\repos\JogoC\Jogo\src\mapas\Mapa.cpp(68,44): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\src\mapas\Mapa.cpp(68,44): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\src\mapas\Mapa.cpp(68,44): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\src\mapas\Mapa.cpp(68,44): warning C4244:             T=float
+C:\Users\alano\source\repos\JogoC\Jogo\src\mapas\Mapa.cpp(68,44): warning C4244:         ]
+C:\Users\alano\source\repos\JogoC\Jogo\src\mapas\Mapa.cpp(69,55): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\src\mapas\Mapa.cpp(69,55): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\src\mapas\Mapa.cpp(69,55): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\src\mapas\Mapa.cpp(69,55): warning C4244:             T=float
+C:\Users\alano\source\repos\JogoC\Jogo\src\mapas\Mapa.cpp(69,55): warning C4244:         ]
+C:\Users\alano\source\repos\JogoC\Jogo\src\mapas\Mapa.cpp(69,42): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\src\mapas\Mapa.cpp(69,42): warning C4244:         with
+C:\Users\alano\source\repos\JogoC\Jogo\src\mapas\Mapa.cpp(69,42): warning C4244:         [
+C:\Users\alano\source\repos\JogoC\Jogo\src\mapas\Mapa.cpp(69,42): warning C4244:             T=float
+C:\Users\alano\source\repos\JogoC\Jogo\src\mapas\Mapa.cpp(69,42): warning C4244:         ]
+C:\Users\alano\source\repos\JogoC\Jogo\src\mapas\Mapa.cpp(123,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\src\mapas\Mapa.cpp(124,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\src\mapas\Mapa.cpp(133,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\alano\source\repos\JogoC\Jogo\src\mapas\Mapa.cpp(134,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
   Generating code
-  4 of 2273 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+  6 of 2435 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    9 functions had inline decision re-evaluated but remain unchanged
+    11 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Jogo.vcxproj -> C:\Users\alano\source\repos\JogoC\Jogo\x64\Release\Jogo.exe

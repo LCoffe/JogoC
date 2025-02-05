@@ -2,6 +2,8 @@
 
 namespace Fase {
 	Fase01::Fase01() : Fase(IDs::IDs::fase01) {
+		mapa = new Mapa(this, MAPA1_PATH, TILESET1_PATH); // Cria o mapa
+
 		iniciaFundo();
 	}
 
@@ -9,6 +11,7 @@ namespace Fase {
 		pListaObstaculo->limparLista();
 		pListaPersona->limparLista();
 	}
+
 
 	void Fase01::iniciaFase(bool doisJogadres) {
 		criarMapa(doisJogadres);
@@ -36,17 +39,34 @@ namespace Fase {
 			criaPersonagem(sf::Vector2f(30, 350), IDs::IDs::jogador, false);
 		}
 
+
+			mapa->carregarMapa(MAPA1_PATH);
+			
+
+			criaPersonagem(sf::Vector2f(600, 500), IDs::IDs::guerreiraAthena, false);
+		criaPersonagem(sf::Vector2f(700, 500), IDs::IDs::gorgona, false);
+
 		// Criar inimigos
 		//criaPersonagem(sf::Vector2f(600, 768 - 101), IDs::IDs::guerreiraAthena, false);
 		criaPersonagem(sf::Vector2f(600, 768 - 101), IDs::IDs::gorgona, false);
+
 		//criaPersonagem(sf::Vector2f(400, 768 - 101), IDs::IDs::guerreiraAthena, false);
 
+		criaPlataforma(sf::Vector2f(600, 500), sf::Vector2f(50, 50), IDs::IDs::caixa);
+		criaPersonagem(sf::Vector2f(400, 500), IDs::IDs::gorgona, false);
 		// Criar plataformas
+		/*
 		criaPlataforma(sf::Vector2f(0, 768 - 100), sf::Vector2f(900, 100), IDs::IDs::plataforma);
 		criaPlataforma(sf::Vector2f(1366, 768 - 100), sf::Vector2f(1366, 100), IDs::IDs::plataforma);
 		criaPlataforma(sf::Vector2f(800, 768 - 188), sf::Vector2f(100, 138), IDs::IDs::plataforma);
 		criaPlataforma(sf::Vector2f(1600, 768 - 188), sf::Vector2f(100, 138), IDs::IDs::plataforma);
+
+		
+		*/
+			// Criar inimigos
+
 		//criaPlataforma(sf::Vector2f(600, 768 - 200), sf::Vector2f(50, 50), IDs::IDs::caixa);
+
 	}
 
 	void Fase01::carregar() {

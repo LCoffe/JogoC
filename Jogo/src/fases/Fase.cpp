@@ -134,7 +134,7 @@ namespace Fase {
 		}
 	}
 
-	void Fase::criaPersonagem(const sf::Vector2f pos, const IDs::IDs ID, const sf::Vector2f tam, const sf::Vector2f vel, bool direcao, bool jogadorUm, float vida, float tempoAtaque, sf::Vector2f posArma, bool atacando, bool petrifica, bool levandoDano, 
+	void Fase::criaPersonagem(const sf::Vector2f pos, const IDs::IDs ID, const sf::Vector2f tam, const sf::Vector2f vel, bool direcao, bool jogadorUm, float vida, float tempoAtaque, sf::Vector2f posArma, bool atacando, bool petrifica, bool levandoDano,
 		float tempoDano, bool morrendo, float tempoMorrendo, int pontuacao, bool colisaoChao) { //Usado para carregar os personagens
 		Entidade::Entidade* personagem = nullptr;
 		Entidade::Entidade* arma = nullptr;
@@ -396,8 +396,10 @@ namespace Fase {
 
 	void Fase::desenhar() {
 		fundo->desenhar(*pGG->getJanela());
+		mapa->desenharMapa(*pGG->getJanela());
 		pListaPersona->desenharEntidades();
 		pListaObstaculo->desenharEntidades();
+
 	}
 
 	void Fase::salvarColocacao(string nome) {
@@ -448,7 +450,7 @@ namespace Fase {
 		else {
 			if (pJogador->getTempoMorte() <= 1.25f) {
 				pGG->atualizarCamera(pJogador->getPos(), pGG->getTamJanela());
-				
+
 				atualizaFundo();
 				pListaPersona->executar();
 				pListaObstaculo->executar();
