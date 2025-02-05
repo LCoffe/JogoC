@@ -75,30 +75,30 @@
         "petrificado": false,
         "pontuacao": 0,
         "posArma": {
-            "x": -500.0,
-            "y": -500.0
+            "x": 344.5953063964844,
+            "y": 630.99072265625
         },
         "posicao": {
-            "x": 1067.5,
-            "y": 526.0169677734375
+
+            "x": 157.39501953125,
+            "y": 618.0
         },
         "tamanho": {
             "x": 50.0,
             "y": 50.0
         },
-        "tempoAtaque": 0.0,
+        "tempoAtaque": 0.03200000151991844,
         "tempoDano": 0.0,
         "tempoMorte": 0.0,
         "tempoPetrificado": 0.0,
         "velocidade": {
-            "x": 50.0,
+            "x": 80.0,
             "y": 0.0
         },
         "vida": 100.0
     },
     {
         "ID": 30,
-        "andando": true,
         "atacando": false,
         "ataqueBasico": false,
         "ataquePetrificante": false,
@@ -151,6 +151,7 @@
         "posicao": {
             "x": 550.8408813476563,
             "y": 526.0169677734375
+
         },
         "tamanho": {
             "x": 50.0,

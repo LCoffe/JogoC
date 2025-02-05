@@ -20,7 +20,7 @@ namespace Entidade {
             Gorgona::~Gorgona() {}
 
             void Gorgona::desenhar() {
-               //pGG->desenharElemento(corpo);
+               pGG->desenharElemento(corpo);
                 desenharInimigo();
             }
 
@@ -106,14 +106,8 @@ namespace Entidade {
 
             void Gorgona::atualizarSprite(float dt) {
 				sf::Vector2f posicao = pos;
-                if (direcao) {
-                    posicao.x += TAMANHO_GORGONA_X / 0.65f;
-                    posicao.y += TAMANHO_GORGONA_Y / 2.7f;
-                }
-                else {
-					posicao.x += TAMANHO_GORGONA_X / 0.5f;
-					posicao.y += TAMANHO_GORGONA_Y / 2.7f;
-                }
+                posicao.x += TAMANHO_GORGONA_X / 2.15f;
+                posicao.y += TAMANHO_GORGONA_Y / 2.7f;
                 
                 if (morrendo) {
                     sprite.atualizar(ElementosGraficos::ID_ANIMACAO::morte, direcao, posicao, dt);

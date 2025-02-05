@@ -51,6 +51,10 @@ namespace Entidade {
 					pp->setDirecao(true);
 				}
 			}
+			else if (ent->getID() == IDs::IDs::projetil) {
+				Item::Projetil* proj = static_cast<Item::Projetil*>(ent);
+				proj->setColidiu(true);
+			}
 		}
 
 		void Plataforma::atualizar() {

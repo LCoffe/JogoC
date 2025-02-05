@@ -147,7 +147,11 @@
     <ClCompile Include="src\Parallax.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
+
     <ClCompile Include="src\mapas\Mapa.cpp">
+
+    <ClCompile Include="src\Projetil.cpp">
+
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
   </ItemGroup>
@@ -290,7 +294,11 @@
     <ClInclude Include="include\Parallax.hpp">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
+
     <ClInclude Include="include\mapas\Mapa.hpp">
+
+    <ClInclude Include="include\Projetil.hpp">
+
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
   </ItemGroup>

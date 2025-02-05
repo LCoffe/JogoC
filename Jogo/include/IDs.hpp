@@ -35,5 +35,6 @@ namespace IDs {
 		gorgona, // 30
 		cobrasGorgona, // 31
 		caixa, // 32
+		projetil, // 33
 	};
 }

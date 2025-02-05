@@ -11,7 +11,7 @@ namespace Entidade {
 		}
 		Arma::~Arma() { pPersonagem = nullptr; }
 		void Arma::desenhar() {
-			//pGG->desenharElemento(corpo);
+			pGG->desenharElemento(corpo);
 		}
 
 		void Arma::atualizar() {}
@@ -25,9 +25,7 @@ namespace Entidade {
 					if (!p->getMorrendo()) {
 						p->tomarDano(dano);
 						if (p->getMorrendo()) {
-							Personagem::Jogador::Jogador* pJog = dynamic_cast<Personagem::Jogador::Jogador*>(pPersonagem);
-							pJog->addPontuacao(100);
-							//add xp outra hora
+							//Morreu
 						}
 						/*else {
 							sf::Vector2f posInimigo = p->getPos();
@@ -38,6 +36,7 @@ namespace Entidade {
 			}
 		}
 
-		void Arma::salvar(nlohmann::json& j) {}
+		void Arma::salvar(nlohmann::json& j) {
+		}
 	}
 }

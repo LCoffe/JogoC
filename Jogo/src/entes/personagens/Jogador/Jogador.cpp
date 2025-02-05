@@ -5,15 +5,24 @@ namespace Entidade {
 	namespace Personagem {
 		namespace Jogador {
 			Jogador::Jogador(sf::Vector2f pos)
-				: Personagem(pos, sf::Vector2f(TAM_JOGADOR_X, TAM_JOGADOR_Y), VELOCIDADE_JOGADOR, IDs::IDs::jogador),
+				: Personagem(pos, sf::Vector2f(TAM_JOGADOR_X, TAM_JOGADOR_Y), VELOCIDADE_JOGADOR, IDs::IDs::jogador), armas(), armaAtual(0),
 				pObs(new Observado::Observador::ObservadorJogador(this)), podePular(false), jogadorUm(false)
 			{
+				armas.clear();
 				vida = VIDA_JOGADOR;
 				setDano(DANO_JOGADOR);
 				inicializarSprite();  // Garante inicialização do sprite
 			}
 
-			Jogador::~Jogador() {}
+			Jogador::~Jogador() {
+				delete pObs;
+				pObs = nullptr;
+
+				for (auto& a : armas) {
+					delete& a;
+				}
+				armas.clear();
+			}
 
 			void Jogador::pular() {
 				if (colisaoChao) {
@@ -129,7 +138,7 @@ namespace Entidade {
 
 			void Jogador::atualizarTempoAtaque()
 			{	
-				if (getAtacando() && !andando && !levandoDano) {
+				if (getAtacando() && !andando && !levandoDano && pArma->getID() == IDs::IDs::espadaJogador) {
 					tempoAtaque += 0.016f;
 					pArma->setPos(sf::Vector2f(-500.0f, -500.0f));
 					if (tempoAtaque > 0.9f) {
@@ -150,6 +159,32 @@ namespace Entidade {
 					atacar(false);
 				}
 
+				if (atacando && !andando && !levandoDano && pArma->getID() == IDs::IDs::projetil) { 
+					tempoAtaque += 0.016f;
+					if (tempoAtaque > 0.9f) {
+						if (pArma != nullptr) {
+							Item::Projetil* p = dynamic_cast<Item::Projetil*>(pArma);
+							p->setPos(sf::Vector2f(direcao ? pos.x + pArma->getTam().x + 30.0f : pos.x + pArma->getTam().x + 15.0f, pos.y + 10.0f));
+							p->setColidiu(false);	
+							p->setVelocidade(sf::Vector2f(200.0f, 5.0f));
+							p->setDirecao(direcao);
+							atacando = false;
+							tempoAtaque = 0.0f;
+						}
+					}
+				}
+
+			}
+
+			void Jogador::trocarArma() {
+				if (pArma != nullptr && !andando && !levandoDano && !atacando) {
+					armaAtual++;
+					if (armaAtual >= armas.size()) {
+						armaAtual = 0;
+					}
+					pArma = armas[armaAtual];
+				}
+				tempoAtaque = 0.0f;
 			}
 
 			void Jogador::atualizarSprite(float dt)
@@ -182,6 +217,7 @@ namespace Entidade {
 				j["direcao"] = direcao;
 				j["jogadorUm"] = jogadorUm;
 				j["vida"] = vida;
+				j["armaAtual"] = armaAtual;
 				j["tempoAtaque"] = tempoAtaque;
 				j["posArma"] = { {"x", pArma->getPos().x}, {"y", pArma->getPos().y} };
 				j["atacando"] = atacando;
