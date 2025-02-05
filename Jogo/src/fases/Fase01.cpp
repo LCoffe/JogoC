@@ -35,21 +35,21 @@ namespace Fase {
 	void Fase01::criarMapa(bool doisJogadores) {
 		if (doisJogadores) {
 			//Cria Jogadores
-			criaPersonagem2Jog(sf::Vector2f(100, 768 - 101), IDs::IDs::jogador, true);
-			criaPersonagem2Jog(sf::Vector2f(200, 768 - 101), IDs::IDs::jogador, false);
+			criaPersonagem2Jog(sf::Vector2f(100, 768 - 251), IDs::IDs::jogador, true);
+			criaPersonagem2Jog(sf::Vector2f(200, 768 - 251), IDs::IDs::jogador, false);
 
 			// Criar inimigos
-			criaPersonagem2Jog(sf::Vector2f(600, 768 - 101), IDs::IDs::gorgona, false);
+			criaPersonagem2Jog(sf::Vector2f(300, 768 - 251), IDs::IDs::gorgona, false);
 		}
 		else {
 			//Cria Jogador
-			criaPersonagem1Jog(sf::Vector2f(100, 768 - 101), IDs::IDs::jogador);
+			criaPersonagem1Jog(sf::Vector2f(100, 768 - 251), IDs::IDs::jogador);
 			// Criar inimigos
-			criaPersonagem1Jog(sf::Vector2f(600, 768 - 101), IDs::IDs::gorgona);
+			criaPersonagem1Jog(sf::Vector2f(300, 768 - 251), IDs::IDs::gorgona);
 		}
 
 		criaPlataforma(sf::Vector2f(600, 500), sf::Vector2f(50, 50), IDs::IDs::caixa);
-		criaPersonagem(sf::Vector2f(400, 500), IDs::IDs::gorgona, false);
+		//criaPersonagem(sf::Vector2f(400, 500), IDs::IDs::gorgona, false);
 		// Criar plataformas
 		/*
 		criaPlataforma(sf::Vector2f(0, 768 - 100), sf::Vector2f(900, 100), IDs::IDs::plataforma);

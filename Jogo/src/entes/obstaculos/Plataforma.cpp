@@ -54,6 +54,7 @@ namespace Entidade {
 			else if (ent->getID() == IDs::IDs::projetil) {
 				Item::Projetil* proj = static_cast<Item::Projetil*>(ent);
 				proj->setColidiu(true);
+				proj->setAtivo(false);
 			}
 		}
 

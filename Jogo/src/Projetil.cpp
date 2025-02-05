@@ -3,7 +3,7 @@
 namespace Entidade {
 	namespace Item {
 
-		Projetil::Projetil(Personagem::Personagem* p, sf::Vector2f tam) : Arma(p, tam, IDs::IDs::projetil), direcao(p->getDirecao()), colidiu(false), velocidade(sf::Vector2f(0.0f, 0.0f)) {
+		Projetil::Projetil(Personagem::Personagem* p, sf::Vector2f tam) : Arma(p, tam, IDs::IDs::projetil), direcao(p->getDirecao()), colidiu(false), velocidade(sf::Vector2f(0.0f, 0.0f)){
 			if (p != nullptr) {
 				dano = p->getDano() + DANO_PROJETIL;
 			}
@@ -50,6 +50,7 @@ namespace Entidade {
 					if (!p->getMorrendo()) {
 						p->tomarDano(dano, pPersonagem);
 						setColidiu(true);
+						setAtivo(false);
 						if (p->getMorrendo()) {
 							//Morreu
 						}

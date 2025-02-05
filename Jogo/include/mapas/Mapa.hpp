@@ -5,8 +5,7 @@
 #include <vector>
 #include <string>
 
-
-constexpr auto MAPA1_PATH = "C:/Users/alano/source/repos/JogoC/Jogo/assets/mapas/mapa1.tmj";
+constexpr const char* const MAPA1_PATH = "assets\\mapas\\mapa1.tmj";
 
 namespace Fase {
     class Fase;
@@ -21,8 +20,8 @@ private:
     int larguraTile, alturaTile;
 
 public:
-    Mapa(Fase::Fase* fase, const std::string& caminhoMapa, const std::string& caminhoTileset);
-    bool carregarMapa(const std::string& caminhoMapa);
+    Mapa(Fase::Fase* fase, const char* caminhoMapa, const std::string& caminhoTileset);
+    bool carregarMapa(const char* caminhoMapa);
     bool carregarTileset(const std::string& caminhoTileset);
     void desenharMapa(sf::RenderWindow& janela);
 };

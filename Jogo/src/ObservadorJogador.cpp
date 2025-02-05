@@ -61,7 +61,12 @@ namespace Observado {
 				}
 				if (tecla == sf::Keyboard::R) {
 					if (pJogador->getTamanhoArmas() > 1) {
-						pJogador->trocarArma();
+						if (pJogador->getArma()->getID() == IDs::IDs::projetil && !pJogador->getArma()->getAtivo()) {
+							pJogador->trocarArma();
+						}
+						else if(pJogador->getArma()->getID() == IDs::IDs::espadaJogador) {
+							pJogador->trocarArma();
+						}
 					}	
 				}
 			}

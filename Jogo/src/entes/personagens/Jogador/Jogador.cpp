@@ -158,10 +158,11 @@ namespace Entidade {
 				if (atacando && !andando && !levandoDano && pArma->getID() == IDs::IDs::projetil) { 
 					tempoAtaque += 0.016f;
 					if (tempoAtaque > 0.9f) {
-						if (pArma != nullptr) {
+						if (pArma != nullptr && !pArma->getAtivo()) {
 							Item::Projetil* p = static_cast<Item::Projetil*>(pArma);
 							p->setPos(sf::Vector2f(direcao ? pos.x + pArma->getTam().x + 30.0f : pos.x + pArma->getTam().x + 15.0f, pos.y + 10.0f));
 							p->setColidiu(false);	
+							p->setAtivo(true);
 							p->setVelocidade(sf::Vector2f(200.0f, 5.0f));
 							p->setDirecao(direcao);
 							atacando = false;

@@ -8,7 +8,7 @@
 
 using json = nlohmann::json;
 
-Mapa::Mapa(Fase::Fase* fase , const std::string& caminhoMapa, const std::string& caminhoTileset) {
+Mapa::Mapa(Fase::Fase* fase , const char* caminhoMapa, const std::string& caminhoTileset) {
 
 	if (fase == nullptr) {
 		std::cerr << "Erro: Fase passada para Mapa é nullptr!" << std::endl;
@@ -29,7 +29,7 @@ Mapa::Mapa(Fase::Fase* fase , const std::string& caminhoMapa, const std::string&
     }
 }
 
-bool Mapa::carregarMapa(const std::string& caminhoMapa) {
+bool Mapa::carregarMapa(const char* caminhoMapa) {
     std::ifstream arquivo(caminhoMapa);
     if (!arquivo.is_open()) {
         std::cerr << "Erro ao abrir o mapa!" << std::endl;
@@ -65,8 +65,8 @@ bool Mapa::carregarMapa(const std::string& caminhoMapa) {
                     int tileID = tiles[index];
 
                     if (tileID != 0) { // Se não for um tile vazio
-                        sf::Vector2f pos(x * larguraTile, y * alturaTile);
-                        sf::Vector2f tam(larguraTile, alturaTile);
+                        sf::Vector2f pos(static_cast<float>(x * larguraTile), static_cast<float>(y * alturaTile));
+                        sf::Vector2f tam(static_cast<float>(larguraTile), static_cast<float>(alturaTile));
 
                         if (fase == nullptr) {
                             std::cerr << "Erro: ponteiro fase em Mapa é nullptr!" << std::endl;
@@ -120,8 +120,8 @@ void Mapa::desenharMapa(sf::RenderWindow& janela) {
             int tileY = (tileID - 1) / (texturaTileset.getSize().x / larguraTile);
 
             // Calcula posição do tile no mapa
-            float posX = x * larguraTile;
-            float posY = y * alturaTile;
+            float posX = static_cast<float>(x * larguraTile);
+            float posY = static_cast<float>(y * alturaTile);
 
             int vIndex = index * 4;
 
@@ -130,8 +130,8 @@ void Mapa::desenharMapa(sf::RenderWindow& janela) {
             vertices[vIndex + 2].position = sf::Vector2f(posX + larguraTile, posY + alturaTile);
             vertices[vIndex + 3].position = sf::Vector2f(posX, posY + alturaTile);
 
-            float texX = tileX * larguraTile;
-            float texY = tileY * alturaTile;
+            float texX = static_cast<float>(tileX * larguraTile);
+            float texY = static_cast<float>(tileY * alturaTile);
 
             vertices[vIndex].texCoords = sf::Vector2f(texX, texY);
             vertices[vIndex + 1].texCoords = sf::Vector2f(texX + larguraTile, texY);

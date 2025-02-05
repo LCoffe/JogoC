@@ -8,6 +8,7 @@ namespace Entidade {
 		protected:
 			float dano;
 			bool ataquePetrificante;
+			bool ativo;
 			Personagem::Personagem *pPersonagem;
 		
 		public:
@@ -17,6 +18,8 @@ namespace Entidade {
 			Personagem::Personagem* getPersonagem() { return pPersonagem; }
 			void setAtaquePetrificante(const bool ataquePetrificante) { this->ataquePetrificante = ataquePetrificante; }
 			bool getAtaquePetrificante() { return ataquePetrificante; }
+			void setAtivo(const bool ativo) { this->ativo = ativo; }
+			bool getAtivo() { return ativo; }
 			virtual void desenhar();
 			virtual void atualizar();
 			virtual	void inicializarSprite();
