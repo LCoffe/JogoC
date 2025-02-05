@@ -163,6 +163,7 @@
     <ClCompile Include="src\Gerenciadores\GerenciadorGrafico.cpp" />
     <ClCompile Include="src\Gerenciadores\GerenciadorSalvar.cpp" />
     <ClCompile Include="src\Listas\ListaEntidade.cpp" />
+    <ClCompile Include="src\mapas\Mapa.cpp" />
     <ClCompile Include="src\Menus\Menu.cpp" />
     <ClCompile Include="src\Menus\MenuColocacao.cpp" />
     <ClCompile Include="src\Menus\MenuMorreu.cpp" />
@@ -212,6 +213,7 @@
     <ClInclude Include="include\json.hpp" />
     <ClInclude Include="include\Listas\Lista.hpp" />
     <ClInclude Include="include\Listas\ListaEntidade.hpp" />
+    <ClInclude Include="include\mapas\Mapa.hpp" />
     <ClInclude Include="include\Menus\Menu.hpp" />
     <ClInclude Include="include\Menus\MenuColocacao.hpp" />
     <ClInclude Include="include\Menus\MenuMorreu.hpp" />
@@ -230,10 +232,14 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\athenasoldier.png" />
+    <Image Include="assets\fundos\fundo01.png" />
+    <Image Include="assets\fundos\fundo02.png" />
     <Image Include="assets\fundos\fundo1.png" />
     <Image Include="assets\gamemenu.png" />
     <Image Include="assets\greeksoldier.png" />
     <Image Include="assets\inimigos\athena\guerreira_ataque.png" />
+    <Image Include="assets\inimigos\athena\guerreira_machucado.png" />
+    <Image Include="assets\inimigos\athena\guerreira_morte.png" />
     <Image Include="assets\inimigos\gorgona\gorgona_andar.png" />
     <Image Include="assets\inimigos\gorgona\gorgona_ataque.png" />
     <Image Include="assets\inimigos\gorgona\gorgona_especial.png" />
@@ -254,16 +260,23 @@
     <Image Include="assets\jogador\jogador_pulo.png" />
     <Image Include="assets\jogador\Jump.png" />
     <Image Include="assets\jogador\Walk.png" />
+    <Image Include="assets\obstaculos\caixa\caixa_arrastado.png" />
+    <Image Include="assets\obstaculos\caixa\caixa_parado.png" />
+    <Image Include="assets\obstaculos\plataforma.png" />
     <Image Include="assets\plataformas\pedra.png" />
+    <Image Include="assets\tilesets\babylon.png" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="assets\Fontes\Greek-Freak.ttf">
       <DeploymentContent>true</DeploymentContent>
     </Font>
+    <Font Include="assets\Greek-Freak.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitattributes" />
     <None Include=".gitignore" />
+    <None Include="assets\mapas\mapa1.tmj" />
+    <None Include="assets\tilesets\greece.tsx" />
     <None Include="Jogo.exe" />
     <None Include="openal32.dll" />
     <None Include="README.md" />

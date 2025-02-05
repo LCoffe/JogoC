@@ -19,6 +19,8 @@
 #include "../../include/entes/personagens/jogador/Jogador.hpp"
 #include "../../include/entes/obstaculos/Caixa.hpp"
 #include "../../include/Arma.hpp"
+
+#include "../mapas/Mapa.hpp"
 #include "../../include/Projetil.hpp"
 
 namespace Observado {
@@ -33,7 +35,7 @@ namespace Fase {
 		static Observado::Observador::ObservadorFase* pObsFase;
 	protected:
 		Fundo::Parallax* fundo;
-
+		Mapa* mapa;
 		Lista::ListaEntidade* pListaPersona;
 		Lista::ListaEntidade* pListaObstaculo;
 		static Entidade::Personagem::Jogador::Jogador* pJogador;
@@ -55,6 +57,8 @@ namespace Fase {
 		Entidade::Item::Arma* carregaArma(Entidade::Personagem::Personagem* p, const sf::Vector2f pos, const sf::Vector2f tam, const IDs::IDs ID, bool colidiu, bool direcao, const sf::Vector2f velocidade, bool ataquePetrificante);
 		void criaLimite();
 	public:
+		void criaPlataforma(const sf::Vector2f pos, const sf::Vector2f tam, const IDs::IDs ID, bool arrastado, bool colisaoParede);
+		void criaPlataforma(const sf::Vector2f pos, const sf::Vector2f tam, const IDs::IDs ID);
 		Fase(IDs::IDs ID_Fase);
 		~Fase();
 		Entidade::Personagem::Jogador::Jogador* getJogador() { return pJogador; }
@@ -67,6 +71,7 @@ namespace Fase {
 		void atualizaFundo();
 		void salvarColocacao(string nome);
 		void desenhar();
+		virtual void desenharMapa() {}
 		void setAtivoObs(const bool ativo);
 		void executar();
 		void salvar();

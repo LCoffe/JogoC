@@ -1,21 +1,36 @@
 #include "../../include/entes/obstaculos/Plataforma.hpp"
 
+
 constexpr auto PLATAFORMA_PATH = "..\\Jogo\\assets\\plataformas\\pedra.png";
+
 
 namespace Entidade {
 	namespace Obstaculos {
-		Plataforma::Plataforma(const sf::Vector2f pos, const sf::Vector2f tam, const IDs::IDs ID) : Obstaculo(pos, tam, ID) {
 		
+
+		sf::Texture Plataforma::texturaTileset;
+		bool texturaCarregada = false; // Controla se já carregamos a textura
+
+		Plataforma::Plataforma(const sf::Vector2f pos, const sf::Vector2f tam, const IDs::IDs ID)
+			: Obstaculo(pos, tam, ID) {
+
 			corpo.setSize(tam);
 			corpo.setPosition(pos);
-			inicializar();
+			static bool texturaCarregada = false;
+			if (!texturaCarregada) {
+				if (!texturaTileset.loadFromFile(TILESET1_PATH)) {
+					std::cerr << "Erro ao carregar o tileset!" << std::endl;
+				}
+				texturaCarregada = true;
+			}
+		}
+		void Plataforma::desenhar() {
+			
+			
 		}
 
 		Plataforma::~Plataforma() {}
 
-		void Plataforma::desenhar() {
-			sprite.desenhar();
-		}
 
 		void Plataforma::colisao(Entidade* ent, sf::Vector2f diferenca) {
 			if (ent->getID() == IDs::IDs::jogador) {
@@ -47,10 +62,8 @@ namespace Entidade {
 		}
 
 		void Plataforma::inicializar() {
-			sprite.inicializar(PLATAFORMA_PATH, pos, sf::Vector2f(TAM_PLATAFORMA_X, TAM_PLATAFORMA_Y));
+			
 		}
-
-
 
 		void Plataforma::salvar(nlohmann::json& j) {
 			j["ID"] = (int)getID();
