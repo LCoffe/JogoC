@@ -39,16 +39,18 @@ namespace Fase {
 			criaPersonagem2Jog(sf::Vector2f(200, 768 - 251), IDs::IDs::jogador, false);
 
 			// Criar inimigos
-			criaPersonagem2Jog(sf::Vector2f(300, 768 - 251), IDs::IDs::gorgona, false);
+			//criaPersonagem2Jog(sf::Vector2f(300, 768 - 251), IDs::IDs::gorgona, false);
+			criaPersonagem2Jog(sf::Vector2f(400, 768 - 251), IDs::IDs::minotauro, false);
 		}
 		else {
 			//Cria Jogador
 			criaPersonagem1Jog(sf::Vector2f(100, 768 - 251), IDs::IDs::jogador);
 			// Criar inimigos
-			criaPersonagem1Jog(sf::Vector2f(300, 768 - 251), IDs::IDs::gorgona);
+			//criaPersonagem1Jog(sf::Vector2f(300, 768 - 251), IDs::IDs::gorgona);
+			criaPersonagem1Jog(sf::Vector2f(400, 768 - 251), IDs::IDs::minotauro);
 		}
 
-		criaPlataforma(sf::Vector2f(600, 500), sf::Vector2f(50, 50), IDs::IDs::caixa);
+		//criaPlataforma(sf::Vector2f(600, 500), sf::Vector2f(50, 50), IDs::IDs::caixa);
 		//criaPersonagem(sf::Vector2f(400, 500), IDs::IDs::gorgona, false);
 		// Criar plataformas
 		/*
@@ -116,22 +118,23 @@ namespace Fase {
 			float tempoMorte = it["tempoMorte"];
 			int pontuacao = it["pontuacao"];
 			bool colisaoChao = it["colisaoChao"];
+			bool ativo = it["ativo"];
 			if (doisJogadores) {
 				if (ID == IDs::IDs::jogador) {
 					bool jogadorUm = it["jogadorUm"];
-					carregaPersonagem2Jog(pos, ID, tam, vel, direcao, jogadorUm, vida, tempoAtaque, posArma, velArma, colidiu, direcaoArma, atacando, petrifica, levandoDano, tempoDano, morrendo, tempoMorte, pontuacao, colisaoChao);
+					carregaPersonagem2Jog(pos, ID, tam, vel, direcao, jogadorUm, vida, tempoAtaque, posArma, velArma, colidiu, direcaoArma, ativo, atacando, petrifica, levandoDano, tempoDano, morrendo, tempoMorte, pontuacao, colisaoChao);
 				}
-				if (ID == IDs::IDs::guerreiraAthena || ID == IDs::IDs::gorgona) {
-					carregaPersonagem2Jog(pos, ID, tam, vel, direcao, false, vida, tempoAtaque, posArma, velArma, colidiu, direcaoArma, atacando, petrifica, levandoDano, tempoDano, morrendo, tempoMorte, 0, colisaoChao);
+				if (ID == IDs::IDs::guerreiraAthena || ID == IDs::IDs::gorgona || ID == IDs::IDs::minotauro) {
+					carregaPersonagem2Jog(pos, ID, tam, vel, direcao, false, vida, tempoAtaque, posArma, velArma, colidiu, direcaoArma, ativo, atacando, petrifica, levandoDano, tempoDano, morrendo, tempoMorte, 0, colisaoChao);
 				}
 			}
 			else {
 				if (ID == IDs::IDs::jogador) {
 					bool jogadorUm = it["jogadorUm"];
-					carregaPersonagem1Jog(pos, ID, tam, vel, direcao, jogadorUm, vida, tempoAtaque, armaAtual, posArma, IDArma, velArma, colidiu, direcaoArma, atacando, petrifica, levandoDano, tempoDano, morrendo, tempoMorte, pontuacao, colisaoChao);
+					carregaPersonagem1Jog(pos, ID, tam, vel, direcao, jogadorUm, vida, tempoAtaque, armaAtual, posArma, IDArma, velArma, colidiu, direcaoArma, ativo, atacando, petrifica, levandoDano, tempoDano, morrendo, tempoMorte, pontuacao, colisaoChao);
 				}
-				if (ID == IDs::IDs::guerreiraAthena || ID == IDs::IDs::gorgona) {
-					carregaPersonagem1Jog(pos, ID, tam, vel, direcao, false, vida, tempoAtaque, armaAtual, posArma, IDArma, velArma, colidiu, direcaoArma, atacando, petrifica, levandoDano, tempoDano, morrendo, tempoMorte, pontuacao, colisaoChao);
+				if (ID == IDs::IDs::guerreiraAthena || ID == IDs::IDs::gorgona || ID == IDs::IDs::minotauro) {
+					carregaPersonagem1Jog(pos, ID, tam, vel, direcao, false, vida, tempoAtaque, armaAtual, posArma, IDArma, velArma, colidiu, direcaoArma, ativo, atacando, petrifica, levandoDano, tempoDano, morrendo, tempoMorte, 0, colisaoChao);
 				}
 			}
 			

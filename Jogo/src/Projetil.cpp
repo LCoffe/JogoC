@@ -27,6 +27,7 @@ namespace Entidade {
 			if (colidiu) {
 				velocidade = sf::Vector2f(0, 0);
 				setPos(sf::Vector2f(-500.0f, -500.0f));
+				setAtivo(false);
 			}
 		}
 
@@ -45,12 +46,11 @@ namespace Entidade {
 
 		void Projetil::colisao(Entidade* ent, const sf::Vector2f diferenca) {
 			if (pPersonagem->getID() == IDs::IDs::jogador) {
-				if (ent->getID() == IDs::IDs::gorgona || ent->getID() == IDs::IDs::guerreiraAthena) {
+				if (ent->getID() == IDs::IDs::gorgona || ent->getID() == IDs::IDs::guerreiraAthena || ent->getID() == IDs::IDs::minotauro) {
 					Personagem::Personagem* p = dynamic_cast<Personagem::Personagem*>(ent);
 					if (!p->getMorrendo()) {
 						p->tomarDano(dano, pPersonagem);
 						setColidiu(true);
-						setAtivo(false);
 						if (p->getMorrendo()) {
 							//Morreu
 						}
@@ -78,9 +78,20 @@ namespace Entidade {
 			//sprite.desenhar();
 		}
 
+		void Projetil::verificaSaiuTela() {
+			sf::Vector2f posicao = pos;
+			posicao.x += tam.x / 2.0f;
+			posicao.y += tam.y / 2.0f;
+			//cout << posicao.y << endl;
+			if (posicao.y >= 600.0f) {
+				setColidiu(true);
+			}
+		}
+
 		void Projetil::atualizar() {
 			if (!colidiu) {
 				atualizarPosicao();
+				verificaSaiuTela();
 				//cout << pos.x << " " << pos.y << endl;
 				//atualizarSprite(pGG->getTempo());
 				desenhar();

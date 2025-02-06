@@ -11,7 +11,7 @@ namespace Entidade {
 				Personagem::Personagem* pp = dynamic_cast<Personagem::Personagem*>(ent);
 				colisaoObs(pp, diferenca);
 			}
-			else if (ent->getID() == IDs::IDs::guerreiraAthena || ent->getID() == IDs::IDs::gorgona) {
+			else if (ent->getID() == IDs::IDs::guerreiraAthena || ent->getID() == IDs::IDs::gorgona || ent->getID() == IDs::IDs::minotauro) {
 				Personagem::Personagem* pp = dynamic_cast<Personagem::Personagem*>(ent);
 				colisaoObs(pp, diferenca);
 				if (pp->getColisaoParede() && pp->getDirecao()) { //se a plataforma estiver a direita do inimigo e ele estiver indo para a direita
@@ -23,6 +23,10 @@ namespace Entidade {
 			}
 			else if (ent->getID() == IDs::IDs::plataforma) {
 				colisaoPlataforma(ent, diferenca);
+			}
+			else if (ent->getID() == IDs::IDs::projetil) {
+				Item::Projetil* p = static_cast<Item::Projetil*>(ent);
+				p->setColidiu(true);
 			}
 		}
 

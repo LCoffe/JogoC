@@ -26,6 +26,7 @@ namespace Entidade {
 				void atualizarPosicao();
 				void atualizarSprite(float dt);
 				void inicializarSprite();
+				void verificaSaiuTela();
 				void desenhar();
 				void atualizar();
 				void salvar(nlohmann::json& j);

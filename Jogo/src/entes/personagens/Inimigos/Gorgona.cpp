@@ -20,8 +20,8 @@ namespace Entidade {
             Gorgona::~Gorgona() {}
 
             void Gorgona::desenhar() {
-               pGG->desenharElemento(corpo);
-                desenharInimigo();
+               //pGG->desenharElemento(corpo);
+               desenharInimigo();
             }
 
             void Gorgona::atualizarTempoAtaque() {

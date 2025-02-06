@@ -26,7 +26,7 @@ namespace Observado {
 					if (!pJogador->getPetrificado() && !pJogador->getLevandoDano())
 						pJogador->andar(true);
 				}
-				if (tecla == sf::Keyboard::E) {
+				if (tecla == sf::Keyboard::E && !pJogador->getArma()->getAtivo()) {
 					pJogador->atacar(true);
 				}
 			}
@@ -42,7 +42,7 @@ namespace Observado {
 					if (!pJogador->getPetrificado())
 						pJogador->andar(true);
 				}
-				if (tecla == sf::Keyboard::L) {
+				if (tecla == sf::Keyboard::L && !pJogador->getArma()->getAtivo()) {
 					pJogador->atacar(true);
 				}
 			}

@@ -67,6 +67,11 @@ namespace Lista {
 					aux->salvar(jsonAux);
 					jsonReturn.push_back(jsonAux);
 				}
+				if (aux->getID() == IDs::IDs::minotauro) {
+					aux = static_cast<Entidade::Personagem::Inimigo::Minotauro*>(aux);
+					aux->salvar(jsonAux);
+					jsonReturn.push_back(jsonAux);
+				}
 				if ((aux->getID() == IDs::IDs::plataforma)) {
 					aux = static_cast<Entidade::Obstaculos::Plataforma*>(aux);
 					aux->salvar(jsonAux);

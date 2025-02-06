@@ -3,14 +3,15 @@
 #include <vector>
 #include "../json.hpp"
 #include "Lista.hpp"
-#include "../entes/Entidade.hpp"
-#include "../entes/personagens/Personagem.hpp"
-#include "../entes/obstaculos/Plataforma.hpp"
-#include "../entes/personagens/jogador/Jogador.hpp"
-#include "../entes/personagens/Inimigos/Inimigo.hpp"
-#include "../entes/personagens/Inimigos/GuerreiraAthena.hpp"
-#include "../entes/personagens/Inimigos/Gorgona.hpp"
-#include "../entes/obstaculos/Caixa.hpp"
+#include "../../include/entes/Entidade.hpp"
+#include "../../include/entes/personagens/Personagem.hpp"
+#include "../../include/entes/obstaculos/Plataforma.hpp"
+#include "../../include/entes/personagens/jogador/Jogador.hpp"
+#include "../../include/entes/personagens/Inimigos/Inimigo.hpp"
+#include "../../include/entes/personagens/Inimigos/GuerreiraAthena.hpp"
+#include "../../include/entes/personagens/Inimigos/Gorgona.hpp"
+#include "../../include/entes/personagens/Inimigos/Minotauro.hpp"
+#include "../../include/entes/obstaculos/Caixa.hpp"
 
 using namespace std;
 

@@ -15,6 +15,12 @@ namespace Entidade {
 			}
 
 			Jogador::~Jogador() {
+				if (pObs != nullptr) {
+					delete pObs;
+					pObs = nullptr;
+				}
+
+				armas.clear();
 			}
 
 			void Jogador::pular() {
@@ -106,6 +112,18 @@ namespace Entidade {
 						setPos(sf::Vector2f(direcaoInimigo ? posInimigo.x + 40.0f : posInimigo.x - 40.0f, posInimigo.y + 5.0f));
 					}
 				}
+				else if (ent->getID() == IDs::IDs::projetil) {
+					Item::Projetil* proj = static_cast<Item::Projetil*>(ent);
+					if (proj->getPersonagem()->getID() != IDs::IDs::jogador) {
+						tomarDano(proj->getDano(), nullptr);
+						proj->setColidiu(true);
+						if (!getMorrendo()) {
+							sf::Vector2f posInimigo = getPos();
+							bool direcaoInimigo = proj->getPersonagem()->getDirecao();
+							setPos(sf::Vector2f(direcaoInimigo ? posInimigo.x + 10.0f : posInimigo.x - 10.0f, posInimigo.y + 5.0f));
+						}
+					}
+				}
 				else if(ent->getID() == IDs::IDs::plataforma) {
 					if (diferenca.y > 0) {
 						colisaoChao = true;
@@ -156,7 +174,13 @@ namespace Entidade {
 				}
 
 				if (atacando && !andando && !levandoDano && pArma->getID() == IDs::IDs::projetil) { 
-					tempoAtaque += 0.016f;
+					if (!pArma->getAtivo()) {
+						tempoAtaque += 0.016f;
+					}
+					else {
+						tempoAtaque = 0.0f;
+					}
+					
 					if (tempoAtaque > 0.9f) {
 						if (pArma != nullptr && !pArma->getAtivo()) {
 							Item::Projetil* p = static_cast<Item::Projetil*>(pArma);
@@ -233,11 +257,13 @@ namespace Entidade {
 					j["velocidadeArma"] = { {"x", p->getVelocidade().x}, {"y", p->getVelocidade().y} };
 					j["colidiu"] = p->getColidiu();
 					j["direcaoArma"] = p->getDirecao();
+					j["ativo"] = p->getAtivo();
 				}
 				else {
 					j["velocidadeArma"] = { {"x", 0.0f}, {"y", 0.0f} };
 					j["colidiu"] = false;
 					j["direcaoArma"] = false;
+					j["ativo"] = false;
 				}
 			}
 		}

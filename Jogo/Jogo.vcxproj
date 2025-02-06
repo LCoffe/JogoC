@@ -150,6 +150,7 @@
     <ClCompile Include="src\Entes\Personagens\Inimigos\Gorgona.cpp" />
     <ClCompile Include="src\Entes\Personagens\Inimigos\GuerreiraAthena.cpp" />
     <ClCompile Include="src\Entes\Personagens\Inimigos\Inimigo.cpp" />
+    <ClCompile Include="src\entes\personagens\Inimigos\Minotauro.cpp" />
     <ClCompile Include="src\Entes\Personagens\Jogador\Jogador.cpp" />
     <ClCompile Include="src\Entes\Personagens\Personagem.cpp" />
     <ClCompile Include="src\Estado.cpp" />
@@ -197,6 +198,7 @@
     <ClInclude Include="include\Entes\Personagens\Inimigos\Gorgona.hpp" />
     <ClInclude Include="include\Entes\Personagens\Inimigos\GuerreiraAthena.hpp" />
     <ClInclude Include="include\Entes\Personagens\Inimigos\Inimigo.hpp" />
+    <ClInclude Include="include\entes\personagens\Inimigos\Minotauro.hpp" />
     <ClInclude Include="include\Entes\Personagens\jogador\Jogador.hpp" />
     <ClInclude Include="include\Entes\Personagens\Personagem.hpp" />
     <ClInclude Include="include\Estado.hpp" />

@@ -8,7 +8,9 @@ namespace Entidade {
 			Entidade(pos, tam, ID), velocidadeMax(vel), velocidadeFinal(sf::Vector2f(vel, 0.0f)), tempo(0.0f), tempoAtaque(0.0f),
 			andando(false), direcao(true), colisaoChao(false), atacando(false), dano(0.0f), morrendo(false), levandoDano(false), vida(0.0f), tempoDano(0.0f), pArma(nullptr), tempoMorte(0.0f), colisaoParede(false){}
 
-		Personagem::~Personagem() {}
+		Personagem::~Personagem() {
+			pArma = nullptr;
+		}
 
 		void Personagem::andar(const bool direcao) {
 			atacando = false;
