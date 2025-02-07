@@ -11,6 +11,7 @@ namespace Fundo {
         sf::Shader shader;
         float offset;
         sf::Clock relogio;
+        bool carregado;
 
     public:
         Parallax();

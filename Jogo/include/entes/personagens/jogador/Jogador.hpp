@@ -6,7 +6,7 @@
 #include "../../include/Arma.hpp"
 #include "../../include/Projetil.hpp"
 
-#define VELOCIDADE_JOGADOR 80.0f
+#define VELOCIDADE_JOGADOR 100.0f
 #define ALTURA_PULO 900.0f
 #define TAM_JOGADOR_X 50.0f
 #define TAM_JOGADOR_Y 50.0f

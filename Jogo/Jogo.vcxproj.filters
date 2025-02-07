@@ -1,417 +1,154 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Arquivos de Origem">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Arquivos de Cabeçalho">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Arquivos de Recurso">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
+    <ClCompile Include="src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp" />
+    <ClCompile Include="src\ElementosGraficos\animacoes\AnimacaoEstatica.cpp" />
+    <ClCompile Include="src\ElementosGraficos\animacoes\AnimacaoUnica.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\Arma.cpp" />
+    <ClCompile Include="src\Camera.cpp" />
+    <ClCompile Include="src\ElementosGraficos\animacoes\Animacao.cpp" />
+    <ClCompile Include="src\ElementosGraficos\Botao.cpp" />
+    <ClCompile Include="src\ElementosGraficos\Texto.cpp" />
+    <ClCompile Include="src\Entes\Ente.cpp" />
+    <ClCompile Include="src\Entes\Entidade.cpp" />
+    <ClCompile Include="src\entes\obstaculos\Caixa.cpp" />
+    <ClCompile Include="src\Entes\Obstaculos\Obstaculo.cpp" />
+    <ClCompile Include="src\Entes\Obstaculos\Plataforma.cpp" />
+    <ClCompile Include="src\Entes\Personagens\Inimigos\Gorgona.cpp" />
+    <ClCompile Include="src\Entes\Personagens\Inimigos\GuerreiraAthena.cpp" />
+    <ClCompile Include="src\Entes\Personagens\Inimigos\Inimigo.cpp" />
+    <ClCompile Include="src\Entes\Personagens\Jogador\Jogador.cpp" />
+    <ClCompile Include="src\Entes\Personagens\Personagem.cpp" />
+    <ClCompile Include="src\Estado.cpp" />
+    <ClCompile Include="src\EstadoJogar.cpp" />
+    <ClCompile Include="src\EstadoMenu.cpp" />
+    <ClCompile Include="src\Fases\Fase.cpp" />
+    <ClCompile Include="src\Fases\Fase01.cpp" />
+    <ClCompile Include="src\Gerenciadores\GerenciadorColisoes.cpp" />
+    <ClCompile Include="src\Gerenciadores\GerenciadorEstado.cpp" />
+    <ClCompile Include="src\Gerenciadores\GerenciadorEventos.cpp" />
+    <ClCompile Include="src\Gerenciadores\GerenciadorGrafico.cpp" />
+    <ClCompile Include="src\Gerenciadores\GerenciadorSalvar.cpp" />
+    <ClCompile Include="src\Listas\ListaEntidade.cpp" />
+    <ClCompile Include="src\mapas\Mapa.cpp" />
+    <ClCompile Include="src\Menus\Menu.cpp" />
+    <ClCompile Include="src\Menus\MenuColocacao.cpp" />
+    <ClCompile Include="src\Menus\MenuMorreu.cpp" />
+    <ClCompile Include="src\Menus\MenuOpcoes.cpp" />
+    <ClCompile Include="src\Menus\MenuPrincipal.cpp" />
+    <ClCompile Include="src\Menus\MenuSalvarColocacao.cpp" />
+    <ClCompile Include="src\Observador.cpp" />
+    <ClCompile Include="src\ObservadorFase.cpp" />
+    <ClCompile Include="src\ObservadorJogador.cpp" />
+    <ClCompile Include="src\ObservadorMenu.cpp" />
+    <ClCompile Include="src\Jogo.cpp" />
+    <ClCompile Include="src\Observado.cpp" />
+    <ClCompile Include="src\Parallax.cpp" />
+    <ClCompile Include="src\Projetil.cpp" />
+    <ClCompile Include="stdafx\stdafx.cpp" />
+    <ClCompile Include="src\fases\Fase02.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Jogo.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="stdafx\stdafx.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Observado.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Observador.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ObservadorJogador.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Estado.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\EstadoMenu.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ObservadorMenu.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\EstadoJogar.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ObservadorFase.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Camera.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Arma.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ElementosGraficos\Botao.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ElementosGraficos\Texto.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Entes\Ente.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Entes\Entidade.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Entes\Obstaculos\Obstaculo.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Entes\Obstaculos\Plataforma.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Entes\Personagens\Personagem.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Fases\Fase.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Fases\Fase01.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Gerenciadores\GerenciadorColisoes.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Gerenciadores\GerenciadorEstado.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Gerenciadores\GerenciadorEventos.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Gerenciadores\GerenciadorGrafico.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Gerenciadores\GerenciadorSalvar.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Listas\ListaEntidade.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Menus\Menu.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Menus\MenuColocacao.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Menus\MenuMorreu.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Menus\MenuOpcoes.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Menus\MenuPrincipal.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Menus\MenuSalvarColocacao.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Entes\Personagens\Inimigos\Gorgona.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Entes\Personagens\Inimigos\GuerreiraAthena.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Entes\Personagens\Inimigos\Inimigo.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Entes\Personagens\Jogador\Jogador.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ElementosGraficos\animacoes\Animacao.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ElementosGraficos\animacoes\AnimacaoUnica.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ElementosGraficos\animacoes\AnimacaoEstatica.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\entes\obstaculos\Caixa.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Parallax.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-
-    <ClCompile Include="src\mapas\Mapa.cpp">
-
-    <ClCompile Include="src\Projetil.cpp">
-
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
+    <ClInclude Include="include\ElementosGraficos\animacoes\AnimacaoMovimento.hpp" />
+    <ClInclude Include="include\ElementosGraficos\animacoes\AnimacaoEstatica.hpp" />
+    <ClInclude Include="include\ElementosGraficos\animacoes\AnimacaoUnica.hpp" />
+    <ClInclude Include="include\Arma.hpp" />
+    <ClInclude Include="include\Camera.hpp" />
+    <ClInclude Include="include\ElementosGraficos\animacoes\Animacao.hpp" />
+    <ClInclude Include="include\ElementosGraficos\Botao.hpp" />
+    <ClInclude Include="include\ElementosGraficos\Texto.hpp" />
+    <ClInclude Include="include\Entes\Ente.hpp" />
+    <ClInclude Include="include\Entes\Entidade.hpp" />
+    <ClInclude Include="include\entes\obstaculos\Caixa.hpp" />
+    <ClInclude Include="include\Entes\Obstaculos\Obstaculo.hpp" />
+    <ClInclude Include="include\Entes\Obstaculos\Plataforma.hpp" />
+    <ClInclude Include="include\Entes\Personagens\Inimigos\Gorgona.hpp" />
+    <ClInclude Include="include\Entes\Personagens\Inimigos\GuerreiraAthena.hpp" />
+    <ClInclude Include="include\Entes\Personagens\Inimigos\Inimigo.hpp" />
+    <ClInclude Include="include\Entes\Personagens\jogador\Jogador.hpp" />
+    <ClInclude Include="include\Entes\Personagens\Personagem.hpp" />
+    <ClInclude Include="include\Estado.hpp" />
+    <ClInclude Include="include\EstadoJogar.hpp" />
+    <ClInclude Include="include\EstadoMenu.hpp" />
+    <ClInclude Include="include\Fases\Fase.hpp" />
+    <ClInclude Include="include\Fases\Fase01.hpp" />
+    <ClInclude Include="include\Gerenciadores\GerenciadorColisoes.hpp" />
+    <ClInclude Include="include\Gerenciadores\GerenciadorEstado.hpp" />
+    <ClInclude Include="include\Gerenciadores\GerenciadorEventos.hpp" />
+    <ClInclude Include="include\Gerenciadores\GerenciadorGrafico.hpp" />
+    <ClInclude Include="include\Gerenciadores\GerenciadorSalvar.hpp" />
+    <ClInclude Include="include\IDs.hpp" />
+    <ClInclude Include="include\json.hpp" />
+    <ClInclude Include="include\Listas\Lista.hpp" />
+    <ClInclude Include="include\Listas\ListaEntidade.hpp" />
+    <ClInclude Include="include\mapas\Mapa.hpp" />
+    <ClInclude Include="include\Menus\Menu.hpp" />
+    <ClInclude Include="include\Menus\MenuColocacao.hpp" />
+    <ClInclude Include="include\Menus\MenuMorreu.hpp" />
+    <ClInclude Include="include\Menus\MenuOpcoes.hpp" />
+    <ClInclude Include="include\Menus\MenuPrincipal.hpp" />
+    <ClInclude Include="include\Menus\MenuSalvarColocacao.hpp" />
+    <ClInclude Include="include\Observador.hpp" />
+    <ClInclude Include="include\ObservadorFase.hpp" />
+    <ClInclude Include="include\ObservadorJogador.hpp" />
+    <ClInclude Include="include\ObservadorMenu.hpp" />
+    <ClInclude Include="include\Jogo.hpp" />
+    <ClInclude Include="include\Observado.hpp" />
+    <ClInclude Include="include\Parallax.hpp" />
+    <ClInclude Include="include\Projetil.hpp" />
+    <ClInclude Include="stdafx\stdafx.hpp" />
+    <ClInclude Include="include\fases\Fase02.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx\stdafx.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Jogo.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\IDs.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Observado.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Observador.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\ObservadorJogador.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\json.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Estado.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\EstadoMenu.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\ObservadorMenu.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\EstadoJogar.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\ObservadorFase.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Camera.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Arma.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\ElementosGraficos\Botao.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\ElementosGraficos\Texto.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Entes\Obstaculos\Plataforma.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Entes\Obstaculos\Obstaculo.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Entes\Personagens\Inimigos\Gorgona.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Entes\Personagens\Inimigos\GuerreiraAthena.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Entes\Personagens\Inimigos\Inimigo.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Entes\Personagens\Personagem.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Entes\Ente.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Entes\Entidade.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Fases\Fase.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Fases\Fase01.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Gerenciadores\GerenciadorColisoes.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Gerenciadores\GerenciadorEstado.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Gerenciadores\GerenciadorEventos.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Gerenciadores\GerenciadorGrafico.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Gerenciadores\GerenciadorSalvar.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Listas\Lista.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Listas\ListaEntidade.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Menus\Menu.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Menus\MenuColocacao.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Menus\MenuMorreu.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Menus\MenuOpcoes.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Menus\MenuPrincipal.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Menus\MenuSalvarColocacao.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Entes\Personagens\jogador\Jogador.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\ElementosGraficos\animacoes\Animacao.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\ElementosGraficos\animacoes\AnimacaoUnica.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\ElementosGraficos\animacoes\AnimacaoEstatica.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\ElementosGraficos\animacoes\AnimacaoMovimento.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\entes\obstaculos\Caixa.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Parallax.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-
-    <ClInclude Include="include\mapas\Mapa.hpp">
-
-    <ClInclude Include="include\Projetil.hpp">
-
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="assets\athenasoldier.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\greeksoldier.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\jogador\jogador.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\jogador\jogador_machucado.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\jogador\jogador_morte.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\jogador\jogador_parado.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\jogador\Walk.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\jogador\Jump.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\jogador\jogador_andar.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\jogador\jogador_pulo.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\gamemenu.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\inimigos\gorgona\gorgona_andar.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\inimigos\gorgona\gorgona_ataque.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\inimigos\gorgona\gorgona_especial.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\inimigos\gorgona\gorgona_especial1.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\inimigos\gorgona\gorgona_especial2.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\inimigos\gorgona\gorgona_machucado.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\inimigos\gorgona\gorgona_morte.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\inimigos\gorgona\gorgona_parado.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\jogador\jogador_ataque.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\jogador\jogador_pedra.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\inimigos\athena\guerreira_andando.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\inimigos\athena\guerreira_parado.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\inimigos\athena\guerreira_ataque.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\plataformas\pedra.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\fundos\fundo1.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\tilesets\babylon.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\fundos\fundo01.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\fundos\fundo02.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\inimigos\athena\guerreira_morte.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\inimigos\athena\guerreira_machucado.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\obstaculos\caixa\caixa_arrastado.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\obstaculos\caixa\caixa_parado.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
-    <Image Include="assets\obstaculos\plataforma.png">
-      <Filter>Arquivos de Recurso</Filter>
-    </Image>
+    <Image Include="assets\athenasoldier.png" />
+    <Image Include="assets\fundos\fundo01.png" />
+    <Image Include="assets\fundos\fundo02.png" />
+    <Image Include="assets\fundos\fundo1.png" />
+    <Image Include="assets\gamemenu.png" />
+    <Image Include="assets\greeksoldier.png" />
+    <Image Include="assets\inimigos\athena\guerreira_ataque.png" />
+    <Image Include="assets\inimigos\athena\guerreira_machucado.png" />
+    <Image Include="assets\inimigos\athena\guerreira_morte.png" />
+    <Image Include="assets\inimigos\gorgona\gorgona_andar.png" />
+    <Image Include="assets\inimigos\gorgona\gorgona_ataque.png" />
+    <Image Include="assets\inimigos\gorgona\gorgona_especial.png" />
+    <Image Include="assets\inimigos\gorgona\gorgona_especial1.png" />
+    <Image Include="assets\inimigos\gorgona\gorgona_especial2.png" />
+    <Image Include="assets\inimigos\gorgona\gorgona_machucado.png" />
+    <Image Include="assets\inimigos\gorgona\gorgona_morte.png" />
+    <Image Include="assets\inimigos\gorgona\gorgona_parado.png" />
+    <Image Include="assets\inimigos\athena\guerreira_andando.png" />
+    <Image Include="assets\inimigos\athena\guerreira_parado.png" />
+    <Image Include="assets\jogador\jogador.png" />
+    <Image Include="assets\jogador\jogador_andar.png" />
+    <Image Include="assets\jogador\jogador_ataque.png" />
+    <Image Include="assets\jogador\jogador_machucado.png" />
+    <Image Include="assets\jogador\jogador_morte.png" />
+    <Image Include="assets\jogador\jogador_parado.png" />
+    <Image Include="assets\jogador\jogador_pedra.png" />
+    <Image Include="assets\jogador\jogador_pulo.png" />
+    <Image Include="assets\jogador\Jump.png" />
+    <Image Include="assets\jogador\Walk.png" />
+    <Image Include="assets\obstaculos\caixa\caixa_arrastado.png" />
+    <Image Include="assets\obstaculos\caixa\caixa_parado.png" />
+    <Image Include="assets\obstaculos\plataforma.png" />
+    <Image Include="assets\plataformas\pedra.png" />
+    <Image Include="assets\tilesets\babylon.png" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="assets\Fontes\Greek-Freak.ttf" />
     <Font Include="assets\Greek-Freak.ttf" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".gitattributes" />
+    <None Include=".gitignore" />
+    <None Include="assets\mapas\mapa1.tmj" />
+    <None Include="assets\tilesets\greece.tsx" />
+    <None Include="Jogo.exe" />
     <None Include="openal32.dll" />
+    <None Include="README.md" />
+    <None Include="save.dat" />
     <None Include="sfml-audio-2.dll" />
     <None Include="sfml-audio-d-2.dll" />
     <None Include="sfml-graphics-2.dll" />
@@ -422,12 +159,5 @@
     <None Include="sfml-system-d-2.dll" />
     <None Include="sfml-window-2.dll" />
     <None Include="sfml-window-d-2.dll" />
-    <None Include="save.dat" />
-    <None Include=".gitattributes" />
-    <None Include=".gitignore" />
-    <None Include="Jogo.exe" />
-    <None Include="README.md" />
-    <None Include="assets\mapas\mapa1.tmj" />
-    <None Include="assets\tilesets\greece.tsx" />
   </ItemGroup>
 </Project>

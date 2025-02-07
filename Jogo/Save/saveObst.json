@@ -4678,18 +4678,5 @@
             "x": 32.0,
             "y": 32.0
         }
-    },
-    {
-        "ID": 32,
-        "arrastado": false,
-        "colisaoParede": false,
-        "posicao": {
-            "x": 600.0,
-            "y": 526.0
-        },
-        "tamanho": {
-            "x": 50.0,
-            "y": 50.0
-        }
     }
 ]

@@ -76,5 +76,6 @@ namespace Fase {
 		void executar();
 		void salvar();
 		void gerenciarColisoes();
+		virtual void carregar() = 0;
 	};
 }

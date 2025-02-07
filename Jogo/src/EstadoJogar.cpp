@@ -1,5 +1,6 @@
 #include "../include/EstadoJogar.hpp"
 #include "../include/fases/Fase01.hpp"
+#include "../include/fases/Fase02.hpp"
 
 namespace Estado {
 	EstadoJogar::EstadoJogar(IDs::IDs ID, IDs::IDs IDFase) : Estado(ID), fase(nullptr) {
@@ -21,27 +22,33 @@ namespace Estado {
 			if (IDFase == IDs::IDs::fase01) {
 				Fase::Fase01* fase01 = new Fase::Fase01();
 				fase01->iniciaFase(false);
-				fase = static_cast<Fase::Fase*>(fase01);
-				if (fase == nullptr) {
-					//throw std::invalid_argument("Fase invalida");
-					exit(1);
-				}
+				fase = fase01;  // Não precisa do cast, pois Fase01 já herda de Fase.
 			}
-			
+			else if (IDFase == IDs::IDs::fase02) {  // Criando Fase02 corretamente
+				Fase::Fase02* fase02 = new Fase::Fase02();
+				fase02->iniciaFase(false);
+				fase = fase02;
+			}
 		}
 		else if (ID == IDs::IDs::estadoJogar2Jog) {
 			if (IDFase == IDs::IDs::fase01) {
 				Fase::Fase01* fase01 = new Fase::Fase01();
 				fase01->iniciaFase(true);
-				fase = static_cast<Fase::Fase*>(fase01);
-				if (fase == nullptr) {
-					//throw std::invalid_argument("Fase invalida");
-					exit(1);
-				}
+				fase = fase01;
+			}
+			else if (IDFase == IDs::IDs::fase02) {  // Criando Fase02 corretamente
+				Fase::Fase02* fase02 = new Fase::Fase02();
+				fase02->iniciaFase(true);
+				fase = fase02;
 			}
 		}
 		else {
 			throw std::invalid_argument("ID invalido");
+		}
+
+		if (fase == nullptr) {
+			std::cerr << "Erro: Fase não foi criada corretamente!" << std::endl;
+			exit(1);
 		}
 	}
 
@@ -54,7 +61,18 @@ namespace Estado {
 				//throw std::invalid_argument("Fase invalida");
 				exit(1);
 			}
+
 		}
+
+		else if (IDFase == IDs::IDs::fase02) {
+
+			Fase::Fase02* fase02  = new Fase::Fase02();
+			fase02->carregaFase();
+			fase = static_cast<Fase::Fase*>(fase02);
+			if (fase == nullptr)
+				exit(1);
+		}
+
 	}
 
 	void EstadoJogar::mudarAtivoObs(const bool ativo) {
@@ -68,5 +86,6 @@ namespace Estado {
 
 	void EstadoJogar::executar() {
 		fase->executar();
+
 	}
 }

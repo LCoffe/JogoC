@@ -13,8 +13,8 @@ namespace Fase {
 	}
 
 
-	void Fase01::iniciaFase(bool doisJogadres) {
-		criarMapa(doisJogadres);
+	void Fase01::iniciaFase(bool doisJogadores) {
+		criarMapa(doisJogadores);
 		executar();
 	}
 

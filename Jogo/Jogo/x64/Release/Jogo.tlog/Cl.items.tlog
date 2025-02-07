@@ -1,3 +1,4 @@
+C:\Users\alano\source\repos\JogoC\Jogo\src\fases\Fase02.cpp;C:\Users\alano\source\repos\JogoC\Jogo\Jogo\x64\Release\Fase02.obj
 C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp;C:\Users\alano\source\repos\JogoC\Jogo\Jogo\x64\Release\AnimacaoMovimento.obj
 C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoEstatica.cpp;C:\Users\alano\source\repos\JogoC\Jogo\Jogo\x64\Release\AnimacaoEstatica.obj
 C:\Users\alano\source\repos\JogoC\Jogo\src\ElementosGraficos\animacoes\AnimacaoUnica.cpp;C:\Users\alano\source\repos\JogoC\Jogo\Jogo\x64\Release\AnimacaoUnica.obj
@@ -42,4 +43,5 @@ C:\Users\alano\source\repos\JogoC\Jogo\src\ObservadorMenu.cpp;C:\Users\alano\sou
 C:\Users\alano\source\repos\JogoC\Jogo\src\Jogo.cpp;C:\Users\alano\source\repos\JogoC\Jogo\Jogo\x64\Release\Jogo.obj
 C:\Users\alano\source\repos\JogoC\Jogo\src\Observado.cpp;C:\Users\alano\source\repos\JogoC\Jogo\Jogo\x64\Release\Observado.obj
 C:\Users\alano\source\repos\JogoC\Jogo\src\Parallax.cpp;C:\Users\alano\source\repos\JogoC\Jogo\Jogo\x64\Release\Parallax.obj
+C:\Users\alano\source\repos\JogoC\Jogo\src\Projetil.cpp;C:\Users\alano\source\repos\JogoC\Jogo\Jogo\x64\Release\Projetil.obj
 C:\Users\alano\source\repos\JogoC\Jogo\stdafx\stdafx.cpp;C:\Users\alano\source\repos\JogoC\Jogo\Jogo\x64\Release\stdafx.obj

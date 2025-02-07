@@ -566,6 +566,10 @@ namespace Fase {
 	}
 
 	void Fase::atualizaFundo() {
+		if (fundo == nullptr) {
+			std::cerr << "Erro: fundo não foi inicializado antes de atualizar!" << std::endl;
+			return;
+		}
 		fundo->atualizar();
 	}
 
@@ -590,7 +594,7 @@ namespace Fase {
 	void Fase::executar() {
 		pJogador = getJogador();
 		pJogadorDois = getJogadorDois();
-		if (pJogadorDois != nullptr) {
+		if (pJogadorDois != nullptr && pJogador != nullptr) {
 			if (pJogador->getTempoMorte() <= 1.25f && pJogadorDois->getTempoMorte() <= 1.25f) {
 
 				// Atualizar camera
@@ -617,12 +621,14 @@ namespace Fase {
 
 				gerenciarColisoes();
 				atualizaPontuacao();
+				pObsFase->finalizaFase();
 			}
 			else {
 				pObsFase->jogadorMorreu();
 			}
 		}
-		else {
+
+		else if(pJogador != nullptr) {
 			if (pJogador->getTempoMorte() <= 1.25f) {
 				pGG->atualizarCamera(pJogador->getPos(), pGG->getTamJanela());
 
@@ -635,6 +641,7 @@ namespace Fase {
 
 				gerenciarColisoes();
 				atualizaPontuacao();
+				pObsFase->finalizaFase();
 			}
 			else {
 				pObsFase->jogadorMorreu();

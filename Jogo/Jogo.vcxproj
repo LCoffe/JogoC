@@ -133,6 +133,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\fases\Fase02.cpp" />
     <ClCompile Include="src\ElementosGraficos\animacoes\AnimacaoMovimento.cpp" />
     <ClCompile Include="src\ElementosGraficos\animacoes\AnimacaoEstatica.cpp" />
     <ClCompile Include="src\ElementosGraficos\animacoes\AnimacaoUnica.cpp" />
@@ -181,6 +182,7 @@
     <ClCompile Include="stdafx\stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\fases\Fase02.hpp" />
     <ClInclude Include="include\ElementosGraficos\animacoes\AnimacaoMovimento.hpp" />
     <ClInclude Include="include\ElementosGraficos\animacoes\AnimacaoEstatica.hpp" />
     <ClInclude Include="include\ElementosGraficos\animacoes\AnimacaoUnica.hpp" />

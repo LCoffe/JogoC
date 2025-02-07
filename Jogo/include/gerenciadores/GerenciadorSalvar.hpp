@@ -17,7 +17,7 @@
 #define CAMINHO_SAVE_COLOCACAO "./Save/saveColocacao.json"
 
 namespace Fase {
-	class Fase01;
+	class Fase;
 }
 
 namespace Gerenciador {
@@ -36,14 +36,14 @@ namespace Gerenciador {
 			nlohmann::json salvarPersonagem(Lista::ListaEntidade& LP);
 			nlohmann::json salvarObstaculo(Lista::ListaEntidade& LO);
 			void salvarColocacao(string nome, int pontuacao);
-			nlohmann::json carregarPersonagem(Fase::Fase01 &Fase);
-			nlohmann::json carregarObstaculo(Fase::Fase01 &Fase);
+			nlohmann::json carregarPersonagem(Fase::Fase &Fase);
+			nlohmann::json carregarObstaculo(Fase::Fase &Fase);
 			nlohmann::json carregarFase();
 			nlohmann::json carregarColocacao();
 			void limparColocacao();
 
 			void salvarJogo(Lista::ListaEntidade LP, Lista::ListaEntidade LO, IDs::IDs IDFase, bool doisJogadores);
-			void carregarJogo(Fase::Fase01 &Fase);
+			void carregarJogo(Fase::Fase &Fase);
 			//void carregarJogo(Lista::ListaEntidade &LP, Lista::ListaEntidade &LO);
 	};
 }

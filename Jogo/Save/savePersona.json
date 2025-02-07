@@ -18,19 +18,19 @@
             "y": -500.0
         },
         "posicao": {
-            "x": 138.73817443847656,
+            "x": 100.0,
             "y": 526.0
         },
         "tamanho": {
             "x": 50.0,
             "y": 50.0
         },
-        "tempoAtaque": 0.03200000151991844,
+        "tempoAtaque": 0.0,
         "tempoDano": 0.0,
         "tempoMorte": 0.0,
         "tempoPetrificado": 0.0,
         "velocidade": {
-            "x": 80.0,
+            "x": 100.0,
             "y": 0.0
         },
         "velocidadeArma": {
@@ -40,48 +40,8 @@
         "vida": 100.0
     },
     {
-        "ID": 1,
-        "IDArma": 33,
-        "armaAtual": 0,
-        "atacando": false,
-        "colidiu": false,
-        "colisaoChao": true,
-        "direcao": false,
-        "direcaoArma": false,
-        "jogadorUm": false,
-        "levandoDano": false,
-        "morrendo": false,
-        "petrificado": false,
-        "pontuacao": 0,
-        "posArma": {
-            "x": 676.2837524414063,
-            "y": 537.9555053710938
-        },
-        "posicao": {
-            "x": 747.2841186523438,
-            "y": 526.0
-        },
-        "tamanho": {
-            "x": 50.0,
-            "y": 50.0
-        },
-        "tempoAtaque": 0.19200001657009125,
-        "tempoDano": 0.0,
-        "tempoMorte": 0.0,
-        "tempoPetrificado": 0.0,
-        "velocidade": {
-            "x": 80.0,
-            "y": 0.0
-        },
-        "velocidadeArma": {
-            "x": -200.0,
-            "y": 5.0
-        },
-        "vida": 100.0
-    },
-    {
         "ID": 30,
-        "IDArma": 33,
+        "IDArma": 28,
         "armaAtual": 0,
         "atacando": false,
         "ataqueBasico": false,
@@ -90,7 +50,7 @@
         "colisaoChao": true,
         "direcao": false,
         "direcaoArma": false,
-        "jogadorUm": false,
+        "jogadorUm": true,
         "levandoDano": false,
         "morrendo": false,
         "petrificado": false,
@@ -100,7 +60,7 @@
             "y": -500.0
         },
         "posicao": {
-            "x": 330.17352294921875,
+            "x": 267.9729309082031,
             "y": 526.0
         },
         "tamanho": {
@@ -116,9 +76,9 @@
             "y": 0.0
         },
         "velocidadeArma": {
-            "x": -200.0,
-            "y": 5.0
+            "x": 0.0,
+            "y": 0.0
         },
-        "vida": 65.0
+        "vida": 100.0
     }
 ]
