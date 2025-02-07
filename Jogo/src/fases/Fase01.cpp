@@ -10,6 +10,10 @@ namespace Fase {
 	Fase01::~Fase01() {
 		pListaObstaculo->limparLista();
 		pListaPersona->limparLista();
+
+		if (mapa != nullptr) {
+			delete mapa;
+		}
 	}
 
 

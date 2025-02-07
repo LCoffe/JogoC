@@ -32,7 +32,7 @@ namespace Observado {
 namespace Fase {
 	class Fase : public Ente {
 	private:
-		static Observado::Observador::ObservadorFase* pObsFase;
+		Observado::Observador::ObservadorFase* pObsFase;
 	protected:
 		Fundo::Parallax* fundo;
 		Mapa* mapa;

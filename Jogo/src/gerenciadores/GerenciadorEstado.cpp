@@ -40,6 +40,33 @@ namespace Gerenciador {
 		estado->mudarAtivoObs(false);
 	}
 
+	void GerenciadorEstado::passouFase(const IDs::IDs ID) {
+		if (ID == IDs::IDs::fase01) {
+			Estado::EstadoJogar* estado = static_cast<Estado::EstadoJogar*>(getEstado());
+			Fase::Fase* fase = estado->getFase();
+			if (fase->getDoisJogadores()) {
+				removerEstado();
+				incluiEstado(IDs::IDs::estadoJogar2Jog, IDs::IDs::fase02, false);
+			}
+			else {
+				removerEstado();
+				incluiEstado(IDs::IDs::estadoJogar1Jog, IDs::IDs::fase02, false);
+			}
+		}
+		else if (ID == IDs::IDs::fase02) {
+			Estado::EstadoJogar* estado = static_cast<Estado::EstadoJogar*>(getEstado());
+			Fase::Fase* fase = estado->getFase();
+			if (fase->getDoisJogadores()) {
+				removerEstado();
+				incluiEstado(IDs::IDs::estadoJogar2Jog, IDs::IDs::fase01, false);
+			}
+			else {
+				removerEstado();
+				incluiEstado(IDs::IDs::estadoJogar1Jog, IDs::IDs::fase01, false);
+			}
+		}
+	}
+
 	void GerenciadorEstado::incluiEstado(const IDs::IDs ID, const IDs::IDs IDFase ,bool carregar) {
 		Estado::Estado* estado = nullptr;
 		if (ID == IDs::IDs::estadoMenuPrincipal) {
@@ -48,7 +75,7 @@ namespace Gerenciador {
 		else if (ID == IDs::IDs::estadoJogar1Jog) {
 			if (carregar) {
 				estado = static_cast<Estado::Estado*>(new Estado::EstadoJogar(ID, IDFase, true));
-			}
+			} 
 			else {
 				estado = static_cast<Estado::Estado*>(new Estado::EstadoJogar(ID, IDFase));
 			}
@@ -63,13 +90,17 @@ namespace Gerenciador {
 		}
 		else if (ID == IDs::IDs::estadoMenuOpcoes) {
 			Fase::Fase* pFase = nullptr;
-			if (getEstado()->getID() == IDs::IDs::estadoJogar1Jog || getEstado()->getID() == IDs::IDs::estadoJogar2Jog) {
-				Estado::EstadoJogar* pEJ = static_cast<Estado::EstadoJogar*>(getEstado());
-				pFase = pEJ->getFase();
+			Estado::Estado* aux = getEstado();
+			if (aux == nullptr) {
+				exit(1);
 			}
-			Estado::EstadoMenu* pEM = new Estado::EstadoMenu(ID);
-			pEM->setFase(pFase);
-			estado = static_cast<Estado::Estado*>(pEM);
+			if (aux->getID() == IDs::IDs::estadoJogar1Jog || aux->getID() == IDs::IDs::estadoJogar2Jog) {
+				Estado::EstadoJogar* pEJ = static_cast<Estado::EstadoJogar*>(aux);
+				pFase = pEJ->getFase();
+				Estado::EstadoMenu* pEM = new Estado::EstadoMenu(ID);
+				pEM->setFase(pFase);
+				estado = static_cast<Estado::Estado*>(pEM);
+			}
 		}
 		else if (ID == IDs::IDs::estadoSalvarColocacao) {
 			Fase::Fase* pFase = nullptr;
@@ -102,23 +133,21 @@ namespace Gerenciador {
 			exit(1);
 		}
 
-		if (estado == nullptr) {
-			//std::cerr << "Erro ao criar o estado" << std::endl;
-			exit(1);
+		if (estado != nullptr) {
+			if (!pilhaEstado.empty()) {
+				desativarObservadores();
+			}
+			pilhaEstado.push(estado);
+			ativarObservadores();
 		}
-
-		if (!pilhaEstado.empty()) {
-			desativarObservadores();
-		}
-		pilhaEstado.push(estado);
-		ativarObservadores();
 	}
 
 	void GerenciadorEstado::removerEstado() {
 		if (pilhaEstado.empty()) {
 			return;
 		}
-		delete pilhaEstado.top();
+		Estado::Estado* estado = pilhaEstado.top();
+		delete estado;
 		pilhaEstado.top() = nullptr;
 		pilhaEstado.pop();
 		if (!pilhaEstado.empty()) {
@@ -153,7 +182,8 @@ namespace Gerenciador {
 		if (pilhaEstado.empty()) {
 			return nullptr;
 		}
-		return pilhaEstado.top();
+		Estado::Estado* estado = pilhaEstado.top();
+		return estado;
 	}
 	void GerenciadorEstado::executar() {
 		if (!pilhaEstado.empty()) {

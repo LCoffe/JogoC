@@ -12,6 +12,10 @@ namespace Fase {
 	{
 		pListaObstaculo->limparLista();
 		pListaPersona->limparLista();
+
+		if (mapa != nullptr) {
+			delete mapa;
+		}
 	}
 
 	void Fase02::iniciaFase(bool doisJogadores)

@@ -22,24 +22,24 @@ namespace Estado {
 			if (IDFase == IDs::IDs::fase01) {
 				Fase::Fase01* fase01 = new Fase::Fase01();
 				fase01->iniciaFase(false);
-				fase = fase01;  // Não precisa do cast, pois Fase01 já herda de Fase.
+				fase = static_cast<Fase::Fase*>(fase01);  // Não precisa do cast, pois Fase01 já herda de Fase.
 			}
 			else if (IDFase == IDs::IDs::fase02) {  // Criando Fase02 corretamente
 				Fase::Fase02* fase02 = new Fase::Fase02();
 				fase02->iniciaFase(false);
-				fase = fase02;
+				fase = static_cast<Fase::Fase*>(fase02);
 			}
 		}
 		else if (ID == IDs::IDs::estadoJogar2Jog) {
 			if (IDFase == IDs::IDs::fase01) {
 				Fase::Fase01* fase01 = new Fase::Fase01();
 				fase01->iniciaFase(true);
-				fase = fase01;
+				fase = static_cast<Fase::Fase*>(fase01);
 			}
 			else if (IDFase == IDs::IDs::fase02) {  // Criando Fase02 corretamente
 				Fase::Fase02* fase02 = new Fase::Fase02();
 				fase02->iniciaFase(true);
-				fase = fase02;
+				fase = static_cast<Fase::Fase*>(fase02);
 			}
 		}
 		else {

@@ -15,6 +15,10 @@ namespace Entidade {
 			}
 
 			Jogador::~Jogador() {
+				if (pObs != nullptr) {
+					delete pObs;
+				}
+				pObs = nullptr;
 			}
 
 			void Jogador::pular() {
@@ -233,11 +237,13 @@ namespace Entidade {
 					j["velocidadeArma"] = { {"x", p->getVelocidade().x}, {"y", p->getVelocidade().y} };
 					j["colidiu"] = p->getColidiu();
 					j["direcaoArma"] = p->getDirecao();
+					j["ativo"] = p->getAtivo();
 				}
 				else {
 					j["velocidadeArma"] = { {"x", 0.0f}, {"y", 0.0f} };
 					j["colidiu"] = false;
 					j["direcaoArma"] = false;
+					j["ativo"] = false;
 				}
 			}
 		}

@@ -4,6 +4,7 @@
         "IDArma": 28,
         "armaAtual": 0,
         "atacando": false,
+        "ativo": false,
         "colidiu": false,
         "colisaoChao": true,
         "direcao": true,
@@ -18,7 +19,7 @@
             "y": -500.0
         },
         "posicao": {
-            "x": 100.0,
+            "x": 137.3848876953125,
             "y": 526.0
         },
         "tamanho": {
@@ -46,6 +47,7 @@
         "atacando": false,
         "ataqueBasico": false,
         "ataquePetrificante": false,
+        "ativo": false,
         "colidiu": false,
         "colisaoChao": true,
         "direcao": false,
@@ -60,7 +62,7 @@
             "y": -500.0
         },
         "posicao": {
-            "x": 267.9729309082031,
+            "x": 266.6006774902344,
             "y": 526.0
         },
         "tamanho": {

@@ -3,7 +3,7 @@
 
 namespace Observado {
 	namespace Observador {
-		ObservadorFase::ObservadorFase(Fase::Fase* pFase) : pFase(pFase) {
+		ObservadorFase::ObservadorFase(Fase::Fase* pFase) : Observador(),  pFase(pFase) {
 		}
 		ObservadorFase::~ObservadorFase() {
 			pFase = nullptr;
@@ -30,22 +30,17 @@ namespace Observado {
 			if (pFase->getID() == IDs::IDs::fase01) {
 				if (pFase->getDoisJogadores()) {
 					if ((pFase->getJogador()->getPos().x > 500.0f) || pFase->getJogadorDois()->getPos().x > 500.0f) {
-						pGEst->removerEstado();
-						pGEst->incluiEstado(IDs::IDs::estadoJogar2Jog,IDs::IDs::fase02 , false);
+						pGEst->passouFase(pFase->getID());
 					}
 				}
 
 				else {
-					if ((pFase->getJogador()->getPos().x > 500.0f)){
-						pGEst->removerEstado();
-						pGEst->incluiEstado(IDs::IDs::estadoJogar1Jog, IDs::IDs::fase02, false);
+					if ((pFase->getJogador()->getPos().x > 500.0f)) {
+						pGEst->passouFase(pFase->getID());
 					}
 				}
 
 			}
-		
-
-
 		}
 	}
 }

@@ -52,6 +52,15 @@ namespace Observado {
 								pGEst->incluiEstado(IDs::IDs::estadoJogar1Jog, ID,true);
 							}
 						}
+						else if (ID == IDs::IDs::fase02) {
+							bool doisJogadores = it["doisJogadores"];
+							if (doisJogadores) {
+								pGEst->incluiEstado(IDs::IDs::estadoJogar2Jog, ID, true);
+							}
+							else {
+								pGEst->incluiEstado(IDs::IDs::estadoJogar1Jog, ID, true);
+							}
+						}
 					}
 				}
 				else if (pMenu->getIDBotao() == IDs::IDs::botaoColocacao) {

@@ -1,6 +1,7 @@
 #include "../../include/menus/MenuOpcoes.hpp"
 
 constexpr const char* const CAMINHO_FUNDO_FASE1 = "assets/fundos/fundo1.png";
+constexpr const char* const CAMINHO_FUNDO_FASE2 = "assets/fundos/fundo02.png";
 
 namespace Menu {
 	MenuOpcoes::MenuOpcoes() : Menu(IDs::IDs::menuOpcoes), pFase(nullptr) {
@@ -30,8 +31,11 @@ namespace Menu {
 
 	void MenuOpcoes::criaFundoParallax() {
 		fundoParallax = new Fundo::Parallax();
-		if (pFase->getID() == IDs::IDs::fase01) {
+		if (pFase != nullptr && pFase->getID() == IDs::IDs::fase01) {
 			fundoParallax->carregarTextura(CAMINHO_FUNDO_FASE1);
+		}
+		else if (pFase->getID() == IDs::IDs::fase02) {
+			fundoParallax->carregarTextura(CAMINHO_FUNDO_FASE2);
 		}
 		if (fundoParallax == nullptr) {
 			//throw std::invalid_argument("Fundo invalido");
