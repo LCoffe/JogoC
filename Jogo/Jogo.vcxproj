@@ -145,8 +145,10 @@
     <ClCompile Include="src\Entes\Ente.cpp" />
     <ClCompile Include="src\Entes\Entidade.cpp" />
     <ClCompile Include="src\entes\obstaculos\Caixa.cpp" />
+    <ClCompile Include="src\entes\obstaculos\Espinho.cpp" />
     <ClCompile Include="src\Entes\Obstaculos\Obstaculo.cpp" />
     <ClCompile Include="src\Entes\Obstaculos\Plataforma.cpp" />
+    <ClCompile Include="src\entes\obstaculos\Portao.cpp" />
     <ClCompile Include="src\Entes\Personagens\Inimigos\Gorgona.cpp" />
     <ClCompile Include="src\Entes\Personagens\Inimigos\GuerreiraAthena.cpp" />
     <ClCompile Include="src\Entes\Personagens\Inimigos\Inimigo.cpp" />
@@ -194,8 +196,10 @@
     <ClInclude Include="include\Entes\Ente.hpp" />
     <ClInclude Include="include\Entes\Entidade.hpp" />
     <ClInclude Include="include\entes\obstaculos\Caixa.hpp" />
+    <ClInclude Include="include\entes\obstaculos\Espinho.hpp" />
     <ClInclude Include="include\Entes\Obstaculos\Obstaculo.hpp" />
     <ClInclude Include="include\Entes\Obstaculos\Plataforma.hpp" />
+    <ClInclude Include="include\entes\obstaculos\Portao.hpp" />
     <ClInclude Include="include\Entes\Personagens\Inimigos\Gorgona.hpp" />
     <ClInclude Include="include\Entes\Personagens\Inimigos\GuerreiraAthena.hpp" />
     <ClInclude Include="include\Entes\Personagens\Inimigos\Inimigo.hpp" />

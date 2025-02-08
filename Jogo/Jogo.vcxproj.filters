@@ -48,6 +48,9 @@
     <ClCompile Include="src\Projetil.cpp" />
     <ClCompile Include="stdafx\stdafx.cpp" />
     <ClCompile Include="src\entes\personagens\Inimigos\Minotauro.cpp" />
+    <ClCompile Include="src\fases\Fase02.cpp" />
+    <ClCompile Include="src\entes\obstaculos\Espinho.cpp" />
+    <ClCompile Include="src\entes\obstaculos\Portao.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\ElementosGraficos\animacoes\AnimacaoMovimento.hpp" />
@@ -99,6 +102,9 @@
     <ClInclude Include="include\Projetil.hpp" />
     <ClInclude Include="stdafx\stdafx.hpp" />
     <ClInclude Include="include\entes\personagens\Inimigos\Minotauro.hpp" />
+    <ClInclude Include="include\fases\Fase02.hpp" />
+    <ClInclude Include="include\entes\obstaculos\Espinho.hpp" />
+    <ClInclude Include="include\entes\obstaculos\Portao.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\athenasoldier.png" />

@@ -21,7 +21,7 @@ Jogo::Jogo() : evento() {
 	}
 
 	pGEst->incluiEstado(IDs::IDs::estadoMenuPrincipal, IDs::IDs::nulo, false);
-	
+	executar();
 }	
 
 Jogo::~Jogo() {}

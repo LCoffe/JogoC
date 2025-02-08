@@ -21,7 +21,7 @@ namespace Entidade {
 					pp->setDirecao(true);
 				}
 			}
-			else if (ent->getID() == IDs::IDs::plataforma) {
+			else if (ent->getID() == IDs::IDs::plataforma || ent->getID() == IDs::IDs::espinho) {
 				colisaoPlataforma(ent, diferenca);
 			}
 			else if (ent->getID() == IDs::IDs::projetil) {

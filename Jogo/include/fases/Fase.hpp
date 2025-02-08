@@ -9,6 +9,9 @@
 
 #include "../../include/entes/obstaculos/Obstaculo.hpp"
 #include "../../include/entes/obstaculos/Plataforma.hpp"
+#include "../../include/entes/obstaculos/Caixa.hpp"
+#include "../../include/entes/obstaculos/Espinho.hpp"
+#include "../../include/entes/obstaculos/Portao.hpp"
 
 #include "../../include/gerenciadores/GerenciadorColisoes.hpp"
 #include "../../include/gerenciadores/GerenciadorSalvar.hpp"
@@ -18,7 +21,6 @@
 #include "../../include/entes/personagens/Inimigos/Minotauro.hpp"
 #include "../../include/entes/personagens/inimigos/Inimigo.hpp"
 #include "../../include/entes/personagens/jogador/Jogador.hpp"
-#include "../../include/entes/obstaculos/Caixa.hpp"
 #include "../../include/Arma.hpp"
 
 #include "../mapas/Mapa.hpp"
@@ -68,6 +70,7 @@ namespace Fase {
 		Entidade::Personagem::Jogador::Jogador* getJogadorDois() { return pJogadorDois; }
 		void setDoisJogadores(bool doisJogadores) { this->doisJogadores = doisJogadores; }
 		bool getDoisJogadores() { return doisJogadores; }
+		void verificaInimigo();
 		void setPontuacao(int pontuacao) { this->pontuacao = pontuacao; }
 		int getPontuacao() { return pontuacao; }
 		void atualizaPontuacao();

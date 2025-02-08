@@ -19,6 +19,7 @@ namespace Observado {
 			void attTeclaUnica(sf::Keyboard::Key tecla);
 			void jogadorMorreu();
 			void finalizaFase(Jogador* pJog, Jogador* pJog2);
+			bool verificaInimigoVivo(Lista::ListaEntidade& LP);
 		};
 	}
 }

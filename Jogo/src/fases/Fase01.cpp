@@ -15,7 +15,7 @@ namespace Fase {
 
 	void Fase01::iniciaFase(bool doisJogadres) {
 		criarMapa(doisJogadres);
-		executar();
+		//executar();
 	}
 
 	void Fase01::iniciaFundo() {
@@ -43,6 +43,7 @@ namespace Fase {
 			criaPersonagem2Jog(sf::Vector2f(400, 768 - 251), IDs::IDs::minotauro, false);
 
 			criaPlataforma(sf::Vector2f(600, 500), sf::Vector2f(50, 50), IDs::IDs::caixa);
+			criaPlataforma(sf::Vector2f(1400, 500), sf::Vector2f(20, 70), IDs::IDs::portao);
 		}
 		else {
 			//Cria Jogador
@@ -51,24 +52,10 @@ namespace Fase {
 			//criaPersonagem1Jog(sf::Vector2f(300, 768 - 251), IDs::IDs::gorgona);
 			criaPersonagem1Jog(sf::Vector2f(400, 768 - 251), IDs::IDs::minotauro);
 
-			criaPlataforma(sf::Vector2f(600, 500), sf::Vector2f(50, 50), IDs::IDs::caixa);
+			criaPlataforma(sf::Vector2f(700, 500), sf::Vector2f(50, 50), IDs::IDs::caixa);
+			criaPlataforma(sf::Vector2f((rand() % 100) + 500, 500), sf::Vector2f(50, 50), IDs::IDs::espinho);
+			criaPlataforma(sf::Vector2f(1400, 500), sf::Vector2f(20, 70), IDs::IDs::portao);
 		}
-
-		//criaPlataforma(sf::Vector2f(600, 500), sf::Vector2f(50, 50), IDs::IDs::caixa);
-		//criaPersonagem(sf::Vector2f(400, 500), IDs::IDs::gorgona, false);
-		// Criar plataformas
-		/*
-		criaPlataforma(sf::Vector2f(0, 768 - 100), sf::Vector2f(900, 100), IDs::IDs::plataforma);
-		criaPlataforma(sf::Vector2f(1366, 768 - 100), sf::Vector2f(1366, 100), IDs::IDs::plataforma);
-		criaPlataforma(sf::Vector2f(800, 768 - 188), sf::Vector2f(100, 138), IDs::IDs::plataforma);
-		criaPlataforma(sf::Vector2f(1600, 768 - 188), sf::Vector2f(100, 138), IDs::IDs::plataforma);
-
-		
-		*/
-			// Criar inimigos
-
-		//criaPlataforma(sf::Vector2f(600, 768 - 200), sf::Vector2f(50, 50), IDs::IDs::caixa);
-
 	}
 
 	void Fase01::carregar() {
@@ -94,8 +81,11 @@ namespace Fase {
 			if (ID == IDs::IDs::plataforma) {
 				criaPlataforma(pos, tam, ID);
 			}
-			if (ID == IDs::IDs::caixa) {
+			else if (ID == IDs::IDs::caixa) {
 				criaPlataforma(pos, tam, ID, arrastado, colisaoParede);
+			}
+			else if (ID == IDs::IDs::espinho) {
+				criaPlataforma(pos, tam, ID);
 			}
 		}
 

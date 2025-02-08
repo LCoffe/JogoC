@@ -18,7 +18,7 @@ namespace Fase {
 	void Fase02::iniciaFase(bool doisJogadores)
 	{
 		criarMapa(doisJogadores);
-		executar();
+		//executar();
 	}
 	void Fase02::criarMapa(bool doisJogadores)
 	{
@@ -38,18 +38,8 @@ namespace Fase {
 			criaPersonagem1Jog(sf::Vector2f(300, 768 - 251), IDs::IDs::gorgona);
 			// Criar inimigos
 			//criaPersonagem1Jog(sf::Vector2f(300, 768 - 251), IDs::IDs::gorgona);
-			
+
 		}
-		/*
-criaPlataforma(sf::Vector2f(0, 768 - 100), sf::Vector2f(900, 100), IDs::IDs::plataforma);
-criaPlataforma(sf::Vector2f(1366, 768 - 100), sf::Vector2f(1366, 100), IDs::IDs::plataforma);
-criaPlataforma(sf::Vector2f(800, 768 - 188), sf::Vector2f(100, 138), IDs::IDs::plataforma);
-criaPlataforma(sf::Vector2f(1600, 768 - 188), sf::Vector2f(100, 138), IDs::IDs::plataforma);
-
-
-*/
-
-
 	}
 
 	void Fase02::iniciaFundo()
