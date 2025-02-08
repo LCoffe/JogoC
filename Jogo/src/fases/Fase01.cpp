@@ -2,7 +2,7 @@
 
 namespace Fase {
 	Fase01::Fase01() : Fase(IDs::IDs::fase01) {
-		mapa = new Mapa(this, MAPA1_PATH, TILESET1_PATH); // Cria o mapa
+		mapa = new Mapa(this, MAPA1_PATH, TILESET1_PATH);
 
 		iniciaFundo();
 	}
@@ -28,8 +28,8 @@ namespace Fase {
 	}
 
 	void Fase01::carregaFase() {
-		pGS->carregarJogo(*this);
-		executar();
+		carregar();
+		//executar();
 	}
 
 	void Fase01::criarMapa(bool doisJogadores) {
@@ -41,6 +41,8 @@ namespace Fase {
 			// Criar inimigos
 			//criaPersonagem2Jog(sf::Vector2f(300, 768 - 251), IDs::IDs::gorgona, false);
 			criaPersonagem2Jog(sf::Vector2f(400, 768 - 251), IDs::IDs::minotauro, false);
+
+			criaPlataforma(sf::Vector2f(600, 500), sf::Vector2f(50, 50), IDs::IDs::caixa);
 		}
 		else {
 			//Cria Jogador
@@ -48,6 +50,8 @@ namespace Fase {
 			// Criar inimigos
 			//criaPersonagem1Jog(sf::Vector2f(300, 768 - 251), IDs::IDs::gorgona);
 			criaPersonagem1Jog(sf::Vector2f(400, 768 - 251), IDs::IDs::minotauro);
+
+			criaPlataforma(sf::Vector2f(600, 500), sf::Vector2f(50, 50), IDs::IDs::caixa);
 		}
 
 		//criaPlataforma(sf::Vector2f(600, 500), sf::Vector2f(50, 50), IDs::IDs::caixa);
@@ -79,7 +83,7 @@ namespace Fase {
 			doisJogadores = it["doisJogadores"];
 		}
 
-		json = pGS->carregarObstaculo(*this);
+		json = pGS->carregarObstaculo();
 		it = json.begin();
 		for (auto& it : json) {
 			IDs::IDs ID = static_cast<IDs::IDs>(it["ID"]);
@@ -95,7 +99,7 @@ namespace Fase {
 			}
 		}
 
-		json = pGS->carregarPersonagem(*this);
+		json = pGS->carregarPersonagem();
 		for (auto& it : json) {
 			IDs::IDs ID = static_cast<IDs::IDs>(it["ID"]);
 			sf::Vector2f pos(it["posicao"]["x"], it["posicao"]["y"]);

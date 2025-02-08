@@ -6,7 +6,7 @@
         "atacando": false,
         "ativo": false,
         "colidiu": false,
-        "colisaoChao": false,
+        "colisaoChao": true,
         "direcao": true,
         "direcaoArma": false,
         "jogadorUm": true,
@@ -19,8 +19,8 @@
             "y": -500.0
         },
         "posicao": {
-            "x": 1043.8375244140625,
-            "y": 450.6333312988281
+            "x": 352.0,
+            "y": 526.0
         },
         "tamanho": {
             "x": 50.0,
@@ -32,54 +32,55 @@
         "tempoPetrificado": 0.0,
         "velocidade": {
             "x": 80.0,
-            "y": 59.26222229003906
+            "y": 0.0
         },
         "velocidadeArma": {
             "x": 0.0,
             "y": 0.0
         },
-        "vida": 55.0
+        "vida": 100.0
     },
     {
-        "ID": 34,
-        "IDArma": 33,
+        "ID": 30,
+        "IDArma": 28,
         "armaAtual": 0,
         "atacando": false,
-        "ativo": true,
+        "ataqueBasico": false,
+        "ataquePetrificante": false,
+        "ativo": false,
         "colidiu": false,
         "colisaoChao": true,
         "direcao": true,
-        "direcaoArma": true,
+        "direcaoArma": false,
         "jogadorUm": true,
         "levandoDano": false,
         "morrendo": false,
         "petrificado": false,
         "pontuacao": 0,
         "posArma": {
-            "x": 1189.9420166015625,
-            "y": 523.2982177734375
+            "x": -500.0,
+            "y": -500.0
         },
         "posicao": {
-            "x": 680.442626953125,
-            "y": 491.0000305175781
+            "x": 240.8456268310547,
+            "y": 526.0
         },
         "tamanho": {
-            "x": 85.0,
-            "y": 85.0
+            "x": 50.0,
+            "y": 50.0
         },
         "tempoAtaque": 0.0,
         "tempoDano": 0.0,
-        "tempoMorrendo": 0.0,
         "tempoMorte": 0.0,
         "tempoPetrificado": 0.0,
         "velocidade": {
-            "x": 80.0,
-            "y": 59.26222229003906
+            "x": 50.0,
+            "y": 0.0
         },
         "velocidadeArma": {
-            "x": 200.0,
-            "y": 5.0
+            "x": 0.0,
+            "y": 0.0
         },
-        "vida": 200.0
+        "vida": 100.0
     }
 ]

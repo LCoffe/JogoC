@@ -158,6 +158,7 @@
     <ClCompile Include="src\EstadoMenu.cpp" />
     <ClCompile Include="src\Fases\Fase.cpp" />
     <ClCompile Include="src\Fases\Fase01.cpp" />
+    <ClCompile Include="src\fases\Fase02.cpp" />
     <ClCompile Include="src\Gerenciadores\GerenciadorColisoes.cpp" />
     <ClCompile Include="src\Gerenciadores\GerenciadorEstado.cpp" />
     <ClCompile Include="src\Gerenciadores\GerenciadorEventos.cpp" />
@@ -206,6 +207,7 @@
     <ClInclude Include="include\EstadoMenu.hpp" />
     <ClInclude Include="include\Fases\Fase.hpp" />
     <ClInclude Include="include\Fases\Fase01.hpp" />
+    <ClInclude Include="include\fases\Fase02.hpp" />
     <ClInclude Include="include\Gerenciadores\GerenciadorColisoes.hpp" />
     <ClInclude Include="include\Gerenciadores\GerenciadorEstado.hpp" />
     <ClInclude Include="include\Gerenciadores\GerenciadorEventos.hpp" />

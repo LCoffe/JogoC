@@ -4,7 +4,10 @@
 #include "../fases/Fase.hpp"
 #include "../gerenciadores/GerenciadorEstado.hpp"
 
-namespace Observado{
+using namespace Entidade::Personagem::Jogador;
+
+
+namespace Observado {
 	namespace Observador {
 		class ObservadorFase : public Observador {
 		private:
@@ -15,6 +18,7 @@ namespace Observado{
 			void attTeclaPressionada(sf::Keyboard::Key tecla);
 			void attTeclaUnica(sf::Keyboard::Key tecla);
 			void jogadorMorreu();
+			void finalizaFase(Jogador* pJog, Jogador* pJog2);
 		};
 	}
 }

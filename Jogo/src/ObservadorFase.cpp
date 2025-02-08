@@ -19,9 +19,26 @@ namespace Observado {
 				//cout << "Pausou" << endl;
 			}
 		}
-		void ObservadorFase::jogadorMorreu() {
+		void ObservadorFase::jogadorMorreu() 
+		{
 			if (pGEst != nullptr) {
 				pGEst->incluiEstado(IDs::IDs::estadoMorreu, IDs::IDs::nulo, false);
+			}
+		}
+		void ObservadorFase::finalizaFase(Jogador* pJog1, Jogador* pJog2)
+		{
+			if (pFase->getID() == IDs::IDs::fase01) {
+				if (pFase->getDoisJogadores()) {
+					if ((pFase->getJogador()->getPos().x > 500.0f) || pFase->getJogadorDois()->getPos().x > 500.0f) {
+						pGEst->passouFase(pFase->getID());
+					}
+				}
+				else {
+					if ((pFase->getJogador()->getPos().x > 500.0f)) {
+						pGEst->passouFase(pFase->getID());
+					}
+				}
+
 			}
 		}
 	}

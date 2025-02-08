@@ -5,17 +5,12 @@
 namespace Fase {
 	Entidade::Personagem::Jogador::Jogador* Fase::pJogador = nullptr;
 	Entidade::Personagem::Jogador::Jogador* Fase::pJogadorDois = nullptr;
-	Observado::Observador::ObservadorFase* Fase::pObsFase = nullptr;
 
-	Fase::Fase(IDs::IDs ID_Fase) : Ente(ID_Fase), pGS(), doisJogadores(false), pontuacao(0), fundo(nullptr), mapa() {
+	Fase::Fase(IDs::IDs ID_Fase) : Ente(ID_Fase), pGS(new Gerenciador::GerenciadorSalvar()), pObsFase(new Observado::Observador::ObservadorFase(this)), doisJogadores(false), pontuacao(0), fundo(nullptr), mapa(nullptr) {
 		pListaPersona = new Lista::ListaEntidade();
 		pListaObstaculo = new Lista::ListaEntidade();
 
 		pGC = new Gerenciador::GerenciadorColisoes(pListaPersona, pListaObstaculo);
-
-		if (pObsFase == nullptr) {
-			pObsFase = new Observado::Observador::ObservadorFase(this);
-		}
 	}
 
 	Fase::~Fase() {
@@ -40,6 +35,22 @@ namespace Fase {
 			delete pGC;
 		}
 		pGC = nullptr;
+
+		if (pGS != nullptr) {
+			delete pGS;
+		}
+
+		if (fundo != nullptr) {
+			delete fundo;
+		}
+
+		if (pObsFase != nullptr) {
+			delete pObsFase;
+		}
+
+		if (mapa != nullptr) {
+			delete mapa;
+		}
 	}
 
 	void Fase::criaPersonagem1Jog(const sf::Vector2f pos, const IDs::IDs ID) {
@@ -706,6 +717,7 @@ namespace Fase {
 
 				gerenciarColisoes();
 				atualizaPontuacao();
+				pObsFase->finalizaFase(pJogador, pJogadorDois);
 			}
 			else {
 				pObsFase->jogadorMorreu();
@@ -724,6 +736,7 @@ namespace Fase {
 
 				gerenciarColisoes();
 				atualizaPontuacao();
+				pObsFase->finalizaFase(pJogador, nullptr);
 			}
 			else {
 				pObsFase->jogadorMorreu();

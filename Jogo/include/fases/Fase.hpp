@@ -33,7 +33,7 @@ namespace Observado {
 namespace Fase {
 	class Fase : public Ente {
 	private:
-		static Observado::Observador::ObservadorFase* pObsFase;
+		Observado::Observador::ObservadorFase* pObsFase;
 	protected:
 		Fundo::Parallax* fundo;
 		Mapa* mapa;
@@ -62,6 +62,8 @@ namespace Fase {
 		void criaPlataforma(const sf::Vector2f pos, const sf::Vector2f tam, const IDs::IDs ID);
 		Fase(IDs::IDs ID_Fase);
 		~Fase();
+		void setJogador(Entidade::Personagem::Jogador::Jogador* pJogador) { this->pJogador = pJogador; }
+		void setJogadorDois(Entidade::Personagem::Jogador::Jogador* pJogadorDois) { this->pJogadorDois = pJogadorDois; }
 		Entidade::Personagem::Jogador::Jogador* getJogador() { return pJogador; }
 		Entidade::Personagem::Jogador::Jogador* getJogadorDois() { return pJogadorDois; }
 		void setDoisJogadores(bool doisJogadores) { this->doisJogadores = doisJogadores; }

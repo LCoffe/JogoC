@@ -1,6 +1,7 @@
 #include "../../include/gerenciadores/GerenciadorSalvar.hpp"
+#include "../../include/fases/Fase02.hpp"
 #include "../../include/fases/Fase01.hpp"
-#include "../../include/fases/Fase.hpp"
+
 
 namespace Gerenciador {
     GerenciadorSalvar::GerenciadorSalvar(){}
@@ -73,7 +74,7 @@ namespace Gerenciador {
 		fechaArqSave(jsonOut);
 	}
 
-	nlohmann::json GerenciadorSalvar::carregarPersonagem(Fase::Fase01 &Fase) {
+	nlohmann::json GerenciadorSalvar::carregarPersonagem() {
 		std::ifstream jsonIn = abreArqLoad(CAMINHO_SAVE_PERSONA);
 		if (!jsonIn.is_open()) {
 			//std::cerr << "Erro ao abrir o arquivo." << std::endl;
@@ -88,7 +89,7 @@ namespace Gerenciador {
 		return jsonLoad;
 	}
 
-	nlohmann::json GerenciadorSalvar::carregarObstaculo(Fase::Fase01& Fase) {
+	nlohmann::json GerenciadorSalvar::carregarObstaculo() {
 		std::ifstream jsonIn = abreArqLoad(CAMINHO_SAVE_OBST);
 		if (!jsonIn.is_open()) {
 			std::cerr << "Erro ao abrir o arquivo." << std::endl;
@@ -162,6 +163,10 @@ namespace Gerenciador {
 	}
 
 	void GerenciadorSalvar::carregarJogo(Fase::Fase01 &Fase) {
+		Fase.carregar();
+	}
+
+	void GerenciadorSalvar::carregarJogo(Fase::Fase02& Fase) {
 		Fase.carregar();
 	}
 }

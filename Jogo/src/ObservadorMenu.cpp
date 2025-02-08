@@ -43,7 +43,7 @@ namespace Observado {
 					nlohmann::json jsonCarregar = pGS->carregarFase();
 					for (auto& it : jsonCarregar) {
 						IDs::IDs ID = static_cast<IDs::IDs>(it["IDFase"]);
-						if (ID == IDs::IDs::fase01) {
+						if (ID == IDs::IDs::fase01 || ID == IDs::IDs::fase02) {
 							bool doisJogadores = it["doisJogadores"];
 							if (doisJogadores) {
 								pGEst->incluiEstado(IDs::IDs::estadoJogar2Jog, ID,true);

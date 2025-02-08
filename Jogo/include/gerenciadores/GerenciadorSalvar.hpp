@@ -18,6 +18,7 @@
 
 namespace Fase {
 	class Fase01;
+	class Fase02;
 }
 
 namespace Gerenciador {
@@ -36,14 +37,15 @@ namespace Gerenciador {
 			nlohmann::json salvarPersonagem(Lista::ListaEntidade& LP);
 			nlohmann::json salvarObstaculo(Lista::ListaEntidade& LO);
 			void salvarColocacao(string nome, int pontuacao);
-			nlohmann::json carregarPersonagem(Fase::Fase01 &Fase);
-			nlohmann::json carregarObstaculo(Fase::Fase01 &Fase);
+			nlohmann::json carregarPersonagem();
+			nlohmann::json carregarObstaculo();
 			nlohmann::json carregarFase();
 			nlohmann::json carregarColocacao();
 			void limparColocacao();
 
 			void salvarJogo(Lista::ListaEntidade LP, Lista::ListaEntidade LO, IDs::IDs IDFase, bool doisJogadores);
 			void carregarJogo(Fase::Fase01 &Fase);
+			void carregarJogo(Fase::Fase02 &Fase);
 			//void carregarJogo(Lista::ListaEntidade &LP, Lista::ListaEntidade &LO);
 	};
 }

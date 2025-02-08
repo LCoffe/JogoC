@@ -37,5 +37,6 @@ namespace IDs {
 		caixa, // 32
 		projetil, // 33
 		minotauro, // 34
+		fase02, // 35
 	};
 }

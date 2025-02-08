@@ -20,6 +20,7 @@ namespace Gerenciador {
 		static GerenciadorEstado* getGerEstado();
 		Estado::Estado* getEstado();
 		void incluiEstado(const IDs::IDs ID, IDs::IDs IDFase,bool carregar);
+		void passouFase(const IDs::IDs ID);
 		void removerEstado();
 		void removerEstado(const int qntd);
 		void executar();

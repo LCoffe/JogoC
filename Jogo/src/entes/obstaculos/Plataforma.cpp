@@ -66,11 +66,7 @@ namespace Entidade {
 		}
 
 		void Plataforma::salvar(nlohmann::json& j) {
-			j["ID"] = (int)getID();
-			j["posicao"] = { {"x", pos.x}, {"y", pos.y} };
-			j["tamanho"] = { {"x", tam.x}, {"y", tam.y} };
-			j["arrastado"] = false;
-			j["colisaoParede"] = false;
+
 		}
 	}
 }
