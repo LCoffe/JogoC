@@ -1,14 +1,14 @@
 [
     {
         "ID": 1,
-        "IDArma": 33,
-        "armaAtual": 1,
+        "IDArma": 28,
+        "armaAtual": 0,
         "atacando": false,
         "ativo": false,
-        "colidiu": true,
+        "colidiu": false,
         "colisaoChao": true,
         "direcao": true,
-        "direcaoArma": true,
+        "direcaoArma": false,
         "jogadorUm": true,
         "levandoDano": false,
         "morrendo": false,
@@ -19,7 +19,7 @@
             "y": -500.0
         },
         "posicao": {
-            "x": 500.02435302734375,
+            "x": 500.9068908691406,
             "y": 526.0
         },
         "tamanho": {

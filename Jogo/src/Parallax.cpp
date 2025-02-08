@@ -2,7 +2,7 @@
 #include "../../include/gerenciadores/GerenciadorGrafico.hpp"
 
 namespace Fundo {
-    Parallax::Parallax() : offset(0.f) {}
+    Parallax::Parallax() : offset(0.f), velParalax(0.001f) {}
 
     Parallax::~Parallax() {}
 
@@ -38,7 +38,7 @@ namespace Fundo {
     }
 
     void Parallax::atualizar() {
-        offset += relogio.getElapsedTime().asSeconds() * 0.001f;  // Ajusta a velocidade do efeito
+        offset += relogio.getElapsedTime().asSeconds() * velParalax;  // Ajusta a velocidade do efeito
         shader.setUniform("offset", offset);
         relogio.restart();
     }
