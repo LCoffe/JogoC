@@ -142,6 +142,76 @@ criaPlataforma(sf::Vector2f(1600, 768 - 188), sf::Vector2f(100, 138), IDs::IDs::
 		}
 	}
 
+	void Fase02::carregaTrocaFase() {
+		nlohmann::json json = pGS->carregaTrocaFase();
+		for (auto& it : json) {
+			IDs::IDs ID = static_cast<IDs::IDs>(it["ID"]);
+			sf::Vector2f pos(it["posicao"]["x"], it["posicao"]["y"]);
+			sf::Vector2f tam(it["tamanho"]["x"], it["tamanho"]["y"]);
+			sf::Vector2f vel(it["velocidade"]["x"], it["velocidade"]["y"]);
+			bool direcao = it["direcao"];
+			bool atacando = it["atacando"];
+			bool petrifica = it["petrificado"];
+			float vida = it["vida"];
+			float tempoAtaque = it["tempoAtaque"];
+			int armaAtual = it["armaAtual"];
+			sf::Vector2f posArma(it["posArma"]["x"], it["posArma"]["y"]);
+			IDs::IDs IDArma = static_cast<IDs::IDs>(it["IDArma"]);
+			sf::Vector2f velArma(it["velocidadeArma"]["x"], it["velocidadeArma"]["y"]);
+			bool colidiu = it["colidiu"];
+			bool direcaoArma = it["direcaoArma"];
+			bool levandoDano = it["levandoDano"];
+			float tempoDano = it["tempoDano"];
+			bool morrendo = it["morrendo"];
+			float tempoMorte = it["tempoMorte"];
+			int pontuacao = it["pontuacao"];
+			bool colisaoChao = it["colisaoChao"];
+			bool ativo = it["ativo"];
+			bool jogadorUm = it["jogadorUm"];
+		
+			if (jogadorUm && pJogador != nullptr) {
+				pJogador->setTam(tam);
+				pJogador->setVelocidade(vel);
+				pJogador->setDirecao(direcao);
+				pJogador->setJogadorUm(jogadorUm);
+				pJogador->setVida(vida);
+				pJogador->setTempoAtaque(tempoAtaque);
+				pJogador->atacar(atacando);
+				pJogador->setPetrificado(petrifica);
+				pJogador->setLevandoDano(levandoDano);
+				pJogador->setTempoDano(tempoDano);
+				pJogador->setMorrendo(morrendo);
+				pJogador->setTempoMorte(tempoMorte);
+				pJogador->addPontuacao(pontuacao);
+				pJogador->setColisaoChao(colisaoChao);
+				pJogador->setAtivoObs(true);
 
+				if (!getDoisJogadores()) {
+					if (armaAtual == 1) {
+						pJogador->trocarArma();
+					}
+				}
+			}
+			else if(!jogadorUm && pJogadorDois != nullptr) {
+				pJogadorDois->setTam(tam);
+				pJogadorDois->setVelocidade(vel);
+				pJogadorDois->setDirecao(direcao);
+				pJogadorDois->setJogadorUm(jogadorUm);
+				pJogador->setArmaAtual(armaAtual);
+				pJogadorDois->setVida(vida);
+				pJogadorDois->setTempoAtaque(tempoAtaque);
+				pJogadorDois->atacar(atacando);
+				pJogadorDois->setPetrificado(petrifica);
+				pJogadorDois->setLevandoDano(levandoDano);
+				pJogadorDois->setTempoDano(tempoDano);
+				pJogadorDois->setMorrendo(morrendo);
+				pJogadorDois->setTempoMorte(tempoMorte);
+				pJogadorDois->addPontuacao(pontuacao);
+				pJogadorDois->setColisaoChao(colisaoChao);
+				pJogadorDois->setAtivoObs(true);
+				
+			}
+		}
+	}
 
 }

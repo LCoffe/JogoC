@@ -141,7 +141,15 @@ namespace Fase {
 					carregaPersonagem1Jog(pos, ID, tam, vel, direcao, false, vida, tempoAtaque, armaAtual, posArma, IDArma, velArma, colidiu, direcaoArma, ativo, atacando, petrifica, levandoDano, tempoDano, morrendo, tempoMorte, 0, colisaoChao);
 				}
 			}
-			
+
+		}
+	}
+	void Fase01::trocaFase() {
+		if (doisJogadores) {
+			pGS->salvarTrocaFase(pJogador, pJogadorDois);
+		}
+		else {
+			pGS->salvarTrocaFase(pJogador, nullptr);
 		}
 	}
 }

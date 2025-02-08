@@ -1,6 +1,8 @@
 #include "../../include/gerenciadores/GerenciadorEstado.hpp"
 #include "../../include/EstadoMenu.hpp"
 #include "../../include/EstadoJogar.hpp"
+#include "../../include/fases/Fase01.hpp"
+#include "../../include/fases/Fase02.hpp"
 
 namespace Gerenciador {
 	GerenciadorEstado* GerenciadorEstado::pGEst = nullptr;
@@ -43,29 +45,16 @@ namespace Gerenciador {
 	void GerenciadorEstado::passouFase(const IDs::IDs ID) {
 		if (ID == IDs::IDs::fase01) {
 			Estado::EstadoJogar* estado = static_cast<Estado::EstadoJogar*>(getEstado());
+			IDs::IDs IDEst = estado->getID();
 			Fase::Fase* fase = estado->getFase();
-			if (fase->getDoisJogadores()) {
-				Estado::EstadoJogar* aux = static_cast<Estado::EstadoJogar*>(getEstado());
-				Entidade::Personagem::Jogador::Jogador* pJogador = aux->getFase()->getJogador();
-				pJogador->setPos(sf::Vector2f(100, 768 - 251));
-				Entidade::Personagem::Jogador::Jogador* pJogadorDois = aux->getFase()->getJogadorDois();
-				pJogadorDois->setPos(sf::Vector2f(200, 768 - 251));
-				removerEstado();
-				incluiEstado(IDs::IDs::estadoJogar2Jog, IDs::IDs::fase02, false);
-				aux = static_cast<Estado::EstadoJogar*>(getEstado());
-				aux->getFase()->setJogador(pJogador);
-				aux->getFase()->setJogadorDois(pJogadorDois);
+			Fase::Fase01* aux = static_cast<Fase::Fase01*>(fase);
+			aux->trocaFase();
+			removerEstado();
+			incluiEstado(IDEst, IDs::IDs::fase02, false);
 
-			}
-			else {
-				Estado::EstadoJogar* aux = static_cast<Estado::EstadoJogar*>(getEstado());
-				//Carregar jogador para outro.
-				//pJogador->setPos(sf::Vector2f(100, 768 - 251));
-				removerEstado();
-				incluiEstado(IDs::IDs::estadoJogar1Jog, IDs::IDs::fase02, false);
-				aux = static_cast<Estado::EstadoJogar*>(getEstado());
-				//aux->getFase()->setJogador(pJogador);
-			}
+			estado = static_cast<Estado::EstadoJogar*>(getEstado());
+			Fase::Fase02* aux2 = static_cast<Fase::Fase02*>(estado->getFase());
+			aux2->carregaTrocaFase();
 		}
 		else if (ID == IDs::IDs::fase02) {
 			Estado::EstadoJogar* estado = static_cast<Estado::EstadoJogar*>(getEstado());

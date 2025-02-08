@@ -74,6 +74,21 @@ namespace Gerenciador {
 		fechaArqSave(jsonOut);
 	}
 
+	void GerenciadorSalvar::salvarTrocaFase(Entidade::Personagem::Jogador::Jogador* pJog, Entidade::Personagem::Jogador::Jogador* pJogDois) {
+		std::ofstream jsonOut = abreArqSave(CAMINHO_SAVE_TROCAFASE);
+		nlohmann::json jsonSave;
+		nlohmann::json aux;
+		pJog->salvar(aux);
+		jsonSave.push_back(aux);
+		if (pJogDois != nullptr) {
+			pJogDois->salvar(aux);
+			jsonSave.push_back(aux);
+		}
+		
+		jsonOut << jsonSave.dump(4);
+		fechaArqSave(jsonOut);
+	}
+
 	nlohmann::json GerenciadorSalvar::carregarPersonagem() {
 		std::ifstream jsonIn = abreArqLoad(CAMINHO_SAVE_PERSONA);
 		if (!jsonIn.is_open()) {
@@ -98,6 +113,21 @@ namespace Gerenciador {
 		if (jsonIn.peek() == std::ifstream::traits_type::eof()) {
 			std::cerr << "Arquivo está vazio." << std::endl;
 			// Trate o erro apropriadamente
+		}
+		nlohmann::json jsonLoad = nlohmann::json::parse(jsonIn);
+		fechaArqLoad(jsonIn);
+		return jsonLoad;
+	}
+
+	nlohmann::json GerenciadorSalvar::carregaTrocaFase() {
+		std::ifstream jsonIn = abreArqLoad(CAMINHO_SAVE_TROCAFASE);
+		if (!jsonIn.is_open()) {
+			//std::cerr << "Erro ao abrir o arquivo." << std::endl;
+			exit(1);
+		}
+		if (jsonIn.peek() == std::ifstream::traits_type::eof()) {
+			//std::cerr << "Arquivo está vazio." << std::endl;
+			exit(1);
 		}
 		nlohmann::json jsonLoad = nlohmann::json::parse(jsonIn);
 		fechaArqLoad(jsonIn);

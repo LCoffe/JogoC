@@ -17,6 +17,7 @@ namespace Fase {
 		~Fase01();
 		void iniciaFase(bool doisJogadores);
 		void carregaFase();
+		void trocaFase();
 		void carregar();
 	};
 }

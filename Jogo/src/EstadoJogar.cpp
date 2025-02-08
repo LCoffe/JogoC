@@ -49,7 +49,7 @@ namespace Estado {
 					exit(1);
 				}
 			}
-			else if (ID == IDs::IDs::fase02) {
+			else if (IDFase == IDs::IDs::fase02) {
 				Fase::Fase02* fase02 = new Fase::Fase02();
 				fase02->iniciaFase(true);
 				fase = static_cast<Fase::Fase*>(fase02);

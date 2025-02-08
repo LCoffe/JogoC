@@ -1,0 +1,43 @@
+[
+    {
+        "ID": 1,
+        "IDArma": 33,
+        "armaAtual": 1,
+        "atacando": false,
+        "ativo": false,
+        "colidiu": true,
+        "colisaoChao": true,
+        "direcao": true,
+        "direcaoArma": true,
+        "jogadorUm": true,
+        "levandoDano": false,
+        "morrendo": false,
+        "petrificado": false,
+        "pontuacao": 0,
+        "posArma": {
+            "x": -500.0,
+            "y": -500.0
+        },
+        "posicao": {
+            "x": 500.02435302734375,
+            "y": 526.0
+        },
+        "tamanho": {
+            "x": 50.0,
+            "y": 50.0
+        },
+        "tempoAtaque": 0.0,
+        "tempoDano": 0.0,
+        "tempoMorte": 0.0,
+        "tempoPetrificado": 0.0,
+        "velocidade": {
+            "x": 80.0,
+            "y": 0.0
+        },
+        "velocidadeArma": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "vida": 100.0
+    }
+]
