@@ -132,7 +132,7 @@ namespace Entidade {
 		}
 		void Caixa::atualizarSprite(float dt) {
 			sf::Vector2f posicao = pos;
-			posicao.x += tam.x / 0.685f;
+			posicao.x += tam.x / 1.8f;
 			posicao.y += tam.y / 2.8f;
 
 			if (arrastado) {

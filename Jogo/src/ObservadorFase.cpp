@@ -34,7 +34,7 @@ namespace Observado {
 					}
 				}
 				else {
-					if ((pFase->getJogador()->getPos().x > 1500.0f)) {
+					if ((pFase->getJogador()->getPos().x > 4000.0f)) {
 						pGEst->passouFase(pFase->getID());
 					}
 				}
