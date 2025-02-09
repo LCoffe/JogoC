@@ -77,6 +77,10 @@ bool Mapa::carregarMapa(const char* caminhoMapa) {
                 }
             }
         }
+        else if (layer["name"] == "Tile Layer 2") {
+            tilesDecorativos = layer["data"].get<std::vector<int>>();
+            std::cout << "Total de tiles carregados (decoração): " << tilesDecorativos.size() << std::endl;
+        }
     }
     return true;
 }
@@ -100,20 +104,51 @@ void Mapa::desenharMapa(sf::RenderWindow& janela) {
         return;
     }
 
+    sf::VertexArray verticesDecorativos(sf::Quads, largura * altura * 4);
     sf::VertexArray vertices(sf::Quads, largura * altura * 4);
 
+  
     for (int y = 0; y < altura; y++) {
         for (int x = 0; x < largura; x++) {
             int index = y * largura + x;
+            if (index >= static_cast<int>(tilesDecorativos.size())) continue;
 
-            if (index >= static_cast<int>(tiles.size())) {
-                std::cerr << "Erro: Índice de tile fora do alcance: " << index
-                    << " (tamanho: " << tiles.size() << ")" << std::endl;
-                continue;
-            }
+            int tileID = tilesDecorativos[index];
+            if (tileID == 0) continue;  // Tile vazio
+
+            // Calcula posição do tile na textura
+            int tileX = (tileID - 1) % (texturaTileset.getSize().x / larguraTile);
+            int tileY = (tileID - 1) / (texturaTileset.getSize().x / larguraTile);
+
+            // Calcula posição do tile no mapa
+            float posX = static_cast<float>(x * larguraTile);
+            float posY = static_cast<float>(y * alturaTile);
+
+            int vIndex = index * 4;
+
+            verticesDecorativos[vIndex].position = sf::Vector2f(posX, posY);
+            verticesDecorativos[vIndex + 1].position = sf::Vector2f(posX + larguraTile, posY);
+            verticesDecorativos[vIndex + 2].position = sf::Vector2f(posX + larguraTile, posY + alturaTile);
+            verticesDecorativos[vIndex + 3].position = sf::Vector2f(posX, posY + alturaTile);
+
+            float texX = static_cast<float>(tileX * larguraTile);
+            float texY = static_cast<float>(tileY * alturaTile);
+
+            verticesDecorativos[vIndex].texCoords = sf::Vector2f(texX, texY);
+            verticesDecorativos[vIndex + 1].texCoords = sf::Vector2f(texX + larguraTile, texY);
+            verticesDecorativos[vIndex + 2].texCoords = sf::Vector2f(texX + larguraTile, texY + alturaTile);
+            verticesDecorativos[vIndex + 3].texCoords = sf::Vector2f(texX, texY + alturaTile);
+        }
+    }
+
+    
+    for (int y = 0; y < altura; y++) {
+        for (int x = 0; x < largura; x++) {
+            int index = y * largura + x;
+            if (index >= static_cast<int>(tiles.size())) continue;
 
             int tileID = tiles[index];
-            if (tileID == 0) continue;
+            if (tileID == 0) continue;  // Tile vazio
 
             // Calcula posição do tile na textura
             int tileX = (tileID - 1) % (texturaTileset.getSize().x / larguraTile);
@@ -140,14 +175,9 @@ void Mapa::desenharMapa(sf::RenderWindow& janela) {
         }
     }
 
-    if (texturaTileset.getSize().x == 0 || texturaTileset.getSize().y == 0) {
-        std::cerr << "Erro: Textura do tileset não carregada corretamente!" << std::endl;
-        return;
-    }
-
     sf::RenderStates estados;
     estados.texture = &texturaTileset;
 
-    
-    janela.draw(vertices, estados);
+    janela.draw(verticesDecorativos, estados); 
+    janela.draw(vertices, estados); 
 }
