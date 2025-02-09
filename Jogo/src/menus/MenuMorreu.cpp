@@ -13,11 +13,15 @@ namespace Menu {
 	void MenuMorreu::criarTitulo() {
 		titulo = new Texto(sf::Vector2f(pGG->getTamJanela().x / 2.5f, pGG->getTamJanela().y / 3.5f), "Voce Morreu");
 		titulo->setTamFonte(50);
+		titulo->setCorTexto(218, 165, 32);
+		titulo->setCorBordaTexto(0, 0, 0);
 	}
 	void MenuMorreu::criarTextoPontuacao() {
 		if (pFase != nullptr) {
 			pontuacao = new Texto(sf::Vector2f(pGG->getTamJanela().x / 2.5f, pGG->getTamJanela().y / 2.5f), "Pontuacao: " + std::to_string(pFase->getPontuacao()));
 			pontuacao->setTamFonte(50);
+			pontuacao->setCorTexto(218, 165, 32);
+			pontuacao->setCorBordaTexto(0, 0, 0);
 		}
 	}
 	void MenuMorreu::criarFundo() {

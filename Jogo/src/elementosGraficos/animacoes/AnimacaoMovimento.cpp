@@ -19,7 +19,7 @@ namespace ElementosGraficos {
 		AnimacaoUnica* tmp = new AnimacaoUnica(path, imagemCount, switchTime);
 
 		if (tmp == nullptr) {
-			std::cout << "ERRO ao criar animacao em AnimacaoMovimento::adicionarNovaAnimacao" << std::endl;
+			//std::cout << "ERRO ao criar animacao em AnimacaoMovimento::adicionarNovaAnimacao" << std::endl;
 			exit(1);
 		}
 

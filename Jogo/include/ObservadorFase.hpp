@@ -18,7 +18,7 @@ namespace Observado {
 			void attTeclaPressionada(sf::Keyboard::Key tecla);
 			void attTeclaUnica(sf::Keyboard::Key tecla);
 			void jogadorMorreu();
-			void finalizaFase(Jogador* pJog, Jogador* pJog2);
+			void finalizaFase(Jogador* pJog, Jogador* pJog2, bool temInimigoVivo);
 			bool verificaInimigoVivo(Lista::ListaEntidade& LP);
 		};
 	}

@@ -16,6 +16,8 @@ namespace Menu {
 			throw std::invalid_argument("Titulo invalido");
 		}
 		titulo->setTamFonte(50);
+		titulo->setCorTexto(218, 165, 32);
+		titulo->setCorBordaTexto(0, 0, 0);
 	}
 
 	void MenuOpcoes::criarFundo() {

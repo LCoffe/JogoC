@@ -20,7 +20,7 @@ namespace ElementosGraficos{
 		tamRect.height = texture->getSize().y;
 
 		if (texture == nullptr) {
-			std::cout << "ERRO ao carregar textura em AnimacaoUnica::AnimacaoUnica()." << std::endl;
+			//std::cout << "ERRO ao carregar textura em AnimacaoUnica::AnimacaoUnica()." << std::endl;
 			exit(1);
 			}
 

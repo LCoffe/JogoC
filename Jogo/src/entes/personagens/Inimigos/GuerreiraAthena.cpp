@@ -30,11 +30,11 @@ namespace Entidade {
 			void GuerreiraAthena::atualizarSprite(float dt) {
 				sf::Vector2f posicao = pos;
 				if (direcao) {
-					posicao.x += TAMANHO_GUERREIRA_ATHENA_X / 0.50f;
+					posicao.x += TAMANHO_GUERREIRA_ATHENA_X/ 0.95f;
 					posicao.y += TAMANHO_GUERREIRA_ATHENA_Y / 2.7f;
 				}
 				else {
-					posicao.x += TAMANHO_GUERREIRA_ATHENA_X / 0.90f;
+					posicao.x += TAMANHO_GUERREIRA_ATHENA_X * 0.009f;
 					posicao.y += TAMANHO_GUERREIRA_ATHENA_Y / 2.7f;
 				}
 				

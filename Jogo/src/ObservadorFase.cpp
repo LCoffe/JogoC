@@ -25,20 +25,24 @@ namespace Observado {
 				pGEst->incluiEstado(IDs::IDs::estadoMorreu, IDs::IDs::nulo, false);
 			}
 		}
-		void ObservadorFase::finalizaFase(Jogador* pJog1, Jogador* pJog2)
-		{
+		void ObservadorFase::finalizaFase(Jogador* pJog1, Jogador* pJog2, bool temInimigoVivo)
+		{	
 			if (pFase->getID() == IDs::IDs::fase01) {
+				pFase->abrePortao(temInimigoVivo);
 				if (pFase->getDoisJogadores()) {
-					if ((pFase->getJogador()->getPos().x > 1500.0f) || pFase->getJogadorDois()->getPos().x > 1500.0f) {
+					if ((pFase->getJogador()->getPos().x > 1450.0f) || pFase->getJogadorDois()->getPos().x > 1450.0f) {
 						pGEst->passouFase(pFase->getID());
 					}
 				}
 				else {
-					if ((pFase->getJogador()->getPos().x > 1500.0f)) {
+					if ((pFase->getJogador()->getPos().x > 1450.0f)) {
 						pGEst->passouFase(pFase->getID());
 					}
 				}
 
+			}
+			else if (pFase->getID() == IDs::IDs::fase02 && !temInimigoVivo) {
+				pGEst->incluiEstado(IDs::IDs::estadoGanhou, IDs::IDs::nulo, false);
 			}
 		}
 

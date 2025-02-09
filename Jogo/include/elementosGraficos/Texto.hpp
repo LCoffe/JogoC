@@ -36,6 +36,7 @@ namespace Menu {
 		void setPosicao(sf::Vector2f pos);
 
 		void setCorTexto(const unsigned int R, const unsigned int G, const unsigned int B);
+		void setCorBordaTexto(const unsigned int R, const unsigned int G, const unsigned int B);
 
 		void setTamFonte(const unsigned int tam);
 

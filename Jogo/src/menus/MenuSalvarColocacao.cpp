@@ -17,6 +17,8 @@ namespace Menu {
 	void MenuSalvarColocacao::criarTitulo() {
 		titulo = new Texto(sf::Vector2f(pGG->getTamJanela().x / 2.5f, pGG->getTamJanela().y / 3.5f), "Digite seu nome");
 		titulo->setTamFonte(50);
+		titulo->setCorTexto(218, 165, 32);
+		titulo->setCorBordaTexto(0, 0, 0);
 	}
 
 	void MenuSalvarColocacao::criarFundo() {

@@ -12,6 +12,7 @@
 #include "../../include/entes/obstaculos/Caixa.hpp"
 #include "../../include/entes/obstaculos/Espinho.hpp"
 #include "../../include/entes/obstaculos/Portao.hpp"
+#include "../../include/entes/obstaculos/Lama.hpp"
 
 #include "../../include/gerenciadores/GerenciadorColisoes.hpp"
 #include "../../include/gerenciadores/GerenciadorSalvar.hpp"
@@ -22,9 +23,13 @@
 #include "../../include/entes/personagens/inimigos/Inimigo.hpp"
 #include "../../include/entes/personagens/jogador/Jogador.hpp"
 #include "../../include/Arma.hpp"
+#include "../../include/Projetil.hpp"
+
 
 #include "../mapas/Mapa.hpp"
-#include "../../include/Projetil.hpp"
+
+#define NUM_MIN_INSTANCIA 3
+#define NUM_MAX_INSTANCIA 6
 
 namespace Observado {
 	namespace Observador {
@@ -45,6 +50,7 @@ namespace Fase {
 		static Entidade::Personagem::Jogador::Jogador* pJogadorDois;
 		int pontuacao;
 		bool doisJogadores;
+		bool temInimigoVivo;
 		Gerenciador::GerenciadorColisoes* pGC;
 		Gerenciador::GerenciadorSalvar* pGS;
 
@@ -60,7 +66,7 @@ namespace Fase {
 		Entidade::Item::Arma* carregaArma(Entidade::Personagem::Personagem* p, const sf::Vector2f pos, const sf::Vector2f tam, const IDs::IDs ID, bool colidiu, bool direcao, const sf::Vector2f velocidade, bool ataquePetrificante, bool ativo);
 		void criaLimite();
 	public:
-		void criaPlataforma(const sf::Vector2f pos, const sf::Vector2f tam, const IDs::IDs ID, bool arrastado, bool colisaoParede);
+		void criaPlataforma(const sf::Vector2f pos, const sf::Vector2f tam, const IDs::IDs ID, bool arrastado, bool colisaoParede, bool aberto);
 		void criaPlataforma(const sf::Vector2f pos, const sf::Vector2f tam, const IDs::IDs ID);
 		Fase(IDs::IDs ID_Fase);
 		~Fase();
@@ -68,9 +74,11 @@ namespace Fase {
 		void setJogadorDois(Entidade::Personagem::Jogador::Jogador* pJogadorDois) { this->pJogadorDois = pJogadorDois; }
 		Entidade::Personagem::Jogador::Jogador* getJogador() { return pJogador; }
 		Entidade::Personagem::Jogador::Jogador* getJogadorDois() { return pJogadorDois; }
+		void setInimigoVivo(bool temInimigoVivo) { this->temInimigoVivo = temInimigoVivo; }
+		bool getInimigoVivo() { return temInimigoVivo; }
 		void setDoisJogadores(bool doisJogadores) { this->doisJogadores = doisJogadores; }
 		bool getDoisJogadores() { return doisJogadores; }
-		void verificaInimigo();
+		void abrePortao(bool temInimigo);
 		void setPontuacao(int pontuacao) { this->pontuacao = pontuacao; }
 		int getPontuacao() { return pontuacao; }
 		void atualizaPontuacao();

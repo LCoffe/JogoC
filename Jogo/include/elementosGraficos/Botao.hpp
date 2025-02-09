@@ -4,6 +4,8 @@
 #include "../../include/entes/Ente.hpp"
 #include "../../include/elementosGraficos/Texto.hpp"
 
+constexpr const char* const BOTAO_PATH = "..\\Jogo\\assets\\icone\\fundoBotao.png";
+
 namespace Menu {
 	namespace Botao {
 		class Botao : public Ente {
@@ -20,6 +22,7 @@ namespace Menu {
 			public:
 				Botao(const sf::Vector2f tam, const sf::Vector2f pos, const IDs::IDs ID, const sf::Vector2f tamSelec);
 				virtual ~Botao();
+				bool getSelecionado() const { return selecionado; }
 				void desenhar();
 				void atualizarPosicao(const sf::Vector2f pos);
 				void seleciona();

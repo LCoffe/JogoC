@@ -51,6 +51,9 @@
     <ClCompile Include="src\fases\Fase02.cpp" />
     <ClCompile Include="src\entes\obstaculos\Espinho.cpp" />
     <ClCompile Include="src\entes\obstaculos\Portao.cpp" />
+    <ClCompile Include="src\entes\obstaculos\Lama.cpp" />
+    <ClCompile Include="src\menus\MenuSelecionaFase.cpp" />
+    <ClCompile Include="src\menus\MenuGanhou.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\ElementosGraficos\animacoes\AnimacaoMovimento.hpp" />
@@ -105,6 +108,10 @@
     <ClInclude Include="include\fases\Fase02.hpp" />
     <ClInclude Include="include\entes\obstaculos\Espinho.hpp" />
     <ClInclude Include="include\entes\obstaculos\Portao.hpp" />
+    <ClInclude Include="include\entes\obstaculos\Lama.hpp" />
+    <ClInclude Include="include\Vida.hpp" />
+    <ClInclude Include="include\menus\MenuSelecionaFase.hpp" />
+    <ClInclude Include="include\menus\MenuGanhou.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\athenasoldier.png" />
@@ -141,6 +148,14 @@
     <Image Include="assets\obstaculos\plataforma.png" />
     <Image Include="assets\plataformas\pedra.png" />
     <Image Include="assets\tilesets\babylon.png" />
+    <Image Include="assets\barraVida\barraVidaJog1.png" />
+    <Image Include="assets\barraVida\barraVidaJog2.png" />
+    <Image Include="assets\icone\fundoBotao.png" />
+    <Image Include="assets\icone\iconeJogo.ico" />
+    <Image Include="assets\icone\iconeJogo.png" />
+    <Image Include="assets\icone\tituloJogo.png" />
+    <Image Include="assets\fundos\fundoVoltar.png" />
+    <Image Include="assets\fundos\gamemenu.png" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="assets\Fontes\Greek-Freak.ttf" />

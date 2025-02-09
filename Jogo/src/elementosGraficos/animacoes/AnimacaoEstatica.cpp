@@ -10,7 +10,7 @@ namespace ElementosGraficos {
 	AnimacaoEstatica::~AnimacaoEstatica(){}
 
     void AnimacaoEstatica::inicializar(const char* path, sf::Vector2f pos, sf::Vector2f tam) {
-        std::cout << "Tentando carregar textura: " << path << std::endl;
+       // std::cout << "Tentando carregar textura: " << path << std::endl;
 
         textura = pGG->incluirTextura(path);
 
@@ -28,8 +28,8 @@ namespace ElementosGraficos {
         corpo.setTexture(textura);
         corpo.setTextureRect(sf::IntRect(0, 0, static_cast<int>(corpo.getSize().x), static_cast<int>(corpo.getSize().y)));
 
-        std::cout << "Textura carregada com sucesso! Dimensões: "
-            << textura->getSize().x << "x" << textura->getSize().y << std::endl;
+        //std::cout << "Textura carregada com sucesso! Dimensões: "
+          //  << textura->getSize().x << "x" << textura->getSize().y << std::endl;
     }
 
 

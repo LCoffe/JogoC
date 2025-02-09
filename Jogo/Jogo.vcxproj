@@ -146,6 +146,7 @@
     <ClCompile Include="src\Entes\Entidade.cpp" />
     <ClCompile Include="src\entes\obstaculos\Caixa.cpp" />
     <ClCompile Include="src\entes\obstaculos\Espinho.cpp" />
+    <ClCompile Include="src\entes\obstaculos\Lama.cpp" />
     <ClCompile Include="src\Entes\Obstaculos\Obstaculo.cpp" />
     <ClCompile Include="src\Entes\Obstaculos\Plataforma.cpp" />
     <ClCompile Include="src\entes\obstaculos\Portao.cpp" />
@@ -170,10 +171,12 @@
     <ClCompile Include="src\mapas\Mapa.cpp" />
     <ClCompile Include="src\Menus\Menu.cpp" />
     <ClCompile Include="src\Menus\MenuColocacao.cpp" />
+    <ClCompile Include="src\menus\MenuGanhou.cpp" />
     <ClCompile Include="src\Menus\MenuMorreu.cpp" />
     <ClCompile Include="src\Menus\MenuOpcoes.cpp" />
     <ClCompile Include="src\Menus\MenuPrincipal.cpp" />
     <ClCompile Include="src\Menus\MenuSalvarColocacao.cpp" />
+    <ClCompile Include="src\menus\MenuSelecionaFase.cpp" />
     <ClCompile Include="src\Observador.cpp" />
     <ClCompile Include="src\ObservadorFase.cpp" />
     <ClCompile Include="src\ObservadorJogador.cpp" />
@@ -197,6 +200,7 @@
     <ClInclude Include="include\Entes\Entidade.hpp" />
     <ClInclude Include="include\entes\obstaculos\Caixa.hpp" />
     <ClInclude Include="include\entes\obstaculos\Espinho.hpp" />
+    <ClInclude Include="include\entes\obstaculos\Lama.hpp" />
     <ClInclude Include="include\Entes\Obstaculos\Obstaculo.hpp" />
     <ClInclude Include="include\Entes\Obstaculos\Plataforma.hpp" />
     <ClInclude Include="include\entes\obstaculos\Portao.hpp" />
@@ -224,10 +228,12 @@
     <ClInclude Include="include\mapas\Mapa.hpp" />
     <ClInclude Include="include\Menus\Menu.hpp" />
     <ClInclude Include="include\Menus\MenuColocacao.hpp" />
+    <ClInclude Include="include\menus\MenuGanhou.hpp" />
     <ClInclude Include="include\Menus\MenuMorreu.hpp" />
     <ClInclude Include="include\Menus\MenuOpcoes.hpp" />
     <ClInclude Include="include\Menus\MenuPrincipal.hpp" />
     <ClInclude Include="include\Menus\MenuSalvarColocacao.hpp" />
+    <ClInclude Include="include\menus\MenuSelecionaFase.hpp" />
     <ClInclude Include="include\Observador.hpp" />
     <ClInclude Include="include\ObservadorFase.hpp" />
     <ClInclude Include="include\ObservadorJogador.hpp" />
@@ -236,15 +242,24 @@
     <ClInclude Include="include\Observado.hpp" />
     <ClInclude Include="include\Parallax.hpp" />
     <ClInclude Include="include\Projetil.hpp" />
+    <ClInclude Include="include\Vida.hpp" />
     <ClInclude Include="stdafx\stdafx.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\athenasoldier.png" />
+    <Image Include="assets\barraVida\barraVidaJog1.png" />
+    <Image Include="assets\barraVida\barraVidaJog2.png" />
     <Image Include="assets\fundos\fundo01.png" />
     <Image Include="assets\fundos\fundo02.png" />
     <Image Include="assets\fundos\fundo1.png" />
+    <Image Include="assets\fundos\fundoVoltar.png" />
+    <Image Include="assets\fundos\gamemenu.png" />
     <Image Include="assets\gamemenu.png" />
     <Image Include="assets\greeksoldier.png" />
+    <Image Include="assets\icone\fundoBotao.png" />
+    <Image Include="assets\icone\iconeJogo.ico" />
+    <Image Include="assets\icone\iconeJogo.png" />
+    <Image Include="assets\icone\tituloJogo.png" />
     <Image Include="assets\inimigos\athena\guerreira_ataque.png" />
     <Image Include="assets\inimigos\athena\guerreira_machucado.png" />
     <Image Include="assets\inimigos\athena\guerreira_morte.png" />

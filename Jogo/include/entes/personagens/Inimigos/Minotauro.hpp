@@ -9,7 +9,7 @@ constexpr const char* const ATAQUEM_PATH = "..\\Jogo\\assets\\inimigos\\minotaur
 constexpr const char* const MORTEM_PATH = "..\\Jogo\\assets\\inimigos\\minotauro\\minotauro_morte.png";
 
 #define VIDA_MINOTAURO 200.0f
-#define DANO_MINOTAURO 20.0f
+#define DANO_MINOTAURO 13.0f
 #define TAMANHO_MINOTAURO_X 85.0f
 #define TAMANHO_MINOTAURO_Y 85.0f
 #define RAIO_VISAO_MINOTAURO_X 300.f

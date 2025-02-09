@@ -13,6 +13,7 @@
 #include "../../include/entes/personagens/Inimigos/Minotauro.hpp"
 #include "../../include/entes/obstaculos/Caixa.hpp"
 #include "../../include/entes/obstaculos/Espinho.hpp"
+#include "../../include/entes/obstaculos/Portao.hpp"
 
 using namespace std;
 

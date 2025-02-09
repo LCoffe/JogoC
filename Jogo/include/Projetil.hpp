@@ -5,7 +5,7 @@
 
 constexpr const char* const PROJETIL_PATH = "res/imagens/projetil.png";
 
-#define DANO_PROJETIL 25.0f;
+#define DANO_PROJETIL 09.0f;
 
 namespace Entidade {
 	namespace Item {

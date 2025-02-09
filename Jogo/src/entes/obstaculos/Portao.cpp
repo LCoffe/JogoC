@@ -65,11 +65,20 @@ namespace Entidade {
 			}
 		}
 		void Portao::atualizar() {
+			//Força da gravidade
+			const float velY = 50.0f;
+			sf::Vector2f soma(0.0f, 0.0f);
+			soma.y = velY * pGG->getTempo() + (GRAVIDADE * pGG->getTempo() * pGG->getTempo()) / 2.0f;
+
+			corpo.move(soma);
+			pos.y = corpo.getPosition().y;
 		}
 		void Portao::salvar(nlohmann::json& j) {
 			j["ID"] = (int)getID();
 			j["posicao"] = { {"x", pos.x}, {"y", pos.y} };
 			j["tamanho"] = { {"x", tam.x}, {"y", tam.y} };
+			j["arrastado"] = false;
+			j["colisaoParede"] = false;
 			j["aberto"] = aberto;
 		}
 	}

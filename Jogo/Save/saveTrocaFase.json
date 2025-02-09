@@ -10,7 +10,7 @@
         "direcao": true,
         "direcaoArma": false,
         "jogadorUm": true,
-        "levandoDano": true,
+        "levandoDano": false,
         "morrendo": false,
         "petrificado": false,
         "pontuacao": 0,
@@ -19,25 +19,25 @@
             "y": -500.0
         },
         "posicao": {
-            "x": 1600.0,
-            "y": 560.0173950195313
+            "x": 300.2557067871094,
+            "y": 390.77630615234375
         },
         "tamanho": {
             "x": 50.0,
             "y": 50.0
         },
         "tempoAtaque": 0.0,
-        "tempoDano": 0.03353399783372879,
+        "tempoDano": 0.0,
         "tempoMorte": 0.0,
         "tempoPetrificado": 0.0,
         "velocidade": {
-            "x": 0.0,
-            "y": 0.0
+            "x": 80.0,
+            "y": -30.722993850708008
         },
         "velocidadeArma": {
             "x": 0.0,
             "y": 0.0
         },
-        "vida": 70.0
+        "vida": 100.0
     }
 ]

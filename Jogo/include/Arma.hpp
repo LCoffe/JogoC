@@ -2,6 +2,8 @@
 
 #include "../../include/entes/personagens/Personagem.hpp"
 
+#define DANO_ARMA 05.0F
+
 namespace Entidade {
 	namespace Item {
 		class Arma : public Entidade {

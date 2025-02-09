@@ -24,6 +24,12 @@ namespace Entidade {
 			else if (ent->getID() == IDs::IDs::plataforma || ent->getID() == IDs::IDs::espinho) {
 				colisaoPlataforma(ent, diferenca);
 			}
+			else if (ent->getID() == IDs::IDs::caixa) {
+				Caixa* c = static_cast<Caixa*>(ent);
+				if (c != this) {
+					colisaoPlataforma(ent, diferenca);
+				}
+			}
 			else if (ent->getID() == IDs::IDs::projetil) {
 				Item::Projetil* p = static_cast<Item::Projetil*>(ent);
 				p->setColidiu(true);
@@ -99,7 +105,7 @@ namespace Entidade {
 			}
 		}
 
-		void Caixa::desenhar() {			
+		void Caixa::desenhar() {	
 			sprite.desenhar();
 			//pGG->desenharElemento(corpo);
 		}
@@ -124,6 +130,7 @@ namespace Entidade {
 			j["tamanho"] = { {"x", tam.x}, {"y", tam.y} };
 			j["arrastado"] = arrastado;
 			j["colisaoParede"] = colisaoParede;
+			j["aberto"] = false;
 		}
 		void Caixa::inicializar() {
 			sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::walk, CAIXA_ARRASTADO_PATH, 8);
@@ -132,7 +139,7 @@ namespace Entidade {
 		}
 		void Caixa::atualizarSprite(float dt) {
 			sf::Vector2f posicao = pos;
-			posicao.x += tam.x / 0.685f;
+			posicao.x += tam.x / 2.0f;
 			posicao.y += tam.y / 2.8f;
 
 			if (arrastado) {

@@ -57,6 +57,8 @@ namespace Menu {
 	void MenuColocacao::criarTitulo() {
 		titulo = new Texto(sf::Vector2f(pGG->getTamJanela().x / 2.5f, pGG->getTamJanela().y / 10.0f), "Colocacao");
 		titulo->setTamFonte(50);
+		titulo->setCorTexto(218, 165, 32);
+		titulo->setCorBordaTexto(0, 0, 0);
 	}
 
 	void MenuColocacao::criarFundo() {

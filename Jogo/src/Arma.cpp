@@ -4,7 +4,7 @@ namespace Entidade {
 	namespace Item {
 		Arma::Arma(Personagem::Personagem* p, sf::Vector2f tam, const IDs::IDs ID) : Entidade(sf::Vector2f(-500.0f, -500.0f), tam, ID), dano(0.0f), pPersonagem(p), ataquePetrificante(false), ativo(false) {
 			if (pPersonagem != nullptr) {
-				dano = pPersonagem->getDano();
+				dano = pPersonagem->getDano() + DANO_ARMA;
 			}
 			pPersonagem->setArma(this);
 			//corpo.setFillColor(sf::Color::Red);
@@ -27,10 +27,6 @@ namespace Entidade {
 						if (p->getMorrendo()) {
 							//Morreu
 						}
-						/*else {
-							sf::Vector2f posInimigo = p->getPos();
-							p->setPos(sf::Vector2f(pPersonagem->getDirecao() ? posInimigo.x + 10.0f : posInimigo.x - 10.0f, posInimigo.y + 5.0f));
-						}*/
 					}
 				}
 			}

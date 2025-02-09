@@ -45,7 +45,8 @@ namespace Observado {
 
 	void Observado::notificaTeclaPressionada(sf::Keyboard::Key tecla) {
 		if (!inicializaIt()) return;
-		for (it = 0; it < (int)observadores.size(); it++) {
+		int tamInicial = (int)observadores.size();
+		for (it = 0; it < tamInicial; it++) {
 			if (observadores[it]) {
 				if (observadores[it]->getAtivar()) {
 					observadores[it]->attTeclaPressionada(tecla);
@@ -56,7 +57,8 @@ namespace Observado {
 
 	void Observado::notificaTeclaUnica(sf::Keyboard::Key tecla) {
 		if (!inicializaIt()) return;
-		for (it = 0; it < (int)observadores.size(); it++) {
+		int tamInicial = (int)observadores.size();
+		for (it = 0; it < tamInicial; it++) {
 			if (observadores[it]) {
 				if (observadores[it]->getAtivar()) {
 					observadores[it]->attTeclaUnica(tecla);

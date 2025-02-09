@@ -54,6 +54,25 @@ namespace Observado {
 						}
 					}
 				}
+				else if (pMenu->getIDBotao() == IDs::IDs::botaoSelecionaFase) {
+					pGEst->incluiEstado(IDs::IDs::estadoMenuSelecionaFase, IDs::IDs::nulo, false);
+				}
+				else if (pMenu->getIDBotao() == IDs::IDs::botaoFase01Jog1) {
+					pGEst->removerEstado();
+					pGEst->incluiEstado(IDs::IDs::estadoJogar1Jog, IDs::IDs::fase01, false);
+				}
+				else if (pMenu->getIDBotao() == IDs::IDs::botaoFase01Jog2) {
+					pGEst->removerEstado();
+					pGEst->incluiEstado(IDs::IDs::estadoJogar2Jog, IDs::IDs::fase01, false);
+				}
+				else if (pMenu->getIDBotao() == IDs::IDs::botaoFase02Jog1) {
+					pGEst->removerEstado();
+					pGEst->incluiEstado(IDs::IDs::estadoJogar1Jog, IDs::IDs::fase02, false);
+				}
+				else if (pMenu->getIDBotao() == IDs::IDs::botaoFase02Jog2) {
+					pGEst->removerEstado();
+					pGEst->incluiEstado(IDs::IDs::estadoJogar2Jog, IDs::IDs::fase02, false);
+				}
 				else if (pMenu->getIDBotao() == IDs::IDs::botaoColocacao) {
 					pGEst->incluiEstado(IDs::IDs::estadoMenuColocacao, IDs::IDs::nulo, false);
 				}
@@ -87,7 +106,7 @@ namespace Observado {
 				}
 				else if (pMenu->getIDBotao() == IDs::IDs::botaoSalvarColocacao) {
 					Estado::Estado* pEst = pGEst->getEstado();
-					if (pEst->getID() == IDs::IDs::estadoMorreu) {
+					if (pEst->getID() == IDs::IDs::estadoMorreu || pEst->getID() == IDs::IDs::estadoGanhou) {
 						Estado::EstadoMenu* pEM = static_cast<Estado::EstadoMenu*>(pEst);
 						Menu::MenuOpcoes* pMenuOp = static_cast<Menu::MenuOpcoes*>(pEM->getMenu());
 						Fase::Fase* pFase = pMenuOp->getFase();

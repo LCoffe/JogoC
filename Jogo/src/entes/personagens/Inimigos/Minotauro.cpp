@@ -56,7 +56,7 @@ namespace Entidade {
 							parar();
 							atacar(true);
 						}
-						else {
+						else{
 							direcao = true;
 							andar(direcao);
 						}
@@ -130,11 +130,11 @@ namespace Entidade {
 				else if (andando && colisaoChao) {
 					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::walk, direcao, posicao, dt);
 				}
-				else if (atacando) {
-					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::attack, direcao, posicao, dt);
-				}
 				else if (levandoDano) {
 					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::levouDano, direcao, posicao, dt);
+				}
+				else if (atacando) {
+					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::attack, direcao, posicao, dt);
 				}
 				else {
 					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::idle, direcao, posicao, dt);

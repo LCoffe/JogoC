@@ -11,6 +11,8 @@ namespace Entidade {
 			inicializarSprite();
 		}
 		Projetil::~Projetil() {
+			setVelocidade(sf::Vector2f(0.0f, 0.0f));
+			setColidiu(true);
 		}
 		void Projetil::inicializarSprite() {
 			//sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::idle, PROJETIL_PATH, 1);

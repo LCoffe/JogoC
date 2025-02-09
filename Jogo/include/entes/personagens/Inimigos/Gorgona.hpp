@@ -9,8 +9,8 @@ constexpr auto ATAQUEG_PATH = "..\\Jogo\\assets\\inimigos\\gorgona\\gorgona_ataq
 constexpr auto ESPECIALG_PATH = "..\\Jogo\\assets\\inimigos\\gorgona\\gorgona_especial.png";
 constexpr auto MORTEG_PATH = "..\\Jogo\\assets\\inimigos\\gorgona\\gorgona_morte.png";
 
-#define DANO_GORGONA 10.0f
-#define VIDA_GORGONA 100.0f
+#define DANO_GORGONA 17.0f
+#define VIDA_GORGONA 80.0f
 #define TAMANHO_GORGONA_X 50.0f
 #define TAMANHO_GORGONA_Y 50.0f
 

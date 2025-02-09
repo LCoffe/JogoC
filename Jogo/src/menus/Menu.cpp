@@ -9,6 +9,8 @@ namespace Menu {
 		if (ID == IDs::IDs::menuSalvarColocao) {
 			nome = new Texto(sf::Vector2f(pGG->getTamJanela().x / 2.3f, pGG->getTamJanela().y / 2.8f), "");
 			nome->setTamFonte(40);
+			nome->setCorTexto(218, 165, 32);
+			nome->setCorBordaTexto(0, 0, 0);
 		}
 	}
 

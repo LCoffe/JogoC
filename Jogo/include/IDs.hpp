@@ -40,5 +40,15 @@ namespace IDs {
 		fase02, // 35
 		espinho, // 36
 		portao, // 37
+		lama, // 38
+		menuSelecionaFase, //39
+		botaoFase01Jog1, // 40
+		botaoFase02Jog1, // 41
+		botaoSelecionaFase, // 42
+		estadoMenuSelecionaFase, // 43
+		botaoFase01Jog2, // 44
+		botaoFase02Jog2, // 45
+		estadoGanhou, // 46
+		menuGanhou, // 47
 	};
 }

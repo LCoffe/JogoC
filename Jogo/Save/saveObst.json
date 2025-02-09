@@ -1,6 +1,7 @@
 [
     {
         "ID": 32,
+        "aberto": false,
         "arrastado": false,
         "colisaoParede": false,
         "posicao": {
@@ -14,15 +15,30 @@
     },
     {
         "ID": 36,
+        "aberto": false,
         "arrastado": false,
         "colisaoParede": false,
         "posicao": {
-            "x": 587.0,
+            "x": 529.0,
             "y": 526.0
         },
         "tamanho": {
             "x": 50.0,
             "y": 50.0
+        }
+    },
+    {
+        "ID": 37,
+        "aberto": false,
+        "arrastado": false,
+        "colisaoParede": false,
+        "posicao": {
+            "x": 1600.0,
+            "y": 700.582275390625
+        },
+        "tamanho": {
+            "x": 20.0,
+            "y": 300.0
         }
     }
 ]

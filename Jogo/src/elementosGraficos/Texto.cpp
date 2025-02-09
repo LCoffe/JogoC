@@ -35,6 +35,12 @@ namespace Menu {
 
 	}
 
+	void Texto::setCorBordaTexto(const unsigned int R, const unsigned int G, const unsigned int B)
+	{
+		texto.setOutlineColor(sf::Color(R, G, B));
+		texto.setOutlineThickness(1.0f);
+	}
+
 	void Texto::setTamFonte(const unsigned int tam)
 	{
 

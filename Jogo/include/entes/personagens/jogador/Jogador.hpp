@@ -20,6 +20,8 @@ constexpr auto ATAQUE_PATH = "..\\Jogo\\assets\\jogador\\jogador_ataque.png";
 constexpr auto DANO_PATH = "..\\Jogo\\assets\\jogador\\jogador_machucado.png";
 constexpr auto PETRIFICADO_PATH = "..\\Jogo\\assets\\jogador\\jogador_pedra.png";
 constexpr auto MORTE_PATH = "..\\Jogo\\assets\\jogador\\jogador_morte.png";
+constexpr const char* const CAMINHO_BARRAVIDA_JOG1 = "..\\Jogo\\assets\\barraVida\\barraVidaJog1.png";
+constexpr const char* const CAMINHO_BARRAVIDA_JOG2 = "..\\Jogo\\assets\\barraVida\\barraVidaJog2.png";
 
 namespace Observado {
 	namespace Observador {
@@ -35,6 +37,8 @@ namespace Entidade {
 				vector<Item::Arma*> armas;
 				int armaAtual;
 				Observado::Observador::ObservadorJogador* pObs;
+				sf::RectangleShape barraVida;
+				sf::RectangleShape textVida;
 				bool petrificado;
 				bool podePular;
 				bool jogadorUm;
@@ -58,7 +62,9 @@ namespace Entidade {
 				void setArmaAtual(int pos) { armaAtual = pos; }
 				int getTamanhoArmas() { return static_cast<int>(armas.size()); }
 				void inicializarSprite();
+				void inicializarBarraVida();
 				void atualizarTempoAtaque();
+				void atualizarBarraVida();
 				void atualizarSprite(float dt);
 				void salvar(nlohmann::json& j);
 				void operator+=(Item::Arma* pArma) { armas.push_back(pArma); }

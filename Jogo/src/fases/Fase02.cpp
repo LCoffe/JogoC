@@ -35,10 +35,26 @@ namespace Fase {
 			//Cria Jogador
 			criaPersonagem1Jog(sf::Vector2f(100, 768 - 251), IDs::IDs::jogador);
 			// Criar inimigos
-			criaPersonagem1Jog(sf::Vector2f(300, 768 - 251), IDs::IDs::gorgona);
-			// Criar inimigos
-			//criaPersonagem1Jog(sf::Vector2f(300, 768 - 251), IDs::IDs::gorgona);
-
+			float posX = 300.0f;
+			for (int i = 0; i < (rand() % NUM_MAX_INSTANCIA) + NUM_MIN_INSTANCIA; i++) {
+				//criaPersonagem1Jog(sf::Vector2f(static_cast<float>((rand() % 100)) + posX, 768 - 251), IDs::IDs::gorgona);
+				posX *= 2.5f;
+			}
+			posX = 150.0f;
+			for (int i = 0; i < (rand() % NUM_MAX_INSTANCIA) + NUM_MIN_INSTANCIA; i++) {
+				//criaPersonagem1Jog(sf::Vector2f(static_cast<float>((rand() % 100)) + posX, 768 - 251), IDs::IDs::guerreiraAthena);
+				//posX *= 5.0f;
+			}
+			posX = 200.0f;
+			for (int i = 0; i < (rand() % NUM_MAX_INSTANCIA) + NUM_MIN_INSTANCIA; i++) {
+				//criaPlataforma(sf::Vector2f(static_cast<float>((rand() % 100)) + posX, 500), sf::Vector2f(50, 30), IDs::IDs::lama);
+				posX *= 4.0f;
+			}
+			posX = 250.0f;
+			for (int i = 0; i < (rand() % NUM_MAX_INSTANCIA) + NUM_MIN_INSTANCIA; i++) {
+				//criaPlataforma(sf::Vector2f(static_cast<float>((rand() % 100)) + posX, 500), sf::Vector2f(50, 50), IDs::IDs::espinho);
+				posX *= 5.0f;
+			}
 		}
 	}
 
@@ -83,7 +99,7 @@ namespace Fase {
 				criaPlataforma(pos, tam, ID);
 			}
 			if (ID == IDs::IDs::caixa) {
-				criaPlataforma(pos, tam, ID, arrastado, colisaoParede);
+				criaPlataforma(pos, tam, ID, arrastado, colisaoParede, false);
 			}
 		}
 

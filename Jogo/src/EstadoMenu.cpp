@@ -4,6 +4,8 @@
 #include "../include/menus/MenuSalvarColocacao.hpp"
 #include "../include/menus/MenuColocacao.hpp"
 #include "../include/menus/MenuMorreu.hpp"
+#include "../include/menus/MenuSelecionaFase.hpp"
+#include "../include/menus/MenuGanhou.hpp"
 
 namespace Estado {
 	EstadoMenu::EstadoMenu(const IDs::IDs ID) : Estado(ID), menu(nullptr) {
@@ -37,6 +39,13 @@ namespace Estado {
 				menuMorreu->criarTextoPontuacao();
 			}
 		}
+		else if (ID == IDs::IDs::estadoGanhou) {
+			Menu::MenuGanhou* menuGanhou = static_cast<Menu::MenuGanhou*>(menu);
+			if (menuGanhou != nullptr) {
+				menuGanhou->setFase(fase);
+				menuGanhou->criarTextoPontuacao();
+			}
+		}
 
 	}
 
@@ -51,6 +60,12 @@ namespace Estado {
 			Menu::MenuMorreu* menuMorreu = static_cast<Menu::MenuMorreu*>(menu);
 			if (menuMorreu != nullptr) {
 				return menuMorreu->getFase();
+			}
+		}
+		if (ID == IDs::IDs::estadoGanhou) {
+			Menu::MenuGanhou* menuGanhou = static_cast<Menu::MenuGanhou*>(menu);
+			if (menuGanhou != nullptr) {
+				return menuGanhou->getFase();
 			}
 		}
 		return nullptr;
@@ -105,6 +120,22 @@ namespace Estado {
 				exit(1);
 			}
 			menu = static_cast<Menu::Menu*>(menuMorreu);
+		}
+		else if (ID == IDs::IDs::estadoMenuSelecionaFase) {
+			Menu::MenuSelecionaFase* menuSelecionaFase = new Menu::MenuSelecionaFase();
+			if (menuSelecionaFase == nullptr) {
+				throw std::invalid_argument("Menu invalido");
+				exit(1);
+			}
+			menu = static_cast<Menu::Menu*>(menuSelecionaFase);
+		}
+		else if (ID == IDs::IDs::estadoGanhou) {
+			Menu::MenuGanhou* menuGanhou = new Menu::MenuGanhou();
+			if (menuGanhou == nullptr) {
+				throw std::invalid_argument("Menu invalido");
+				exit(1);
+			}
+			menu = static_cast<Menu::Menu*>(menuGanhou);
 		}
 		else {
 			//throw std::invalid_argument("ID invalido");

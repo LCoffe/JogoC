@@ -82,6 +82,11 @@ namespace Lista {
 					aux->salvar(jsonAux);
 					jsonReturn.push_back(jsonAux);
 				}
+				if (aux->getID() == IDs::IDs::portao) {
+					aux = static_cast<Entidade::Obstaculos::Portao*>(aux);
+					aux->salvar(jsonAux);
+					jsonReturn.push_back(jsonAux);
+				}
 			}
 		}
 		return jsonReturn;
@@ -97,35 +102,5 @@ namespace Lista {
 			IDs::IDs ID = it["ID"];
 			//cout << (int)ID << endl;
 		}
-
-		/*for (it) {
-			cout << j[i]["ID"] << endl;
-			if (j[i]["ID"] == IDs::IDs::jogador) {
-				sf::Vector2f pos(j[i]["posicao"]["x"], j[i]["posicao"]["y"]);
-				cout << pos.x << " " << pos.y << " Jogador" << endl;
-				pJog->setPos(pos);
-			}
-			else if (j[i]["ID"] == IDs::IDs::inimigo) {
-				if (pJog == nullptr) {
-					std::cout << "Jogador nao encontrado" << std::endl;
-					exit(1);
-				}
-				sf::Vector2f pos(j[i]["posicao"]["x"], j[i]["posicao"]["y"]);
-				aux = new Entidade::Personagem::Inimigo::Inimigo(pos, pJog);
-			}
-			else if (j[i]["ID"] == IDs::IDs::plataforma) {
-				sf::Vector2f pos(j[i]["posicao"]["x"], j[i]["posicao"]["y"]);
-				sf::Vector2f tam(j[i]["tamanho"]["x"], j[i]["tamanho"]["y"]);
-				aux = new Entidade::Obstaculos::Plataforma(pos, tam, IDs::IDs::plataforma);
-			}
-			else {
-				std::cout << "ID desconhecido no JSON" << std::endl;
-				continue;
-			}
-
-			if (aux != nullptr) {
-				inserirEnt(aux);
-			}
-		}*/
 	}
 }

@@ -6,21 +6,22 @@ Gerenciador::GerenciadorEstado* Jogo::pGEst = Gerenciador::GerenciadorEstado::ge
 
 Jogo::Jogo() : evento() {
 	if (pGG == nullptr) {
-		cout << "Erro ao criar o Gerenciador Grafico" << endl;
+		//cout << "Erro ao criar o Gerenciador Grafico" << endl;
 		exit(1);
 	}
 
 	if (pGE == nullptr) {
-		cout << "Erro ao criar o Gerenciador de Eventos" << endl;
+		//cout << "Erro ao criar o Gerenciador de Eventos" << endl;
 		exit(1);
 	}
 
 	if (pGEst == nullptr) {
-		cout << "Erro ao criar o Gerenciador de Estados" << endl;
+		//cout << "Erro ao criar o Gerenciador de Estados" << endl;
 		exit(1);
 	}
 
 	pGEst->incluiEstado(IDs::IDs::estadoMenuPrincipal, IDs::IDs::nulo, false);
+
 	executar();
 }	
 

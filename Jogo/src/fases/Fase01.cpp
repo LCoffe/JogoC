@@ -15,7 +15,6 @@ namespace Fase {
 
 	void Fase01::iniciaFase(bool doisJogadres) {
 		criarMapa(doisJogadres);
-		//executar();
 	}
 
 	void Fase01::iniciaFundo() {
@@ -29,32 +28,62 @@ namespace Fase {
 
 	void Fase01::carregaFase() {
 		carregar();
-		//executar();
 	}
 
 	void Fase01::criarMapa(bool doisJogadores) {
 		if (doisJogadores) {
 			//Cria Jogadores
 			criaPersonagem2Jog(sf::Vector2f(100, 768 - 251), IDs::IDs::jogador, true);
-			criaPersonagem2Jog(sf::Vector2f(200, 768 - 251), IDs::IDs::jogador, false);
-
+			criaPersonagem2Jog(sf::Vector2f(150, 768 - 251), IDs::IDs::jogador, false);
+			
 			// Criar inimigos
-			//criaPersonagem2Jog(sf::Vector2f(300, 768 - 251), IDs::IDs::gorgona, false);
-			criaPersonagem2Jog(sf::Vector2f(400, 768 - 251), IDs::IDs::minotauro, false);
-
-			criaPlataforma(sf::Vector2f(600, 500), sf::Vector2f(50, 50), IDs::IDs::caixa);
-			criaPlataforma(sf::Vector2f(1400, 500), sf::Vector2f(20, 70), IDs::IDs::portao);
+			float posX = 300.0f;
+			for (int i = 0; i < (rand() % NUM_MAX_INSTANCIA) + NUM_MIN_INSTANCIA; i++) {
+				criaPersonagem2Jog(sf::Vector2f(static_cast<float>((rand() % 100)) + posX, 768 - 251), IDs::IDs::gorgona, false);
+				posX *= 2.5f;
+			}
+			posX = 150.0f;
+			for (int i = 0; i < (rand() % NUM_MAX_INSTANCIA) + NUM_MIN_INSTANCIA; i++) {
+				criaPersonagem2Jog(sf::Vector2f(static_cast<float>((rand() % 100)) + posX, 768 - 251), IDs::IDs::minotauro, false);
+				posX *= 5.0f;
+			}
+			posX = 150.0f;
+			for (int i = 0; i < (rand() % NUM_MAX_INSTANCIA) + NUM_MIN_INSTANCIA; i++) {
+				criaPlataforma(sf::Vector2f(static_cast<float>((rand() % 100)) + posX, 500), sf::Vector2f(50, 50), IDs::IDs::caixa);
+				posX *= 4.0f;
+			}
+			posX = 120.0f;
+			for (int i = 0; i < (rand() % NUM_MAX_INSTANCIA) + NUM_MIN_INSTANCIA; i++) {
+				criaPlataforma(sf::Vector2f(static_cast<float>((rand() % 100)) + posX, 500), sf::Vector2f(50, 50), IDs::IDs::espinho);
+				posX *= 5.0f;
+			}
+			criaPlataforma(sf::Vector2f(1400, 500), sf::Vector2f(20, 300), IDs::IDs::portao);
 		}
 		else {
 			//Cria Jogador
 			criaPersonagem1Jog(sf::Vector2f(100, 768 - 251), IDs::IDs::jogador);
 			// Criar inimigos
-			//criaPersonagem1Jog(sf::Vector2f(300, 768 - 251), IDs::IDs::gorgona);
-			criaPersonagem1Jog(sf::Vector2f(400, 768 - 251), IDs::IDs::minotauro);
-
-			criaPlataforma(sf::Vector2f(700, 500), sf::Vector2f(50, 50), IDs::IDs::caixa);
-			criaPlataforma(sf::Vector2f((rand() % 100) + 500, 500), sf::Vector2f(50, 50), IDs::IDs::espinho);
-			criaPlataforma(sf::Vector2f(1400, 500), sf::Vector2f(20, 70), IDs::IDs::portao);
+			float posX = 300.0f;
+			for (int i = 0; i < (rand() % NUM_MAX_INSTANCIA) + NUM_MIN_INSTANCIA; i++) {
+				criaPersonagem1Jog(sf::Vector2f(static_cast<float>((rand() % 100)) + posX, 768 - 251), IDs::IDs::gorgona);
+				posX *= 2.5f;
+			}
+			posX = 150.0f;
+			for (int i = 0; i < (rand() % NUM_MAX_INSTANCIA) + NUM_MIN_INSTANCIA; i++) {
+				criaPersonagem1Jog(sf::Vector2f(static_cast<float>((rand() % 100)) + posX, 768 - 251), IDs::IDs::minotauro);
+				posX *= 5.0f;
+			}
+			posX = 200.0f;
+			for (int i = 0; i < (rand() % NUM_MAX_INSTANCIA) + NUM_MIN_INSTANCIA; i++) {
+				criaPlataforma(sf::Vector2f(static_cast<float>((rand() % 100)) + posX, 500), sf::Vector2f(50, 50), IDs::IDs::caixa);
+				posX *= 4.0f;
+			}
+			posX = 250.0f;
+			for (int i = 0; i < (rand() % NUM_MAX_INSTANCIA) + NUM_MIN_INSTANCIA; i++) {
+				criaPlataforma(sf::Vector2f(static_cast<float>((rand() % 100)) + posX, 500), sf::Vector2f(50, 50), IDs::IDs::espinho);
+				posX *= 5.0f;
+			}
+			criaPlataforma(sf::Vector2f(1400, 500), sf::Vector2f(20, 300), IDs::IDs::portao);
 		}
 	}
 
@@ -78,13 +107,20 @@ namespace Fase {
 			sf::Vector2f tam(it["tamanho"]["x"], it["tamanho"]["y"]);
 			bool arrastado = it["arrastado"];
 			bool colisaoParede = it["colisaoParede"];
+			bool aberto = it["aberto"];
 			if (ID == IDs::IDs::plataforma) {
 				criaPlataforma(pos, tam, ID);
 			}
 			else if (ID == IDs::IDs::caixa) {
-				criaPlataforma(pos, tam, ID, arrastado, colisaoParede);
+				criaPlataforma(pos, tam, ID, arrastado, colisaoParede, false);
 			}
 			else if (ID == IDs::IDs::espinho) {
+				criaPlataforma(pos, tam, ID);
+			}
+			else if (ID == IDs::IDs::portao) {
+				criaPlataforma(pos, tam, ID, false, false, it["aberto"]);
+			}
+			else if (ID == IDs::IDs::lama) {
 				criaPlataforma(pos, tam, ID);
 			}
 		}
