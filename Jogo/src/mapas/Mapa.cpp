@@ -45,33 +45,28 @@ bool Mapa::carregarMapa(const char* caminhoMapa) {
     larguraTile = jsonMapa["tilewidth"];
     alturaTile = jsonMapa["tileheight"];
 
+    camadas.clear();
+
     for (const auto& layer : jsonMapa["layers"]) {
+        std::vector<int> tileIDs = layer["data"];
+
+        if (tileIDs.size() < largura * altura) {
+            std::cerr << "Erro: JSON contém menos tiles do que o esperado!" << std::endl;
+            return false;
+        }
+
+        camadas.push_back(tileIDs);
+
+      
         if (layer["name"] == "Tile Layer 1") {
-            std::vector<int> tileIDs = layer["data"];
-
-            // Verifica se o JSON tem o tamanho correto
-            if (tileIDs.size() < largura * altura) {
-                std::cerr << "Erro: JSON contém menos tiles do que o esperado! Esperado: "
-                    << (largura * altura) << ", Obtido: " << tileIDs.size() << std::endl;
-                return false;
-            }
-
-            tiles = tileIDs; // Agora armazenamos os tiles corretamente
-            std::cout << "Total de tiles carregados: " << tiles.size() << std::endl;
-
             for (int y = 0; y < altura; y++) {
                 for (int x = 0; x < largura; x++) {
                     int index = y * largura + x;
-                    int tileID = tiles[index];
+                    int tileID = tileIDs[index];
 
-                    if (tileID != 0) { // Se não for um tile vazio
+                    if (tileID != 0) { // Se for um tile de colisão
                         sf::Vector2f pos(static_cast<float>(x * larguraTile), static_cast<float>(y * alturaTile));
                         sf::Vector2f tam(static_cast<float>(larguraTile), static_cast<float>(alturaTile));
-
-                        if (fase == nullptr) {
-                            std::cerr << "Erro: ponteiro fase em Mapa é nullptr!" << std::endl;
-                        }
-
                         fase->criaPlataforma(pos, tam, IDs::IDs::plataforma);
                     }
                 }
@@ -80,6 +75,7 @@ bool Mapa::carregarMapa(const char* caminhoMapa) {
     }
     return true;
 }
+
 
 bool Mapa::carregarTileset(const std::string& caminhoTileset) {
     if (!texturaTileset.loadFromFile(caminhoTileset)) {
@@ -95,59 +91,42 @@ void Mapa::desenharMapa(sf::RenderWindow& janela) {
         return;
     }
 
-    if (tiles.empty()) {
-        std::cerr << "Erro: Vetor de tiles está vazio!" << std::endl;
-        return;
-    }
-
-    sf::VertexArray vertices(sf::Quads, largura * altura * 4);
-
-    for (int y = 0; y < altura; y++) {
-        for (int x = 0; x < largura; x++) {
-            int index = y * largura + x;
-
-            if (index >= static_cast<int>(tiles.size())) {
-                std::cerr << "Erro: Índice de tile fora do alcance: " << index
-                    << " (tamanho: " << tiles.size() << ")" << std::endl;
-                continue;
-            }
-
-            int tileID = tiles[index];
-            if (tileID == 0) continue;
-
-            // Calcula posição do tile na textura
-            int tileX = (tileID - 1) % (texturaTileset.getSize().x / larguraTile);
-            int tileY = (tileID - 1) / (texturaTileset.getSize().x / larguraTile);
-
-            // Calcula posição do tile no mapa
-            float posX = static_cast<float>(x * larguraTile);
-            float posY = static_cast<float>(y * alturaTile);
-
-            int vIndex = index * 4;
-
-            vertices[vIndex].position = sf::Vector2f(posX, posY);
-            vertices[vIndex + 1].position = sf::Vector2f(posX + larguraTile, posY);
-            vertices[vIndex + 2].position = sf::Vector2f(posX + larguraTile, posY + alturaTile);
-            vertices[vIndex + 3].position = sf::Vector2f(posX, posY + alturaTile);
-
-            float texX = static_cast<float>(tileX * larguraTile);
-            float texY = static_cast<float>(tileY * alturaTile);
-
-            vertices[vIndex].texCoords = sf::Vector2f(texX, texY);
-            vertices[vIndex + 1].texCoords = sf::Vector2f(texX + larguraTile, texY);
-            vertices[vIndex + 2].texCoords = sf::Vector2f(texX + larguraTile, texY + alturaTile);
-            vertices[vIndex + 3].texCoords = sf::Vector2f(texX, texY + alturaTile);
-        }
-    }
-
-    if (texturaTileset.getSize().x == 0 || texturaTileset.getSize().y == 0) {
-        std::cerr << "Erro: Textura do tileset não carregada corretamente!" << std::endl;
-        return;
-    }
-
     sf::RenderStates estados;
     estados.texture = &texturaTileset;
 
-    
-    janela.draw(vertices, estados);
+    for (const auto& camada : camadas) {
+        sf::VertexArray vertices(sf::Quads, largura * altura * 4);
+
+        for (int y = 0; y < altura; y++) {
+            for (int x = 0; x < largura; x++) {
+                int index = y * largura + x;
+                int tileID = camada[index];
+
+                if (tileID == 0) continue;
+
+                // Calcula posição do tile na textura
+                int tileX = (tileID - 1) % (texturaTileset.getSize().x / larguraTile);
+                int tileY = (tileID - 1) / (texturaTileset.getSize().x / larguraTile);
+
+                float posX = static_cast<float>(x * larguraTile);
+                float posY = static_cast<float>(y * alturaTile);
+
+                int vIndex = index * 4;
+
+                vertices[vIndex].position = sf::Vector2f(posX, posY);
+                vertices[vIndex + 1].position = sf::Vector2f(posX + larguraTile, posY);
+                vertices[vIndex + 2].position = sf::Vector2f(posX + larguraTile, posY + alturaTile);
+                vertices[vIndex + 3].position = sf::Vector2f(posX, posY + alturaTile);
+
+                float texX = static_cast<float>(tileX * larguraTile);
+                float texY = static_cast<float>(tileY * alturaTile);
+
+                vertices[vIndex].texCoords = sf::Vector2f(texX, texY);
+                vertices[vIndex + 1].texCoords = sf::Vector2f(texX + larguraTile, texY);
+                vertices[vIndex + 2].texCoords = sf::Vector2f(texX + larguraTile, texY + alturaTile);
+                vertices[vIndex + 3].texCoords = sf::Vector2f(texX, texY + alturaTile);
+            }
+        }
+        janela.draw(vertices, estados);
+    }
 }

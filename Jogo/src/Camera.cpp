@@ -16,19 +16,10 @@ namespace Gerenciador {
 	}
 
 	void Camera::atualizar(const sf::Vector2f& pos, const sf::Vector2f tamJanela) {
-		camera.setCenter(pos);
-		if (pos.x - tamJanela.x / 2.0f < 0.0f) {
-			camera.setCenter(tamJanela.x / 2.0f, pos.y);
-		}
-		if (pos.y - tamJanela.y / 2.0f < 0.0f) {
-			camera.setCenter(pos.x, tamJanela.y / 2.0f);
-		}
-		if (pos.x + tamJanela.x / 2.0f > this->tamJanela.x) {
-			camera.setCenter(this->tamJanela.x - tamJanela.x / 2.0f, pos.y);
-		}
-		if (pos.y + tamJanela.y / 2.0f > this->tamJanela.y) {
-			camera.setCenter(pos.x, this->tamJanela.y - tamJanela.y / 2.0f);
-		}
+		sf::Vector2f posCamera = camera.getCenter();  // Pega a posição atual da câmera
+
+		// Atualiza apenas no eixo X, mantendo a posição Y fixa
+		camera.setCenter(pos.x, posCamera.y);
 	}
 	sf::View Camera::getCamera() const {
 		return camera;
