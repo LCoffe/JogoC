@@ -545,7 +545,7 @@ namespace Fase {
 			}
 			entidade = static_cast<Entidade::Entidade*>(plataforma);
 		}
-		if (ID == IDs::IDs::caixa) {
+		else if (ID == IDs::IDs::caixa) {
 			Entidade::Obstaculos::Caixa* caixa = nullptr;
 			caixa = new Entidade::Obstaculos::Caixa(pos, tam);
 			if (caixa == nullptr) {
@@ -553,6 +553,24 @@ namespace Fase {
 				exit(1);
 			}
 			entidade = static_cast<Entidade::Entidade*>(caixa);
+		}
+		else if (ID == IDs::IDs::espinho) {
+			Entidade::Obstaculos::Espinho* espinho = nullptr;
+			espinho = new Entidade::Obstaculos::Espinho(pos, tam);
+			if (espinho == nullptr) {
+				//cout << "Erro ao criar espinho" << endl;
+				exit(1);
+			}
+			entidade = static_cast<Entidade::Entidade*>(espinho);
+		}
+		else if (ID == IDs::IDs::portao) {
+			Entidade::Obstaculos::Portao* portao = nullptr;
+			portao = new Entidade::Obstaculos::Portao(pos, tam);
+			if (portao == nullptr) {
+				//cout << "Erro ao criar portao" << endl;
+				exit(1);
+			}
+			entidade = static_cast<Entidade::Entidade*>(portao);
 		}
 
 		if (entidade != nullptr) {
@@ -571,7 +589,7 @@ namespace Fase {
 			}
 			entidade = static_cast<Entidade::Entidade*>(plataforma);
 		}
-		if (ID == IDs::IDs::caixa) {
+		else if (ID == IDs::IDs::caixa) {
 			Entidade::Obstaculos::Caixa* caixa = nullptr;
 			caixa = new Entidade::Obstaculos::Caixa(pos, tam);
 			if (caixa == nullptr) {
@@ -581,6 +599,15 @@ namespace Fase {
 			caixa->setArrastado(arrastado);
 			caixa->setColisaoParede(colisaoParede);
 			entidade = static_cast<Entidade::Entidade*>(caixa);
+		}
+		else if (ID == IDs::IDs::espinho) {
+			Entidade::Obstaculos::Espinho* espinho = nullptr;
+			espinho = new Entidade::Obstaculos::Espinho(pos, tam);
+			if (espinho == nullptr) {
+				//cout << "Erro ao criar espinho" << endl;
+				exit(1);
+			}
+			entidade = static_cast<Entidade::Entidade*>(espinho);
 		}
 		if (entidade != nullptr) {
 			pListaObstaculo->inserirEnt(entidade);
@@ -639,6 +666,17 @@ namespace Fase {
 		else {
 			//cout << "Erro ao criar arma" << endl;
 			exit(1);
+		}
+	}
+
+	void Fase::verificaInimigo() {
+		bool inimigoVivo = pObsFase->verificaInimigoVivo(*pListaPersona);
+		Entidade::Obstaculos::Portao* portao = static_cast<Entidade::Obstaculos::Portao*>(pListaObstaculo->getEntidade(IDs::IDs::portao));
+		if (!inimigoVivo && portao != nullptr) {
+			portao->setAberto(true);
+		}
+		else if (portao->getAberto() && portao != nullptr) {
+			portao->setAberto(false);
 		}
 	}
 
@@ -713,6 +751,9 @@ namespace Fase {
 				atualizaFundo();
 				pListaPersona->executar();
 				pListaObstaculo->executar();
+				if (ID == IDs::IDs::fase01) {
+					verificaInimigo();
+				}
 				desenhar();
 
 				gerenciarColisoes();
@@ -730,7 +771,9 @@ namespace Fase {
 				atualizaFundo();
 				pListaPersona->executar();
 				pListaObstaculo->executar();
-				pontuacao = pJogador->getPontuacao();
+				if (ID == IDs::IDs::fase01) {
+					verificaInimigo();
+				}
 
 				desenhar();
 

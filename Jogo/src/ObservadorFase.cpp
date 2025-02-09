@@ -29,17 +29,27 @@ namespace Observado {
 		{
 			if (pFase->getID() == IDs::IDs::fase01) {
 				if (pFase->getDoisJogadores()) {
-					if ((pFase->getJogador()->getPos().x > 500.0f) || pFase->getJogadorDois()->getPos().x > 500.0f) {
+					if ((pFase->getJogador()->getPos().x > 1500.0f) || pFase->getJogadorDois()->getPos().x > 1500.0f) {
 						pGEst->passouFase(pFase->getID());
 					}
 				}
 				else {
-					if ((pFase->getJogador()->getPos().x > 500.0f)) {
+					if ((pFase->getJogador()->getPos().x > 1500.0f)) {
 						pGEst->passouFase(pFase->getID());
 					}
 				}
 
 			}
+		}
+
+		bool ObservadorFase::verificaInimigoVivo(Lista::ListaEntidade& LP) {
+			for (int i = 0; i < LP.getTamanho(); i++)
+			{
+				if (LP[i]->getID() == IDs::IDs::gorgona || LP[i]->getID() == IDs::IDs::minotauro || LP[i]->getID() == IDs::IDs::guerreiraAthena) {
+					return true;
+				}
+			}
+			return false;
 		}
 	}
 }

@@ -12,7 +12,7 @@ namespace Entidade {
 				bool colisaoParede;
 				bool arrastado;
 				float lentidao;
-				ElementosGraficos::AnimacaoMovimento sprite;
+				//ElementosGraficos::AnimacaoMovimento sprite;
 
 				void inicializar();
 				void atualizarSprite(float dt);

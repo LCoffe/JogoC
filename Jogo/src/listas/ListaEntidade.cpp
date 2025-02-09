@@ -77,6 +77,11 @@ namespace Lista {
 					aux->salvar(jsonAux);
 					jsonReturn.push_back(jsonAux);
 				}
+				if (aux->getID() == IDs::IDs::espinho) {
+					aux = static_cast<Entidade::Obstaculos::Espinho*>(aux);
+					aux->salvar(jsonAux);
+					jsonReturn.push_back(jsonAux);
+				}
 			}
 		}
 		return jsonReturn;

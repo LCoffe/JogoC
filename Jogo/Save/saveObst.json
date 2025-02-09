@@ -1,1 +1,28 @@
-null
+[
+    {
+        "ID": 32,
+        "arrastado": false,
+        "colisaoParede": false,
+        "posicao": {
+            "x": 700.0,
+            "y": 526.0
+        },
+        "tamanho": {
+            "x": 50.0,
+            "y": 50.0
+        }
+    },
+    {
+        "ID": 36,
+        "arrastado": false,
+        "colisaoParede": false,
+        "posicao": {
+            "x": 587.0,
+            "y": 526.0
+        },
+        "tamanho": {
+            "x": 50.0,
+            "y": 50.0
+        }
+    }
+]

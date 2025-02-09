@@ -58,7 +58,7 @@ namespace Entidade {
 		}
 
 		void Plataforma::atualizar() {
-			sprite.atualizar(pos);
+			//sprite.atualizar(pos);
 		}
 
 		void Plataforma::inicializar() {

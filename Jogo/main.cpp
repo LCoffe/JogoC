@@ -14,7 +14,7 @@
 
 int main() {
 	Jogo jogo;
-	jogo.executar();
+	srand(static_cast<unsigned int>(time(NULL)));
 	return 0;
 
 }
