@@ -5,7 +5,7 @@ namespace IDs {
 		nulo = 0, 
 		jogador, // 1
 		guerreiraAthena,// 2
-		fase01, // 3
+		ponte, // 3
 		plataforma, // 4
 		menuPrincipal, // 5
 		menuOpcoes, // 6
@@ -37,17 +37,17 @@ namespace IDs {
 		caixa, // 32
 		projetil, // 33
 		minotauro, // 34
-		fase02, // 35
+		castelo, // 35
 		espinho, // 36
 		portao, // 37
-		lama, // 38
+		maocondenados, // 38
 		menuSelecionaFase, //39
-		botaoFase01Jog1, // 40
-		botaoFase02Jog1, // 41
+		botaoPonteJog1, // 40
+		botaoCasteloJog1, // 41
 		botaoSelecionaFase, // 42
 		estadoMenuSelecionaFase, // 43
-		botaoFase01Jog2, // 44
-		botaoFase02Jog2, // 45
+		botaoPonteJog2, // 44
+		botaoCasteloJog2, // 45
 		estadoGanhou, // 46
 		menuGanhou, // 47
 	};

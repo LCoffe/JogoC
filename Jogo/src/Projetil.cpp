@@ -3,23 +3,32 @@
 namespace Entidade {
 	namespace Item {
 
-		Projetil::Projetil(Personagem::Personagem* p, sf::Vector2f tam) : Arma(p, tam, IDs::IDs::projetil), direcao(p->getDirecao()), colidiu(false), velocidade(sf::Vector2f(0.0f, 0.0f)){
+		Projetil::Projetil(Personagem::Personagem* p, sf::Vector2f tam) : Arma(p, tam, IDs::IDs::projetil), direcao(p->getDirecao()), colidiu(false), velocidade(sf::Vector2f(0.0f, 0.0f)), IDPersonagem(p->getID()){
 			if (p != nullptr) {
 				dano = p->getDano() + DANO_PROJETIL;
+				p->setArma(this);
+				if (p->getID() == IDs::IDs::jogador)
+					inicializarSprite(IDs::IDs::jogador);
+				else if (p->getID() == IDs::IDs::minotauro)
+					inicializarSprite(IDs::IDs::minotauro);
 			}
-			p->setArma(this);
-			inicializarSprite();
 		}
 		Projetil::~Projetil() {
 			setVelocidade(sf::Vector2f(0.0f, 0.0f));
 			setColidiu(true);
 		}
-		void Projetil::inicializarSprite() {
-			//sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::idle, PROJETIL_PATH, 1);
+		void Projetil::inicializarSprite(IDs::IDs ID) {
+			if (ID == IDs::IDs::jogador)
+				sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::idle, PROJETIL_PATH, 1);
+			else if (ID == IDs::IDs::minotauro)
+				sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::attack, PROJETILM_PATH, 10);
 		}
 		void Projetil::atualizarSprite(float dt) {
-			if (!colidiu)
+			if (!colidiu && IDPersonagem == IDs::IDs::minotauro)
+				sprite.atualizar(ElementosGraficos::ID_ANIMACAO::attack, direcao, pos, dt);
+			else if (!colidiu && IDPersonagem == IDs::IDs::jogador) {
 				sprite.atualizar(ElementosGraficos::ID_ANIMACAO::idle, direcao, pos, dt);
+			}
 		}
 
 		void Projetil::setColidiu(const bool colidiu)
@@ -76,26 +85,16 @@ namespace Entidade {
 		}
 
 		void Projetil::desenhar() {
-			pGG->desenharElemento(corpo);
-			//sprite.desenhar();
-		}
-
-		void Projetil::verificaSaiuTela() {
-			sf::Vector2f posicao = pos;
-			posicao.x += tam.x / 2.0f;
-			posicao.y += tam.y / 2.0f;
-			//cout << posicao.y << endl;
-			if (posicao.y >= 600.0f) {
-				setColidiu(true);
+			if (!colidiu) {
+				//pGG->desenharElemento(corpo);
+				sprite.desenhar();
 			}
 		}
 
 		void Projetil::atualizar() {
 			if (!colidiu) {
 				atualizarPosicao();
-				verificaSaiuTela();
-				//cout << pos.x << " " << pos.y << endl;
-				//atualizarSprite(pGG->getTempo());
+				atualizarSprite(0.016f);
 				desenhar();
 			}
 		}

@@ -11,7 +11,7 @@ namespace Menu {
 		titulo = nullptr;
 	}
 	void MenuGanhou::criarTitulo() {
-		titulo = new Texto(sf::Vector2f(pGG->getTamJanela().x / 3.1f, pGG->getTamJanela().y / 3.5f), "Voce Consquitou Athena");
+		titulo = new Texto(sf::Vector2f(pGG->getTamJanela().x / 3.1f, pGG->getTamJanela().y / 3.5f), "Voce Conquistou Athena");
 		titulo->setTamFonte(50);
 		titulo->setCorTexto(218, 165, 32);
 		titulo->setCorBordaTexto(0, 0, 0);

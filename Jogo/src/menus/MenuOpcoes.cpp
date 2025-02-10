@@ -33,11 +33,11 @@ namespace Menu {
 
 	void MenuOpcoes::criaFundoParallax() {
 		fundoParallax = new Fundo::Parallax();
-		if (pFase->getID() == IDs::IDs::fase01) {
+		if (pFase->getID() == IDs::IDs::ponte) {
 			fundoParallax->carregarTextura(CAMINHO_FUNDO_FASE1);
 			fundoParallax->setVelParalax(0.02f);
 		}
-		else if (pFase->getID() == IDs::IDs::fase02) {
+		else if (pFase->getID() == IDs::IDs::castelo) {
 			fundoParallax->carregarTextura(CAMINHO_FUNDO_FASE2);
 			fundoParallax->setVelParalax(0.02f);
 		}

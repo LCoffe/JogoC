@@ -2,7 +2,7 @@
 
 #include "../../include/entes/obstaculos/Obstaculo.hpp"
 
-constexpr const char* const ESPINHO_PATH = "res/assets/obstaculos/espinho.png";
+constexpr const char* const ESPINHO_PATH = "..\\Jogo\\assets\\obstaculos\\espinho\\espinhos.png";
 
 #define DANO_ESPINHO 30.0f
 

@@ -14,6 +14,7 @@
 #include "../../include/entes/obstaculos/Caixa.hpp"
 #include "../../include/entes/obstaculos/Espinho.hpp"
 #include "../../include/entes/obstaculos/Portao.hpp"
+#include "../../include/entes/obstaculos/MaoCondenados.hpp"
 
 using namespace std;
 
@@ -33,7 +34,6 @@ namespace Lista {
 			void limparLista();
 			void desenharEntidades();
 			nlohmann::json save();
-			void carregar(nlohmann::json& j, Entidade::Personagem::Jogador::Jogador *pJog);
 			void executar();
 	};
 }

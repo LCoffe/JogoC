@@ -5,8 +5,8 @@
 #include <vector>
 #include <string>
 
-constexpr const char* const MAPA1_PATH = "assets\\mapas\\mapa1Teste.tmj";
-constexpr const char* const MAPA2_PATH = "assets\\mapas\\mapa2.tmj";
+constexpr const char* const MAPA1_PATH = "assets\\mapas\\ponte.tmj";
+constexpr const char* const MAPA2_PATH = "assets\\mapas\\castelo.tmj";
 
 namespace Fase {
     class Fase;

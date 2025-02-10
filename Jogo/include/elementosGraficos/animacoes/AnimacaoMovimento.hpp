@@ -13,7 +13,14 @@ namespace ElementosGraficos {
 			levouDano = 4,
 			especialGorgona = 5,
 			petrificado = 6,
-			morte = 7
+			morte = 7,
+			walkL = 8,
+			idleL = 9,
+			attackL = 10,
+			jumpL = 11,
+			levouDanoL = 12,
+			morteL = 13,
+			petrificadoL = 14,
 		};
 
 		class AnimacaoMovimento : public Animacao{

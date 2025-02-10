@@ -8,7 +8,7 @@ namespace Entidade {
 		Espinho::~Espinho() {
 		}
 		void Espinho::inicializarSprite() {
-			//animaEstatica.inicializar(ESPINHO_PATH, pos, tam);
+			sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::idle, ESPINHO_PATH, 1);
 		}
 		void Espinho::inicializar() {
 			inicializarSprite();
@@ -41,8 +41,8 @@ namespace Entidade {
 			}
 		}
 		void Espinho::desenhar() {
-			pGG->desenharElemento(corpo);
-			//animaEstatica.desenhar();
+			//pGG->desenharElemento(corpo);
+			sprite.desenhar();
 		}
 
 		void Espinho::colisaoPlataforma(Entidade* ent, const sf::Vector2f diferenca) {
@@ -76,7 +76,10 @@ namespace Entidade {
 			corpo.move(soma);
 			pos.y = corpo.getPosition().y;
 
-			//animaEstatica.atualizar();
+			sf::Vector2f posicao = pos;
+			posicao.x += tam.x / 2.7f;
+			posicao.y += tam.y / 5.50f;
+			sprite.atualizar(ElementosGraficos::ID_ANIMACAO::idle, true, posicao, pGG->getTempo());
 		}
 
 		void Espinho::salvar(nlohmann::json& j) {

@@ -244,21 +244,26 @@ namespace Fase {
 				//cout << "Erro ao criar jogador" << endl;
 				exit(1);
 			}
-			pJogador->setTam(tam);
-			pJogador->setVelocidade(vel);
-			pJogador->setDirecao(direcao);
-			pJogador->setJogadorUm(jogadorUm);
-			pJogador->setVida(vida);
-			pJogador->setTempoAtaque(tempoAtaque);
-			pJogador->atacar(atacando);
-			pJogador->setPetrificado(petrifica);
-			pJogador->setLevandoDano(levandoDano);
-			pJogador->setTempoDano(tempoDano);
-			pJogador->setMorrendo(morrendo);
-			pJogador->setTempoMorte(tempoMorrendo);
-			pJogador->addPontuacao(pontuacao);
-			pJogador->setColisaoChao(colisaoChao);
-
+			try {
+				pJogador->setTam(tam);
+				pJogador->setVelocidade(vel);
+				pJogador->setDirecao(direcao);
+				pJogador->setJogadorUm(jogadorUm);
+				pJogador->setVida(vida);
+				pJogador->setTempoAtaque(tempoAtaque);
+				pJogador->atacar(atacando);
+				pJogador->setPetrificado(petrifica);
+				pJogador->setLevandoDano(levandoDano);
+				pJogador->setTempoDano(tempoDano);
+				pJogador->setMorrendo(morrendo);
+				pJogador->setTempoMorte(tempoMorrendo);
+				pJogador->addPontuacao(pontuacao);
+				pJogador->setColisaoChao(colisaoChao);
+				pJogador->inicializarBarraVida();
+			}
+			catch (const std::exception& e) {
+				cout << e.what() << endl;
+			}
 			pJogador->setAtivoObs(true);
 			personagem = static_cast<Entidade::Entidade*>(pJogador);
 			arma = static_cast<Entidade::Entidade*>(pArma);
@@ -280,17 +285,22 @@ namespace Fase {
 				//cout << "Erro ao criar inimigo" << endl;
 				exit(1);
 			}
-			pInimigo->setTam(tam);
-			pInimigo->setVelocidade(vel);
-			pInimigo->setDirecao(direcao);
-			pInimigo->setVida(vida);
-			pInimigo->setTempoAtaque(tempoAtaque);
-			pInimigo->atacar(atacando);
-			pInimigo->setLevandoDano(levandoDano);
-			pInimigo->setTempoDano(tempoDano);
-			pInimigo->setMorrendo(morrendo);
-			pInimigo->setTempoMorte(tempoMorrendo);
-			pInimigo->setColisaoChao(colisaoChao);
+			try {
+				pInimigo->setTam(tam);
+				pInimigo->setVelocidade(vel);
+				pInimigo->setDirecao(direcao);
+				pInimigo->setVida(vida);
+				pInimigo->setTempoAtaque(tempoAtaque);
+				pInimigo->atacar(atacando);
+				pInimigo->setLevandoDano(levandoDano);
+				pInimigo->setTempoDano(tempoDano);
+				pInimigo->setMorrendo(morrendo);
+				pInimigo->setTempoMorte(tempoMorrendo);
+				pInimigo->setColisaoChao(colisaoChao);
+			}
+			catch (const std::exception& e) {
+				cout << e.what() << endl;
+			}
 
 			personagem = static_cast<Entidade::Entidade*>(pInimigo);
 			arma = static_cast<Entidade::Entidade*>(pArma);
@@ -311,18 +321,23 @@ namespace Fase {
 				//cout << "Erro ao criar inimigo" << endl;
 				exit(1);
 			}
-			pInimigo->setTam(tam);
-			pInimigo->setVelocidade(vel);
-			pInimigo->setDirecao(direcao);
-			pInimigo->setVida(vida);
-			pInimigo->setTempoAtaque(tempoAtaque);
-			pInimigo->atacar(atacando);
-			pInimigo->setAtaquePetrificante(petrifica);
-			pInimigo->setLevandoDano(levandoDano);
-			pInimigo->setTempoDano(tempoDano);
-			pInimigo->setMorrendo(morrendo);
-			pInimigo->setTempoMorte(tempoMorrendo);
-			pInimigo->setColisaoChao(colisaoChao);
+			try {
+				pInimigo->setTam(tam);
+				pInimigo->setVelocidade(vel);
+				pInimigo->setDirecao(direcao);
+				pInimigo->setVida(vida);
+				pInimigo->setTempoAtaque(tempoAtaque);
+				pInimigo->atacar(atacando);
+				pInimigo->setAtaquePetrificante(petrifica);
+				pInimigo->setLevandoDano(levandoDano);
+				pInimigo->setTempoDano(tempoDano);
+				pInimigo->setMorrendo(morrendo);
+				pInimigo->setTempoMorte(tempoMorrendo);
+				pInimigo->setColisaoChao(colisaoChao);
+			}
+			catch (const std::exception& e) {
+				cout << e.what() << endl;
+			}
 
 			personagem = static_cast<Entidade::Entidade*>(pInimigo);
 			arma = static_cast<Entidade::Entidade*>(pArma);
@@ -343,17 +358,22 @@ namespace Fase {
 				//cout << "Erro ao criar inimigo" << endl;
 				exit(1);
 			}
-			pInimigo->setTam(tam);
-			pInimigo->setVelocidade(vel);
-			pInimigo->setDirecao(direcao);
-			pInimigo->setVida(vida);
-			pInimigo->setTempoAtaque(tempoAtaque);
-			pInimigo->atacar(atacando);
-			pInimigo->setLevandoDano(levandoDano);
-			pInimigo->setTempoDano(tempoDano);
-			pInimigo->setMorrendo(morrendo);
-			pInimigo->setTempoMorte(tempoMorrendo);
-			pInimigo->setColisaoChao(colisaoChao);
+			try {
+				pInimigo->setTam(tam);
+				pInimigo->setVelocidade(vel);
+				pInimigo->setDirecao(direcao);
+				pInimigo->setVida(vida);
+				pInimigo->setTempoAtaque(tempoAtaque);
+				pInimigo->atacar(atacando);
+				pInimigo->setLevandoDano(levandoDano);
+				pInimigo->setTempoDano(tempoDano);
+				pInimigo->setMorrendo(morrendo);
+				pInimigo->setTempoMorte(tempoMorrendo);
+				pInimigo->setColisaoChao(colisaoChao);
+			}
+			catch (const std::exception& e) {
+				cout << e.what() << endl;
+			}
 			personagem = static_cast<Entidade::Entidade*>(pInimigo);
 			arma = static_cast<Entidade::Entidade*>(pArma);
 		}
@@ -384,22 +404,27 @@ namespace Fase {
 					//cout << "Erro ao criar jogador" << endl;
 					exit(1);
 				}
-				pJogador->setTam(tam);
-				pJogador->setVelocidade(vel);
-				pJogador->setDirecao(direcao);
-				pJogador->setJogadorUm(jogadorUm);
-				pJogador->setVida(vida);
-				pJogador->setTempoAtaque(tempoAtaque);
-				pJogador->atacar(atacando);
-				pJogador->setPetrificado(petrifica);
-				pJogador->setLevandoDano(levandoDano);
-				pJogador->setTempoDano(tempoDano);
-				pJogador->setMorrendo(morrendo);
-				pJogador->setTempoMorte(tempoMorrendo);
-				pJogador->addPontuacao(pontuacao);
-				pJogador->setColisaoChao(colisaoChao);
-
-				pJogador->setAtivoObs(true);
+				try {
+					pJogador->setTam(tam);
+					pJogador->setVelocidade(vel);
+					pJogador->setDirecao(direcao);
+					pJogador->setJogadorUm(jogadorUm);
+					pJogador->setVida(vida);
+					pJogador->setTempoAtaque(tempoAtaque);
+					pJogador->atacar(atacando);
+					pJogador->setPetrificado(petrifica);
+					pJogador->setLevandoDano(levandoDano);
+					pJogador->setTempoDano(tempoDano);
+					pJogador->setMorrendo(morrendo);
+					pJogador->setTempoMorte(tempoMorrendo);
+					pJogador->addPontuacao(pontuacao);
+					pJogador->setColisaoChao(colisaoChao);
+					pJogador->inicializarBarraVida();
+					pJogador->setAtivoObs(true);
+				}
+				catch (const std::exception& e) {
+					cout << e.what() << endl;
+				}
 				personagem = static_cast<Entidade::Entidade*>(pJogador);
 				arma = static_cast<Entidade::Entidade*>(pArma);
 			}
@@ -415,22 +440,27 @@ namespace Fase {
 					//cout << "Erro ao criar jogador" << endl;
 					exit(1);
 				}
-				pJogadorDois->setTam(tam);
-				pJogadorDois->setVelocidade(vel);
-				pJogadorDois->setDirecao(direcao);
-				pJogadorDois->setJogadorUm(jogadorUm);
-				pJogadorDois->setVida(vida);
-				pJogadorDois->setTempoAtaque(tempoAtaque);
-				pJogadorDois->atacar(atacando);
-				pJogadorDois->setPetrificado(petrifica);
-				pJogadorDois->setLevandoDano(levandoDano);
-				pJogadorDois->setTempoDano(tempoDano);
-				pJogadorDois->setMorrendo(morrendo);
-				pJogadorDois->setTempoMorte(tempoMorrendo);
-				pJogadorDois->addPontuacao(pontuacao);
-				pJogadorDois->setColisaoChao(colisaoChao);
-
-				pJogadorDois->setAtivoObs(true);
+				try {
+					pJogadorDois->setTam(tam);
+					pJogadorDois->setVelocidade(vel);
+					pJogadorDois->setDirecao(direcao);
+					pJogadorDois->setJogadorUm(jogadorUm);
+					pJogadorDois->setVida(vida);
+					pJogadorDois->setTempoAtaque(tempoAtaque);
+					pJogadorDois->atacar(atacando);
+					pJogadorDois->setPetrificado(petrifica);
+					pJogadorDois->setLevandoDano(levandoDano);
+					pJogadorDois->setTempoDano(tempoDano);
+					pJogadorDois->setMorrendo(morrendo);
+					pJogadorDois->setTempoMorte(tempoMorrendo);
+					pJogadorDois->addPontuacao(pontuacao);
+					pJogadorDois->setColisaoChao(colisaoChao);
+					pJogadorDois->inicializarBarraVida();
+					pJogadorDois->setAtivoObs(true);
+				}
+				catch (const std::exception& e) {
+					cout << e.what() << endl;
+				}
 				personagem = static_cast<Entidade::Entidade*>(pJogadorDois);
 				arma = static_cast<Entidade::Entidade*>(pArma);
 			}
@@ -451,18 +481,22 @@ namespace Fase {
 				//cout << "Erro ao criar inimigo" << endl;
 				exit(1);
 			}
-			pInimigo->setTam(tam);
-			pInimigo->setVelocidade(vel);
-			pInimigo->setDirecao(direcao);
-			pInimigo->setVida(vida);
-			pInimigo->setTempoAtaque(tempoAtaque);
-			pInimigo->atacar(atacando);
-			pInimigo->setLevandoDano(levandoDano);
-			pInimigo->setTempoDano(tempoDano);
-			pInimigo->setMorrendo(morrendo);
-			pInimigo->setTempoMorte(tempoMorrendo);
-			pInimigo->setColisaoChao(colisaoChao);
-
+			try {
+				pInimigo->setTam(tam);
+				pInimigo->setVelocidade(vel);
+				pInimigo->setDirecao(direcao);
+				pInimigo->setVida(vida);
+				pInimigo->setTempoAtaque(tempoAtaque);
+				pInimigo->atacar(atacando);
+				pInimigo->setLevandoDano(levandoDano);
+				pInimigo->setTempoDano(tempoDano);
+				pInimigo->setMorrendo(morrendo);
+				pInimigo->setTempoMorte(tempoMorrendo);
+				pInimigo->setColisaoChao(colisaoChao);
+			}
+			catch (const std::exception& e) {
+				cout << e.what() << endl;
+			}
 			personagem = static_cast<Entidade::Entidade*>(pInimigo);
 			arma = static_cast<Entidade::Entidade*>(pArma);
 		}
@@ -482,19 +516,23 @@ namespace Fase {
 				//cout << "Erro ao criar inimigo" << endl;
 				exit(1);
 			}
-			pInimigo->setTam(tam);
-			pInimigo->setVelocidade(vel);
-			pInimigo->setDirecao(direcao);
-			pInimigo->setVida(vida);
-			pInimigo->setTempoAtaque(tempoAtaque);
-			pInimigo->atacar(atacando);
-			pInimigo->setAtaquePetrificante(petrifica);
-			pInimigo->setLevandoDano(levandoDano);
-			pInimigo->setTempoDano(tempoDano);
-			pInimigo->setMorrendo(morrendo);
-			pInimigo->setTempoMorte(tempoMorrendo);
-			pInimigo->setColisaoChao(colisaoChao);
-
+			try {
+				pInimigo->setTam(tam);
+				pInimigo->setVelocidade(vel);
+				pInimigo->setDirecao(direcao);
+				pInimigo->setVida(vida);
+				pInimigo->setTempoAtaque(tempoAtaque);
+				pInimigo->atacar(atacando);
+				pInimigo->setAtaquePetrificante(petrifica);
+				pInimigo->setLevandoDano(levandoDano);
+				pInimigo->setTempoDano(tempoDano);
+				pInimigo->setMorrendo(morrendo);
+				pInimigo->setTempoMorte(tempoMorrendo);
+				pInimigo->setColisaoChao(colisaoChao);
+			}
+			catch (const std::exception& e) {
+				cout << e.what() << endl;
+			}
 			personagem = static_cast<Entidade::Entidade*>(pInimigo);
 			arma = static_cast<Entidade::Entidade*>(pArma);
 		}
@@ -514,18 +552,22 @@ namespace Fase {
 				//cout << "Erro ao criar inimigo" << endl;
 				exit(1);
 			}
-			pInimigo->setTam(tam);
-			pInimigo->setVelocidade(vel);
-			pInimigo->setDirecao(direcao);
-			pInimigo->setVida(vida);
-			pInimigo->setTempoAtaque(tempoAtaque);
-			pInimigo->atacar(atacando);
-			pInimigo->setLevandoDano(levandoDano);
-			pInimigo->setTempoDano(tempoDano);
-			pInimigo->setMorrendo(morrendo);
-			pInimigo->setTempoMorte(tempoMorrendo);
-			pInimigo->setColisaoChao(colisaoChao);
-
+			try {
+				pInimigo->setTam(tam);
+				pInimigo->setVelocidade(vel);
+				pInimigo->setDirecao(direcao);
+				pInimigo->setVida(vida);
+				pInimigo->setTempoAtaque(tempoAtaque);
+				pInimigo->atacar(atacando);
+				pInimigo->setLevandoDano(levandoDano);
+				pInimigo->setTempoDano(tempoDano);
+				pInimigo->setMorrendo(morrendo);
+				pInimigo->setTempoMorte(tempoMorrendo);
+				pInimigo->setColisaoChao(colisaoChao);
+			}
+			catch (const std::exception& e) {
+				cout << e.what() << endl;
+			}
 			personagem = static_cast<Entidade::Entidade*>(pInimigo);
 			arma = static_cast<Entidade::Entidade*>(pArma);
 		}
@@ -575,14 +617,14 @@ namespace Fase {
 			}
 			entidade = static_cast<Entidade::Entidade*>(portao);
 		}
-		else if (ID == IDs::IDs::lama) {
-			Entidade::Obstaculos::Lama* lama = nullptr;
-			lama = new Entidade::Obstaculos::Lama(pos, tam);
-			if (lama == nullptr) {
+		else if (ID == IDs::IDs::maocondenados) {
+			Entidade::Obstaculos::MaoCondenados* maocondenados = nullptr;
+			maocondenados = new Entidade::Obstaculos::MaoCondenados(pos, tam);
+			if (maocondenados == nullptr) {
 				//cout << "Erro ao criar lama" << endl;
 				exit(1);
 			}
-			entidade = static_cast<Entidade::Entidade*>(lama);
+			entidade = static_cast<Entidade::Entidade*>(maocondenados);
 		}
 
 		if (entidade != nullptr) {
@@ -649,11 +691,16 @@ namespace Fase {
 		Entidade::Item::Arma* arma = nullptr;
 		if (ID == IDs::IDs::projetil) {
 			Entidade::Item::Projetil* projetil = new Entidade::Item::Projetil(p, tam);
-			projetil->setPos(pos);
-			projetil->setColidiu(colidiu);
-			projetil->setDirecao(direcao);
-			projetil->setVelocidade(velocidade);
-			projetil->setAtivo(ativo);
+			try {
+				projetil->setPos(pos);
+				projetil->setColidiu(colidiu);
+				projetil->setDirecao(direcao);
+				projetil->setVelocidade(velocidade);
+				projetil->setAtivo(ativo);
+			}
+			catch (const std::exception& e) {
+				cout << e.what() << endl;
+			}
 			arma = static_cast<Entidade::Item::Arma*>(projetil);
 		}
 		else if (ID == IDs::IDs::cobrasGorgona) {
@@ -663,7 +710,7 @@ namespace Fase {
 		else {
 			arma = new Entidade::Item::Arma(p, tam, ID);
 		}
-		
+
 		if (arma != nullptr) {
 			return arma;
 		}

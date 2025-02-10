@@ -22,12 +22,16 @@ namespace Lista {
 	void ListaEntidade::limparLista() { objListaEntidade.limpar(); }
 
 	void ListaEntidade::desenharEntidades() {
-		for (int i = 0; i < objListaEntidade.getTamanho(); i++) {
-			objListaEntidade[i]->desenhar();
+		Entidade::Entidade* aux = nullptr;
+		for (Lista<Entidade::Entidade>::Iterator it = objListaEntidade.begin(); it != objListaEntidade.end(); ++it) {
+			aux = *it;
+			if (aux != nullptr) {
+				aux->desenhar();
+			}
 		}
 	}
 
-	void ListaEntidade::executar() {
+    void ListaEntidade::executar() {
 		int tam = objListaEntidade.getTamanho();
 		Entidade::Entidade* aux = nullptr;
 		for (int i = tam - 1; i >= 0; i--) {
@@ -42,15 +46,15 @@ namespace Lista {
 				}
 			}
 		}
-	}
+    }
 
 	nlohmann::json ListaEntidade::save() {
 		int tam = objListaEntidade.getTamanho();
 		Entidade::Entidade* aux = nullptr;
 		nlohmann::json jsonAux;
 		nlohmann::json jsonReturn;
-		for (int i = 0; i < tam; i++) {
-			aux = objListaEntidade.operator[](i);
+		for (Lista<Entidade::Entidade>::Iterator it = objListaEntidade.begin(); it != objListaEntidade.end(); ++it) {
+			aux = *it;
 			if (aux != nullptr) {
 				if ((aux->getID() == IDs::IDs::jogador)){
 					aux = static_cast<Entidade::Personagem::Jogador::Jogador*>(aux);
@@ -87,20 +91,13 @@ namespace Lista {
 					aux->salvar(jsonAux);
 					jsonReturn.push_back(jsonAux);
 				}
+				if (aux->getID() == IDs::IDs::maocondenados) {
+					aux = static_cast<Entidade::Obstaculos::MaoCondenados*>(aux);
+					aux->salvar(jsonAux);
+					jsonReturn.push_back(jsonAux);
+				}
 			}
 		}
 		return jsonReturn;
-	}
-
-	void ListaEntidade::carregar(nlohmann::json& j, Entidade::Personagem::Jogador::Jogador* pJog) {
-		Entidade::Entidade* aux = nullptr;
-		//cout << "Carregando" << endl;
-		
-		nlohmann::json::iterator it = j.begin();
-		//cout << "begin" << endl;
-		for (auto& it : j) {
-			IDs::IDs ID = it["ID"];
-			//cout << (int)ID << endl;
-		}
 	}
 }

@@ -34,16 +34,16 @@ namespace Observado {
 					pGG->fechar();
 				}
 				else if (pMenu->getIDBotao() == IDs::IDs::botaoJogar1Jog) {
-					pGEst->incluiEstado(IDs::IDs::estadoJogar1Jog, IDs::IDs::fase01,false);
+					pGEst->incluiEstado(IDs::IDs::estadoJogar1Jog, IDs::IDs::ponte,false);
 				} 
 				else if (pMenu->getIDBotao() == IDs::IDs::botaoJogar2Jog) {
-					pGEst->incluiEstado(IDs::IDs::estadoJogar2Jog, IDs::IDs::fase01,false);
+					pGEst->incluiEstado(IDs::IDs::estadoJogar2Jog, IDs::IDs::ponte,false);
 				}
 				else if (pMenu->getIDBotao() == IDs::IDs::botaoCarregar) {
 					nlohmann::json jsonCarregar = pGS->carregarFase();
 					for (auto& it : jsonCarregar) {
 						IDs::IDs ID = static_cast<IDs::IDs>(it["IDFase"]);
-						if (ID == IDs::IDs::fase01 || ID == IDs::IDs::fase02) {
+						if (ID == IDs::IDs::ponte || ID == IDs::IDs::castelo) {
 							bool doisJogadores = it["doisJogadores"];
 							if (doisJogadores) {
 								pGEst->incluiEstado(IDs::IDs::estadoJogar2Jog, ID,true);
@@ -57,21 +57,21 @@ namespace Observado {
 				else if (pMenu->getIDBotao() == IDs::IDs::botaoSelecionaFase) {
 					pGEst->incluiEstado(IDs::IDs::estadoMenuSelecionaFase, IDs::IDs::nulo, false);
 				}
-				else if (pMenu->getIDBotao() == IDs::IDs::botaoFase01Jog1) {
+				else if (pMenu->getIDBotao() == IDs::IDs::botaoPonteJog1) {
 					pGEst->removerEstado();
-					pGEst->incluiEstado(IDs::IDs::estadoJogar1Jog, IDs::IDs::fase01, false);
+					pGEst->incluiEstado(IDs::IDs::estadoJogar1Jog, IDs::IDs::ponte, false);
 				}
-				else if (pMenu->getIDBotao() == IDs::IDs::botaoFase01Jog2) {
+				else if (pMenu->getIDBotao() == IDs::IDs::botaoPonteJog2) {
 					pGEst->removerEstado();
-					pGEst->incluiEstado(IDs::IDs::estadoJogar2Jog, IDs::IDs::fase01, false);
+					pGEst->incluiEstado(IDs::IDs::estadoJogar2Jog, IDs::IDs::ponte, false);
 				}
-				else if (pMenu->getIDBotao() == IDs::IDs::botaoFase02Jog1) {
+				else if (pMenu->getIDBotao() == IDs::IDs::botaoCasteloJog1) {
 					pGEst->removerEstado();
-					pGEst->incluiEstado(IDs::IDs::estadoJogar1Jog, IDs::IDs::fase02, false);
+					pGEst->incluiEstado(IDs::IDs::estadoJogar1Jog, IDs::IDs::castelo, false);
 				}
-				else if (pMenu->getIDBotao() == IDs::IDs::botaoFase02Jog2) {
+				else if (pMenu->getIDBotao() == IDs::IDs::botaoCasteloJog2) {
 					pGEst->removerEstado();
-					pGEst->incluiEstado(IDs::IDs::estadoJogar2Jog, IDs::IDs::fase02, false);
+					pGEst->incluiEstado(IDs::IDs::estadoJogar2Jog, IDs::IDs::castelo, false);
 				}
 				else if (pMenu->getIDBotao() == IDs::IDs::botaoColocacao) {
 					pGEst->incluiEstado(IDs::IDs::estadoMenuColocacao, IDs::IDs::nulo, false);

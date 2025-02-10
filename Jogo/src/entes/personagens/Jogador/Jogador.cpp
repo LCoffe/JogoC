@@ -30,7 +30,6 @@ namespace Entidade {
 			}
 
 			void Jogador::desenhar() {
-
 				pGG->desenharElemento(barraVida);
 				pGG->desenharElemento(textVida);
 				
@@ -113,7 +112,7 @@ namespace Entidade {
 					if (!getMorrendo()) {
 						sf::Vector2f posInimigo = getPos();
 						bool direcaoInimigo = arma->getPersonagem()->getDirecao();
-						setPos(sf::Vector2f(direcaoInimigo ? posInimigo.x + 40.0f : posInimigo.x - 40.0f, posInimigo.y + 5.0f));
+						//setPos(sf::Vector2f(direcaoInimigo ? posInimigo.x + 40.0f : posInimigo.x - 40.0f, posInimigo.y + 5.0f));
 					}
 				}
 				else if (ent->getID() == IDs::IDs::projetil) {
@@ -149,20 +148,29 @@ namespace Entidade {
 				sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::levouDano, DANO_PATH, 7);
 				sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::morte, MORTE_PATH, 7);
 				sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::petrificado, PETRIFICADO_PATH, 5);
+
+				sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::idleL, PARADOL_PATH, 4);
+				sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::walkL, ANDARL_PATH, 6);
+				sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::jumpL, PULOL_PATH, 3);
+				sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::attackL, ATAQUEL_PATH, 6);
+				sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::levouDanoL, DANOL_PATH, 7);
+				sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::morteL, MORTEL_PATH, 7);
+				sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::petrificadoL, PETRIFICADOL_PATH, 5);
+
 			}
 
 			void Jogador::inicializarBarraVida() {
 				if (jogadorUm) {
-					textVida.setSize(sf::Vector2f(200.0f, 30.0f));
+					textVida.setSize(sf::Vector2f(230.0f, 50.0f));
 					textVida.setTexture(pGG->incluirTextura(CAMINHO_BARRAVIDA_JOG1));
 					barraVida.setFillColor(sf::Color::Green);
-					barraVida.setSize(sf::Vector2f(vida + 23.0f, 15.0f));
+					barraVida.setSize(sf::Vector2f(vida + 40.0f, 25.0f));
 				}
 				else {
-					textVida.setSize(sf::Vector2f(200.0f, 30.0f));
+					textVida.setSize(sf::Vector2f(230.0f, 50.0f));
 					textVida.setTexture(pGG->incluirTextura(CAMINHO_BARRAVIDA_JOG2));
 					barraVida.setFillColor(sf::Color::Green);
-					barraVida.setSize(sf::Vector2f(vida + 23.0f, 15.0f));
+					barraVida.setSize(sf::Vector2f(vida + 40.0f, 25.0f));
 				}
 			}
 
@@ -203,7 +211,7 @@ namespace Entidade {
 					if (tempoAtaque > 0.9f) {
 						if (pArma != nullptr && !pArma->getAtivo()) {
 							Item::Projetil* p = static_cast<Item::Projetil*>(pArma);
-							p->setPos(sf::Vector2f(direcao ? pos.x + pArma->getTam().x + 30.0f : pos.x + pArma->getTam().x + 15.0f, pos.y + 10.0f));
+							p->setPos(sf::Vector2f(direcao ? pos.x + pArma->getTam().x + 30.0f : pos.x + pArma->getTam().x + 15.0f, pos.y));
 							p->setColidiu(false);	
 							p->setAtivo(true);
 							p->setVelocidade(sf::Vector2f(200.0f, 5.0f));
@@ -219,24 +227,24 @@ namespace Entidade {
 			void Jogador::atualizarBarraVida() {
 				if (jogadorUm) {
 					textVida.setPosition(sf::Vector2f(pGG->getCamera().getCenter().x - 650.0f, pGG->getCamera().getCenter().y - 370.0f));
-					barraVida.setPosition(sf::Vector2f(pGG->getCamera().getCenter().x - 600.0f, pGG->getCamera().getCenter().y - 360.0f));
+					barraVida.setPosition(sf::Vector2f(pGG->getCamera().getCenter().x - 590.0f, pGG->getCamera().getCenter().y - 360.0f));
 					if (vida > 0.0f) {
-						barraVida.setSize(sf::Vector2f(vida + 23.0f, 15.0f));
+						barraVida.setSize(sf::Vector2f(vida + 40.0f, 25.0f));
 					}
 					else
 					{
-						barraVida.setSize(sf::Vector2f(0.0f, 15.0f));
+						barraVida.setSize(sf::Vector2f(0.0f, 25.0f));
 					}
 				}
 				else {
-					textVida.setPosition(sf::Vector2f(pGG->getCamera().getCenter().x + 460.0f, pGG->getCamera().getCenter().y - 370.0f));
-					barraVida.setPosition(sf::Vector2f(pGG->getCamera().getCenter().x + 480.0f, pGG->getCamera().getCenter().y - 360.0f));
+					textVida.setPosition(sf::Vector2f(pGG->getCamera().getCenter().x + 430.0f, pGG->getCamera().getCenter().y - 370.0f));
+					barraVida.setPosition(sf::Vector2f(pGG->getCamera().getCenter().x + 450.0f, pGG->getCamera().getCenter().y - 360.0f));
 					if (vida > 0.0f) {
-						barraVida.setSize(sf::Vector2f(vida + 23.0f, 15.0f));
+						barraVida.setSize(sf::Vector2f(vida + 40.0f, 25.0f));
 					}
 					else
 					{
-						barraVida.setSize(sf::Vector2f(0.0f, 15.0f));
+						barraVida.setSize(sf::Vector2f(0.0f, 25.0f));
 					}
 				}
 			}
@@ -254,30 +262,49 @@ namespace Entidade {
 
 			void Jogador::atualizarSprite(float dt)
 			{	
-				sf::Vector2f posicao = pos;
-				if (direcao) {
-					posicao.x += TAM_JOGADOR_X / 1.55f;
-					posicao.y += TAM_JOGADOR_Y / 2.7f;
+				if (!remover) {
+					sf::Vector2f posicao = pos;
+					if (direcao) {
+						posicao.x += TAM_JOGADOR_X / 1.55f;
+						posicao.y += TAM_JOGADOR_Y / 2.7f;
+					}
+					else {
+						posicao.x += TAM_JOGADOR_X / 3.35f;
+						posicao.y += TAM_JOGADOR_Y / 2.7f;
+					}
+					if (pArma->getID() == IDs::IDs::espadaJogador) {
+						if (morrendo)
+							sprite.atualizar(ElementosGraficos::ID_ANIMACAO::morte, direcao, posicao, dt);
+						else if (andando && colisaoChao)
+							sprite.atualizar(ElementosGraficos::ID_ANIMACAO::walk, direcao, posicao, dt);
+						else if (!colisaoChao)
+							sprite.atualizar(ElementosGraficos::ID_ANIMACAO::jump, direcao, posicao, dt);
+						else if (atacando)
+							sprite.atualizar(ElementosGraficos::ID_ANIMACAO::attack, direcao, posicao, dt);
+						else if (levandoDano)
+							sprite.atualizar(ElementosGraficos::ID_ANIMACAO::levouDano, direcao, posicao, dt);
+						else if (petrificado)
+							sprite.atualizar(ElementosGraficos::ID_ANIMACAO::petrificado, direcao, posicao, dt);
+						else
+							sprite.atualizar(ElementosGraficos::ID_ANIMACAO::idle, direcao, posicao, dt);
+					}
+					if (pArma->getID() == IDs::IDs::projetil) {
+						if (morrendo)
+							sprite.atualizar(ElementosGraficos::ID_ANIMACAO::morteL, direcao, posicao, dt);
+						else if (andando && colisaoChao)
+							sprite.atualizar(ElementosGraficos::ID_ANIMACAO::walkL, direcao, posicao, dt);
+						else if (!colisaoChao)
+							sprite.atualizar(ElementosGraficos::ID_ANIMACAO::jumpL, direcao, posicao, dt);
+						else if (atacando)
+							sprite.atualizar(ElementosGraficos::ID_ANIMACAO::attackL, direcao, posicao, dt);
+						else if (levandoDano)
+							sprite.atualizar(ElementosGraficos::ID_ANIMACAO::levouDanoL, direcao, posicao, dt);
+						else if (petrificado)
+							sprite.atualizar(ElementosGraficos::ID_ANIMACAO::petrificadoL, direcao, posicao, dt);
+						else
+							sprite.atualizar(ElementosGraficos::ID_ANIMACAO::idleL, direcao, posicao, dt);
+					}
 				}
-				else {
-					posicao.x += TAM_JOGADOR_X / 3.35f;
-					posicao.y += TAM_JOGADOR_Y / 2.7f;
-				}
-
-				if(morrendo)
-					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::morte, direcao, posicao, dt);
-				else if (andando && colisaoChao)
-					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::walk, direcao, posicao, dt);
-				else if(!colisaoChao)
-					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::jump, direcao, posicao, dt);
-				else if (atacando)
-					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::attack, direcao, posicao, dt);
-				else if (levandoDano)
-					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::levouDano, direcao, posicao, dt);
-				else if (petrificado)
-					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::petrificado, direcao, posicao, dt);
-				else
-					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::idle, direcao, posicao,dt);
 			}
 
 			void Jogador::salvar(nlohmann::json& j) {

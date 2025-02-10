@@ -114,7 +114,7 @@ namespace Entidade {
 				if (getMorrendo()) {
 					tempoMorte += 0.016f;
 					morrendo = true;
-					if (tempoMorte > 1.25f) {
+					if (tempoMorte > 1.15f) {
 						podeRemover();
 					}
 				}

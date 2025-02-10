@@ -12,7 +12,7 @@
 #include "../../include/entes/obstaculos/Caixa.hpp"
 #include "../../include/entes/obstaculos/Espinho.hpp"
 #include "../../include/entes/obstaculos/Portao.hpp"
-#include "../../include/entes/obstaculos/Lama.hpp"
+#include "../../include/entes/obstaculos/MaoCondenados.hpp"
 
 #include "../../include/gerenciadores/GerenciadorColisoes.hpp"
 #include "../../include/gerenciadores/GerenciadorSalvar.hpp"
@@ -29,7 +29,7 @@
 #include "../mapas/Mapa.hpp"
 
 #define NUM_MIN_INSTANCIA 3
-#define NUM_MAX_INSTANCIA 6
+#define NUM_MAX_INSTANCIA 4
 
 namespace Observado {
 	namespace Observador {

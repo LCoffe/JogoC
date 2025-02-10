@@ -79,7 +79,8 @@ namespace Gerenciador {
 	void GerenciadorColisoes::tratarColisaoObstObst() {
 		for (int i = 0; i < pListaObstaculo->getTamanho(); i++) {
 			Entidade::Entidade* ent1 = pListaObstaculo->operator[](i);
-			if (ent1->getID() == IDs::IDs::caixa || ent1->getID() == IDs::IDs::espinho || ent1->getID() == IDs::IDs::lama || ent1->getID() == IDs::IDs::portao) {
+			if (ent1->getID() == IDs::IDs::caixa || ent1->getID() == IDs::IDs::espinho || ent1->getID() == IDs::IDs::maocondenados
+				|| ent1->getID() == IDs::IDs::portao) {
 				for (int j = 0; j < pListaObstaculo->getTamanho(); j++) {
 					Entidade::Entidade* ent2 = pListaObstaculo->operator[](j);
 					if (verificaColisao(ent1, ent2)) { //verifica se as entidades colidiram.

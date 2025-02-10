@@ -18,8 +18,8 @@
 #define CAMINHO_SAVE_TROCAFASE "./Save/saveTrocaFase.json"
 
 namespace Fase {
-	class Fase01;
-	class Fase02;
+	class Ponte;
+	class Castelo;
 }
 
 namespace Gerenciador {
@@ -47,8 +47,8 @@ namespace Gerenciador {
 			void limparColocacao();
 
 			void salvarJogo(Lista::ListaEntidade LP, Lista::ListaEntidade LO, IDs::IDs IDFase, bool doisJogadores);
-			void carregarJogo(Fase::Fase01 &Fase);
-			void carregarJogo(Fase::Fase02 &Fase);
+			void carregarJogo(Fase::Ponte &Ponte);
+			void carregarJogo(Fase::Castelo &Castelo);
 			//void carregarJogo(Lista::ListaEntidade &LP, Lista::ListaEntidade &LO);
 	};
 }

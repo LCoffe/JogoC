@@ -11,7 +11,7 @@ C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\src\Entes\Ente.cpp;C:\User
 C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\src\Entes\Entidade.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\Jogo\x64\Debug\Entidade.obj
 C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\src\entes\obstaculos\Caixa.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\Jogo\x64\Debug\Caixa.obj
 C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\src\entes\obstaculos\Espinho.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\Jogo\x64\Debug\Espinho.obj
-C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\src\entes\obstaculos\Lama.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\Jogo\x64\Debug\Lama.obj
+C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\src\entes\obstaculos\MaoCondenados.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\Jogo\x64\Debug\MaoCondenados.obj
 C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\src\Entes\Obstaculos\Obstaculo.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\Jogo\x64\Debug\Obstaculo.obj
 C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\src\Entes\Obstaculos\Plataforma.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\Jogo\x64\Debug\Plataforma.obj
 C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\src\entes\obstaculos\Portao.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\Jogo\x64\Debug\Portao.obj
@@ -25,8 +25,8 @@ C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\src\Estado.cpp;C:\Users\T-
 C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\src\EstadoJogar.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\Jogo\x64\Debug\EstadoJogar.obj
 C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\src\EstadoMenu.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\Jogo\x64\Debug\EstadoMenu.obj
 C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\src\Fases\Fase.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\Jogo\x64\Debug\Fase.obj
-C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\src\Fases\Fase01.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\Jogo\x64\Debug\Fase01.obj
-C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\src\fases\Fase02.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\Jogo\x64\Debug\Fase02.obj
+C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\src\Fases\Ponte.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\Jogo\x64\Debug\Ponte.obj
+C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\src\fases\Castelo.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\Jogo\x64\Debug\Castelo.obj
 C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\src\Gerenciadores\GerenciadorColisoes.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\Jogo\x64\Debug\GerenciadorColisoes.obj
 C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\src\Gerenciadores\GerenciadorEstado.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\Jogo\x64\Debug\GerenciadorEstado.obj
 C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\src\Gerenciadores\GerenciadorEventos.cpp;C:\Users\T-GAMER\OneDrive\Documentos\GITHUB\Jogo\Jogo\Jogo\x64\Debug\GerenciadorEventos.obj

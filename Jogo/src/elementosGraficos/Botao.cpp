@@ -75,25 +75,25 @@ namespace Menu {
 					caixa.setSize(sf::Vector2f(texto->getTam().x + 70.0f, texto->getTam().y + 40.0f));
 					caixa.setPosition(sf::Vector2f(pos.x - 17.0f, pos.y - 10.0f));
 					break;
-				case IDs::IDs::botaoFase01Jog1:
+				case IDs::IDs::botaoPonteJog1:
 					texto = new Texto(pos, "Ponte de Athena (1 Jogador)");
 					texto->setPosicao(sf::Vector2f(pos.x + 5.0f, pos.y + 10.0f));
 					caixa.setSize(sf::Vector2f(texto->getTam().x + 90.0f, texto->getTam().y + 40.0f));
 					caixa.setPosition(sf::Vector2f(pos.x - 50.0f, pos.y - 10.0f));
 					break;
-				case IDs::IDs::botaoFase01Jog2:
+				case IDs::IDs::botaoPonteJog2:
 					texto = new Texto(pos, "Ponte de Athena (2 Jogadores)");
 					texto->setPosicao(sf::Vector2f(pos.x + 5.0f, pos.y + 10.0f));
 					caixa.setSize(sf::Vector2f(texto->getTam().x + 90.0f, texto->getTam().y + 40.0f));
 					caixa.setPosition(sf::Vector2f(pos.x - 50.0f, pos.y - 10.0f));
 					break;
-				case IDs::IDs::botaoFase02Jog1:
+				case IDs::IDs::botaoCasteloJog1:
 					texto = new Texto(pos, "Castelo de Athena (1 Jogador)");
 					texto->setPosicao(sf::Vector2f(pos.x + 7.0f, pos.y + 10.0f));
 					caixa.setSize(sf::Vector2f(texto->getTam().x + 90.0f, texto->getTam().y + 40.0f));
 					caixa.setPosition(sf::Vector2f(pos.x - 50.0f, pos.y - 10.0f));
 					break;
-				case IDs::IDs::botaoFase02Jog2:
+				case IDs::IDs::botaoCasteloJog2:
 					texto = new Texto(pos, "Castelo de Athena (2 Jogadores)");
 					texto->setPosicao(sf::Vector2f(pos.x + 5.0f, pos.y + 10.0f));
 					caixa.setSize(sf::Vector2f(texto->getTam().x + 90.0f, texto->getTam().y + 40.0f));
@@ -132,7 +132,7 @@ namespace Menu {
 			else {
 				texto->setTamFonte(24);
 				texto->setPosicao(sf::Vector2f(pos.x + 10.0f, pos.y + 10.0f));
-				if (ID == IDs::IDs::botaoFase01Jog1 || ID == IDs::IDs::botaoFase01Jog2 || ID == IDs::IDs::botaoFase02Jog1 || ID == IDs::IDs::botaoFase02Jog2) {
+				if (ID == IDs::IDs::botaoPonteJog1 || ID == IDs::IDs::botaoPonteJog2 || ID == IDs::IDs::botaoCasteloJog1 || ID == IDs::IDs::botaoCasteloJog2) {
 					caixa.setSize(sf::Vector2f(texto->getTam().x + 90.0f, texto->getTam().y + 40.0f));
 				}
 				else if (ID != IDs::IDs::botaoTextoColocacao) {

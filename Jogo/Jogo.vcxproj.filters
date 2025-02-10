@@ -24,7 +24,7 @@
     <ClCompile Include="src\EstadoJogar.cpp" />
     <ClCompile Include="src\EstadoMenu.cpp" />
     <ClCompile Include="src\Fases\Fase.cpp" />
-    <ClCompile Include="src\Fases\Fase01.cpp" />
+    <ClCompile Include="src\Fases\Ponte.cpp" />
     <ClCompile Include="src\Gerenciadores\GerenciadorColisoes.cpp" />
     <ClCompile Include="src\Gerenciadores\GerenciadorEstado.cpp" />
     <ClCompile Include="src\Gerenciadores\GerenciadorEventos.cpp" />
@@ -48,10 +48,10 @@
     <ClCompile Include="src\Projetil.cpp" />
     <ClCompile Include="stdafx\stdafx.cpp" />
     <ClCompile Include="src\entes\personagens\Inimigos\Minotauro.cpp" />
-    <ClCompile Include="src\fases\Fase02.cpp" />
+    <ClCompile Include="src\fases\Castelo.cpp" />
     <ClCompile Include="src\entes\obstaculos\Espinho.cpp" />
     <ClCompile Include="src\entes\obstaculos\Portao.cpp" />
-    <ClCompile Include="src\entes\obstaculos\Lama.cpp" />
+    <ClCompile Include="src\entes\obstaculos\MaoCondenados.cpp" />
     <ClCompile Include="src\menus\MenuSelecionaFase.cpp" />
     <ClCompile Include="src\menus\MenuGanhou.cpp" />
   </ItemGroup>
@@ -78,7 +78,7 @@
     <ClInclude Include="include\EstadoJogar.hpp" />
     <ClInclude Include="include\EstadoMenu.hpp" />
     <ClInclude Include="include\Fases\Fase.hpp" />
-    <ClInclude Include="include\Fases\Fase01.hpp" />
+    <ClInclude Include="include\Fases\Ponte.hpp" />
     <ClInclude Include="include\Gerenciadores\GerenciadorColisoes.hpp" />
     <ClInclude Include="include\Gerenciadores\GerenciadorEstado.hpp" />
     <ClInclude Include="include\Gerenciadores\GerenciadorEventos.hpp" />
@@ -105,10 +105,10 @@
     <ClInclude Include="include\Projetil.hpp" />
     <ClInclude Include="stdafx\stdafx.hpp" />
     <ClInclude Include="include\entes\personagens\Inimigos\Minotauro.hpp" />
-    <ClInclude Include="include\fases\Fase02.hpp" />
+    <ClInclude Include="include\fases\Castelo.hpp" />
     <ClInclude Include="include\entes\obstaculos\Espinho.hpp" />
     <ClInclude Include="include\entes\obstaculos\Portao.hpp" />
-    <ClInclude Include="include\entes\obstaculos\Lama.hpp" />
+    <ClInclude Include="include\entes\obstaculos\MaoCondenados.hpp" />
     <ClInclude Include="include\Vida.hpp" />
     <ClInclude Include="include\menus\MenuSelecionaFase.hpp" />
     <ClInclude Include="include\menus\MenuGanhou.hpp" />
@@ -156,6 +156,18 @@
     <Image Include="assets\icone\tituloJogo.png" />
     <Image Include="assets\fundos\fundoVoltar.png" />
     <Image Include="assets\fundos\gamemenu.png" />
+    <Image Include="assets\jogador\jogador_andar_lanca.png" />
+    <Image Include="assets\jogador\jogador_ataque_lanca.png" />
+    <Image Include="assets\jogador\jogador_machucado_lanca.png" />
+    <Image Include="assets\jogador\jogador_morte_lanca.png" />
+    <Image Include="assets\jogador\jogador_parado_lanca.png" />
+    <Image Include="assets\jogador\jogador_pedra_lanca.png" />
+    <Image Include="assets\jogador\jogador_pulo_lanca.png" />
+    <Image Include="assets\obstaculos\espinho\espinhos.png" />
+    <Image Include="assets\obstaculos\maocondenados\mao_condenados.png" />
+    <Image Include="assets\armas\lanca.png" />
+    <Image Include="assets\armas\machado.png" />
+    <Image Include="assets\obstaculos\portao\portao.png" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="assets\Fontes\Greek-Freak.ttf" />
@@ -180,5 +192,14 @@
     <None Include="sfml-system-d-2.dll" />
     <None Include="sfml-window-2.dll" />
     <None Include="sfml-window-d-2.dll" />
+    <None Include="Save\saveTrocaFase.json" />
+    <None Include="Save\savePersona.json" />
+    <None Include="Save\saveObst.json" />
+    <None Include="Save\saveFase.json" />
+    <None Include="Save\saveColocacao.json" />
+    <None Include="assets\mapas\mapa1Teste.tmj" />
+    <None Include="assets\mapas\mapa2.tmj" />
+    <None Include="assets\mapas\ponte.tmj" />
+    <None Include="assets\mapas\castelo.tmj" />
   </ItemGroup>
 </Project>

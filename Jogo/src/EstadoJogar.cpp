@@ -1,6 +1,6 @@
 #include "../include/EstadoJogar.hpp"
-#include "../include/fases/Fase01.hpp"
-#include "../include/fases/Fase02.hpp"
+#include "../include/fases/Ponte.hpp"
+#include "../include/fases/Castelo.hpp"
 
 namespace Estado {
 	EstadoJogar::EstadoJogar(IDs::IDs ID, IDs::IDs IDFase) : Estado(ID), fase(nullptr) {
@@ -19,19 +19,19 @@ namespace Estado {
 	}
 	void EstadoJogar::criarFase(IDs::IDs IDFase) {
 		if (ID == IDs::IDs::estadoJogar1Jog) {
-			if (IDFase == IDs::IDs::fase01) {
-				Fase::Fase01* fase01 = new Fase::Fase01();
-				fase01->iniciaFase(false);
-				fase = static_cast<Fase::Fase*>(fase01);
+			if (IDFase == IDs::IDs::ponte) {
+				Fase::Ponte* ponte = new Fase::Ponte();
+				ponte->iniciaFase(false);
+				fase = static_cast<Fase::Fase*>(ponte);
 				if (fase == nullptr) {
 					//throw std::invalid_argument("Fase invalida");
 					exit(1);
 				}
 			}
-			else if (IDFase == IDs::IDs::fase02) {
-				Fase::Fase02* fase02 = new Fase::Fase02();
-				fase02->iniciaFase(false);
-				fase = static_cast<Fase::Fase*>(fase02);
+			else if (IDFase == IDs::IDs::castelo) {
+				Fase::Castelo* castelo = new Fase::Castelo();
+				castelo->iniciaFase(false);
+				fase = static_cast<Fase::Fase*>(castelo);
 				if (fase == nullptr) {
 					//throw std::invalid_argument("Fase invalida");
 					exit(1);
@@ -40,19 +40,19 @@ namespace Estado {
 			
 		}
 		else if (ID == IDs::IDs::estadoJogar2Jog) {
-			if (IDFase == IDs::IDs::fase01) {
-				Fase::Fase01* fase01 = new Fase::Fase01();
-				fase01->iniciaFase(true);
-				fase = static_cast<Fase::Fase*>(fase01);
+			if (IDFase == IDs::IDs::ponte) {
+				Fase::Ponte* ponte = new Fase::Ponte();
+				ponte->iniciaFase(true);
+				fase = static_cast<Fase::Fase*>(ponte);
 				if (fase == nullptr) {
 					//throw std::invalid_argument("Fase invalida");
 					exit(1);
 				}
 			}
-			else if (IDFase == IDs::IDs::fase02) {
-				Fase::Fase02* fase02 = new Fase::Fase02();
-				fase02->iniciaFase(true);
-				fase = static_cast<Fase::Fase*>(fase02);
+			else if (IDFase == IDs::IDs::castelo) {
+				Fase::Castelo* castelo = new Fase::Castelo();
+				castelo->iniciaFase(true);
+				fase = static_cast<Fase::Fase*>(castelo);
 				if (fase == nullptr) {
 					//throw std::invalid_argument("Fase invalida");
 					exit(1);
@@ -65,19 +65,19 @@ namespace Estado {
 	}
 
 	void EstadoJogar::carregaFase(IDs::IDs IDFase) {
-		if (IDFase == IDs::IDs::fase01) {
-			Fase::Fase01* fase01 = new Fase::Fase01();
-			fase01->carregaFase();
-			fase = static_cast<Fase::Fase*>(fase01);
+		if (IDFase == IDs::IDs::ponte) {
+			Fase::Ponte* ponte = new Fase::Ponte();
+			ponte->carregaFase();
+			fase = static_cast<Fase::Fase*>(ponte);
 			if (fase == nullptr) {
 				//throw std::invalid_argument("Fase invalida");
 				exit(1);
 			}
 		}
-		else if (IDFase == IDs::IDs::fase02) {
-			Fase::Fase02* fase02 = new Fase::Fase02();
-			fase02->carregaFase();
-			fase = static_cast<Fase::Fase*>(fase02);
+		else if (IDFase == IDs::IDs::castelo) {
+			Fase::Castelo* castelo = new Fase::Castelo();
+			castelo->carregaFase();
+			fase = static_cast<Fase::Fase*>(castelo);
 			if (fase == nullptr) {
 				//throw std::invalid_argument("Fase invalida");
 				exit(1);

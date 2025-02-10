@@ -21,7 +21,8 @@ namespace Entidade {
 
             void Gorgona::desenhar() {
                //pGG->desenharElemento(corpo);
-               desenharInimigo();
+                if (!remover)
+                    desenharInimigo();
             }
 
             void Gorgona::atualizarTempoAtaque() {
@@ -55,7 +56,7 @@ namespace Entidade {
                     }
                     else if (tempoAtaque > 1.20f) {
                         if (ataquePetrificante) {
-                            setPosArma(sf::Vector2f(direcao ? pos.x + pArma->getTam().x + 45.0f : pos.x - pArma->getTam().x - 10.0f, pos.y + 10.0f));
+                            setPosArma(sf::Vector2f(direcao ? pos.x + pArma->getTam().x + 30.0f : pos.x - pArma->getTam().x - 10.0f, pos.y + 10.0f));
                         }
                         else {
                             setPosArma(sf::Vector2f(direcao ? pos.x + pArma->getTam().x + 15.0f : pos.x - pArma->getTam().x + 3.0f, pos.y + 10.0f));

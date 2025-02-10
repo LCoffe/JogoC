@@ -20,6 +20,13 @@ constexpr auto ATAQUE_PATH = "..\\Jogo\\assets\\jogador\\jogador_ataque.png";
 constexpr auto DANO_PATH = "..\\Jogo\\assets\\jogador\\jogador_machucado.png";
 constexpr auto PETRIFICADO_PATH = "..\\Jogo\\assets\\jogador\\jogador_pedra.png";
 constexpr auto MORTE_PATH = "..\\Jogo\\assets\\jogador\\jogador_morte.png";
+constexpr const char* const PARADOL_PATH = "..\\Jogo\\assets\\jogador\\jogador_parado_lanca.png";
+constexpr const char* const ANDARL_PATH = "..\\Jogo\\assets\\jogador\\jogador_andar_lanca.png";
+constexpr const char* const DANOL_PATH = "..\\Jogo\\assets\\jogador\\jogador_machucado_lanca.png";
+constexpr const char* const PULOL_PATH = "..\\Jogo\\assets\\jogador\\jogador_pulo_lanca.png";
+constexpr const char* const ATAQUEL_PATH = "..\\Jogo\\assets\\jogador\\jogador_ataque_lanca.png";
+constexpr const char* const PETRIFICADOL_PATH = "..\\Jogo\\assets\\jogador\\jogador_pedra_lanca.png";
+constexpr const char* const MORTEL_PATH = "..\\Jogo\\assets\\jogador\\jogador_morte_lanca.png";
 constexpr const char* const CAMINHO_BARRAVIDA_JOG1 = "..\\Jogo\\assets\\barraVida\\barraVidaJog1.png";
 constexpr const char* const CAMINHO_BARRAVIDA_JOG2 = "..\\Jogo\\assets\\barraVida\\barraVidaJog2.png";
 

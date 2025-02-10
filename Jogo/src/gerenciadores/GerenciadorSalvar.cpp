@@ -1,6 +1,6 @@
 #include "../../include/gerenciadores/GerenciadorSalvar.hpp"
-#include "../../include/fases/Fase02.hpp"
-#include "../../include/fases/Fase01.hpp"
+#include "../../include/fases/Castelo.hpp"
+#include "../../include/fases/Ponte.hpp"
 
 
 namespace Gerenciador {
@@ -192,11 +192,11 @@ namespace Gerenciador {
 		fechaArqSave(jsonOut);
 	}
 
-	void GerenciadorSalvar::carregarJogo(Fase::Fase01 &Fase) {
-		Fase.carregar();
+	void GerenciadorSalvar::carregarJogo(Fase::Ponte &Ponte) {
+		Ponte.carregar();
 	}
 
-	void GerenciadorSalvar::carregarJogo(Fase::Fase02& Fase) {
-		Fase.carregar();
+	void GerenciadorSalvar::carregarJogo(Fase::Castelo& Castelo) {
+		Castelo.carregar();
 	}
 }

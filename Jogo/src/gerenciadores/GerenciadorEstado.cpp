@@ -1,8 +1,8 @@
 #include "../../include/gerenciadores/GerenciadorEstado.hpp"
 #include "../../include/EstadoMenu.hpp"
 #include "../../include/EstadoJogar.hpp"
-#include "../../include/fases/Fase01.hpp"
-#include "../../include/fases/Fase02.hpp"
+#include "../../include/fases/Ponte.hpp"
+#include "../../include/fases/Castelo.hpp"
 
 namespace Gerenciador {
 	GerenciadorEstado* GerenciadorEstado::pGEst = nullptr;
@@ -43,29 +43,29 @@ namespace Gerenciador {
 	}
 
 	void GerenciadorEstado::passouFase(const IDs::IDs ID) {
-		if (ID == IDs::IDs::fase01) {
+		if (ID == IDs::IDs::ponte) {
 			Estado::EstadoJogar* estado = static_cast<Estado::EstadoJogar*>(getEstado());
 			IDs::IDs IDEst = estado->getID();
 			Fase::Fase* fase = estado->getFase();
-			Fase::Fase01* aux = static_cast<Fase::Fase01*>(fase);
+			Fase::Ponte* aux = static_cast<Fase::Ponte*>(fase);
 			aux->trocaFase();
 			removerEstado();
-			incluiEstado(IDEst, IDs::IDs::fase02, false);
+			incluiEstado(IDEst, IDs::IDs::castelo, false);
 
 			estado = static_cast<Estado::EstadoJogar*>(getEstado());
-			Fase::Fase02* aux2 = static_cast<Fase::Fase02*>(estado->getFase());
+			Fase::Castelo* aux2 = static_cast<Fase::Castelo*>(estado->getFase());
 			aux2->carregaTrocaFase();
 		}
-		else if (ID == IDs::IDs::fase02) {
+		else if (ID == IDs::IDs::castelo) {
 			Estado::EstadoJogar* estado = static_cast<Estado::EstadoJogar*>(getEstado());
 			Fase::Fase* fase = estado->getFase();
 			if (fase->getDoisJogadores()) {
 				removerEstado();
-				incluiEstado(IDs::IDs::estadoJogar2Jog, IDs::IDs::fase01, false);
+				incluiEstado(IDs::IDs::estadoJogar2Jog, IDs::IDs::ponte, false);
 			}
 			else {
 				removerEstado();
-				incluiEstado(IDs::IDs::estadoJogar1Jog, IDs::IDs::fase01, false);
+				incluiEstado(IDs::IDs::estadoJogar1Jog, IDs::IDs::ponte, false);
 			}
 		}
 	}

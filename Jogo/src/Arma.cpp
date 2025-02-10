@@ -11,7 +11,7 @@ namespace Entidade {
 		}
 		Arma::~Arma() { pPersonagem = nullptr; }
 		void Arma::desenhar() {
-			pGG->desenharElemento(corpo);
+			//pGG->desenharElemento(corpo);
 		}
 
 		void Arma::atualizar() {}

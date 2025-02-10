@@ -5,7 +5,7 @@ namespace Gerenciador {
 	float GerenciadorGrafico::tempo = 0.0f;
 
 	GerenciadorGrafico::GerenciadorGrafico() :
-		janela(new sf::RenderWindow(sf::VideoMode(TELA_X, TELA_Y), "Jogo")), relogio(),
+		janela(new sf::RenderWindow(sf::VideoMode(TELA_X, TELA_Y), "Conquer Athena")), relogio(),
 		camera(new Camera(sf::Vector2f(TELA_X, TELA_Y)))
 	{
 		if (janela == nullptr) {
@@ -19,8 +19,6 @@ namespace Gerenciador {
 		}
 		janela->setIcon(icone.getSize().x, icone.getSize().y, icone.getPixelsPtr());
 		janela->setFramerateLimit(60);
-
-
 	}
 
 	GerenciadorGrafico::~GerenciadorGrafico() {}

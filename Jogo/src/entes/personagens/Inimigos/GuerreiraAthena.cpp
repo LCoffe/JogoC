@@ -50,8 +50,8 @@ namespace Entidade {
 					sprite.atualizar(ElementosGraficos::ID_ANIMACAO::idle, direcao, posicao, dt);
 			}
 			void GuerreiraAthena::desenhar() {
-				//pGG->desenharElemento(corpo);
-				desenharInimigo();
+				if(!remover)
+					desenharInimigo();
 			}
 
 			void GuerreiraAthena::salvar(nlohmann::json& j) {

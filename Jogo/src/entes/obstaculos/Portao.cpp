@@ -10,7 +10,7 @@ namespace Entidade {
 			inicializarSprite();
 		}
 		void Portao::inicializarSprite() {
-			//animaEstatica.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::idle, PORTAO_PATH, 1);
+			sprite.adicionarNovaAnimacao(ElementosGraficos::ID_ANIMACAO::idle, PORTAO_PATH, 1);
 		}
 		void Portao::colisao(Entidade* ent, const sf::Vector2f diferenca) {
 			if (!aberto) {
@@ -38,30 +38,25 @@ namespace Entidade {
 			}
 		}
 		void Portao::colisaoPlataforma(Entidade* ent, const sf::Vector2f diferenca) {
+			sf::Vector2f pos = getPos();
+			sf::Vector2f tam = getTam();
+			//pos.x = corpo.getPosition().x - tam.x / 2.0f;
+			//pos.y = corpo.getPosition().y + tam.y / 2.0f;
 			if (diferenca.x < 0.0f && diferenca.y < 0.0f) {
-				if (diferenca.x > diferenca.y) { //Colisao em x
-					if (pos.x < ent->getPos().x) {
-						pos.x += diferenca.x;
-					}
-					else {
-						pos.x -= diferenca.x;
-					}
+				if (pos.y < ent->getPos().y) { //Colisao em y
+					pos.y += diferenca.y;
 				}
 				else {
-					if (pos.y < ent->getPos().y) { //Colisao em y
-						pos.y += diferenca.y;
-					}
-					else {
-						pos.y -= diferenca.y;
-					}
+					pos.y -= diferenca.y;
 				}
 				setPos(pos);
 			}
 		}
 		void Portao::desenhar() {
 			if (!aberto) {
+				sprite.desenhar();
 				pGG->desenharElemento(corpo);
-				//animaEstatica.desenhar();
+				
 			}
 		}
 		void Portao::atualizar() {
@@ -72,6 +67,8 @@ namespace Entidade {
 
 			corpo.move(soma);
 			pos.y = corpo.getPosition().y;
+
+			sprite.atualizar(ElementosGraficos::ID_ANIMACAO::idle, true, sf::Vector2f(pos.x, pos.y + 40.0f), pGG->getTempo());
 		}
 		void Portao::salvar(nlohmann::json& j) {
 			j["ID"] = (int)getID();

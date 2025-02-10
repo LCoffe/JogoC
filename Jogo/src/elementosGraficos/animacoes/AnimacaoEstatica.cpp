@@ -21,10 +21,9 @@ namespace ElementosGraficos {
 
         textura->setRepeated(true);
 
-        corpo.setFillColor(sf::Color::Blue);
         corpo.setSize(tam);
-        corpo.setPosition(pos);
-        corpo.setOrigin(tam.x / 2, tam.y / 2);
+        corpo.setSize(sf::Vector2f(tam.x, tam.y));
+        corpo.setOrigin(sf::Vector2f(tam.x, tam.y) / 2.0f);
         corpo.setTexture(textura);
         corpo.setTextureRect(sf::IntRect(0, 0, static_cast<int>(corpo.getSize().x), static_cast<int>(corpo.getSize().y)));
 

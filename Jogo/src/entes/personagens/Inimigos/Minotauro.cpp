@@ -142,8 +142,8 @@ namespace Entidade {
 			}
 
 			void Minotauro::desenhar() {
-				pGG->desenharElemento(corpo);
-				desenharInimigo();
+				if(!remover)
+					desenharInimigo();
 			}
 
 			void Minotauro::salvar(nlohmann::json& j) {

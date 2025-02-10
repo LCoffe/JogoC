@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../stdafx/stdafx.hpp"
-#include "../fases/Fase01.hpp"
+#include "../fases/Ponte.hpp"
 #include "../gerenciadores/GerenciadorEventos.hpp"
 #include "../entes/personagens/jogador/Jogador.hpp"
 #include "../entes/personagens/Inimigos/Inimigo.hpp"
