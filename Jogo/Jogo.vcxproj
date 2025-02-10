@@ -296,7 +296,6 @@
     <Image Include="assets\obstaculos\caixa\caixa_parado.png" />
     <Image Include="assets\obstaculos\espinho\espinhos.png" />
     <Image Include="assets\obstaculos\maocondenados\mao_condenados.png" />
-    <Image Include="assets\obstaculos\plataforma.png" />
     <Image Include="assets\obstaculos\portao\portao.png" />
     <Image Include="assets\plataformas\pedra.png" />
     <Image Include="assets\tilesets\babylon.png" />

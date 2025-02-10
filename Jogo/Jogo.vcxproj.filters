@@ -145,7 +145,6 @@
     <Image Include="assets\jogador\Walk.png" />
     <Image Include="assets\obstaculos\caixa\caixa_arrastado.png" />
     <Image Include="assets\obstaculos\caixa\caixa_parado.png" />
-    <Image Include="assets\obstaculos\plataforma.png" />
     <Image Include="assets\plataformas\pedra.png" />
     <Image Include="assets\tilesets\babylon.png" />
     <Image Include="assets\barraVida\barraVidaJog1.png" />

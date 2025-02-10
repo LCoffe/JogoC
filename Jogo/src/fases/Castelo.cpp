@@ -24,8 +24,8 @@ namespace Fase {
 	{
 		if (doisJogadores) {
 			//Cria Jogadores
-			criaPersonagem2Jog(sf::Vector2f(100, 100), IDs::IDs::jogador, true);
-			criaPersonagem2Jog(sf::Vector2f(200, 100), IDs::IDs::jogador, false);
+			criaPersonagem2Jog(sf::Vector2f(100, 768 - 251), IDs::IDs::jogador, true);
+			criaPersonagem2Jog(sf::Vector2f(200, 768 - 251), IDs::IDs::jogador, false);
 
 			// Criar inimigos
 			float posX = 300.0f;
