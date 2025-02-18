@@ -4,7 +4,8 @@
 
 
 namespace Gerenciador {
-    GerenciadorSalvar::GerenciadorSalvar(){}
+    GerenciadorSalvar::GerenciadorSalvar(){
+	}
 
     GerenciadorSalvar::~GerenciadorSalvar() {}
 

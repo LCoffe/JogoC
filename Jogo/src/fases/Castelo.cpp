@@ -94,7 +94,7 @@ namespace Fase {
 	void Castelo::carregaFase()
 	{
 		carregar();
-		//executar();
+		executar();
 	}
 
 	void Castelo::carregar()

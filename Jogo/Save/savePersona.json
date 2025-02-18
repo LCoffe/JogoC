@@ -1,14 +1,57 @@
 [
     {
         "ID": 1,
-        "IDArma": 28,
+        "IDArma": 33,
         "armaAtual": 0,
         "atacando": false,
-        "ativo": false,
+        "ativo": true,
         "colidiu": false,
-        "colisaoChao": false,
+        "colisaoChao": true,
         "direcao": true,
-        "direcaoArma": false,
+        "direcaoArma": true,
+        "jogadorUm": true,
+        "levandoDano": false,
+        "morrendo": false,
+        "petrificado": false,
+        "pontuacao": 0,
+        "posArma": {
+            "x": 509.10784912109375,
+            "y": 547.6715087890625
+        },
+        "posicao": {
+            "x": 136.3069610595703,
+            "y": 540.8967895507813
+        },
+        "tamanho": {
+            "x": 50.0,
+            "y": 50.0
+        },
+        "tempoAtaque": 0.0,
+        "tempoDano": 0.0,
+        "tempoMorte": 0.0,
+        "tempoPetrificado": 0.0,
+        "velocidade": {
+            "x": 80.0,
+            "y": 0.0
+        },
+        "velocidadeArma": {
+            "x": 200.0,
+            "y": 5.0
+        },
+        "vida": 100.0
+    },
+    {
+        "ID": 30,
+        "IDArma": 33,
+        "armaAtual": 0,
+        "atacando": false,
+        "ataqueBasico": false,
+        "ataquePetrificante": false,
+        "ativo": true,
+        "colidiu": false,
+        "colisaoChao": true,
+        "direcao": false,
+        "direcaoArma": true,
         "jogadorUm": true,
         "levandoDano": false,
         "morrendo": false,
@@ -19,8 +62,8 @@
             "y": -500.0
         },
         "posicao": {
-            "x": 100.0,
-            "y": 409.7127990722656
+            "x": 399.4737243652344,
+            "y": 590.0
         },
         "tamanho": {
             "x": 50.0,
@@ -31,278 +74,28 @@
         "tempoMorte": 0.0,
         "tempoPetrificado": 0.0,
         "velocidade": {
-            "x": 80.0,
-            "y": 272.6372985839844
-        },
-        "velocidadeArma": {
-            "x": 0.0,
-            "y": 0.0
-        },
-        "vida": 100.0
-    },
-    {
-        "ID": 1,
-        "IDArma": 33,
-        "armaAtual": 0,
-        "atacando": false,
-        "ativo": false,
-        "colidiu": false,
-        "colisaoChao": false,
-        "direcao": true,
-        "direcaoArma": true,
-        "jogadorUm": false,
-        "levandoDano": true,
-        "morrendo": false,
-        "petrificado": false,
-        "pontuacao": 0,
-        "posArma": {
-            "x": -500.0,
-            "y": -501.81134033203125
-        },
-        "posicao": {
-            "x": 180.0,
-            "y": 419.7127990722656
-        },
-        "tamanho": {
             "x": 50.0,
-            "y": 50.0
-        },
-        "tempoAtaque": 0.0,
-        "tempoDano": 0.8416240811347961,
-        "tempoMorte": 0.0,
-        "tempoPetrificado": 0.0,
-        "velocidade": {
-            "x": 80.0,
-            "y": 272.6372985839844
-        },
-        "velocidadeArma": {
-            "x": 0.0,
             "y": 0.0
         },
-        "vida": 85.0
+        "velocidadeArma": {
+            "x": 200.0,
+            "y": 5.0
+        },
+        "vida": 80.0
     },
     {
-        "ID": 34,
+        "ID": 30,
         "IDArma": 33,
         "armaAtual": 0,
         "atacando": false,
-        "ativo": false,
-        "colidiu": false,
-        "colisaoChao": false,
-        "direcao": true,
-        "direcaoArma": true,
-        "jogadorUm": false,
-        "levandoDano": false,
-        "morrendo": false,
-        "petrificado": false,
-        "pontuacao": 0,
-        "posArma": {
-            "x": -500.0,
-            "y": -501.81134033203125
-        },
-        "posicao": {
-            "x": 305.43963623046875,
-            "y": 409.7127990722656
-        },
-        "tamanho": {
-            "x": 85.0,
-            "y": 85.0
-        },
-        "tempoAtaque": 0.0,
-        "tempoDano": 0.0,
-        "tempoMorrendo": 0.0,
-        "tempoMorte": 0.0,
-        "tempoPetrificado": 0.0,
-        "velocidade": {
-            "x": 80.0,
-            "y": 272.6372985839844
-        },
-        "velocidadeArma": {
-            "x": 0.0,
-            "y": 0.0
-        },
-        "vida": 200.0
-    },
-    {
-        "ID": 34,
-        "IDArma": 33,
-        "armaAtual": 0,
-        "atacando": false,
-        "ativo": false,
+        "ataqueBasico": false,
+        "ataquePetrificante": false,
+        "ativo": true,
         "colidiu": false,
         "colisaoChao": true,
-        "direcao": true,
-        "direcaoArma": true,
-        "jogadorUm": false,
-        "levandoDano": false,
-        "morrendo": false,
-        "petrificado": false,
-        "pontuacao": 0,
-        "posArma": {
-            "x": -500.0,
-            "y": -501.81134033203125
-        },
-        "posicao": {
-            "x": 1050.5992431640625,
-            "y": 267.0
-        },
-        "tamanho": {
-            "x": 85.0,
-            "y": 85.0
-        },
-        "tempoAtaque": 0.0,
-        "tempoDano": 0.0,
-        "tempoMorrendo": 0.0,
-        "tempoMorte": 0.0,
-        "tempoPetrificado": 0.0,
-        "velocidade": {
-            "x": 80.0,
-            "y": 272.6372985839844
-        },
-        "velocidadeArma": {
-            "x": 0.0,
-            "y": 0.0
-        },
-        "vida": 200.0
-    },
-    {
-        "ID": 34,
-        "IDArma": 33,
-        "armaAtual": 0,
-        "atacando": false,
-        "ativo": false,
-        "colidiu": false,
-        "colisaoChao": false,
-        "direcao": true,
-        "direcaoArma": true,
-        "jogadorUm": false,
-        "levandoDano": false,
-        "morrendo": false,
-        "petrificado": false,
-        "pontuacao": 0,
-        "posArma": {
-            "x": -500.0,
-            "y": -501.81134033203125
-        },
-        "posicao": {
-            "x": 1692.5994873046875,
-            "y": 409.7127990722656
-        },
-        "tamanho": {
-            "x": 85.0,
-            "y": 85.0
-        },
-        "tempoAtaque": 0.0,
-        "tempoDano": 0.0,
-        "tempoMorrendo": 0.0,
-        "tempoMorte": 0.0,
-        "tempoPetrificado": 0.0,
-        "velocidade": {
-            "x": 80.0,
-            "y": 272.6372985839844
-        },
-        "velocidadeArma": {
-            "x": 0.0,
-            "y": 0.0
-        },
-        "vida": 200.0
-    },
-    {
-        "ID": 34,
-        "IDArma": 33,
-        "armaAtual": 0,
-        "atacando": false,
-        "ativo": false,
-        "colidiu": false,
-        "colisaoChao": false,
-        "direcao": true,
-        "direcaoArma": true,
-        "jogadorUm": false,
-        "levandoDano": false,
-        "morrendo": false,
-        "petrificado": false,
-        "pontuacao": 0,
-        "posArma": {
-            "x": -500.0,
-            "y": -501.81134033203125
-        },
-        "posicao": {
-            "x": 2282.5986328125,
-            "y": 409.7127990722656
-        },
-        "tamanho": {
-            "x": 85.0,
-            "y": 85.0
-        },
-        "tempoAtaque": 0.0,
-        "tempoDano": 0.0,
-        "tempoMorrendo": 0.0,
-        "tempoMorte": 0.0,
-        "tempoPetrificado": 0.0,
-        "velocidade": {
-            "x": 80.0,
-            "y": 272.6372985839844
-        },
-        "velocidadeArma": {
-            "x": 0.0,
-            "y": 0.0
-        },
-        "vida": 200.0
-    },
-    {
-        "ID": 34,
-        "IDArma": 33,
-        "armaAtual": 0,
-        "atacando": false,
-        "ativo": false,
-        "colidiu": false,
-        "colisaoChao": false,
-        "direcao": true,
-        "direcaoArma": true,
-        "jogadorUm": false,
-        "levandoDano": false,
-        "morrendo": false,
-        "petrificado": false,
-        "pontuacao": 0,
-        "posArma": {
-            "x": -500.0,
-            "y": -501.81134033203125
-        },
-        "posicao": {
-            "x": 2855.5986328125,
-            "y": 409.7127990722656
-        },
-        "tamanho": {
-            "x": 85.0,
-            "y": 85.0
-        },
-        "tempoAtaque": 0.0,
-        "tempoDano": 0.0,
-        "tempoMorrendo": 0.0,
-        "tempoMorte": 0.0,
-        "tempoPetrificado": 0.0,
-        "velocidade": {
-            "x": 80.0,
-            "y": 272.6372985839844
-        },
-        "velocidadeArma": {
-            "x": 0.0,
-            "y": 0.0
-        },
-        "vida": 200.0
-    },
-    {
-        "ID": 2,
-        "IDArma": 33,
-        "andando": false,
-        "armaAtual": 0,
-        "atacando": true,
-        "ativo": false,
-        "colidiu": false,
-        "colisaoChao": false,
         "direcao": false,
         "direcaoArma": true,
-        "jogadorUm": false,
+        "jogadorUm": true,
         "levandoDano": false,
         "morrendo": false,
         "petrificado": false,
@@ -312,40 +105,83 @@
             "y": -500.0
         },
         "posicao": {
-            "x": 229.48110961914063,
-            "y": 409.7127990722656
+            "x": 811.8646850585938,
+            "y": 590.0
         },
         "tamanho": {
             "x": 50.0,
             "y": 50.0
         },
-        "tempoAtaque": 0.46400004625320435,
+        "tempoAtaque": 0.0,
         "tempoDano": 0.0,
-        "tempoMorrendo": 0.0,
         "tempoMorte": 0.0,
         "tempoPetrificado": 0.0,
         "velocidade": {
             "x": 50.0,
-            "y": 272.6372985839844
-        },
-        "velocidadeArma": {
-            "x": 0.0,
             "y": 0.0
         },
-        "vida": 100.0
+        "velocidadeArma": {
+            "x": 200.0,
+            "y": 5.0
+        },
+        "vida": 80.0
     },
     {
-        "ID": 2,
+        "ID": 30,
         "IDArma": 33,
-        "andando": true,
         "armaAtual": 0,
         "atacando": false,
-        "ativo": false,
+        "ataqueBasico": false,
+        "ataquePetrificante": false,
+        "ativo": true,
+        "colidiu": false,
+        "colisaoChao": true,
+        "direcao": false,
+        "direcaoArma": true,
+        "jogadorUm": true,
+        "levandoDano": false,
+        "morrendo": false,
+        "petrificado": false,
+        "pontuacao": 0,
+        "posArma": {
+            "x": -500.0,
+            "y": -500.0
+        },
+        "posicao": {
+            "x": 747.7567749023438,
+            "y": 590.0
+        },
+        "tamanho": {
+            "x": 50.0,
+            "y": 50.0
+        },
+        "tempoAtaque": 0.0,
+        "tempoDano": 0.0,
+        "tempoMorte": 0.0,
+        "tempoPetrificado": 0.0,
+        "velocidade": {
+            "x": 50.0,
+            "y": 0.0
+        },
+        "velocidadeArma": {
+            "x": 200.0,
+            "y": 5.0
+        },
+        "vida": 80.0
+    },
+    {
+        "ID": 30,
+        "IDArma": 33,
+        "armaAtual": 0,
+        "atacando": false,
+        "ataqueBasico": false,
+        "ataquePetrificante": false,
+        "ativo": true,
         "colidiu": false,
         "colisaoChao": true,
         "direcao": true,
         "direcaoArma": true,
-        "jogadorUm": false,
+        "jogadorUm": true,
         "levandoDano": false,
         "morrendo": false,
         "petrificado": false,
@@ -355,8 +191,8 @@
             "y": -500.0
         },
         "posicao": {
-            "x": 813.9873046875,
-            "y": 366.0
+            "x": 1426.0,
+            "y": 430.0
         },
         "tamanho": {
             "x": 50.0,
@@ -364,31 +200,31 @@
         },
         "tempoAtaque": 0.0,
         "tempoDano": 0.0,
-        "tempoMorrendo": 0.0,
         "tempoMorte": 0.0,
         "tempoPetrificado": 0.0,
         "velocidade": {
-            "x": 50.0,
-            "y": 0.0
-        },
-        "velocidadeArma": {
             "x": 0.0,
             "y": 0.0
         },
-        "vida": 100.0
+        "velocidadeArma": {
+            "x": 200.0,
+            "y": 5.0
+        },
+        "vida": 80.0
     },
     {
-        "ID": 2,
+        "ID": 30,
         "IDArma": 33,
-        "andando": true,
         "armaAtual": 0,
         "atacando": false,
-        "ativo": false,
+        "ataqueBasico": false,
+        "ataquePetrificante": false,
+        "ativo": true,
         "colidiu": false,
         "colisaoChao": true,
-        "direcao": true,
+        "direcao": false,
         "direcaoArma": true,
-        "jogadorUm": false,
+        "jogadorUm": true,
         "levandoDano": false,
         "morrendo": false,
         "petrificado": false,
@@ -398,8 +234,8 @@
             "y": -500.0
         },
         "posicao": {
-            "x": 1226.883056640625,
-            "y": 302.0
+            "x": 1426.0,
+            "y": 430.0
         },
         "tamanho": {
             "x": 50.0,
@@ -407,7 +243,50 @@
         },
         "tempoAtaque": 0.0,
         "tempoDano": 0.0,
-        "tempoMorrendo": 0.0,
+        "tempoMorte": 0.0,
+        "tempoPetrificado": 0.0,
+        "velocidade": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "velocidadeArma": {
+            "x": 200.0,
+            "y": 5.0
+        },
+        "vida": 80.0
+    },
+    {
+        "ID": 2,
+        "IDArma": 33,
+        "andando": true,
+        "armaAtual": 0,
+        "atacando": false,
+        "ataqueBasico": false,
+        "ataquePetrificante": false,
+        "ativo": true,
+        "colidiu": false,
+        "colisaoChao": true,
+        "direcao": false,
+        "direcaoArma": true,
+        "jogadorUm": true,
+        "levandoDano": false,
+        "morrendo": false,
+        "petrificado": false,
+        "pontuacao": 0,
+        "posArma": {
+            "x": -500.0,
+            "y": -500.0
+        },
+        "posicao": {
+            "x": 558.0,
+            "y": 590.0
+        },
+        "tamanho": {
+            "x": 50.0,
+            "y": 50.0
+        },
+        "tempoAtaque": 0.0,
+        "tempoDano": 0.0,
         "tempoMorte": 0.0,
         "tempoPetrificado": 0.0,
         "velocidade": {
@@ -415,8 +294,8 @@
             "y": 0.0
         },
         "velocidadeArma": {
-            "x": 0.0,
-            "y": 0.0
+            "x": 200.0,
+            "y": 5.0
         },
         "vida": 100.0
     },
@@ -426,12 +305,14 @@
         "andando": true,
         "armaAtual": 0,
         "atacando": false,
-        "ativo": false,
+        "ataqueBasico": false,
+        "ataquePetrificante": false,
+        "ativo": true,
         "colidiu": false,
-        "colisaoChao": false,
-        "direcao": true,
+        "colisaoChao": true,
+        "direcao": false,
         "direcaoArma": true,
-        "jogadorUm": false,
+        "jogadorUm": true,
         "levandoDano": false,
         "morrendo": false,
         "petrificado": false,
@@ -441,8 +322,8 @@
             "y": -500.0
         },
         "posicao": {
-            "x": 1721.5994873046875,
-            "y": 409.7127990722656
+            "x": 757.0287475585938,
+            "y": 590.0
         },
         "tamanho": {
             "x": 50.0,
@@ -450,16 +331,103 @@
         },
         "tempoAtaque": 0.0,
         "tempoDano": 0.0,
-        "tempoMorrendo": 0.0,
         "tempoMorte": 0.0,
         "tempoPetrificado": 0.0,
         "velocidade": {
             "x": 50.0,
-            "y": 272.6372985839844
+            "y": 0.0
         },
         "velocidadeArma": {
-            "x": 0.0,
+            "x": 200.0,
+            "y": 5.0
+        },
+        "vida": 100.0
+    },
+    {
+        "ID": 2,
+        "IDArma": 33,
+        "andando": true,
+        "armaAtual": 0,
+        "atacando": false,
+        "ataqueBasico": false,
+        "ataquePetrificante": false,
+        "ativo": true,
+        "colidiu": false,
+        "colisaoChao": true,
+        "direcao": false,
+        "direcaoArma": true,
+        "jogadorUm": true,
+        "levandoDano": false,
+        "morrendo": false,
+        "petrificado": false,
+        "pontuacao": 0,
+        "posArma": {
+            "x": -500.0,
+            "y": -500.0
+        },
+        "posicao": {
+            "x": 1086.3895263671875,
+            "y": 462.0
+        },
+        "tamanho": {
+            "x": 50.0,
+            "y": 50.0
+        },
+        "tempoAtaque": 0.0,
+        "tempoDano": 0.0,
+        "tempoMorte": 0.0,
+        "tempoPetrificado": 0.0,
+        "velocidade": {
+            "x": 50.0,
             "y": 0.0
+        },
+        "velocidadeArma": {
+            "x": 200.0,
+            "y": 5.0
+        },
+        "vida": 100.0
+    },
+    {
+        "ID": 2,
+        "IDArma": 33,
+        "andando": true,
+        "armaAtual": 0,
+        "atacando": false,
+        "ataqueBasico": false,
+        "ataquePetrificante": false,
+        "ativo": true,
+        "colidiu": false,
+        "colisaoChao": true,
+        "direcao": false,
+        "direcaoArma": true,
+        "jogadorUm": true,
+        "levandoDano": false,
+        "morrendo": false,
+        "petrificado": false,
+        "pontuacao": 0,
+        "posArma": {
+            "x": -500.0,
+            "y": -500.0
+        },
+        "posicao": {
+            "x": 1526.865234375,
+            "y": 398.0
+        },
+        "tamanho": {
+            "x": 50.0,
+            "y": 50.0
+        },
+        "tempoAtaque": 0.0,
+        "tempoDano": 0.0,
+        "tempoMorte": 0.0,
+        "tempoPetrificado": 0.0,
+        "velocidade": {
+            "x": 50.0,
+            "y": 0.0
+        },
+        "velocidadeArma": {
+            "x": 200.0,
+            "y": 5.0
         },
         "vida": 100.0
     }

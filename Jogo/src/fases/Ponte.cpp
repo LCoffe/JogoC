@@ -28,6 +28,7 @@ namespace Fase {
 
 	void Ponte::carregaFase() {
 		carregar();
+		executar();
 	}
 
 	void Ponte::criarMapa(bool doisJogadores) {
